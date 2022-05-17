@@ -11,8 +11,8 @@ jobs:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
     - name: configure git
       run: |
-        git config --global user.name "Deploy from CI"
-        git config --global user.email ""
+        git config --global user.name "SichangHe"
+        git config --global user.email "sichanghe@users.noreply.github.com"
     - name: Install mdbook
       run: |
         mkdir bin
