@@ -1,0 +1,2081 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+
+<head>
+    <!-- Book generated using mdBook -->
+    <meta charset="UTF-8">
+    <title>Steven&#x27;s Notes</title>
+    <meta name="robots" content="noindex" />
+    <!-- Custom HTML head -->
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff" />
+
+    <link rel="icon" href="favicon.svg">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/chrome.css">
+    <link rel="stylesheet" href="css/print.css" media="print">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+    <link rel="stylesheet" href="fonts/fonts.css">
+
+    <!-- Highlight.js Stylesheets -->
+    <link rel="stylesheet" href="highlight.css">
+    <link rel="stylesheet" href="tomorrow-night.css">
+    <link rel="stylesheet" href="ayu-highlight.css">
+
+    <!-- Custom theme stylesheets -->
+    <!-- MathJax -->
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: {inlineMath: [["$","$"]]} });
+    </script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+
+<body>
+    <script type="text/javascript">
+        // Provide site root to javascript
+        var path_to_root = "";
+        var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+
+        // Work around some values being stored in localStorage wrapped in quotes
+        try {
+            var theme = localStorage.getItem('mdbook-theme');
+            var sidebar = localStorage.getItem('mdbook-sidebar');
+
+            if (theme.startsWith('"') && theme.endsWith('"')) {
+                localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+            }
+
+            if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+            }
+        } catch (e) { }
+
+        // Set the theme before any content is loaded, prevents flash
+        var theme;
+        try { theme = localStorage.getItem('mdbook-theme'); } catch (e) { }
+        if (theme === null || theme === undefined) { theme = default_theme; }
+        var html = document.querySelector('html');
+        html.classList.remove('no-js')
+        html.classList.remove('light')
+        html.classList.add(theme);
+        html.classList.add('js');
+
+        // Hide / unhide sidebar before it is displayed
+        var html = document.querySelector('html');
+        var sidebar = 'hidden';
+        if (document.body.clientWidth >= 1080) {
+            try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch (e) { }
+            sidebar = sidebar || 'visible';
+        }
+        html.classList.remove('sidebar-visible');
+        html.classList.add("sidebar-" + sidebar);
+
+        // don't show body until MathJax finish
+        setTimeout(() => { document.body.style.visibility = "visible" }, 1000); // show the body anyway after 1 sec
+        MathJax.Hub.Queue(() => document.body.style.visibility = "visible");
+    </script>
+
+    <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+        <div class="sidebar-scrollbox">
+            <ol class="chapter"><li class="chapter-item expanded "><a href="automation_software/index.html"><strong aria-hidden="true">1.</strong> Automation Software</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="automation_software/hammerspoon.html"><strong aria-hidden="true">1.1.</strong> Hammerspoon</a></li></ol></li><li class="chapter-item expanded "><a href="cs/index.html"><strong aria-hidden="true">2.</strong> Computer Science</a></li><li class="chapter-item expanded "><a href="documentation/index.html"><strong aria-hidden="true">3.</strong> Documentation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="documentation/pandoc.html"><strong aria-hidden="true">3.1.</strong> Pandoc</a></li></ol></li><li class="chapter-item expanded "><a href="mathematics/index.html"><strong aria-hidden="true">4.</strong> Mathematics</a></li><li class="chapter-item expanded "><a href="package_manager/index.html"><strong aria-hidden="true">5.</strong> Package Manager</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="package_manager/homebrew.html"><strong aria-hidden="true">5.1.</strong> Homebrew</a></li><li class="chapter-item expanded "><a href="package_manager/pacman.html"><strong aria-hidden="true">5.2.</strong> Pacman</a></li></ol></li><li class="chapter-item expanded "><a href="programming/index.html"><strong aria-hidden="true">6.</strong> Programming</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="programming/git.html"><strong aria-hidden="true">6.1.</strong> Git</a></li><li class="chapter-item expanded "><a href="programming/java.html"><strong aria-hidden="true">6.2.</strong> Java</a></li><li class="chapter-item expanded "><a href="programming/javascript.html"><strong aria-hidden="true">6.3.</strong> JavaScript</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="programming/mathjax.html"><strong aria-hidden="true">6.3.1.</strong> MathJax</a></li></ol></li><li class="chapter-item expanded "><a href="programming/julia.html"><strong aria-hidden="true">6.4.</strong> Julia</a></li><li class="chapter-item expanded "><a href="programming/perl.html"><strong aria-hidden="true">6.5.</strong> Perl</a></li><li class="chapter-item expanded "><a href="programming/python.html"><strong aria-hidden="true">6.6.</strong> Python</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="programming/pip.html"><strong aria-hidden="true">6.6.1.</strong> pip</a></li></ol></li><li class="chapter-item expanded "><a href="programming/mathematica.html"><strong aria-hidden="true">6.7.</strong> Mathematica</a></li><li class="chapter-item expanded "><a href="programming/matlab.html"><strong aria-hidden="true">6.8.</strong> MATLAB</a></li><li class="chapter-item expanded "><a href="programming/rust.html"><strong aria-hidden="true">6.9.</strong> Rust</a></li><li class="chapter-item expanded "><a href="programming/rlang.html"><strong aria-hidden="true">6.10.</strong> R lang</a></li><li class="chapter-item expanded "><a href="programming/shell.html"><strong aria-hidden="true">6.11.</strong> Shell</a></li></ol></li><li class="chapter-item expanded "><a href="server/index.html"><strong aria-hidden="true">7.</strong> Server</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="server/nfs.html"><strong aria-hidden="true">7.1.</strong> NFS</a></li><li class="chapter-item expanded "><a href="server/ssh.html"><strong aria-hidden="true">7.2.</strong> SSH</a></li></ol></li><li class="chapter-item expanded "><a href="text_editor/index.html"><strong aria-hidden="true">8.</strong> Text Editor</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="text_editor/vim.html"><strong aria-hidden="true">8.1.</strong> Vim</a></li></ol></li><li class="chapter-item expanded "><a href="license.html"><strong aria-hidden="true">9.</strong> License</a></li></ol>
+        </div>
+        <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+    </nav>
+
+    <div id="page-wrapper" class="page-wrapper">
+
+        <div class="page">
+            <div id="menu-bar-hover-placeholder"></div>
+            <div id="menu-bar" class="menu-bar sticky bordered">
+                <div class="left-buttons">
+                    <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents"
+                        aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <button id="theme-toggle" class="icon-button" type="button" title="Change theme"
+                        aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                        <i class="fa fa-paint-brush"></i>
+                    </button>
+                    <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                        <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                        <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                        <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                        <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                        <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button>
+                        </li>
+                    </ul>
+                    <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)"
+                        aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S"
+                        aria-controls="searchbar">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+
+                <h1 class="menu-title">Steven&#x27;s Notes</h1>
+
+                <div class="right-buttons">
+                    <a href="print.html" title="Print this book" aria-label="Print this book">
+                        <i id="print-button" class="fa fa-print"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div id="search-wrapper" class="hidden">
+                <form id="searchbar-outer" class="searchbar-outer">
+                    <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..."
+                        aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                </form>
+                <div id="searchresults-outer" class="searchresults-outer hidden">
+                    <div id="searchresults-header" class="searchresults-header"></div>
+                    <ul id="searchresults">
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+            <script type="text/javascript">
+                document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                Array.from(document.querySelectorAll('#sidebar a')).forEach(function (link) {
+                    link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                });
+            </script>
+
+            <div id="content" class="content">
+                <main>
+                    <h1 id="automation-software"><a class="header" href="#automation-software">Automation Software</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="hammerspoon"><a class="header" href="#hammerspoon">Hammerspoon</a></h1>
+<p>add stuff: open config, type in LaTeX, save, reload config</p>
+<p>bind function to hotkey</p>
+<pre><code class="language-lua">hs.hotkey.bind({&quot;functionKey&quot;, …}, &quot;key&quot;,…, function()
+  …
+end)
+</code></pre>
+<p>functionKey: <code>cmd</code> <code>alt</code> <code>ctrl</code><br />
+key: <code>X</code> <code>\\</code> <code>Left</code><br />
+the <code>{}</code> must stay even if it`s empty</p>
+<p>show alert message</p>
+<pre><code class="language-lua">hs.alert.show(&quot;message&quot;)
+</code></pre>
+<p>generate system notification with title and content</p>
+<pre><code class="language-lua">hs.notify.new({title=&quot;title&quot;, informativeText=&quot;content&quot;}):send()
+</code></pre>
+<p>define the current window as <code>win</code></p>
+<pre><code class="language-lua">local win = hs.window.focusedWindow()
+</code></pre>
+<p>define win’s window frame as f</p>
+<pre><code class="language-lua">local f = win:frame()
+</code></pre>
+<p>position of <code>f</code> is <code>(f.x, f.y)</code>
+its width and height <code>f.w</code>, <code>f.h</code></p>
+<p>define the screen <code>win</code> at as <code>screen</code></p>
+<pre><code class="language-lua">local screen = win:screen()
+</code></pre>
+<p>define <code>screen</code>'s screen frame as <code>max</code></p>
+<pre><code class="language-lua">local max = screen:frame()
+</code></pre>
+<p>update the frame of <code>win</code> as <code>f</code></p>
+<pre><code class="language-lua">win:setFrame(f)
+</code></pre>
+<pre><code class="language-lua">hs.pathwatcher.new(.....):start()
+</code></pre>
+<p>reload config</p>
+<pre><code class="language-lua">hs.reload()
+</code></pre>
+<p>automatically reload config</p>
+<pre><code class="language-lua">function reloadConfig(files)
+    doReload = false
+    for _,file in pairs(files) do
+        if file:sub(-4) == &quot;.lua&quot; then
+            doReload = true
+        end
+    end
+    if doReload then
+        hs.reload()
+    end
+end
+myWatcher = hs.pathwatcher.new(os.getenv(&quot;HOME&quot;) .. &quot;/.hammerspoon/&quot;, reloadConfig):start()
+hs.alert.show(&quot;Config loaded&quot;)
+</code></pre>
+<p>get the home direction of the system</p>
+<pre><code class="language-lua">os.getenv(&quot;HOME&quot;)
+</code></pre>
+<p>connect string to path</p>
+<pre><code class="language-lua">..
+</code></pre>
+<p>call <code>function</code> whenever changes in <code>direction</code></p>
+<pre><code class="language-lua">hs.pathwatcher.new(&quot;direction&quot;, function):start()
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="computer-science"><a class="header" href="#computer-science">Computer Science</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="documentation"><a class="header" href="#documentation">Documentation</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="pandoc"><a class="header" href="#pandoc">Pandoc</a></h1>
+<p><a href="https://opensource.com/article/18/9/pandoc-research-paper">How to use Pandoc to produce a research paper</a></p>
+<p>create <code>paper.pdf</code> from <code>paper.md</code> and <code>paper.bib</code></p>
+<pre><code class="language-shell">pandoc --citeproc --bibliography=paper.bib --variable classoption=twocolumn --variable papersize=a4paper -s paper.md -o paper.pdf
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="mathematics"><a class="header" href="#mathematics">Mathematics</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="package-manager"><a class="header" href="#package-manager">Package Manager</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="homebrew"><a class="header" href="#homebrew">Homebrew</a></h1>
+<p>search package</p>
+<pre><code class="language-shell">brew search &lt;package&gt;
+</code></pre>
+<p>install package</p>
+<pre><code class="language-shell">brew install &lt;package&gt;
+</code></pre>
+<p>update</p>
+<pre><code class="language-shell">brew update &amp;&amp; brew upgrade --greedy
+</code></pre>
+<p>list installed packages</p>
+<pre><code class="language-shell">brew list
+</code></pre>
+<p>show dependency tree of package</p>
+<pre><code class="language-shell">brew deps -t &lt;package&gt;
+</code></pre>
+<p>display information about package</p>
+<pre><code class="language-shell">brew info &lt;package&gt;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="pacman"><a class="header" href="#pacman">Pacman</a></h1>
+<p>get the fastest mirror (France for example)</p>
+<pre><code class="language-shell">curl -s &quot;https://archlinux.org/mirrorlist/?country=FR&amp;protocol=https&amp;use_mirror_status=on&quot; | sed -e 's/^#Server/Server/' -e '/^#/d' | rankmirrors -n 5 -
+</code></pre>
+<p>set mirror</p>
+<pre><code class="language-shell">sudo vim /etc/pacman.d/mirrorlist
+</code></pre>
+<p>resolve untrusted packages when updating</p>
+<pre><code class="language-shell">sudo pacman -Sy archlinux-keyring
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="programming"><a class="header" href="#programming">Programming</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="git"><a class="header" href="#git">Git</a></h1>
+<p>start using git</p>
+<pre><code class="language-shell">git init
+</code></pre>
+<p>check status</p>
+<pre><code class="language-shell">git status
+</code></pre>
+<p>show all difference since last commit</p>
+<pre><code class="language-shell">git diff
+</code></pre>
+<p>git clone without downloading</p>
+<pre><code class="language-shell">git clone &lt;repo&gt; --no-checkout
+</code></pre>
+<p>commit with message</p>
+<pre><code class="language-shell">git commit -m &quot;&lt;msg&gt;&quot;
+</code></pre>
+<p>stage all changes and commit</p>
+<pre><code class="language-shell">git commit -am &quot;&lt;msg&gt;&quot;
+</code></pre>
+<p>revert to the last commit</p>
+<pre><code class="language-shell">git reset HEAD~
+</code></pre>
+<p>or</p>
+<pre><code class="language-shell">git revert …
+</code></pre>
+<p>change the last commit</p>
+<pre><code class="language-shell">--amend
+</code></pre>
+<p>add repo as submodule</p>
+<pre><code class="language-shell">git submodule add &lt;repo&gt;
+</code></pre>
+<p>push <code>book</code> folder to GitHub gh-pages to publish pages</p>
+<pre><code class="language-shell">git subtree push --prefix book origin gh-pages
+</code></pre>
+<p>push all branch to all remote</p>
+<pre><code class="language-shell">git remote | xargs -L1 git push --all
+</code></pre>
+<p>push master to all remote</p>
+<pre><code class="language-shell">git remote | xargs -L1 -I R git push R master
+</code></pre>
+<p>delete all history of a certain file (<em>deprecated</em>)</p>
+<pre><code class="language-shell">git filter-branch --index-filter \
+    'git rm -rf --cached --ignore-unmatch &lt;path_to_file&gt;' HEAD
+</code></pre>
+<p>delete all history of a certain file using git-filter-repo</p>
+<pre><code class="language-shell">git filter-repo --invert-paths --path '&lt;path_to_file&gt;' --use-base-name
+</code></pre>
+<p>ignore all symlink</p>
+<pre><code class="language-bash">find * -type l -not -exec grep -q &quot;^{}$&quot; .gitignore \; -print &gt;&gt; .gitignore
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="java"><a class="header" href="#java">Java</a></h1>
+<h1 id="built-in-data-type"><a class="header" href="#built-in-data-type">built-in data type</a></h1>
+<h2 id="primitive-type"><a class="header" href="#primitive-type">primitive type</a></h2>
+<h3 id="bool"><a class="header" href="#bool">bool</a></h3>
+<p>1B</p>
+<ul>
+<li>
+<p><code>&amp;&amp;</code> <code>||</code> <code>!</code></p>
+<pre><code class="language-java">assert (a &amp;&amp; b) == (!(!a || !b))
+</code></pre>
+</li>
+</ul>
+<h3 id="number"><a class="header" href="#number">number</a></h3>
+<ul>
+<li>
+<p>two's complement, e.g.</p>
+<pre><code class="language-java">Integer.MAX_VALUE + 1 = Integer.MIN_VALUE = -Integer.MIN_VALUE
+</code></pre>
+</li>
+</ul>
+<h4 id="short"><a class="header" href="#short">short</a></h4>
+<p>2B</p>
+<h4 id="int"><a class="header" href="#int">int</a></h4>
+<p>4B</p>
+<h4 id="float"><a class="header" href="#float">float</a></h4>
+<p>4B</p>
+<h4 id="long"><a class="header" href="#long">long</a></h4>
+<p>8B</p>
+<h4 id="double"><a class="header" href="#double">double</a></h4>
+<p>8B</p>
+<ul>
+<li>special value <code>Infinity</code> <code>NaN</code></li>
+</ul>
+<h4 id="numerical-operator"><a class="header" href="#numerical-operator">numerical operator</a></h4>
+<ul>
+<li>cast to precise type when different type</li>
+<li><code>+ - *</code></li>
+<li><code>/</code> integer division if both integer
+else float division</li>
+<li><code>%</code> remainder</li>
+</ul>
+<h5 id="math-library"><a class="header" href="#math-library"><code>Math</code> library</a></h5>
+<p>operation: abs, max, sin, asin, exp, log, pow, round, random, sqrt
+variable: PI, E</p>
+<h3 id="char"><a class="header" href="#char">char</a></h3>
+<p>2B</p>
+<ul>
+<li>use ASCII</li>
+<li>auto cast from and to int</li>
+</ul>
+<h4 id="convert-to-string"><a class="header" href="#convert-to-string">convert to String</a></h4>
+<pre><code class="language-java">String.valueOf(charArray)
+</code></pre>
+<h3 id="cast"><a class="header" href="#cast">cast</a></h3>
+<pre><code class="language-java">(target_type) var_to_convert
+</code></pre>
+<h3 id="wrapper-type"><a class="header" href="#wrapper-type">wrapper type</a></h3>
+<p>built-in reference type corresponding to primitive type</p>
+<ul>
+<li>object</li>
+<li>autoboxing and unboxing
+convert from and to primitive type and wrapper type
+automatically in assignment and function call</li>
+</ul>
+<h2 id="string"><a class="header" href="#string">String</a></h2>
+<h3 id="concatenation"><a class="header" href="#concatenation">concatenation</a></h3>
+<ul>
+<li>
+<p><code>+</code></p>
+</li>
+<li></li>
+</ul>
+<pre><code class="language-java">string1.append(string2)
+</code></pre>
+<ul>
+<li><code>StringBuilder</code> better way to concatenate string</li>
+</ul>
+<h2 id="array"><a class="header" href="#array">array</a></h2>
+<pre><code class="language-java">{literal1,…}//an array
+arr1.length//length attribute of array
+Arrays.sort(arr1)//sort array arr1
+</code></pre>
+<ul>
+<li>copy: copy the length and every single value</li>
+<li>assign: refer to the same array (aliasing)</li>
+<li>array overhead 3B = object reference 1B + object overhead 2B</li>
+</ul>
+<h3 id="declaration"><a class="header" href="#declaration">declaration</a></h3>
+<pre><code class="language-java">type1[] arr1; //declare array name of type type1
+</code></pre>
+<h3 id="initialization"><a class="header" href="#initialization">initialization</a></h3>
+<pre><code class="language-java">new double[length] //an array of length length, all 0.0s
+</code></pre>
+<ul>
+<li>default value for number is 0</li>
+<li>default value for object is <code>null</code></li>
+</ul>
+<h3 id="access--mutate"><a class="header" href="#access--mutate">access &amp; mutate</a></h3>
+<pre><code class="language-java">arr1[i] = literal; //refer to array arr1 by index i
+</code></pre>
+<h3 id="two-dimensional-array"><a class="header" href="#two-dimensional-array">two-dimensional array</a></h3>
+<p>an array of array</p>
+<h1 id="basic-syntax"><a class="header" href="#basic-syntax">basic syntax</a></h1>
+<h2 id="conditioning"><a class="header" href="#conditioning">conditioning</a></h2>
+<h3 id="if"><a class="header" href="#if">if</a></h3>
+<pre><code class="language-java">if (bool1) { execution1; }
+else if (bool2) { execution2; }
+// …
+else { execution0; }
+</code></pre>
+<h3 id="switch"><a class="header" href="#switch">switch</a></h3>
+<pre><code class="language-java">switch (var1) {
+ case value1: execution1;
+              break;
+ // …
+}
+</code></pre>
+<ul>
+<li>work with primitive type and wrapper</li>
+<li>work with enum</li>
+<li>work with String</li>
+</ul>
+<h2 id="loop"><a class="header" href="#loop">loop</a></h2>
+<h3 id="while"><a class="header" href="#while">while</a></h3>
+<pre><code class="language-java">while (bool1) { execution; }
+</code></pre>
+<h3 id="do-while"><a class="header" href="#do-while">do while</a></h3>
+<pre><code class="language-java">do { execution; } while (boolean);
+</code></pre>
+<p>at least do once</p>
+<h3 id="for"><a class="header" href="#for">for</a></h3>
+<pre><code class="language-java">for (initialization_statement1, …; bool1; increment_statement1, …) { execution; }
+</code></pre>
+<h2 id="access-modifier"><a class="header" href="#access-modifier">access modifier</a></h2>
+<h3 id="default"><a class="header" href="#default">default</a></h3>
+<p>access from same package</p>
+<h3 id="public"><a class="header" href="#public">public</a></h3>
+<pre><code class="language-java">public …;
+</code></pre>
+<p>access everywhere</p>
+<h3 id="protected"><a class="header" href="#protected">protected</a></h3>
+<pre><code class="language-java">protected …;
+</code></pre>
+<p>access from same package or subclass</p>
+<h3 id="private"><a class="header" href="#private">private</a></h3>
+<pre><code class="language-java">private …;
+</code></pre>
+<p>access from same class</p>
+<h2 id="mutability-modifier"><a class="header" href="#mutability-modifier">mutability modifier</a></h2>
+<pre><code class="language-java">final … var1 …;
+</code></pre>
+<p>make the variable immutable</p>
+<h2 id="static-vs-instance"><a class="header" href="#static-vs-instance">static vs instance</a></h2>
+<pre><code class="language-java">… static …;
+</code></pre>
+<p>make variable or function static,
+as opposed to instance</p>
+<ul>
+<li>static mean belong to type itself</li>
+<li>instance mean belong to an instance of class</li>
+</ul>
+<h2 id="comment"><a class="header" href="#comment">comment</a></h2>
+<pre><code class="language-java">// inline
+/* block */
+</code></pre>
+<h3 id="docstring"><a class="header" href="#docstring">docstring</a></h3>
+<pre><code class="language-java">/**
+ * doc
+ */
+</code></pre>
+<p>support HTML</p>
+<h2 id="assertion"><a class="header" href="#assertion">assertion</a></h2>
+<pre><code class="language-java">assert bool1 : &quot;error message&quot;;
+</code></pre>
+<p>throw the error if <code>bool1 == false</code></p>
+<h1 id="input"><a class="header" href="#input">input</a></h1>
+<h2 id="command-line-argument"><a class="header" href="#command-line-argument">command-line argument</a></h2>
+<pre><code class="language-java">args[i]
+</code></pre>
+<ul>
+<li>start from <code>0</code></li>
+</ul>
+<h2 id="stdin"><a class="header" href="#stdin">stdin</a></h2>
+<p>scanner:</p>
+<pre><code class="language-java">import java.util.Scanner; //import scanner
+Scanner sc= new Scanner(System.in); //define a scanner
+Type1 var1 = sc.nextType1();//let variable be input
+</code></pre>
+<h1 id="output"><a class="header" href="#output">output</a></h1>
+<h2 id="print"><a class="header" href="#print">print</a></h2>
+<pre><code class="language-java">System.out.println(output)//print output \n
+System.out.print(output)//print output
+</code></pre>
+<h3 id="formatted-print"><a class="header" href="#formatted-print">formatted print</a></h3>
+<pre><code class="language-java">System.out.printf(“string1%w1.p1c1… string2”,output1,…)
+//print string1 output1… string2 
+// with field width w, precision .p, and conversion code c
+</code></pre>
+<ul>
+<li>negative <code>w</code> counts from the right</li>
+<li>for c
+<ul>
+<li><code>d</code>: decimal</li>
+<li><code>f</code>: floating</li>
+<li><code>e</code>: scientific</li>
+<li><code>s</code>: string</li>
+<li><code>b</code>: boolean</li>
+</ul>
+</li>
+<li>must have <code>%</code> and <code>c</code></li>
+<li><a href="https://docs.oracle.com/javase/tutorial/java/data/numberformat.html">standard string format in Java</a></li>
+</ul>
+<h1 id="class"><a class="header" href="#class">class</a></h1>
+<h2 id="class-as-function-library"><a class="header" href="#class-as-function-library">class as function library</a></h2>
+<pre><code class="language-java">public class ProgramName {
+    public static void main(String[] args) {
+        // main function
+    }
+}
+</code></pre>
+<h3 id="global-variable"><a class="header" href="#global-variable">global variable</a></h3>
+<pre><code class="language-java">public class ProgramName {
+ static type1 var1;
+}
+</code></pre>
+<h2 id="class-as-abstract-data-type"><a class="header" href="#class-as-abstract-data-type">class as abstract data type</a></h2>
+<pre><code class="language-java">public class ClassName {
+ type1 ins1; // instance variable …
+
+ /*
+  * constructor
+ */
+ public ClassName(arg…) {
+  // …
+  ins1 = …; // need to initialize all instance variable …
+ }
+
+ public type2 method1(arg…) {
+  // …
+ } // instance method …
+
+    public static void main(String[] args) {
+        // test
+    }
+}
+</code></pre>
+<ul>
+<li>use short name for instance variables for convenience</li>
+<li>use full name for parameter variables as the client can see them</li>
+</ul>
+<h3 id="constructor"><a class="header" href="#constructor">constructor</a></h3>
+<p>same method name as class</p>
+<h4 id="use-constructor"><a class="header" href="#use-constructor">use constructor</a></h4>
+<pre><code class="language-java">ClassName var1 = new ClassName(arg…);
+</code></pre>
+<h3 id="access-instance-variable"><a class="header" href="#access-instance-variable">access instance variable</a></h3>
+<pre><code class="language-java">var1.ins1
+</code></pre>
+<h3 id="use-instance-method"><a class="header" href="#use-instance-method">use instance method</a></h3>
+<pre><code class="language-java">var1.method1(arg…);
+</code></pre>
+<h3 id="common-instance-method"><a class="header" href="#common-instance-method">common instance method</a></h3>
+<h4 id="equals-method"><a class="header" href="#equals-method">equals method</a></h4>
+<pre><code class="language-java">public boolean equals(Object x)
+{
+    if (x == null) return false;
+    if (this.getClass() != x.getClass()) return false;
+    return (this.ins1 == x.ins1) &amp;&amp; …;
+}
+</code></pre>
+<h4 id="hashcode-method"><a class="header" href="#hashcode-method">hashCode method</a></h4>
+<pre><code class="language-java">public int hashCode() {
+    return Objects.hash(ins1,…);
+}
+</code></pre>
+<h3 id="interface"><a class="header" href="#interface">interface</a></h3>
+<pre><code class="language-java">public interface InterfaceName {
+ type1 var1; // instance variable …
+    public abstract type1 method1(arg…); // empty abstract method …
+}
+</code></pre>
+<ul>
+<li>interface enables a method name to call different methods according to the object</li>
+<li>functional interface: single method</li>
+</ul>
+<h4 id="abstract-method"><a class="header" href="#abstract-method">abstract method</a></h4>
+<p>include nothing</p>
+<h4 id="implement"><a class="header" href="#implement">implement</a></h4>
+<pre><code class="language-java">public class ClassName implements InterfaceName{
+ // …
+}
+</code></pre>
+<ul>
+<li>the class must have methods corresponding to all abstract methods in the interface</li>
+</ul>
+<h4 id="implement-iterator"><a class="header" href="#implement-iterator">implement Iterator</a></h4>
+<pre><code class="language-java">import java.util.Iterator;
+class ClassName implements Iterator&lt;K&gt; {
+ // …
+
+ // must-need method for Iterator
+    public boolean hasNext() {
+  // …
+ }
+    public Item next() {
+  // …
+ }
+    public void remove() {
+  // …
+ }
+}
+</code></pre>
+<h3 id="subclass"><a class="header" href="#subclass">subclass</a></h3>
+<pre><code class="language-java">public class SubClassName extends ClassName {
+ // …
+}
+</code></pre>
+<p>have everything super class have</p>
+<h1 id="generic-programming"><a class="header" href="#generic-programming">generic programming</a></h1>
+<h2 id="generic-class"><a class="header" href="#generic-class">generic class</a></h2>
+<pre><code class="language-java">public class GenericClass&lt;typeParameter&gt; {
+ // …
+}
+</code></pre>
+<p>a class that can be fed with different data type</p>
+<h3 id="use-constructor-1"><a class="header" href="#use-constructor-1">use constructor</a></h3>
+<pre><code class="language-java">GenericClass&lt;type1&gt; var1 = new GenericClass&lt;type1&gt;(var0);
+</code></pre>
+<h1 id="functional-programming"><a class="header" href="#functional-programming">functional programming</a></h1>
+<h2 id="lambda-expression"><a class="header" href="#lambda-expression">lambda expression</a></h2>
+<pre><code class="language-java">(arg…) -&gt; stuffToReturn;
+</code></pre>
+<h1 id="package"><a class="header" href="#package">package</a></h1>
+<h2 id="import"><a class="header" href="#import">import</a></h2>
+<h3 id="static-import"><a class="header" href="#static-import">static import</a></h3>
+<pre><code class="language-java">import static package1
+</code></pre>
+<p>imports the method so that its prefix can be omitted <em>don’t use</em></p>
+<h1 id="timing"><a class="header" href="#timing">timing</a></h1>
+<pre><code class="language-java">System.currentTimeMillis()
+System.nanoTime()
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="javascript"><a class="header" href="#javascript">JavaScript</a></h1>
+<h1 id="data-type"><a class="header" href="#data-type">data type</a></h1>
+<ul>
+<li>no char</li>
+<li>undefined
+<ul>
+<li>nullish coalescing operator <code>??</code><br />
+give default value if the expression before is <code>null</code> or <code>undefined</code></li>
+<li>optional chaining <code>?</code><br />
+skip method chain and return <code>undefined</code> if expression before is <code>undefined</code></li>
+</ul>
+</li>
+</ul>
+<h1 id="assignment"><a class="header" href="#assignment">assignment</a></h1>
+<ul>
+<li>fallback <code>||</code> execute if the former one fail</li>
+</ul>
+<h1 id="array-"><a class="header" href="#array-">array <code>[…]</code></a></h1>
+<p>can contain multiple types of data</p>
+<h2 id="access-data-array1index1"><a class="header" href="#access-data-array1index1">access data <code>array1[index1]</code></a></h2>
+<ul>
+<li><code>.length</code></li>
+<li><code>.push()</code> <code>.pop()</code> work like stack</li>
+<li><code>.unshift()</code> <code>.shift()</code> work like queue</li>
+<li><code>.splice(index,number,…)</code> remove <code>number</code> items from <code>index</code> and insert <code>…</code></li>
+<li><code>.reduce(fun1)</code> take variable into function and put result back</li>
+<li>spread (deep copy) <code>[...arr1]</code></li>
+</ul>
+<h2 id="string-1"><a class="header" href="#string-1">string</a></h2>
+<p>is just immutable array</p>
+<p>formatted string</p>
+<pre><code class="language-javascript">`blah ${var1}…`
+</code></pre>
+<ul>
+<li><code>.toUpperCase()</code></li>
+<li><code>.toLowerCase()</code></li>
+<li><code>.trim()</code></li>
+<li><code>.slice(start,end)</code>
+<ul>
+<li><code>a.slice(1)</code> return substring excluding <code>a[0]</code></li>
+<li><code>a.slice(-1)</code> return <code>a[a.length - 1]</code></li>
+</ul>
+</li>
+</ul>
+<h1 id="function"><a class="header" href="#function">function</a></h1>
+<pre><code class="language-javascript">function fun1(var1,…) {
+    // …
+}
+</code></pre>
+<h2 id="anonymous-function"><a class="header" href="#anonymous-function">anonymous function</a></h2>
+<pre><code class="language-javascript">(var1,…) =&gt; {
+    // …
+}
+</code></pre>
+<p>minimum <code>var1 =&gt; expression1</code></p>
+<h1 id="comparison"><a class="header" href="#comparison">comparison</a></h1>
+<ul>
+<li>strong comparison <code>===</code> <code>!==</code> does not convert type</li>
+<li>weak comparison <code>==</code> <code>!=</code> convert type</li>
+</ul>
+<h1 id="object"><a class="header" href="#object">object</a></h1>
+<pre><code class="language-javascript">{
+    attr1: lit1,
+    // …
+}
+</code></pre>
+<p>rather dictionary</p>
+<ul>
+<li><code>delete</code> attribute</li>
+<li><code>.hasOwnProperty(attr)</code> check if has <code>attr</code></li>
+</ul>
+<h2 id="quick-initialization"><a class="header" href="#quick-initialization">quick initialization</a></h2>
+<pre><code class="language-javascript">{
+    attr1,
+    attr2,
+    // …
+}
+</code></pre>
+<p>is equivalent to</p>
+<pre><code class="language-javascript">{
+    attr1: attr1,
+    attr2: attr2,
+    // …
+}
+</code></pre>
+<h2 id="access-attribute"><a class="header" href="#access-attribute">access attribute</a></h2>
+<ul>
+<li><code>.attr1</code></li>
+<li><code>object1[attr1]</code></li>
+</ul>
+<h2 id="immutable-object-objectfreeze"><a class="header" href="#immutable-object-objectfreeze">immutable object <code>Object.freeze(…)</code></a></h2>
+<h2 id="method"><a class="header" href="#method">method</a></h2>
+<p>defined inside of the object block</p>
+<h2 id="class-class-class1"><a class="header" href="#class-class-class1">class <code>class Class1{…}</code></a></h2>
+<h3 id="constructor-constructor"><a class="header" href="#constructor-constructor">constructor <code>constructor(…){…}</code></a></h3>
+<p>use constructor <code>new</code></p>
+<h3 id="gettersetter-get-var1-set-var1-"><a class="header" href="#gettersetter-get-var1-set-var1-">getter/setter <code>get var1() {…}</code>/<code>set var1(…) {…}</code></a></h3>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="mathjax"><a class="header" href="#mathjax">MathJax</a></h1>
+<p>enable <code>$…$</code> inline math</p>
+<pre><code class="language-javascript">&lt;script type=&quot;text/x-mathjax-config&quot;&gt;
+    MathJax.Hub.Config({ tex2jax: {inlineMath: [[&quot;$&quot;,&quot;$&quot;]]} })
+&lt;/script&gt;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="julia"><a class="header" href="#julia">Julia</a></h1>
+<h2 id="use-latex-symbol"><a class="header" href="#use-latex-symbol">use latex symbol</a></h2>
+<p>type <code>\…</code> and tab</p>
+<h1 id="built-in"><a class="header" href="#built-in">built-in</a></h1>
+<h2 id="constant"><a class="header" href="#constant">constant</a></h2>
+<p><code>π</code> or <code>pi = 3.1415926535897...</code>
+<code>Inf</code> and <code>NaN</code>
+$i$ <code>im</code></p>
+<h2 id="math-function"><a class="header" href="#math-function">math function</a></h2>
+<p><code>sqrt()</code></p>
+<h1 id="variable"><a class="header" href="#variable">variable</a></h1>
+<h2 id="check-type"><a class="header" href="#check-type">check type</a></h2>
+<p><code>typeof()</code></p>
+<h2 id="numerical-type"><a class="header" href="#numerical-type">numerical type</a></h2>
+<h3 id="extreme-representable-value"><a class="header" href="#extreme-representable-value">extreme representable value</a></h3>
+<p><code>typemin(Type1)</code> / <code>typemax(Type1)</code></p>
+<h3 id="convert-to-bits-bitstring"><a class="header" href="#convert-to-bits-bitstring">convert to bits <code>bitstring()</code></a></h3>
+<h3 id="avoid-overflow-using-big"><a class="header" href="#avoid-overflow-using-big">avoid overflow using <code>big()</code></a></h3>
+<p>create <code>BigInt</code> or <code>BigFloat</code>
+or use <code>big&quot;…&quot;</code> if the number if too big for Int or Float</p>
+<h3 id="machine-epsilon-epstype1"><a class="header" href="#machine-epsilon-epstype1">machine epsilon <code>eps(Type1)</code></a></h3>
+<h2 id="conversion-type1"><a class="header" href="#conversion-type1">conversion <code>Type1(…)</code></a></h2>
+<h2 id="pattern-matching"><a class="header" href="#pattern-matching">pattern matching</a></h2>
+<p><code>_</code> can be assigned value</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="perl"><a class="header" href="#perl">Perl</a></h1>
+<p>install package A/B</p>
+<pre><code class="language-shell">cpanm install A::B
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="python"><a class="header" href="#python">Python</a></h1>
+<h1 id="environment"><a class="header" href="#environment">environment</a></h1>
+<ul>
+<li>Python REPL (Read-Evaluate-Print Loop)/ Python shell</li>
+<li>script$\in$script file</li>
+</ul>
+<h1 id="variable-1"><a class="header" href="#variable-1">variable</a></h1>
+<h2 id="operator"><a class="header" href="#operator">operator</a></h2>
+<ul>
+<li>assignment operator <code>=</code></li>
+</ul>
+<h2 id="naming-convention"><a class="header" href="#naming-convention">naming convention</a></h2>
+<ul>
+<li>camelCase</li>
+<li>snake_case</li>
+</ul>
+<h3 id="pep-8-guideline"><a class="header" href="#pep-8-guideline">PEP 8 guideline</a></h3>
+<h2 id="inspect-in-repl"><a class="header" href="#inspect-in-repl">inspect (in REPL)</a></h2>
+<h2 id="unassign-delete-del-var1"><a class="header" href="#unassign-delete-del-var1">unassign (delete) <code>del var1</code></a></h2>
+<hr />
+<h1 id="data-type-1"><a class="header" href="#data-type-1">data type</a></h1>
+<ul>
+<li>fundamental data type</li>
+<li>compound data type (data structure)</li>
+<li>check data type <code>type()</code></li>
+</ul>
+<h2 id="string-str"><a class="header" href="#string-str">string <code>str</code></a></h2>
+<ul>
+<li>character</li>
+<li>length <code>len(string1)</code></li>
+<li>sequence</li>
+</ul>
+<h3 id="string-literal-string-literal"><a class="header" href="#string-literal-string-literal">string literal <code>&quot;string literal&quot;</code></a></h3>
+<ul>
+<li>delimiter <code>&quot;&quot;</code> or <code>''</code></li>
+<li>multiline string <code>&quot;first and \</code>
+<code>second&quot;</code>
+or
+<code>&quot;&quot;&quot;first line</code>
+<code>second line&quot;&quot;&quot;</code></li>
+<li>raw string <code>r&quot;raw string&quot;</code></li>
+</ul>
+<h3 id="string-operation"><a class="header" href="#string-operation">string operation</a></h3>
+<ul>
+<li>concatenation <code>string1 + string2</code>
+need to manually make sure both are string</li>
+<li>indexing <code>string1[index1]</code> → <em>character</em>
+negative index count from right</li>
+<li>slicing (slicing) <code>string1[index1:index2]</code>
+return string consisting of <code>string1[index1]</code> to <code>string1[index2 - 1]</code>
+leaving <code>index1</code> or <code>index2</code> empty means <code>0</code> or <code>-1</code> by default
+exceeding string length return empty string <code>''</code> for those parts</li>
+<li>multiplication <code>string1 * n</code>
+repeat <code>n</code> time</li>
+</ul>
+<h3 id="immutability"><a class="header" href="#immutability">immutability</a></h3>
+<h3 id="string-method"><a class="header" href="#string-method">string method</a></h3>
+<ul>
+<li>convert case <code>.lower()</code> <code>.upper()</code></li>
+<li>remove whitespace
+<code>.rstript()</code> from the right
+<code>lstript()</code> from the left
+<code>stript()</code> both side</li>
+<li>check start/ end <code>.startswith()</code> <code>.endswith()</code> → <em>boolean</em></li>
+<li>find substring <code>.find(substring1)</code> → <em>int</em> index of the first found; <code>-1</code> if not found</li>
+<li>replace <code>.replace(string1,string2)</code></li>
+</ul>
+<h3 id="input-1"><a class="header" href="#input-1">input</a></h3>
+<p><code>input(prompt_string)</code> → <em>str</em></p>
+<h3 id="conversion"><a class="header" href="#conversion">conversion</a></h3>
+<ul>
+<li>anything to string <code>str(var1)</code></li>
+</ul>
+<h3 id="output-1"><a class="header" href="#output-1">output</a></h3>
+<ul>
+<li><code>print(string1,string2…)</code>
+each part must be string
+<strong>`` are added between string</strong></li>
+<li>formatted string literals (f-string)
+<code>f&quot;{string1}string_literal…&quot;</code> → <em>str</em>
+enclose variable name in <code>{}</code></li>
+</ul>
+<h2 id="number-int-float"><a class="header" href="#number-int-float">number <code>int</code> <code>float</code></a></h2>
+<h3 id="number-literal-1"><a class="header" href="#number-literal-1">number literal <code>1</code></a></h3>
+<ul>
+<li>separate by <code>_</code> <em>ignored</em></li>
+<li>exponential notation (E-notation) <code>1e2</code> → <em>float</em></li>
+<li>too big → <code>inf</code>/ too small → <code>-inf</code></li>
+</ul>
+<h3 id="arithmetic-operation"><a class="header" href="#arithmetic-operation">arithmetic operation</a></h3>
+<ul>
+<li>operand and operator</li>
+<li>addition <code>+</code> subtraction <code>-</code> multiplication <code>*</code> → <em>int</em> iff both operand int, else <em>float</em></li>
+<li>division <code>/</code> → <em>float</em></li>
+<li>integer division <code>//</code> → <em>int</em> iff both operand int, else <em>float</em>, round down
+no <code>0</code> denominator allowed regardless of type</li>
+<li>exponent <code>**</code> → <em>int</em> iff both operand positive int, else *float</li>
+<li>modulus <code>%</code> → <em>int</em> iff both operand int, else *float</li>
+</ul>
+<h3 id="number-method"><a class="header" href="#number-method">number method</a></h3>
+<ul>
+<li>round tie to even <code>round(num1,n)</code>
+by default, blank precision → <em>int</em> with <code>None</code> precision
+with int <code>n</code> → <em>int</em> iff both int, else <em>float</em> with <code>n</code> floating digit (negative precision go beyond decimal)</li>
+<li>absolute value <code>abs()</code> return same type</li>
+<li>power <code>pow(base1,exponent1) = base1 ** exponent1</code>, <code>pow(base1,exponent1,mod1) = (base1 ** exponent1) % mod1</code></li>
+<li>check if float is int <code>float1.is_integer()</code> → <em>boolean</em></li>
+</ul>
+<h3 id="conversion-1"><a class="header" href="#conversion-1">conversion</a></h3>
+<ul>
+<li>string to int <code>int(string1)</code>
+can only take string in integer form</li>
+</ul>
+<h3 id="output-2"><a class="header" href="#output-2">output</a></h3>
+<h4 id="fixed-point-number-fnum1format"><a class="header" href="#fixed-point-number-fnum1format">fixed-point number <code>f&quot;{num1:format}&quot;</code></a></h4>
+<p><a href="https://docs.python.org/3/library/string.html#format-specification-mini-language">format language</a>
+format</p>
+<ul>
+<li><code>.pt</code> precision <code>p</code> type <code>t</code> e.g. <code>.2f</code></li>
+<li><code>.pt%</code> in percentage form</li>
+<li><code>,</code> separate digit with comma</li>
+</ul>
+<h2 id="complex-number"><a class="header" href="#complex-number">complex number</a></h2>
+<h3 id="format-n-num_real--num_imaginej"><a class="header" href="#format-n-num_real--num_imaginej">format <code>n =</code><em><code>num_real + num_imagine</code></em><code>j</code></a></h3>
+<ul>
+<li>getting real part and imaginary part <code>n.real</code> <code>n.imag</code> → <em>float</em></li>
+<li>conjugate number <code>n.conjugate()</code>
+*<code>int</code> and <code>float</code> also have these</li>
+</ul>
+<h2 id="none-nonetype"><a class="header" href="#none-nonetype">None <code>NoneType</code></a></h2>
+<p>no data</p>
+<h2 id="data-structure"><a class="header" href="#data-structure">data structure</a></h2>
+<h3 id="tuple"><a class="header" href="#tuple">tuple</a></h3>
+<ul>
+<li>ordered sequence (iterable)</li>
+<li>immutable</li>
+<li>can hold multiple type of element at the same time</li>
+</ul>
+<h4 id="tuple-literal-elem1"><a class="header" href="#tuple-literal-elem1">tuple literal <code>(elem1,…)</code></a></h4>
+<ul>
+<li>empty tuple <code>()</code></li>
+<li>tuple with only 1 element <code>(element1,)</code></li>
+</ul>
+<h4 id="built-in-create-method"><a class="header" href="#built-in-create-method">built-in create method</a></h4>
+<p><code>tuple(converted1)</code> convert iterable <code>converted1</code> into tuple</p>
+<h4 id="length-lentuple1"><a class="header" href="#length-lentuple1">length <code>len(tuple1)</code></a></h4>
+<h4 id="indexing-tuple1index1"><a class="header" href="#indexing-tuple1index1">indexing <code>tuple1[index1]</code></a></h4>
+<h4 id="slicing-tuple1index1index2--shallow-copy"><a class="header" href="#slicing-tuple1index1index2--shallow-copy">slicing <code>tuple1[index1:index2]</code> → <em>shallow copy</em></a></h4>
+<h4 id="packing-unpacking"><a class="header" href="#packing-unpacking">packing/ unpacking</a></h4>
+<ul>
+<li>packing <code>tuple1 = elem1,…</code></li>
+<li>unpacking <code>var1,… = tuple1</code></li>
+<li>combined <code>var1,…,varN = literal1,…literalN</code></li>
+</ul>
+<h4 id="check-contain-elem1-in-tuple1--boolean"><a class="header" href="#check-contain-elem1-in-tuple1--boolean">check contain <code>elem1 in tuple1</code> → <em>boolean</em></a></h4>
+<h3 id="list"><a class="header" href="#list">list</a></h3>
+<ul>
+<li>same as tuple</li>
+<li>mutable</li>
+<li>use <code>[]</code></li>
+</ul>
+<h4 id="create"><a class="header" href="#create">create</a></h4>
+<ul>
+<li><code>list(iterable1)</code></li>
+<li><code>string1.split(separator1)</code></li>
+<li>list comprehension <code>[expression1 for elem in iterable1]</code></li>
+</ul>
+<h4 id="mutate"><a class="header" href="#mutate">mutate</a></h4>
+<ul>
+<li>replace element <code>list1[index1] = elem1</code></li>
+<li>slice replace <code>list1[index1:index2] = list2</code> <em>not necessarily same length</em></li>
+<li>insert <code>list1.insert(index1,elem1)</code>
+index too big is seen as last index</li>
+<li>append <code>list1.append(elem1)</code> append to last space, equivalent to <code>list1.insert(list1.__len__(),elem1)</code></li>
+<li>extend <code>list1.extend(iterable1)</code> append an iterable</li>
+<li>pop <code>list1.pop(index1)</code> return and remove <code>list1[index1]</code></li>
+</ul>
+<h4 id="list-method"><a class="header" href="#list-method">list method</a></h4>
+<ul>
+<li>sum number <code>sum(list1)</code> iff all element are number</li>
+<li><code>min()</code></li>
+<li><code>max()</code></li>
+<li>shallow copy <code>list1[:]</code> or <code>list1.copy()</code></li>
+<li>sort <code>list1.sort()</code>
+key <code>list1.sort(key=func1)</code> sort by return value of <code>func1(elem)</code></li>
+</ul>
+<h3 id="dictionary"><a class="header" href="#dictionary">dictionary</a></h3>
+<ul>
+<li>key-value pair</li>
+</ul>
+<h4 id="create-1"><a class="header" href="#create-1">create</a></h4>
+<ul>
+<li>dictionary literal <code>{key1:val1,…}</code></li>
+<li>from tuple of tuple <code>((key1:val1),…)</code></li>
+<li>empty dictionary <code>{}</code> or <code>dict()</code></li>
+</ul>
+<h4 id="access"><a class="header" href="#access">access</a></h4>
+<ul>
+<li><code>dict1[key1]</code> → <em>value corresponding</em></li>
+<li>index <code>dict[index1]</code></li>
+<li>convert to dict_items <code>dict1.items()</code></li>
+</ul>
+<h4 id="mutate-1"><a class="header" href="#mutate-1">mutate</a></h4>
+<ul>
+<li>add or overwrite <code>dict1[key1] = val1</code></li>
+<li>remove <code>del dict1[key1]</code></li>
+</ul>
+<hr />
+<h1 id="function-1"><a class="header" href="#function-1">function</a></h1>
+<ul>
+<li>argument</li>
+<li>return value</li>
+<li>side effect</li>
+</ul>
+<h2 id="property"><a class="header" href="#property">property</a></h2>
+<h3 id="function-are-values"><a class="header" href="#function-are-values">function are values</a></h3>
+<p>function name are variable</p>
+<h3 id="side-effect"><a class="header" href="#side-effect">side effect</a></h3>
+<p>change something external to the function itself</p>
+<h2 id="anatomy"><a class="header" href="#anatomy">anatomy</a></h2>
+<ul>
+<li>function signature<code>def fun_name(parameter_list):</code></li>
+<li>function body</li>
+</ul>
+<pre><code>fun_signature
+    fun_body
+</code></pre>
+<h3 id="parameter"><a class="header" href="#parameter">parameter</a></h3>
+<p>placeholder for variable</p>
+<ul>
+<li>default value <code>fun_name(para1=val1,…)</code></li>
+</ul>
+<h3 id="return-statement-return-return_value"><a class="header" href="#return-statement-return-return_value">return statement <code>return return_value</code></a></h3>
+<p>automatically return <code>None</code> if no return statement</p>
+<h2 id="call-function_nameargs"><a class="header" href="#call-function_nameargs">call <code>function_name(args,…)</code></a></h2>
+<h2 id="built-in-function"><a class="header" href="#built-in-function">built-in function</a></h2>
+<ul>
+<li>get the usage of the function <code>help(fun_name)</code></li>
+</ul>
+<h2 id="user-defined-function"><a class="header" href="#user-defined-function">user-defined function</a></h2>
+<ul>
+<li>define first and then call</li>
+<li>docstring—triple-quoted above function body</li>
+</ul>
+<hr />
+<h1 id="loop-1"><a class="header" href="#loop-1">loop</a></h1>
+<h2 id="while-loop"><a class="header" href="#while-loop">while loop</a></h2>
+<ul>
+<li>while statement<code>while test_condition:</code></li>
+<li>loop body</li>
+</ul>
+<h2 id="for-loop"><a class="header" href="#for-loop">for loop</a></h2>
+<ul>
+<li>for statement <code>for membership_expression:</code></li>
+<li>loop body</li>
+<li>else statement <code>else:</code> execute if not break</li>
+</ul>
+<h3 id="membership-expression"><a class="header" href="#membership-expression">membership expression</a></h3>
+<ul>
+<li><code>a in b</code></li>
+<li><code>i in range(n)</code></li>
+</ul>
+<h2 id="break-out"><a class="header" href="#break-out">break out</a></h2>
+<p>exit loop <code>break</code>
+next iteration <code>continue</code></p>
+<hr />
+<h1 id="scope"><a class="header" href="#scope">scope</a></h1>
+<ul>
+<li>local scope</li>
+<li>global scope</li>
+<li>enclosing scope</li>
+</ul>
+<h2 id="legb-rule"><a class="header" href="#legb-rule">LEGB rule</a></h2>
+<p>Local $\leq$ Enclosing $\leq$ Global $\leq$ Built-in</p>
+<ul>
+<li>violate scope <code>global var_name</code> let local access global</li>
+</ul>
+<hr />
+<h1 id="class-1"><a class="header" href="#class-1">class</a></h1>
+<p><code>class Class1:</code> <em>CamelCase</em>
+empty structure to contain data</p>
+<h2 id="dunder-method-__method1__"><a class="header" href="#dunder-method-__method1__">dunder method <code>.__method1__()</code></a></h2>
+<h2 id="local-method-_method1-naming-convention"><a class="header" href="#local-method-_method1-naming-convention">local method <code>_method1()</code> <em>naming convention</em></a></h2>
+<h2 id="instance-method"><a class="header" href="#instance-method">(instance) method</a></h2>
+<p>function in class</p>
+<ul>
+<li>change what is printed <code>.__str__()</code></li>
+</ul>
+<h2 id="instance"><a class="header" href="#instance">instance</a></h2>
+<p>object built from class</p>
+<h3 id="instantiate"><a class="header" href="#instantiate">instantiate</a></h3>
+<p><code>Class1(para1,…)</code></p>
+<h2 id="attribute"><a class="header" href="#attribute">attribute</a></h2>
+<p>mutable</p>
+<h3 id="class-attribute"><a class="header" href="#class-attribute">class attribute</a></h3>
+<p>variable with initial value every object of this class has, defined right under the class structure</p>
+<h3 id="instance-attribute"><a class="header" href="#instance-attribute">instance attribute</a></h3>
+<ul>
+<li>initialize method <code>.__init__()</code>
+<code>def __init__(self,para1,…):</code></li>
+</ul>
+<h3 id="access-object1attribute1-dot-notation"><a class="header" href="#access-object1attribute1-dot-notation">access <code>object1.attribute1</code> <em>dot notation</em></a></h3>
+<h2 id="inheritance"><a class="header" href="#inheritance">inheritance</a></h2>
+<ul>
+<li>create child class <code>class ChildClass1(ParentClass1):</code></li>
+<li>common ancestor <code>object</code></li>
+<li>check class and parent class of instance <code>isinstance(object1,Class1)</code></li>
+</ul>
+<h3 id="method-inheritance"><a class="header" href="#method-inheritance">method inheritance</a></h3>
+<ul>
+<li>completely overwrite parent method</li>
+<li>access parent (<em>direct, not grand</em>) method using <code>super().method1(arg1,…)</code></li>
+</ul>
+<hr />
+<h1 id="module"><a class="header" href="#module">module</a></h1>
+<h2 id="calling-module-import-module1"><a class="header" href="#calling-module-import-module1">calling module <code>import module1</code></a></h2>
+<p>variation (can be combined)</p>
+<ul>
+<li><code>import module1 as name1</code></li>
+<li><code>from module1 import name1,…</code></li>
+</ul>
+<h2 id="namespace-module1-in-module1name1"><a class="header" href="#namespace-module1-in-module1name1">namespace <code>module1</code> in <code>module1.name1</code></a></h2>
+<h3 id="specify-different-options-for-import-and-ran-directly"><a class="header" href="#specify-different-options-for-import-and-ran-directly">specify different options for import and ran directly</a></h3>
+<p><code>if __name__ == '__main__':</code></p>
+<hr />
+<h1 id="package-1"><a class="header" href="#package-1">package</a></h1>
+<p>a folder to group modules</p>
+<h2 id="must-have-module-__init__py"><a class="header" href="#must-have-module-__init__py"><em>must-have module</em> <code>__init__.py</code></a></h2>
+<p>for the package to be recognized</p>
+<h2 id="import-module-from-package-import-package1module1"><a class="header" href="#import-module-from-package-import-package1module1">import module from package <code>import package1.module1</code></a></h2>
+<ul>
+<li><code>from package1.module1 import name1</code></li>
+</ul>
+<h2 id="subpackage"><a class="header" href="#subpackage">subpackage</a></h2>
+<p>a package under a package</p>
+<h2 id="package-manager-1"><a class="header" href="#package-manager-1">package manager</a></h2>
+<p>automate install, update, remove of third-party package</p>
+<h3 id="de-facto-package-manager-pip"><a class="header" href="#de-facto-package-manager-pip"><em>de facto</em> package manager <code>pip</code></a></h3>
+<p><strong>virtual environment</strong> is used to make sure things work after some update</p>
+<hr />
+<h1 id="file-input-output"><a class="header" href="#file-input-output">file input/ output</a></h1>
+<h2 id="path-library-module-pathlib"><a class="header" href="#path-library-module-pathlib">path library module <code>pathlib</code></a></h2>
+<h3 id="path-object"><a class="header" href="#path-object"><code>Path</code> object</a></h3>
+<ul>
+<li>file or directory name <code>path1.name</code></li>
+<li>component of file name <code>path1.stem</code> <code>path1.suffix</code></li>
+<li>check existence <code>path1.exists()</code> → <em>boolean</em></li>
+<li>check if is file <code>path1.is_file()</code> → <em>boolean</em></li>
+<li>check if is directory <code>path1.is_dir()</code> → <em>boolean</em></li>
+</ul>
+<h4 id="create-2"><a class="header" href="#create-2">create</a></h4>
+<ul>
+<li>from string <code>Path(string1)</code></li>
+<li><code>Path.home()</code> or <code>Path.cwd()</code></li>
+<li><code>path1 / string1</code> or <code>path1 / path2</code></li>
+</ul>
+<h4 id="absolute-relative-path"><a class="header" href="#absolute-relative-path">absolute/ relative path</a></h4>
+<h5 id="absolute-path"><a class="header" href="#absolute-path">absolute path</a></h5>
+<p>start from root</p>
+<ul>
+<li>test <code>path1.is_absolute()</code> → <em>boolean</em></li>
+<li>access root directory <code>path1.anchor</code></li>
+</ul>
+<h5 id="relative-path"><a class="header" href="#relative-path">relative path</a></h5>
+<p>start from cwd</p>
+<ul>
+<li><code>path1.anchor</code> → <code>''</code></li>
+</ul>
+<h4 id="path-component"><a class="header" href="#path-component">path component</a></h4>
+<p>all level of directory from low to high <code>path1.parents</code> → <em>iterable</em>
+one level up <code>path1.parent</code> → <em>Path</em></p>
+<h4 id="manipulation"><a class="header" href="#manipulation">manipulation</a></h4>
+<ul>
+<li>make directory <code>path1.mkdir()</code>
+avoid error if directory already exist <code>path1.mkdir(exist_ok=True)</code>
+create all the parents directory if not exist <code>path1.mkdir(parents=True)</code></li>
+<li>make file <code>path1.touch()</code>
+trying to make file that already exist do nothing</li>
+<li>iterate all content of directory <code>path1.iterdir()</code> → <em>iterable</em></li>
+<li>move <code>src_path1.replace(des_path1)</code> <em>overwrite destination by default</em></li>
+<li>delete file <code>path1.unlink()</code>
+avoid error if not exist <code>path1.unlink(missing_ok=True)</code></li>
+</ul>
+<h4 id="search-for-file-in-directory"><a class="header" href="#search-for-file-in-directory">search for file in directory</a></h4>
+<p><code>path1.glob(pattern1)</code> → <em>iterable</em></p>
+<ul>
+<li>wildcard character. <code>*</code>—any number of character; <code>?</code>—1 character; <code>[abc]</code>—any included character</li>
+<li><strong>match</strong> to a pattern</li>
+<li>recursive matching
+use <code>**/</code> search in the subtree
+or use <code>path1.rglob(pattern1)</code></li>
+</ul>
+<h2 id="shutil-module"><a class="header" href="#shutil-module"><code>shutil</code> module</a></h2>
+<p>remove subtree <code>shuril.rmtree(path1)</code></p>
+<h2 id="os-module"><a class="header" href="#os-module"><code>os</code> module</a></h2>
+<p>both <code>pathlib</code> and <code>shutil</code> are implemented using <code>os</code></p>
+<hr />
+<h1 id="file"><a class="header" href="#file">file</a></h1>
+<h2 id="text-file"><a class="header" href="#text-file">text file</a></h2>
+<h3 id="character-encoding"><a class="header" href="#character-encoding">character encoding</a></h3>
+<h3 id="line-ending"><a class="header" href="#line-ending">line ending</a></h3>
+<ul>
+<li>carriage return <code>\r</code></li>
+<li>line feed <code>\n</code></li>
+</ul>
+<h3 id="csv-file"><a class="header" href="#csv-file">csv file</a></h3>
+<p><code>csv</code> module</p>
+<h4 id="write"><a class="header" href="#write">write</a></h4>
+<ul>
+<li>writer object <code>csv.writer(file1)</code>
+<ul>
+<li>write one line <code>writer1.writerow(list_of_str1)</code> add <code>','</code> between all item and <code>\n</code> at the end</li>
+<li>write multiple lines <code>writer1.writerows(list_of_list_of_str1)</code></li>
+</ul>
+</li>
+<li>dictionary writer object <code>csv.DictWriter(file1,fieldname=list_of_str1)</code>
+<ul>
+<li>write header <code>DictWriter1.writeheader()</code> → <em>int of character written</em></li>
+<li>write one line <code>DictWriter1.writerow(dict1)</code></li>
+<li>write multiple line<code>DictWriter1.writerows(list_of_dict1)</code>
+<em>it in fact work with any object with <code>write()</code> method</em></li>
+</ul>
+</li>
+</ul>
+<h4 id="read"><a class="header" href="#read">read</a></h4>
+<ul>
+<li>reader object <code>csv.reader(file1)</code> → <em>iterable of list of str</em></li>
+<li>dictionary reader object <code>csv.DictReader(file1)</code> → *iterable of dict of <code>header:val</code></li>
+</ul>
+<h2 id="binary-file"><a class="header" href="#binary-file">binary file</a></h2>
+<p>can only interact with byte directly</p>
+<h2 id="file-object"><a class="header" href="#file-object">file object</a></h2>
+<h3 id="create-3"><a class="header" href="#create-3">create</a></h3>
+<h4 id="path1open-from-pathlib"><a class="header" href="#path1open-from-pathlib"><code>path1.open()</code> from <code>pathlib</code></a></h4>
+<ul>
+<li>mode <code>path1.open(mode=mode1)</code>. <code>&quot;r&quot;</code>—read; <code>&quot;w&quot;</code>—write; <code>&quot;a&quot;</code>—append; <code>&quot;~b&quot;</code>—for binary file with <code>~</code> be one of the mentioned</li>
+<li>encoding <code>path1.open(encoding=encoding1)</code>. <code>&quot;ascii&quot;</code> <code>&quot;utf-8&quot;</code></li>
+</ul>
+<h4 id="openstring1-built-in"><a class="header" href="#openstring1-built-in"><code>open(string1)</code> built-in</a></h4>
+<p>exactly like <code>path1.open()</code> except using a <code>string</code></p>
+<h4 id="with-statement-with--as-file1"><a class="header" href="#with-statement-with--as-file1">with statement <code>with … as file1:</code></a></h4>
+<h3 id="close-file1close"><a class="header" href="#close-file1close">close <code>file1.close()</code></a></h3>
+<h3 id="read-1"><a class="header" href="#read-1">read</a></h3>
+<ul>
+<li>all at once <code>file1.read()</code> → <em>str</em></li>
+<li>line by line <code>file1.readlines()</code> → <em>iterable of str</em></li>
+</ul>
+<h3 id="write-1"><a class="header" href="#write-1">write</a></h3>
+<p>create file if not exist and parent exist</p>
+<h4 id="write-a-string"><a class="header" href="#write-a-string">write a string</a></h4>
+<p><code>file1.write(string1)</code> → <em>int of character written</em></p>
+<ul>
+<li>overwrite when in write mode</li>
+<li>append when in append mode</li>
+</ul>
+<h4 id="write-a-list-of-string"><a class="header" href="#write-a-list-of-string">write a list of string</a></h4>
+<p><code>file1.writelines(list1)</code></p>
+<hr />
+<h1 id="regular-expression-regex"><a class="header" href="#regular-expression-regex">regular expression (regex)</a></h1>
+<h2 id="meta-character"><a class="header" href="#meta-character">meta-character</a></h2>
+<h3 id="wild-card"><a class="header" href="#wild-card">wild card</a></h3>
+<ul>
+<li><code>*</code> any number of the character left to it, greedy, excluding <code>\n</code></li>
+<li><code>.</code> a character, excluding <code>\n</code></li>
+<li><code>*?</code> any number of the character left to it, non-greedy, excluding <code>\n</code></li>
+</ul>
+<h3 id="string-method-1"><a class="header" href="#string-method-1">string method</a></h3>
+<ul>
+<li>find all <code>re.findall(pattern_string1,checked_string1)</code> → <em>list of str</em></li>
+<li>not case sensitive <code>re.meth1(…,re.IGNORECASE)</code></li>
+<li><code>re.search(pattern_string1,checked_string1)</code> → <em>MatchObject</em>
+<ul>
+<li><code>match_object1.group()</code> → <em>the first greedy result</em></li>
+</ul>
+</li>
+<li>find replace <code>re.sub(pattern_string1,replace_string1,checked_string1)</code></li>
+</ul>
+<hr />
+<h1 id="mistake"><a class="header" href="#mistake">mistake</a></h1>
+<h2 id="error"><a class="header" href="#error">error</a></h2>
+<ul>
+<li>syntax error</li>
+<li>run-time error</li>
+</ul>
+<h2 id="try"><a class="header" href="#try">try</a></h2>
+<pre><code class="language-python">try:
+    execution1
+except error_name:
+    execution2
+finally:
+    execution3
+</code></pre>
+<ul>
+<li>multiple kinds of error <code>except (error_name1,error_name2):</code></li>
+<li>catch error individually using multiple <code>except</code></li>
+<li>bare exception clause <code>except:</code> catch any error</li>
+</ul>
+<hr />
+<h1 id="comment-1"><a class="header" href="#comment-1">comment</a></h1>
+<ul>
+<li>block comment
+<code># block comment</code></li>
+<li>in-line comment
+<code>code  # in-line comment</code></li>
+<li>document code
+docstring <code>&quot;&quot;&quot;description of this program&quot;&quot;&quot;</code></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="pip"><a class="header" href="#pip">pip</a></h1>
+<p>upgrade pip3</p>
+<pre><code>python3 -m pip install --upgrade pip
+</code></pre>
+<p>update all</p>
+<pre><code>pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U
+</code></pre>
+<p>check version</p>
+<pre><code>pip3 -V
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="mathematica"><a class="header" href="#mathematica">Mathematica</a></h1>
+<ul>
+<li>space is seen as $\times$</li>
+</ul>
+<h2 id="approximation"><a class="header" href="#approximation">approximation</a></h2>
+<p>exact result by default, to get approximation</p>
+<ul>
+<li>add a dot at the end <code>….</code></li>
+<li>use <code>N[]</code></li>
+</ul>
+<h2 id="complex-number-1"><a class="header" href="#complex-number-1">complex number</a></h2>
+<p>imaginary unit <code>I</code></p>
+<h2 id="variable-assignment"><a class="header" href="#variable-assignment">variable assignment</a></h2>
+<ul>
+<li>unassigned variable treated as symbol</li>
+<li>assigned variable work like in other language</li>
+<li>clear variable <code>Clear[]</code></li>
+</ul>
+<h1 id="data-structure-1"><a class="header" href="#data-structure-1">data structure</a></h1>
+<h2 id="list-"><a class="header" href="#list-">list `{…,…}</a></h2>
+<ul>
+<li>getter <code>list1[[index1]]</code></li>
+<li>slicing <code>list1[[start1;;end1]]</code></li>
+<li>show as list <code>FullForm[]</code></li>
+</ul>
+<h3 id="vector"><a class="header" href="#vector">vector</a></h3>
+<p>vector are represented as list</p>
+<ul>
+<li>dot <code>.</code>
+or <code>Dot[,]</code></li>
+<li>cross <code>esc</code> + <code>cross</code> + <code>esc</code>
+or <code>Cross[,]</code></li>
+</ul>
+<h3 id="matrix"><a class="header" href="#matrix">matrix</a></h3>
+<p>a list of list</p>
+<ul>
+<li>show as matrix <code>MatrixForm[]</code></li>
+</ul>
+<h2 id="hide-output-"><a class="header" href="#hide-output-">hide output <code>;</code></a></h2>
+<h2 id="force-simplify-simplify"><a class="header" href="#force-simplify-simplify">force simplify <code>Simplify[]</code></a></h2>
+<h1 id="math-function-1"><a class="header" href="#math-function-1">math function</a></h1>
+<h2 id="define-fvar1_"><a class="header" href="#define-fvar1_">define <code>f[var1_]:=…</code></a></h2>
+<h2 id="calculate-f"><a class="header" href="#calculate-f">calculate <code>f[…]</code></a></h2>
+<h3 id="integration"><a class="header" href="#integration">integration</a></h3>
+<ul>
+<li>indefinite <code>Integrate[fun1[var1],var1]</code></li>
+<li>definite <code>Integrate[fun1[var1],{var1,start1,end1}]</code></li>
+<li>numerical <code>NIntegrate</code></li>
+</ul>
+<h1 id="equation"><a class="header" href="#equation">equation</a></h1>
+<h2 id="polynomial"><a class="header" href="#polynomial">polynomial</a></h2>
+<p><code>SolveValue[]</code> gives precise solution
+<code>NSolveValue[]</code> gives approximate solution</p>
+<h2 id="non-polynomial"><a class="header" href="#non-polynomial">non-polynomial</a></h2>
+<p><code>FindRoot[]</code> uses Newton's Method</p>
+<h1 id="plot"><a class="header" href="#plot">plot</a></h1>
+<p>search help</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="matlab"><a class="header" href="#matlab">MATLAB</a></h1>
+<h1 id="syntax"><a class="header" href="#syntax">syntax</a></h1>
+<h2 id="number-1"><a class="header" href="#number-1">number</a></h2>
+<h3 id="special-variable"><a class="header" href="#special-variable">special variable</a></h3>
+<ul>
+<li>most recent answer <code>ans</code></li>
+<li>accuracy of floating-point precision <code>eps</code></li>
+</ul>
+<h3 id="special-constant"><a class="header" href="#special-constant">special constant</a></h3>
+<ul>
+<li>not a number <code>Nan</code></li>
+<li>$\infty$ <code>Inf</code></li>
+<li>$\sqrt{-1}$ <code>i</code> or <code>j</code></li>
+<li>$\pi$ <code>pi</code></li>
+</ul>
+<h2 id="numerical-operator-1"><a class="header" href="#numerical-operator-1">numerical operator</a></h2>
+<ul>
+<li>plus <code>+</code> minus <code>-</code></li>
+<li>matrix multiplication <code>*</code></li>
+<li>array multiplication <code>.*</code></li>
+<li>matrix exponential <code>^</code></li>
+<li>array exponential <code>.^</code></li>
+<li>left-division <code>\</code></li>
+<li>array left-division <code>.\</code></li>
+<li>right-division <code>/</code></li>
+<li>array right-division <code>./</code></li>
+<li>square root <code>sqrt()</code></li>
+</ul>
+<h2 id="character-syntax"><a class="header" href="#character-syntax">character syntax</a></h2>
+<ul>
+<li>regularly spaced elements or entire row or column <code>:</code></li>
+<li>enclose function argument, array index; override precedence <code>()</code></li>
+<li>enclosure array element <code>[]</code></li>
+<li>decimal point <code>.</code></li>
+<li>line-continuation <code>...</code></li>
+<li>separate statement and element in a row <code>,</code></li>
+<li>quote sign and transpose <code>_</code></li>
+<li>non-conjugated transpose <code>._</code></li>
+</ul>
+<h3 id="semicolon-"><a class="header" href="#semicolon-">semicolon <code>;</code></a></h3>
+<ul>
+<li>end of statement</li>
+<li>hide output of statement</li>
+</ul>
+<h3 id="percentage-sign-"><a class="header" href="#percentage-sign-">percentage sign <code>%</code></a></h3>
+<ul>
+<li>inline comment <code>% comment</code></li>
+<li>multiline comment</li>
+</ul>
+<pre><code>% {
+    comment
+% }
+</code></pre>
+<h2 id="save-and-load"><a class="header" href="#save-and-load">save and load</a></h2>
+<ul>
+<li>save all variable in workspace as <code>.mat</code> file <code>save file_name</code></li>
+<li>load the file <code>load file_name</code></li>
+</ul>
+<h1 id="variable-2"><a class="header" href="#variable-2">variable</a></h1>
+<h2 id="assign"><a class="header" href="#assign">assign</a></h2>
+<ul>
+<li>all variable is either array or matrix</li>
+<li>no <code>null</code> type</li>
+<li>unassigned value are assigned to <code>ans</code></li>
+<li>long assignment</li>
+</ul>
+<pre><code>var1 = command1 ...
+    command2
+</code></pre>
+<ul>
+<li>declare global variable <code>global</code></li>
+</ul>
+<h3 id="vector-1"><a class="header" href="#vector-1">vector</a></h3>
+<p>1D array</p>
+<ul>
+<li>row vector <code>[num1 …]</code></li>
+<li>column vector <code>[row1;…]</code></li>
+</ul>
+<h3 id="matrix-1"><a class="header" href="#matrix-1">matrix</a></h3>
+<p>2D array
+<code>[r1c1 r1c2 …; r2c1 …]</code></p>
+<h4 id="solve-avecxb"><a class="header" href="#solve-avecxb">solve $A\vec{x}=B$</a></h4>
+<p><code>x = A\B</code></p>
+<h2 id="variable-management"><a class="header" href="#variable-management">variable management</a></h2>
+<ul>
+<li>display all variable name <code>who</code>
+<ul>
+<li>with information <code>whos</code></li>
+</ul>
+</li>
+<li>delete all variable <code>clear</code>
+<ul>
+<li>delete variable <code>var1</code> <code>clear var1</code></li>
+</ul>
+</li>
+<li>check existence of variable <code>exist var1</code></li>
+</ul>
+<h2 id="session-management"><a class="header" href="#session-management">session management</a></h2>
+<h3 id="shell-environment"><a class="header" href="#shell-environment">shell environment</a></h3>
+<ul>
+<li>open shell <code>matlab -nodisplay -nodesktop</code></li>
+<li>close shell <code>quit</code> or <code>exit</code></li>
+</ul>
+<h3 id="file-system"><a class="header" href="#file-system">file system</a></h3>
+<ul>
+<li>shell script <code>cd</code> <code>dir</code> <code>delete</code> <code>pwd</code></li>
+</ul>
+<h2 id="format-format-arg1"><a class="header" href="#format-format-arg1">format <code>format arg1</code></a></h2>
+<ul>
+<li>short format (default, 4 decimal place) <code>format short</code></li>
+<li>display 16 decimal place <code>format long</code></li>
+<li>display 2 decimal place <code>format bank</code></li>
+<li>display in exponential form <code>format arg1 e</code></li>
+<li>display as the closest rational form <code>format rat</code></li>
+</ul>
+<h2 id="find-help"><a class="header" href="#find-help">find help</a></h2>
+<ul>
+<li>help topic <code>help</code></li>
+<li>search help entry <code>lookfor</code></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="rust"><a class="header" href="#rust">Rust</a></h1>
+<h1 id="function-fn"><a class="header" href="#function-fn">function <code>fn</code></a></h1>
+<h2 id="main-function"><a class="header" href="#main-function">main function</a></h2>
+<p><code>fn main(){}</code></p>
+<h2 id="associated-function"><a class="header" href="#associated-function">associated function</a></h2>
+<p>a function that is implemented on a type</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>`type1::fun1()`
+<span class="boring">}
+</span></code></pre></pre>
+<h2 id="method-1"><a class="header" href="#method-1">method</a></h2>
+<ul>
+<li>call method on instance</li>
+</ul>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>instance1
+    .method1();
+<span class="boring">}
+</span></code></pre></pre>
+<h1 id="variable-3"><a class="header" href="#variable-3">variable</a></h1>
+<p>immutable by default</p>
+<h2 id="declare"><a class="header" href="#declare">declare</a></h2>
+<p><code>let</code></p>
+<ul>
+<li>declare mutable variable <code>let mut</code></li>
+</ul>
+<h1 id="type"><a class="header" href="#type">type</a></h1>
+<h2 id="string-2"><a class="header" href="#string-2">String</a></h2>
+<p>new string <code>String::new()</code></p>
+<h2 id="str"><a class="header" href="#str">str</a></h2>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>&quot;str literal&quot; // str literal
+r#&quot;str
+literal&quot;# /* raw str
+literal */
+<span class="boring">}
+</span></code></pre></pre>
+<h2 id="enumeration"><a class="header" href="#enumeration">enumeration</a></h2>
+<h3 id="variant"><a class="header" href="#variant">variant</a></h3>
+<h2 id="result-result"><a class="header" href="#result-result">result <code>Result</code></a></h2>
+<p>enumeration with variant <code>Ok</code> or <code>Err</code></p>
+<h3 id="ok-variant"><a class="header" href="#ok-variant"><code>Ok</code> variant</a></h3>
+<p>indicate successful run, contain result</p>
+<h3 id="err-variant"><a class="header" href="#err-variant"><code>Err</code> variant</a></h3>
+<p>indicate failure, contain reason</p>
+<h3 id="expect-method"><a class="header" href="#expect-method"><code>.expect()</code> method</a></h3>
+<p>crash on <code>Err</code> and display argument</p>
+<h1 id="statement"><a class="header" href="#statement">statement</a></h1>
+<p>represent instruction for action
+end with <code>;</code></p>
+<h1 id="expression"><a class="header" href="#expression">expression</a></h1>
+<p>represent a value
+end without <code>;</code>
+can be used as return statement</p>
+<h1 id="reference"><a class="header" href="#reference">reference</a></h1>
+<ul>
+<li>refer to variable <code>&amp;var1</code></li>
+<li>mutable reference <code>&amp;mut var1</code></li>
+</ul>
+<h1 id="input-output-use-stdio"><a class="header" href="#input-output-use-stdio">input/ output <code>use std::io</code></a></h1>
+<h2 id="input-2"><a class="header" href="#input-2">input</a></h2>
+<ul>
+<li><code>io::stdin()</code> → <em>an instance of type <code>std::io::Stdin</code></em></li>
+<li>standard input handle type <code>std::io::Stdin</code></li>
+</ul>
+<h1 id="macro"><a class="header" href="#macro">macro</a></h1>
+<h2 id="print-println"><a class="header" href="#print-println">print <code>println!()</code></a></h2>
+<h1 id="comment-2"><a class="header" href="#comment-2">comment</a></h1>
+<p>inline comment <code>//</code></p>
+<h1 id="package-2"><a class="header" href="#package-2">package</a></h1>
+<h2 id="crate"><a class="header" href="#crate">crate</a></h2>
+<h3 id="root-convention"><a class="header" href="#root-convention">root convention</a></h3>
+<ul>
+<li>binary crate root <code>src/main.rs</code></li>
+<li>library crate root <code>src/lib.rs</code></li>
+</ul>
+<p>both same name as package</p>
+<h2 id="import-crate-use"><a class="header" href="#import-crate-use">import crate <code>use</code></a></h2>
+<ul>
+<li>absolute path <code>crate::…</code></li>
+<li>relative path <code>self::…</code></li>
+</ul>
+<h3 id="import-function"><a class="header" href="#import-function">import function</a></h3>
+<p>use the parent path</p>
+<h3 id="import-struct-or-enum"><a class="header" href="#import-struct-or-enum">import struct or enum</a></h3>
+<p>use the whole path</p>
+<h3 id="alias"><a class="header" href="#alias">alias</a></h3>
+<p><code>use … as …</code></p>
+<h3 id="re-exporting"><a class="header" href="#re-exporting">re-exporting</a></h3>
+<p><code>pub use …</code></p>
+<h3 id="nesting-path"><a class="header" href="#nesting-path">nesting path</a></h3>
+<ul>
+<li>both are children <code>use common_path::{path1,path2…}</code></li>
+<li>parent and children <code>use common_path::{self,path1…}</code></li>
+</ul>
+<h3 id="glob-operator-"><a class="header" href="#glob-operator-">glob operator <code>*</code></a></h3>
+<p>brings everything into scope</p>
+<h2 id="trait"><a class="header" href="#trait">trait</a></h2>
+<h3 id="define"><a class="header" href="#define">define</a></h3>
+<p><code>pub trait Trait1 {…}</code></p>
+<h3 id="trait-method"><a class="header" href="#trait-method">trait method</a></h3>
+<ul>
+<li>
+<p>empty method</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>`fn fun1(&amp;self,…)-&gt;Type1;`
+<span class="boring">}
+</span></code></pre></pre>
+</li>
+<li>
+<p>default implementation</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>`fn fun1(&amp;self,…)-&gt;Type1 {…}` 
+<span class="boring">}
+</span></code></pre></pre>
+</li>
+</ul>
+<h3 id="implement-trait-on-type"><a class="header" href="#implement-trait-on-type">implement trait on type</a></h3>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>`impl Trait1 for Type1 {…}`
+<span class="boring">}
+</span></code></pre></pre>
+<h4 id="implement-trait-method"><a class="header" href="#implement-trait-method">implement trait method</a></h4>
+<ul>
+<li>
+<p>use default implementation—do nothing</p>
+</li>
+<li>
+<p>override implementation</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>`fn fun1(&amp;self,…)-&gt;Type1 {…}`
+<span class="boring">}
+</span></code></pre></pre>
+</li>
+</ul>
+<h3 id="use-trait-as-parameter"><a class="header" href="#use-trait-as-parameter">use trait as parameter</a></h3>
+<ul>
+<li>
+<p>shorthand</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>`pub fn fun1(para1: &amp;impl Trait1) {…}` 
+<span class="boring">}
+</span></code></pre></pre>
+</li>
+<li>
+<p>trait bound syntax <code>pub fn fun1&lt;T: Trait1&gt;(para1: &amp;T) {…}</code></p>
+</li>
+</ul>
+<h4 id="multiple-trait-bound-"><a class="header" href="#multiple-trait-bound-">multiple trait bound <code>+</code></a></h4>
+<ul>
+<li>shorthand <code>pub fn fun1(para1: &amp;(impl Trait1 + Trait2)) {…}</code></li>
+<li>trait bound syntax <code>pub fn fun1&lt;T: Trait1 + Trait2&gt;(para1: &amp;T) {…}</code></li>
+</ul>
+<h4 id="where-clause"><a class="header" href="#where-clause"><code>where</code> clause</a></h4>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>fn fun1&lt;T,U&gt;(t: &amp;T, u: &amp;U)-&gt;Type1
+    where T: Trait1 + Trait2,
+          U: Trait3 + Trait4
+{…}
+<span class="boring">}
+</span></code></pre></pre>
+<h3 id="return-type-implement-trait"><a class="header" href="#return-type-implement-trait">return type implement trait</a></h3>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>`fn fun1(…)-&gt;impl Trait1 {…}`
+<span class="boring">}
+</span></code></pre></pre>
+<h1 id="closure"><a class="header" href="#closure">closure</a></h1>
+<p>anonymous function stored as variable that can capture its environment</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>`let closure1 = |var1,…| {return_value};`
+<span class="boring">}
+</span></code></pre></pre>
+<p><em>implement <code>FnOnce</code> trait</em></p>
+<ul>
+<li>more overhead than function</li>
+<li>automatically detect and decide type and cannot have multiple set of them</li>
+</ul>
+<h2 id="type-annotation"><a class="header" href="#type-annotation">type annotation</a></h2>
+<p><code>|var1: type1,…| -&gt; return_type {return_value};</code></p>
+<h2 id="storing-closure"><a class="header" href="#storing-closure">storing closure</a></h2>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>struct Store1&lt;T&gt;
+where
+    T: Fn(type_for_var1,…) -&gt; return_type,
+{
+    attr1: T,
+    …
+}
+<span class="boring">}
+</span></code></pre></pre>
+<ul>
+<li>use a <code>Option&lt;…&gt;</code></li>
+<li>use a hashmap</li>
+</ul>
+<h2 id="capture-environment"><a class="header" href="#capture-environment">capture environment</a></h2>
+<ul>
+<li>
+<p>borrow by default <em>implement <code>Fn</code> trait</em>,
+mutable as needed <em>implement <code>FnMut</code> trait</em></p>
+</li>
+<li>
+<p>adopt ownership using <code>move</code></p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>`move |var1,…| {return_value}`
+<span class="boring">}
+</span></code></pre></pre>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="r-lang"><a class="header" href="#r-lang">R lang</a></h1>
+<h1 id="naming"><a class="header" href="#naming">naming</a></h1>
+<h2 id="character-allowed"><a class="header" href="#character-allowed">character allowed</a></h2>
+<p>letter, <code>.</code>, <code>_</code></p>
+<ul>
+<li>cannot start with <code>_</code></li>
+<li>cannot start with <code>..</code></li>
+</ul>
+<h1 id="basic-syntax-1"><a class="header" href="#basic-syntax-1">basic syntax</a></h1>
+<h2 id="command-separation"><a class="header" href="#command-separation">command separation</a></h2>
+<p><code>;</code> or <code>\n</code></p>
+<h2 id="comment-3"><a class="header" href="#comment-3">comment</a></h2>
+<p><code>#</code> last to the end of line</p>
+<h2 id="assignment-1"><a class="header" href="#assignment-1">assignment</a></h2>
+<p><code>=</code>
+<code>assignee &lt;- assigner</code>
+<code>assigner -&gt; assignee</code></p>
+<h1 id="function-2"><a class="header" href="#function-2">function</a></h1>
+<h2 id="execute-from-r-file"><a class="header" href="#execute-from-r-file">execute from <code>.R</code> file</a></h2>
+<p><code>source(&quot;filename.R&quot;)</code></p>
+<h2 id="manipulate-data-storage"><a class="header" href="#manipulate-data-storage">manipulate data storage</a></h2>
+<h3 id="show-all-object"><a class="header" href="#show-all-object">show all object</a></h3>
+<p><code>objects()</code></p>
+<h3 id="remove-object"><a class="header" href="#remove-object">remove object</a></h3>
+<p><code>rm(obj1,obj2,…)</code></p>
+<h3 id="store-to-disk"><a class="header" href="#store-to-disk">store to disk</a></h3>
+<p>choose <code>y</code> when quit <code>q()</code>
+stored as <code>.RData</code></p>
+<h1 id="data-structure-2"><a class="header" href="#data-structure-2">data structure</a></h1>
+<h2 id="vector-2"><a class="header" href="#vector-2">vector</a></h2>
+<p><code>c(ele1,ele2,…)</code>
+can also take vector as element, will expand</p>
+<h1 id="package-managing"><a class="header" href="#package-managing">package managing</a></h1>
+<h2 id="install-package"><a class="header" href="#install-package">install package</a></h2>
+<p><code>install.packages(&quot;package_name&quot;)</code></p>
+<ul>
+<li>install multiple packages
+use a vector
+<code>install.packages(c(&quot;package1&quot;,&quot;package2&quot;,…))</code></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="shell"><a class="header" href="#shell">Shell</a></h1>
+<p>switch user to root and do</p>
+<pre><code class="language-shell">sudo
+</code></pre>
+<h2 id="file--directory"><a class="header" href="#file--directory">file &amp; directory</a></h2>
+<p>print working directory</p>
+<pre><code class="language-shell">pwd
+</code></pre>
+<p>list file in <code>path</code></p>
+<pre><code class="language-shell">ls [path]
+</code></pre>
+<p>change working directory to <code>path</code>, by default to <code>~</code></p>
+<pre><code class="language-shell">cd [path]
+</code></pre>
+<p>go up one directory</p>
+<pre><code class="language-shell">cd ..
+</code></pre>
+<p>go back to the last directory</p>
+<pre><code class="language-shell">cd -
+</code></pre>
+<p>copy one file to a given directory [and name it as instructed
+(the new name cannot be a local folder’s name,
+or it will just copy it there)]</p>
+<pre><code class="language-shell">cp &lt;original file path&gt; &lt;new copy’s parent folder path&gt;[/&lt;new copy’s name&gt;]
+</code></pre>
+<p>copy recursively one folder to a given directory<br />
+if the new directory does not exist,
+the command will create it</p>
+<pre><code class="language-shell">cp -r &lt;original folder path&gt; &lt;new copy’s parent folder path&gt;
+</code></pre>
+<p>remove one file</p>
+<pre><code class="language-shell">rm &lt;file path&gt;
+</code></pre>
+<p>remove recursively one folder</p>
+<pre><code class="language-shell">rm -r &lt;folder path&gt;
+</code></pre>
+<p>remove one empty folder</p>
+<pre><code class="language-shell">rmdir &lt;folder path&gt;
+</code></pre>
+<p>make directory</p>
+<pre><code class="language-shell">mkdir
+</code></pre>
+<p>run the file</p>
+<pre><code class="language-shell">./&lt;file name&gt;
+</code></pre>
+<h2 id="system-information"><a class="header" href="#system-information">system information</a></h2>
+<p>display [human-readable (i.e., in MB, GB, etc.)] file system disk space usage</p>
+<pre><code class="language-shell">df [-h]
+</code></pre>
+<p>disk usage for this directory</p>
+<pre><code class="language-shell">du [path]
+</code></pre>
+<p>free and used memory in the system [in megabytes]</p>
+<pre><code class="language-shell">free [-m]
+</code></pre>
+<p>table of processes</p>
+<pre><code class="language-shell">top
+</code></pre>
+<p>print all system information: name, kernel, etc.</p>
+<pre><code class="language-shell">uname -a
+</code></pre>
+<p>print version information for the linux release</p>
+<pre><code class="language-shell">lsb_release -a
+</code></pre>
+<h2 id="user"><a class="header" href="#user">user</a></h2>
+<p>add a new user</p>
+<pre><code class="language-shell">adduser &lt;new user’s name&gt;
+</code></pre>
+<p>assign password to the user</p>
+<pre><code class="language-shell">passwd &lt;user name&gt;
+</code></pre>
+<h2 id="manual"><a class="header" href="#manual">manual</a></h2>
+<p>manual for the command</p>
+<pre><code class="language-shell">man &lt;command&gt;
+</code></pre>
+<p>introduction to linux command-line</p>
+<pre><code class="language-shell">man intro
+</code></pre>
+<p>search in manual what is <code>&lt;string&gt;</code></p>
+<pre><code class="language-shell">whatis -r &lt;string&gt;
+</code></pre>
+<h2 id="history"><a class="header" href="#history">history</a></h2>
+<p>show command you input with numbers before them</p>
+<pre><code class="language-shell">history
+</code></pre>
+<p><kbd>Ctrl</kbd> + <kbd>R</kbd></p>
+<p>search for command you input</p>
+<h2 id="cursor-navigation"><a class="header" href="#cursor-navigation">cursor navigation</a></h2>
+<p><kbd>Ctrl</kbd> + <kbd>A</kbd>/ <kbd>Home</kbd></p>
+<p>move cursor to start of line</p>
+<p><kbd>Ctrl</kbd> + <kbd>E</kbd>/ <kbd>End</kbd></p>
+<p>move cursor to end of line</p>
+<p><kbd>Ctrl</kbd> + <kbd>B</kbd></p>
+<p>move cursor to beginning of word</p>
+<p><kbd>Ctrl</kbd> + <kbd>K</kbd></p>
+<p>delete to the end of line</p>
+<p><kbd>Ctrl</kbd> + <kbd>U</kbd></p>
+<p>delete to start of line</p>
+<p><kbd>Ctrl</kbd> + <kbd>W</kbd></p>
+<p>delete word</p>
+<p><kbd>Alt</kbd> + <kbd>B</kbd></p>
+<p>go back one word</p>
+<p><kbd>Alt</kbd> + <kbd>F</kbd></p>
+<p>go forward one word</p>
+<p><kbd>Alt</kbd> + <kbd>C</kbd></p>
+<p>capitalize the letter and move cursor to end of word</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="server"><a class="header" href="#server">Server</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="nfs"><a class="header" href="#nfs">NFS</a></h1>
+<p>enable nfs</p>
+<pre><code class="language-shell">systemctl enable nfs-server
+</code></pre>
+<p>add directory to export:
+edit <code>etc/exports</code></p>
+<pre><code class="language-text">directory_to_export ip_to_allow(rw,insecure)
+</code></pre>
+<p>export all specified directory</p>
+<pre><code class="language-shell">sudo exportfs -arv
+</code></pre>
+<p>mount on macOS</p>
+<pre><code class="language-shell">sudo mount -t nfs -v source target
+</code></pre>
+<p>automatically mount on macOS</p>
+<ol>
+<li>
+<p>open <code>/etc/fstab</code> with</p>
+<pre><code class="language-shell">sudo vifs
+</code></pre>
+</li>
+<li>
+<p>add into the file:</p>
+<pre><code>source /System/Volumes/Data/../Data/Volumes/target_name nfs rw,nolockd,resvport,hard,bg,intr,tcp,nfc,rsize=65536,wsize=65536
+</code></pre>
+<ul>
+<li>
+<p>for pre-Catalina, it should be</p>
+<pre><code>source /../Volumes/target_name nfs rw,nolockd,resvport,hard,bg,intr,tcp,nfc,rsize=65536,wsize=65536
+</code></pre>
+</li>
+</ul>
+</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ssh"><a class="header" href="#ssh">SSH</a></h1>
+<p>kitty ssh</p>
+<pre><code class="language-shell">kitty +kitten ssh …
+</code></pre>
+<p>port forwarding</p>
+<pre><code class="language-shell">ssh -N -L 8080:127.0.0.1:8080 username@host
+</code></pre>
+<h2 id="rsync"><a class="header" href="#rsync">rsync</a></h2>
+<p>general usage
+<code>-P</code> give a progress bar</p>
+<pre><code class="language-shell">rsync -P source destination
+</code></pre>
+<p>copy file from ssh server to client</p>
+<pre><code class="language-shell">rsync -P username@host:dir local_dir
+</code></pre>
+<p>copy file from client to ssh server</p>
+<pre><code class="language-shell">rsync -P local_dir username@host:dir
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="text-editor"><a class="header" href="#text-editor">Text Editor</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="vim"><a class="header" href="#vim">Vim</a></h1>
+<h1 id="movement"><a class="header" href="#movement">movement</a></h1>
+<h2 id="arrow-equivalent"><a class="header" href="#arrow-equivalent">arrow equivalent</a></h2>
+<blockquote>
+<pre><code>       ↑
+ ← h j k l →
+     ↓
+</code></pre>
+</blockquote>
+<h2 id="by-word"><a class="header" href="#by-word">by word</a></h2>
+<h3 id="to-start-of-word"><a class="header" href="#to-start-of-word">to start of word</a></h3>
+<blockquote>
+<p>&lt;–b– ○ –w–&gt;
+word word word</p>
+</blockquote>
+<h3 id="to-end-of-word"><a class="header" href="#to-end-of-word">to end of word</a></h3>
+<blockquote>
+<p>ㅤㅤ&lt;–ge–○ –e–&gt;
+word word word</p>
+</blockquote>
+<h3 id="by-word-1"><a class="header" href="#by-word-1">by WORD</a></h3>
+<p>same as <strong>by word</strong> but capitalize the last letter
+a <strong>WORD</strong> contains any consecutive non-whitespace character</p>
+<h2 id="search"><a class="header" href="#search">search</a></h2>
+<h3 id="search-character"><a class="header" href="#search-character">search character</a></h3>
+<p>type a character in replace of <code>w</code> below</p>
+<h4 id="move-to-result"><a class="header" href="#move-to-result">move to result</a></h4>
+<blockquote>
+<p>○–fw–&gt;
+word word</p>
+</blockquote>
+<h4 id="move-to-left-of-result"><a class="header" href="#move-to-left-of-result">move to left of result</a></h4>
+<blockquote>
+<p>○–tw–&gt;
+word sword</p>
+</blockquote>
+<h4 id="backward"><a class="header" href="#backward">backward</a></h4>
+<p>capitalize the letter</p>
+<h3 id="search-expression"><a class="header" href="#search-expression">search expression</a></h3>
+<ul>
+<li><code>/…</code> + <code>enter</code> search forward</li>
+<li><code>?…</code> + <code>enter</code> search backward</li>
+</ul>
+<h4 id="repeat"><a class="header" href="#repeat">repeat</a></h4>
+<ul>
+<li><code>n</code> next match</li>
+<li><code>N</code> last match</li>
+</ul>
+<h4 id="expression-1"><a class="header" href="#expression-1">expression</a></h4>
+<ul>
+<li>exact</li>
+<li>regex</li>
+</ul>
+<h2 id="end-of-line"><a class="header" href="#end-of-line">end of line</a></h2>
+<h3 id="the-end-character"><a class="header" href="#the-end-character">the end character</a></h3>
+<blockquote>
+<p>&lt;–0– ○ –$–&gt;
+ㅤㅤlineㅤㅤ</p>
+</blockquote>
+<h3 id="the-end-non-whitespace-character"><a class="header" href="#the-end-non-whitespace-character">the end non-whitespace character</a></h3>
+<blockquote>
+<p>ㅤㅤ&lt;–^–– ○ ––g_–&gt;
+ㅤㅤnot whitespaceㅤㅤ</p>
+</blockquote>
+<h2 id="by-chunk"><a class="header" href="#by-chunk">by chunk</a></h2>
+<h3 id="by-paragraph"><a class="header" href="#by-paragraph">by paragraph</a></h3>
+<blockquote>
+<p>paragraph 1
+stuff
+&lt;–––– { ––––-+
+paragraph 2 ○
+more stuff ㅤ|
+&lt;–––– } ––––-+
+paragraph 3</p>
+</blockquote>
+<h3 id="by-page"><a class="header" href="#by-page">by page</a></h3>
+<h4 id="half-page"><a class="header" href="#half-page">half page</a></h4>
+<ul>
+<li>up <code>^u</code></li>
+<li>down <code>^d</code></li>
+</ul>
+<h4 id="whole-page"><a class="header" href="#whole-page">whole page</a></h4>
+<ul>
+<li>up <code>^b</code></li>
+<li>down <code>^f</code></li>
+</ul>
+<h1 id="count"><a class="header" href="#count">count</a></h1>
+<p><code>number</code> + <code>keys</code> is the same as pressing <code>keys</code> for <code>number</code> times</p>
+<h1 id="write-as-root"><a class="header" href="#write-as-root">write as root</a></h1>
+<pre><code class="language-text">:w !sudo tee %
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><pre><code>                         StevenHe Public License
+                      Version 1.0.2, 25 April 2022
+</code></pre>
+<p>Copyright (c) 2022 Sichang He (Steven)
+All rights reserved.</p>
+<pre><code>                               Basic Term
+</code></pre>
+<p>THIS LICENSE SHALL BE INCLUDED IN ALL COPIES OR SUBSTANTIAL PORTIONS OF THE
+SOFTWARE.</p>
+<pre><code>                          Terms and Conditions
+</code></pre>
+<ol>
+<li>
+<p>Definition of &quot;Commercial Use&quot;</p>
+<p>Any activities that involve, directly or indirectly, the subject of the
+activity gaining financial benefits or any benefits in any other form that
+have the same effects as financial benefits, shall be considered
+&quot;Commercial Use&quot;.
+&quot;Commercial Use&quot; includes but is not limited to:</p>
+<p>Directly selling anything for benefits, including but not limited to
+financial payment, gifts, partnerships, and/or services.</p>
+<p>Use to endorse or promote activities that involve benefits or objects
+related to such activities, including but not limited to endorsing or
+promoting commercial activities, commercial products, payed services,
+and/or brands.</p>
+</li>
+<li>
+<p>Definition of &quot;Non-commercial Use&quot;</p>
+<p>&quot;Non-commercial Use&quot; shall be considered the opposite of &quot;Commercial Use&quot;.
+&quot;Non-commercial Use&quot; does not involve any financial benefits or any
+benefits in any other form that have the same effects as financial
+benefits to the subject of the activities.
+&quot;Non-commercial Use&quot; includes but is not limited to:</p>
+<p>Use for any personal purpose, including learning, or solving personal
+problems.</p>
+<p>Use for free and open-source software licensed under a license approved
+by the Open Source Initiative <a href="https://opensource.org">https://opensource.org</a>.</p>
+</li>
+<li>
+<p>Permission is hereby granted, free of charge, to any person obtaining a
+copy of this software and associated documentation files (the &quot;Software&quot;),
+for Non-commercial Use, to deal with this software without restriction,
+including without limitation the rights to use, copy, modify, merge,
+publish, and/or distribute copies of the Software, and to permit persons
+to whom the Software is furnished to do so, provided that they follow the
+Basic Term.</p>
+</li>
+<li>
+<p>Any use of the Software for &quot;Commercial use&quot; is subject to copyright laws.
+Please contact the author <a href="mailto:sichang.he@dukekunshan.edu.cn">sichang.he@dukekunshan.edu.cn</a> for permissions.</p>
+</li>
+</ol>
+<p>THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+                </main>
+
+                <nav class="nav-wrapper" aria-label="Page navigation">
+                    <!-- Mobile navigation buttons -->
+                    <div style="clear: both"></div>
+                </nav>
+            </div>
+        </div>
+
+        <nav class="nav-wide-wrapper" aria-label="Page navigation">
+        </nav>
+
+    </div>
+
+    <script type="text/javascript">
+        window.playground_copyable = true;
+    </script>
+    <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+
+    <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+    <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+    <!-- Custom JS scripts -->
+</body>
+
+</html>

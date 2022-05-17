@@ -1,0 +1,285 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+
+<head>
+    <!-- Book generated using mdBook -->
+    <meta charset="UTF-8">
+    <title>Vim - Steven&#x27;s Notes</title>
+    <!-- Custom HTML head -->
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff" />
+
+    <link rel="icon" href="../favicon.svg">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/chrome.css">
+    <link rel="stylesheet" href="../css/print.css" media="print">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+    <link rel="stylesheet" href="../fonts/fonts.css">
+
+    <!-- Highlight.js Stylesheets -->
+    <link rel="stylesheet" href="../highlight.css">
+    <link rel="stylesheet" href="../tomorrow-night.css">
+    <link rel="stylesheet" href="../ayu-highlight.css">
+
+    <!-- Custom theme stylesheets -->
+    <!-- MathJax -->
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: {inlineMath: [["$","$"]]} });
+    </script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+
+<body>
+    <script type="text/javascript">
+        // Provide site root to javascript
+        var path_to_root = "../";
+        var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+
+        // Work around some values being stored in localStorage wrapped in quotes
+        try {
+            var theme = localStorage.getItem('mdbook-theme');
+            var sidebar = localStorage.getItem('mdbook-sidebar');
+
+            if (theme.startsWith('"') && theme.endsWith('"')) {
+                localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+            }
+
+            if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+            }
+        } catch (e) { }
+
+        // Set the theme before any content is loaded, prevents flash
+        var theme;
+        try { theme = localStorage.getItem('mdbook-theme'); } catch (e) { }
+        if (theme === null || theme === undefined) { theme = default_theme; }
+        var html = document.querySelector('html');
+        html.classList.remove('no-js')
+        html.classList.remove('light')
+        html.classList.add(theme);
+        html.classList.add('js');
+
+        // Hide / unhide sidebar before it is displayed
+        var html = document.querySelector('html');
+        var sidebar = 'hidden';
+        if (document.body.clientWidth >= 1080) {
+            try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch (e) { }
+            sidebar = sidebar || 'visible';
+        }
+        html.classList.remove('sidebar-visible');
+        html.classList.add("sidebar-" + sidebar);
+
+        // don't show body until MathJax finish
+        setTimeout(() => { document.body.style.visibility = "visible" }, 1000); // show the body anyway after 1 sec
+        MathJax.Hub.Queue(() => document.body.style.visibility = "visible");
+    </script>
+
+    <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+        <div class="sidebar-scrollbox">
+            <ol class="chapter"><li class="chapter-item expanded "><a href="../automation_software/index.html"><strong aria-hidden="true">1.</strong> Automation Software</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../automation_software/hammerspoon.html"><strong aria-hidden="true">1.1.</strong> Hammerspoon</a></li></ol></li><li class="chapter-item expanded "><a href="../cs/index.html"><strong aria-hidden="true">2.</strong> Computer Science</a></li><li class="chapter-item expanded "><a href="../documentation/index.html"><strong aria-hidden="true">3.</strong> Documentation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../documentation/pandoc.html"><strong aria-hidden="true">3.1.</strong> Pandoc</a></li></ol></li><li class="chapter-item expanded "><a href="../mathematics/index.html"><strong aria-hidden="true">4.</strong> Mathematics</a></li><li class="chapter-item expanded "><a href="../package_manager/index.html"><strong aria-hidden="true">5.</strong> Package Manager</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../package_manager/homebrew.html"><strong aria-hidden="true">5.1.</strong> Homebrew</a></li><li class="chapter-item expanded "><a href="../package_manager/pacman.html"><strong aria-hidden="true">5.2.</strong> Pacman</a></li></ol></li><li class="chapter-item expanded "><a href="../programming/index.html"><strong aria-hidden="true">6.</strong> Programming</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../programming/git.html"><strong aria-hidden="true">6.1.</strong> Git</a></li><li class="chapter-item expanded "><a href="../programming/java.html"><strong aria-hidden="true">6.2.</strong> Java</a></li><li class="chapter-item expanded "><a href="../programming/javascript.html"><strong aria-hidden="true">6.3.</strong> JavaScript</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../programming/mathjax.html"><strong aria-hidden="true">6.3.1.</strong> MathJax</a></li></ol></li><li class="chapter-item expanded "><a href="../programming/julia.html"><strong aria-hidden="true">6.4.</strong> Julia</a></li><li class="chapter-item expanded "><a href="../programming/perl.html"><strong aria-hidden="true">6.5.</strong> Perl</a></li><li class="chapter-item expanded "><a href="../programming/python.html"><strong aria-hidden="true">6.6.</strong> Python</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../programming/pip.html"><strong aria-hidden="true">6.6.1.</strong> pip</a></li></ol></li><li class="chapter-item expanded "><a href="../programming/mathematica.html"><strong aria-hidden="true">6.7.</strong> Mathematica</a></li><li class="chapter-item expanded "><a href="../programming/matlab.html"><strong aria-hidden="true">6.8.</strong> MATLAB</a></li><li class="chapter-item expanded "><a href="../programming/rust.html"><strong aria-hidden="true">6.9.</strong> Rust</a></li><li class="chapter-item expanded "><a href="../programming/rlang.html"><strong aria-hidden="true">6.10.</strong> R lang</a></li><li class="chapter-item expanded "><a href="../programming/shell.html"><strong aria-hidden="true">6.11.</strong> Shell</a></li></ol></li><li class="chapter-item expanded "><a href="../server/index.html"><strong aria-hidden="true">7.</strong> Server</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../server/nfs.html"><strong aria-hidden="true">7.1.</strong> NFS</a></li><li class="chapter-item expanded "><a href="../server/ssh.html"><strong aria-hidden="true">7.2.</strong> SSH</a></li></ol></li><li class="chapter-item expanded "><a href="../text_editor/index.html"><strong aria-hidden="true">8.</strong> Text Editor</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../text_editor/vim.html" class="active"><strong aria-hidden="true">8.1.</strong> Vim</a></li></ol></li><li class="chapter-item expanded "><a href="../license.html"><strong aria-hidden="true">9.</strong> License</a></li></ol>
+        </div>
+        <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+    </nav>
+
+    <div id="page-wrapper" class="page-wrapper">
+
+        <div class="page">
+            <div id="menu-bar-hover-placeholder"></div>
+            <div id="menu-bar" class="menu-bar sticky bordered">
+                <div class="left-buttons">
+                    <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents"
+                        aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <button id="theme-toggle" class="icon-button" type="button" title="Change theme"
+                        aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                        <i class="fa fa-paint-brush"></i>
+                    </button>
+                    <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                        <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                        <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                        <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                        <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                        <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button>
+                        </li>
+                    </ul>
+                    <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)"
+                        aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S"
+                        aria-controls="searchbar">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+
+                <h1 class="menu-title">Steven&#x27;s Notes</h1>
+
+                <div class="right-buttons">
+                    <a href="../print.html" title="Print this book" aria-label="Print this book">
+                        <i id="print-button" class="fa fa-print"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div id="search-wrapper" class="hidden">
+                <form id="searchbar-outer" class="searchbar-outer">
+                    <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..."
+                        aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                </form>
+                <div id="searchresults-outer" class="searchresults-outer hidden">
+                    <div id="searchresults-header" class="searchresults-header"></div>
+                    <ul id="searchresults">
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+            <script type="text/javascript">
+                document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                Array.from(document.querySelectorAll('#sidebar a')).forEach(function (link) {
+                    link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                });
+            </script>
+
+            <div id="content" class="content">
+                <main>
+                    <h1 id="vim"><a class="header" href="#vim">Vim</a></h1>
+<h1 id="movement"><a class="header" href="#movement">movement</a></h1>
+<h2 id="arrow-equivalent"><a class="header" href="#arrow-equivalent">arrow equivalent</a></h2>
+<blockquote>
+<pre><code>       ↑
+ ← h j k l →
+     ↓
+</code></pre>
+</blockquote>
+<h2 id="by-word"><a class="header" href="#by-word">by word</a></h2>
+<h3 id="to-start-of-word"><a class="header" href="#to-start-of-word">to start of word</a></h3>
+<blockquote>
+<p>&lt;–b– ○ –w–&gt;
+word word word</p>
+</blockquote>
+<h3 id="to-end-of-word"><a class="header" href="#to-end-of-word">to end of word</a></h3>
+<blockquote>
+<p>ㅤㅤ&lt;–ge–○ –e–&gt;
+word word word</p>
+</blockquote>
+<h3 id="by-word-1"><a class="header" href="#by-word-1">by WORD</a></h3>
+<p>same as <strong>by word</strong> but capitalize the last letter
+a <strong>WORD</strong> contains any consecutive non-whitespace character</p>
+<h2 id="search"><a class="header" href="#search">search</a></h2>
+<h3 id="search-character"><a class="header" href="#search-character">search character</a></h3>
+<p>type a character in replace of <code>w</code> below</p>
+<h4 id="move-to-result"><a class="header" href="#move-to-result">move to result</a></h4>
+<blockquote>
+<p>○–fw–&gt;
+word word</p>
+</blockquote>
+<h4 id="move-to-left-of-result"><a class="header" href="#move-to-left-of-result">move to left of result</a></h4>
+<blockquote>
+<p>○–tw–&gt;
+word sword</p>
+</blockquote>
+<h4 id="backward"><a class="header" href="#backward">backward</a></h4>
+<p>capitalize the letter</p>
+<h3 id="search-expression"><a class="header" href="#search-expression">search expression</a></h3>
+<ul>
+<li><code>/…</code> + <code>enter</code> search forward</li>
+<li><code>?…</code> + <code>enter</code> search backward</li>
+</ul>
+<h4 id="repeat"><a class="header" href="#repeat">repeat</a></h4>
+<ul>
+<li><code>n</code> next match</li>
+<li><code>N</code> last match</li>
+</ul>
+<h4 id="expression"><a class="header" href="#expression">expression</a></h4>
+<ul>
+<li>exact</li>
+<li>regex</li>
+</ul>
+<h2 id="end-of-line"><a class="header" href="#end-of-line">end of line</a></h2>
+<h3 id="the-end-character"><a class="header" href="#the-end-character">the end character</a></h3>
+<blockquote>
+<p>&lt;–0– ○ –$–&gt;
+ㅤㅤlineㅤㅤ</p>
+</blockquote>
+<h3 id="the-end-non-whitespace-character"><a class="header" href="#the-end-non-whitespace-character">the end non-whitespace character</a></h3>
+<blockquote>
+<p>ㅤㅤ&lt;–^–– ○ ––g_–&gt;
+ㅤㅤnot whitespaceㅤㅤ</p>
+</blockquote>
+<h2 id="by-chunk"><a class="header" href="#by-chunk">by chunk</a></h2>
+<h3 id="by-paragraph"><a class="header" href="#by-paragraph">by paragraph</a></h3>
+<blockquote>
+<p>paragraph 1
+stuff
+&lt;–––– { ––––-+
+paragraph 2 ○
+more stuff ㅤ|
+&lt;–––– } ––––-+
+paragraph 3</p>
+</blockquote>
+<h3 id="by-page"><a class="header" href="#by-page">by page</a></h3>
+<h4 id="half-page"><a class="header" href="#half-page">half page</a></h4>
+<ul>
+<li>up <code>^u</code></li>
+<li>down <code>^d</code></li>
+</ul>
+<h4 id="whole-page"><a class="header" href="#whole-page">whole page</a></h4>
+<ul>
+<li>up <code>^b</code></li>
+<li>down <code>^f</code></li>
+</ul>
+<h1 id="count"><a class="header" href="#count">count</a></h1>
+<p><code>number</code> + <code>keys</code> is the same as pressing <code>keys</code> for <code>number</code> times</p>
+<h1 id="write-as-root"><a class="header" href="#write-as-root">write as root</a></h1>
+<pre><code class="language-text">:w !sudo tee %
+</code></pre>
+                </main>
+
+                <nav class="nav-wrapper" aria-label="Page navigation">
+                    <!-- Mobile navigation buttons -->
+                    <a rel="prev" href="../text_editor/index.html" class="mobile-nav-chapters previous"
+                        title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../license.html" class="mobile-nav-chapters next"
+                        title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                    <div style="clear: both"></div>
+                </nav>
+            </div>
+        </div>
+
+        <nav class="nav-wide-wrapper" aria-label="Page navigation">
+            <a rel="prev" href="../text_editor/index.html" class="nav-chapters previous" title="Previous chapter"
+                aria-label="Previous chapter" aria-keyshortcuts="Left">
+                <i class="fa fa-angle-left"></i>
+            </a>
+            <a rel="next" href="../license.html" class="nav-chapters next" title="Next chapter"
+                aria-label="Next chapter" aria-keyshortcuts="Right">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        </nav>
+
+    </div>
+
+    <script type="text/javascript">
+        window.playground_copyable = true;
+    </script>
+    <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+    <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+    <!-- Custom JS scripts -->
+</body>
+
+</html>
