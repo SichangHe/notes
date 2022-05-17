@@ -18,8 +18,8 @@ jobs:
       run: mdbook build
     - name: push
       run: |
-        git config user.name "Deploy from CI"
-        git config user.email ""
+        git config --global user.name "Deploy from CI"
+        git config --global user.email ""
         cd docs
         git init
         git add .
