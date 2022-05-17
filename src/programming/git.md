@@ -96,3 +96,21 @@ ignore all symlink
 ```bash
 find * -type l -not -exec grep -q "^{}$" .gitignore \; -print >> .gitignore
 ```
+
+check what are the branches
+
+```shell
+git fetch && git branch
+```
+
+check out another branch
+
+```shell
+git checkout <branch>
+```
+
+create orphan branch
+
+```shell
+git switch --orphan <branch>
+```
