@@ -9,14 +9,10 @@ jobs:
     - uses: actions/checkout@v1
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
-    - name: clone down
+    - name: configure git
       run: |
         git config --global user.name "Deploy from CI"
         git config --global user.email ""
-        git clone --no-checkout git@github.com:SichangHe/notes.git docs
-        cd docs
-        git checkout gh-pages
-        cd ..
     - name: Install mdbook
       run: |
         mkdir bin
@@ -26,7 +22,7 @@ jobs:
       run: mdbook build
     - name: push
       run: |
-        cd docs
-        git add .
+        git checkout gh-pages
+        git add docs
         git commit -m "Deploy $GITHUB_SHA to gh-pages"
-        git push origin gh-pages --force
+        git push -f
