@@ -25,5 +25,5 @@ jobs:
         git fetch
         git checkout gh-pages
         git add docs
-        git commit -m "Deploy $GITHUB_SHA to gh-pages"
+        git commit --allow-empty -m "Deploy $GITHUB_SHA to gh-pages"
         git push -f
