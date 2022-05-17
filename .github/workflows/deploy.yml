@@ -11,8 +11,8 @@ jobs:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
     - name: configure git
       run: |
-        git config --global user.name "SichangHe"
-        git config --global user.email "sichanghe@users.noreply.github.com"
+        git config --global user.name "Deploy from CI"
+        git config --global user.email ""
     - name: Install mdbook
       run: |
         mkdir bin
@@ -22,7 +22,10 @@ jobs:
       run: mdbook build
     - name: push
       run: |
-        git checkout gh-pages
-        git add docs
+        cd docs
+        git init
+        git add .
         git commit -m "Deploy $GITHUB_SHA to gh-pages"
-        git push -f
+        git remote add https://sichanghe:$GITHUB_TOKEN@github.com/sichanghe/notes
+        git push origin gh-pages -f
+
