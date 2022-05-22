@@ -14,3 +14,23 @@ $$
 \frac{\sqrt{a^2+b^2}-b}{a^2}
 =\frac{a^2}{\sqrt{a^2+b^2}+b}
 $$
+
+sigma notation
+
+$$
+\sum_{i=m}^nf(x_i)
+$$
+
+- linear
+
+common sum
+
+$$
+\sum_{i=1}^ni=\frac{n(n+1)}{2}
+\\\\[12pt]
+\sum_{i=1}^ni^2=\frac{n(n+1)(2n+1)}{6}
+\\\\[12pt]
+\sum_{i=1}^ni^3=\left[
+    \frac{n(n+1)}{2}
+\right]^2
+$$

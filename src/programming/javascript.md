@@ -25,6 +25,7 @@ can contain multiple types of data
 - `.splice(index,number,…)` remove `number` items from `index` and insert `…`
 - `.reduce(fun1)` take variable into function and put result back
 - spread (deep copy) `[...arr1]`
+- rest `[attr1, ...arr2] = arr1`
 
 ## string
 
@@ -79,6 +80,8 @@ rather dictionary
 
 - `delete` attribute
 - `.hasOwnProperty(attr)` check if has `attr`
+- rest `{attr1, ...obj2} = obj1`
+- spread `obj2 = {...obj1, attr1: val1}`
 
 ## quick initialization
 
