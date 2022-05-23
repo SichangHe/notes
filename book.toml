@@ -7,3 +7,6 @@ title = "Steven's Notes"
 
 [build]
 build-dir = "docs"
+
+[output.html]
+git-repository-url = "https://github.com/SichangHe/notes"
