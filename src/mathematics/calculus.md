@@ -239,7 +239,7 @@ $$
 ### derivative of logarithmic function
 
 $$
-\frac{d}{dx}(\ln u)=\frac{du}{udx}
+\frac{d}{dx}(\ln|u|)=\frac{du}{udx}
 \\\\[12pt]
 \frac{d}{dx}\ln|x|=\frac{1}{x}
 $$
@@ -438,7 +438,7 @@ $$
 
 $\Leftarrow$ chain rule
 
-### integration recipes
+### trigonometric integral
 
 from $\sin^2\\!x+\cos^2\\!x=1$
 
@@ -472,7 +472,13 @@ $$
 =∫(\sec^2\\!x-1)^{k-1}\sec^{n-1}\\!x\ d(\sec x)
 $$
 
-integrate any polynomial
+$$
+∫\tan x\ dx=\ln|\sec x|+C
+\\\\[12pt]
+∫\sec x\ dx=\ln|\sec x+\tan x|+C
+$$
+
+## polynomial integral
 
 $$
 \frac{
@@ -521,3 +527,72 @@ f(-x)=f(x) ⇒ ∫_{-a}^af(x)\ dx=2∫_0^af(x)\ dx
 \\\\[12pt]
 f(-x)=-f(x) ⇒ ∫_{-a}^af(x)\ dx=0
 $$
+
+## volume from integral
+
+from $x=a$ to $x=b$,
+rotate $y=f(x)$ and $y=g(x)$ about $x$-axis,
+volume:
+
+$$
+∫_a^bA(x)\ dx
+=∫_a^b\pi\left|
+    (f(x))^2-(g(x))^2
+\right|\ dx
+$$
+
+from $x=a$ to $x=b$,
+rotate $y=f(x)$ and $y=g(x)$ about $y$-axis,
+volume:
+
+$$
+∫_a^bl(x)h(x)\ dx
+=∫_a^b2\pi x|f(x)-g(x)|\ dx
+$$
+
+## arc length from integral
+
+$$
+∫_P^Q\ ds
+=∫_P^Q\sqrt{(dx)^2+(dy)^2}
+\\\\[12pt]
+=∫_a^b\sqrt{1+\left(
+    \frac{df}{dx}
+\right)^2}\ dx
+$$
+
+## surface area from integral
+
+from $x=a$ to $x=b$,
+rotate $y=f(x)$ about $y$-axis,
+surface area:
+
+$$
+∫_a^bl(x)\ d(arc\\_length(x))
+\\\\[12pt]
+=∫_a^b2\pi f(x)\sqrt{1+\left(
+    \frac{df}{dx}
+\right)^2}\ dx
+$$
+
+## average of function
+
+$$
+f_{ave}=\frac{1}{b-a}∫_a^bf(x)\ dx
+$$
+
+### mean value theorem for integral
+
+$f$ continuous $[a,b] ⇒ ∃\ c\in [a,b]$
+
+$$
+f(c)=f_{ave}
+$$
+
+## integration by part
+
+$$
+∫u\ dv=uv-∫v\ du
+$$
+
+$\Leftarrow$ power rule

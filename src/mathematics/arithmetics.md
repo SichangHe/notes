@@ -34,3 +34,16 @@ $$
     \frac{n(n+1)}{2}
 \right]^2
 $$
+
+trigonometric transformation
+
+$$
+\sin A\cos B
+=\frac{1}{2}[\sin(A-B)+\sin(A+B)]
+\\\\[12pt]
+\sin A\sin B
+=\frac{1}{2}[\cos(A-B)-\cos(A+B)]
+\\\\[12pt]
+\cos A\cos B
+=\frac{1}{2}[\cos(A-B)+\cos(A+B)]
+$$

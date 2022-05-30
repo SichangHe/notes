@@ -27,6 +27,12 @@ can contain multiple types of data
 - spread (deep copy) `[...arr1]`
 - rest `[attr1, ...arr2] = arr1`
 
+## loop array
+
+- the C way
+- `for… of` loop
+- `.forEach(callback)`
+
 ## string
 
 is just immutable array
