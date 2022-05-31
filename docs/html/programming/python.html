@@ -1,0 +1,695 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+
+<head>
+    <!-- Book generated using mdBook -->
+    <meta charset="UTF-8">
+    <title>Python - Steven&#x27;s Notes</title>
+    <!-- Custom HTML head -->
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff" />
+
+    <link rel="icon" href="../favicon.svg">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/chrome.css">
+    <link rel="stylesheet" href="../css/print.css" media="print">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+    <link rel="stylesheet" href="../fonts/fonts.css">
+
+    <!-- Highlight.js Stylesheets -->
+    <link rel="stylesheet" href="../highlight.css">
+    <link rel="stylesheet" href="../tomorrow-night.css">
+    <link rel="stylesheet" href="../ayu-highlight.css">
+
+    <!-- Custom theme stylesheets -->
+</head>
+
+<body>
+    <script type="text/javascript">
+        // Provide site root to javascript
+        var path_to_root = "../";
+        var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+
+        // Work around some values being stored in localStorage wrapped in quotes
+        try {
+            var theme = localStorage.getItem('mdbook-theme');
+            var sidebar = localStorage.getItem('mdbook-sidebar');
+
+            if (theme.startsWith('"') && theme.endsWith('"')) {
+                localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+            }
+
+            if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+            }
+        } catch (e) { }
+
+        // Set the theme before any content is loaded, prevents flash
+        var theme;
+        try { theme = localStorage.getItem('mdbook-theme'); } catch (e) { }
+        if (theme === null || theme === undefined) { theme = default_theme; }
+        var html = document.querySelector('html');
+        html.classList.remove('no-js')
+        html.classList.remove('light')
+        html.classList.add(theme);
+        html.classList.add('js');
+
+        // Hide / unhide sidebar before it is displayed
+        var html = document.querySelector('html');
+        var sidebar = 'hidden';
+        if (document.body.clientWidth >= 1080) {
+            try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch (e) { }
+            sidebar = sidebar || 'visible';
+        }
+        html.classList.remove('sidebar-visible');
+        html.classList.add("sidebar-" + sidebar);
+    </script>
+
+    <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+        <div class="sidebar-scrollbox">
+            <ol class="chapter"><li class="chapter-item expanded "><a href="../automation_software/index.html"><strong aria-hidden="true">1.</strong> Automation Software</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../automation_software/hammerspoon.html"><strong aria-hidden="true">1.1.</strong> Hammerspoon</a></li></ol></li><li class="chapter-item expanded "><a href="../cs/index.html"><strong aria-hidden="true">2.</strong> Computer Science</a></li><li class="chapter-item expanded "><a href="../documentation/index.html"><strong aria-hidden="true">3.</strong> Documentation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../documentation/pandoc.html"><strong aria-hidden="true">3.1.</strong> Pandoc</a></li></ol></li><li class="chapter-item expanded "><a href="../mathematics/index.html"><strong aria-hidden="true">4.</strong> Mathematics</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../mathematics/arithmetics.html"><strong aria-hidden="true">4.1.</strong> Arithmetics</a></li><li class="chapter-item expanded "><a href="../mathematics/calculus.html"><strong aria-hidden="true">4.2.</strong> Calculus</a></li><li class="chapter-item expanded "><a href="../mathematics/shorthand.html"><strong aria-hidden="true">4.3.</strong> Shorthand</a></li></ol></li><li class="chapter-item expanded "><a href="../package_manager/index.html"><strong aria-hidden="true">5.</strong> Package Manager</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../package_manager/homebrew.html"><strong aria-hidden="true">5.1.</strong> Homebrew</a></li><li class="chapter-item expanded "><a href="../package_manager/pacman.html"><strong aria-hidden="true">5.2.</strong> Pacman</a></li></ol></li><li class="chapter-item expanded "><a href="../programming/index.html"><strong aria-hidden="true">6.</strong> Programming</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../programming/git.html"><strong aria-hidden="true">6.1.</strong> Git</a></li><li class="chapter-item expanded "><a href="../programming/java.html"><strong aria-hidden="true">6.2.</strong> Java</a></li><li class="chapter-item expanded "><a href="../programming/javascript.html"><strong aria-hidden="true">6.3.</strong> JavaScript</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../programming/mathjax.html"><strong aria-hidden="true">6.3.1.</strong> MathJax</a></li></ol></li><li class="chapter-item expanded "><a href="../programming/julia.html"><strong aria-hidden="true">6.4.</strong> Julia</a></li><li class="chapter-item expanded "><a href="../programming/perl.html"><strong aria-hidden="true">6.5.</strong> Perl</a></li><li class="chapter-item expanded "><a href="../programming/python.html" class="active"><strong aria-hidden="true">6.6.</strong> Python</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../programming/pip.html"><strong aria-hidden="true">6.6.1.</strong> pip</a></li></ol></li><li class="chapter-item expanded "><a href="../programming/mathematica.html"><strong aria-hidden="true">6.7.</strong> Mathematica</a></li><li class="chapter-item expanded "><a href="../programming/matlab.html"><strong aria-hidden="true">6.8.</strong> MATLAB</a></li><li class="chapter-item expanded "><a href="../programming/rust.html"><strong aria-hidden="true">6.9.</strong> Rust</a></li><li class="chapter-item expanded "><a href="../programming/rlang.html"><strong aria-hidden="true">6.10.</strong> R lang</a></li><li class="chapter-item expanded "><a href="../programming/shell.html"><strong aria-hidden="true">6.11.</strong> Shell</a></li></ol></li><li class="chapter-item expanded "><a href="../server/index.html"><strong aria-hidden="true">7.</strong> Server</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../server/nfs.html"><strong aria-hidden="true">7.1.</strong> NFS</a></li><li class="chapter-item expanded "><a href="../server/ssh.html"><strong aria-hidden="true">7.2.</strong> SSH</a></li></ol></li><li class="chapter-item expanded "><a href="../text_editor/index.html"><strong aria-hidden="true">8.</strong> Text Editor</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../text_editor/vim.html"><strong aria-hidden="true">8.1.</strong> Vim</a></li><li class="spacer"></li></ol></li><li class="chapter-item expanded "><a href="../license.html">License</a></li></ol>
+        </div>
+        <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+    </nav>
+
+    <div id="page-wrapper" class="page-wrapper">
+
+        <div class="page">
+            <div id="menu-bar-hover-placeholder"></div>
+            <div id="menu-bar" class="menu-bar sticky bordered">
+                <div class="left-buttons">
+                    <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents"
+                        aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <button id="theme-toggle" class="icon-button" type="button" title="Change theme"
+                        aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                        <i class="fa fa-paint-brush"></i>
+                    </button>
+                    <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                        <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                        <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                        <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                        <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                        <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button>
+                        </li>
+                    </ul>
+                    <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)"
+                        aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S"
+                        aria-controls="searchbar">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+
+                <h1 class="menu-title">Steven&#x27;s Notes</h1>
+
+                <div class="right-buttons">
+                    <a href="../print.html" title="Print this book" aria-label="Print this book">
+                        <i id="print-button" class="fa fa-print"></i>
+                    </a>
+                    <a href="https://github.com/SichangHe/notes" title="Git repository" aria-label="Git repository">
+                        <i id="git-repository-button" class="fa fa-github"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div id="search-wrapper" class="hidden">
+                <form id="searchbar-outer" class="searchbar-outer">
+                    <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..."
+                        aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                </form>
+                <div id="searchresults-outer" class="searchresults-outer hidden">
+                    <div id="searchresults-header" class="searchresults-header"></div>
+                    <ul id="searchresults">
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+            <script type="text/javascript">
+                document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                Array.from(document.querySelectorAll('#sidebar a')).forEach(function (link) {
+                    link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                });
+            </script>
+
+            <div id="content" class="content">
+                <main>
+                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="python"><a class="header" href="#python">Python</a></h1>
+<h1 id="environment"><a class="header" href="#environment">environment</a></h1>
+<ul>
+<li>Python REPL (Read-Evaluate-Print Loop)/ Python shell</li>
+<li>script<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">∈</span></span></span></span>script file</li>
+</ul>
+<h1 id="variable"><a class="header" href="#variable">variable</a></h1>
+<h2 id="operator"><a class="header" href="#operator">operator</a></h2>
+<ul>
+<li>assignment operator <code>=</code></li>
+</ul>
+<h2 id="naming-convention"><a class="header" href="#naming-convention">naming convention</a></h2>
+<ul>
+<li>camelCase</li>
+<li>snake_case</li>
+</ul>
+<h3 id="pep-8-guideline"><a class="header" href="#pep-8-guideline">PEP 8 guideline</a></h3>
+<h2 id="inspect-in-repl"><a class="header" href="#inspect-in-repl">inspect (in REPL)</a></h2>
+<h2 id="unassign-delete-del-var1"><a class="header" href="#unassign-delete-del-var1">unassign (delete) <code>del var1</code></a></h2>
+<hr />
+<h1 id="data-type"><a class="header" href="#data-type">data type</a></h1>
+<ul>
+<li>fundamental data type</li>
+<li>compound data type (data structure)</li>
+<li>check data type <code>type()</code></li>
+</ul>
+<h2 id="string-str"><a class="header" href="#string-str">string <code>str</code></a></h2>
+<ul>
+<li>character</li>
+<li>length <code>len(string1)</code></li>
+<li>sequence</li>
+</ul>
+<h3 id="string-literal-string-literal"><a class="header" href="#string-literal-string-literal">string literal <code>&quot;string literal&quot;</code></a></h3>
+<ul>
+<li>delimiter <code>&quot;&quot;</code> or <code>''</code></li>
+<li>multiline string <code>&quot;first and \</code>
+<code>second&quot;</code>
+or
+<code>&quot;&quot;&quot;first line</code>
+<code>second line&quot;&quot;&quot;</code></li>
+<li>raw string <code>r&quot;raw string&quot;</code></li>
+</ul>
+<h3 id="string-operation"><a class="header" href="#string-operation">string operation</a></h3>
+<ul>
+<li>concatenation <code>string1 + string2</code>
+need to manually make sure both are string</li>
+<li>indexing <code>string1[index1]</code> → <em>character</em>
+negative index count from right</li>
+<li>slicing (slicing) <code>string1[index1:index2]</code>
+return string consisting of <code>string1[index1]</code> to <code>string1[index2 - 1]</code>
+leaving <code>index1</code> or <code>index2</code> empty means <code>0</code> or <code>-1</code> by default
+exceeding string length return empty string <code>''</code> for those parts</li>
+<li>multiplication <code>string1 * n</code>
+repeat <code>n</code> time</li>
+</ul>
+<h3 id="immutability"><a class="header" href="#immutability">immutability</a></h3>
+<h3 id="string-method"><a class="header" href="#string-method">string method</a></h3>
+<ul>
+<li>convert case <code>.lower()</code> <code>.upper()</code></li>
+<li>remove whitespace
+<code>.rstript()</code> from the right
+<code>lstript()</code> from the left
+<code>stript()</code> both side</li>
+<li>check start/ end <code>.startswith()</code> <code>.endswith()</code> → <em>boolean</em></li>
+<li>find substring <code>.find(substring1)</code> → <em>int</em> index of the first found; <code>-1</code> if not found</li>
+<li>replace <code>.replace(string1,string2)</code></li>
+</ul>
+<h3 id="input"><a class="header" href="#input">input</a></h3>
+<p><code>input(prompt_string)</code> → <em>str</em></p>
+<h3 id="conversion"><a class="header" href="#conversion">conversion</a></h3>
+<ul>
+<li>anything to string <code>str(var1)</code></li>
+</ul>
+<h3 id="output"><a class="header" href="#output">output</a></h3>
+<ul>
+<li><code>print(string1,string2…)</code>
+each part must be string
+<strong>`` are added between string</strong></li>
+<li>formatted string literals (f-string)
+<code>f&quot;{string1}string_literal…&quot;</code> → <em>str</em>
+enclose variable name in <code>{}</code></li>
+</ul>
+<h2 id="number-int-float"><a class="header" href="#number-int-float">number <code>int</code> <code>float</code></a></h2>
+<h3 id="number-literal-1"><a class="header" href="#number-literal-1">number literal <code>1</code></a></h3>
+<ul>
+<li>separate by <code>_</code> <em>ignored</em></li>
+<li>exponential notation (E-notation) <code>1e2</code> → <em>float</em></li>
+<li>too big → <code>inf</code>/ too small → <code>-inf</code></li>
+</ul>
+<h3 id="arithmetic-operation"><a class="header" href="#arithmetic-operation">arithmetic operation</a></h3>
+<ul>
+<li>operand and operator</li>
+<li>addition <code>+</code> subtraction <code>-</code> multiplication <code>*</code> → <em>int</em> iff both operand int, else <em>float</em></li>
+<li>division <code>/</code> → <em>float</em></li>
+<li>integer division <code>//</code> → <em>int</em> iff both operand int, else <em>float</em>, round down
+no <code>0</code> denominator allowed regardless of type</li>
+<li>exponent <code>**</code> → <em>int</em> iff both operand positive int, else *float</li>
+<li>modulus <code>%</code> → <em>int</em> iff both operand int, else *float</li>
+</ul>
+<h3 id="number-method"><a class="header" href="#number-method">number method</a></h3>
+<ul>
+<li>round tie to even <code>round(num1,n)</code>
+by default, blank precision → <em>int</em> with <code>None</code> precision
+with int <code>n</code> → <em>int</em> iff both int, else <em>float</em> with <code>n</code> floating digit (negative precision go beyond decimal)</li>
+<li>absolute value <code>abs()</code> return same type</li>
+<li>power <code>pow(base1,exponent1) = base1 ** exponent1</code>, <code>pow(base1,exponent1,mod1) = (base1 ** exponent1) % mod1</code></li>
+<li>check if float is int <code>float1.is_integer()</code> → <em>boolean</em></li>
+</ul>
+<h3 id="conversion-1"><a class="header" href="#conversion-1">conversion</a></h3>
+<ul>
+<li>string to int <code>int(string1)</code>
+can only take string in integer form</li>
+</ul>
+<h3 id="output-1"><a class="header" href="#output-1">output</a></h3>
+<h4 id="fixed-point-number-fnum1format"><a class="header" href="#fixed-point-number-fnum1format">fixed-point number <code>f&quot;{num1:format}&quot;</code></a></h4>
+<p><a href="https://docs.python.org/3/library/string.html#format-specification-mini-language">format language</a>
+format</p>
+<ul>
+<li><code>.pt</code> precision <code>p</code> type <code>t</code> e.g. <code>.2f</code></li>
+<li><code>.pt%</code> in percentage form</li>
+<li><code>,</code> separate digit with comma</li>
+</ul>
+<h2 id="complex-number"><a class="header" href="#complex-number">complex number</a></h2>
+<h3 id="format-n-num_real--num_imaginej"><a class="header" href="#format-n-num_real--num_imaginej">format <code>n =</code><em><code>num_real + num_imagine</code></em><code>j</code></a></h3>
+<ul>
+<li>getting real part and imaginary part <code>n.real</code> <code>n.imag</code> → <em>float</em></li>
+<li>conjugate number <code>n.conjugate()</code>
+*<code>int</code> and <code>float</code> also have these</li>
+</ul>
+<h2 id="none-nonetype"><a class="header" href="#none-nonetype">None <code>NoneType</code></a></h2>
+<p>no data</p>
+<h2 id="data-structure"><a class="header" href="#data-structure">data structure</a></h2>
+<h3 id="tuple"><a class="header" href="#tuple">tuple</a></h3>
+<ul>
+<li>ordered sequence (iterable)</li>
+<li>immutable</li>
+<li>can hold multiple type of element at the same time</li>
+</ul>
+<h4 id="tuple-literal-elem1"><a class="header" href="#tuple-literal-elem1">tuple literal <code>(elem1,…)</code></a></h4>
+<ul>
+<li>empty tuple <code>()</code></li>
+<li>tuple with only 1 element <code>(element1,)</code></li>
+</ul>
+<h4 id="built-in-create-method"><a class="header" href="#built-in-create-method">built-in create method</a></h4>
+<p><code>tuple(converted1)</code> convert iterable <code>converted1</code> into tuple</p>
+<h4 id="length-lentuple1"><a class="header" href="#length-lentuple1">length <code>len(tuple1)</code></a></h4>
+<h4 id="indexing-tuple1index1"><a class="header" href="#indexing-tuple1index1">indexing <code>tuple1[index1]</code></a></h4>
+<h4 id="slicing-tuple1index1index2--shallow-copy"><a class="header" href="#slicing-tuple1index1index2--shallow-copy">slicing <code>tuple1[index1:index2]</code> → <em>shallow copy</em></a></h4>
+<h4 id="packing-unpacking"><a class="header" href="#packing-unpacking">packing/ unpacking</a></h4>
+<ul>
+<li>packing <code>tuple1 = elem1,…</code></li>
+<li>unpacking <code>var1,… = tuple1</code></li>
+<li>combined <code>var1,…,varN = literal1,…literalN</code></li>
+</ul>
+<h4 id="check-contain-elem1-in-tuple1--boolean"><a class="header" href="#check-contain-elem1-in-tuple1--boolean">check contain <code>elem1 in tuple1</code> → <em>boolean</em></a></h4>
+<h3 id="list"><a class="header" href="#list">list</a></h3>
+<ul>
+<li>same as tuple</li>
+<li>mutable</li>
+<li>use <code>[]</code></li>
+</ul>
+<h4 id="create"><a class="header" href="#create">create</a></h4>
+<ul>
+<li><code>list(iterable1)</code></li>
+<li><code>string1.split(separator1)</code></li>
+<li>list comprehension <code>[expression1 for elem in iterable1]</code></li>
+</ul>
+<h4 id="mutate"><a class="header" href="#mutate">mutate</a></h4>
+<ul>
+<li>replace element <code>list1[index1] = elem1</code></li>
+<li>slice replace <code>list1[index1:index2] = list2</code> <em>not necessarily same length</em></li>
+<li>insert <code>list1.insert(index1,elem1)</code>
+index too big is seen as last index</li>
+<li>append <code>list1.append(elem1)</code> append to last space, equivalent to <code>list1.insert(list1.__len__(),elem1)</code></li>
+<li>extend <code>list1.extend(iterable1)</code> append an iterable</li>
+<li>pop <code>list1.pop(index1)</code> return and remove <code>list1[index1]</code></li>
+</ul>
+<h4 id="list-method"><a class="header" href="#list-method">list method</a></h4>
+<ul>
+<li>sum number <code>sum(list1)</code> iff all element are number</li>
+<li><code>min()</code></li>
+<li><code>max()</code></li>
+<li>shallow copy <code>list1[:]</code> or <code>list1.copy()</code></li>
+<li>sort <code>list1.sort()</code>
+key <code>list1.sort(key=func1)</code> sort by return value of <code>func1(elem)</code></li>
+</ul>
+<h3 id="dictionary"><a class="header" href="#dictionary">dictionary</a></h3>
+<ul>
+<li>key-value pair</li>
+</ul>
+<h4 id="create-1"><a class="header" href="#create-1">create</a></h4>
+<ul>
+<li>dictionary literal <code>{key1:val1,…}</code></li>
+<li>from tuple of tuple <code>((key1:val1),…)</code></li>
+<li>empty dictionary <code>{}</code> or <code>dict()</code></li>
+</ul>
+<h4 id="access"><a class="header" href="#access">access</a></h4>
+<ul>
+<li><code>dict1[key1]</code> → <em>value corresponding</em></li>
+<li>index <code>dict[index1]</code></li>
+<li>convert to dict_items <code>dict1.items()</code></li>
+</ul>
+<h4 id="mutate-1"><a class="header" href="#mutate-1">mutate</a></h4>
+<ul>
+<li>add or overwrite <code>dict1[key1] = val1</code></li>
+<li>remove <code>del dict1[key1]</code></li>
+</ul>
+<hr />
+<h1 id="function"><a class="header" href="#function">function</a></h1>
+<ul>
+<li>argument</li>
+<li>return value</li>
+<li>side effect</li>
+</ul>
+<h2 id="property"><a class="header" href="#property">property</a></h2>
+<h3 id="function-are-values"><a class="header" href="#function-are-values">function are values</a></h3>
+<p>function name are variable</p>
+<h3 id="side-effect"><a class="header" href="#side-effect">side effect</a></h3>
+<p>change something external to the function itself</p>
+<h2 id="anatomy"><a class="header" href="#anatomy">anatomy</a></h2>
+<ul>
+<li>function signature<code>def fun_name(parameter_list):</code></li>
+<li>function body</li>
+</ul>
+<pre><code>fun_signature
+    fun_body
+</code></pre>
+<h3 id="parameter"><a class="header" href="#parameter">parameter</a></h3>
+<p>placeholder for variable</p>
+<ul>
+<li>default value <code>fun_name(para1=val1,…)</code></li>
+</ul>
+<h3 id="return-statement-return-return_value"><a class="header" href="#return-statement-return-return_value">return statement <code>return return_value</code></a></h3>
+<p>automatically return <code>None</code> if no return statement</p>
+<h2 id="call-function_nameargs"><a class="header" href="#call-function_nameargs">call <code>function_name(args,…)</code></a></h2>
+<h2 id="built-in-function"><a class="header" href="#built-in-function">built-in function</a></h2>
+<ul>
+<li>get the usage of the function <code>help(fun_name)</code></li>
+</ul>
+<h2 id="user-defined-function"><a class="header" href="#user-defined-function">user-defined function</a></h2>
+<ul>
+<li>define first and then call</li>
+<li>docstring—triple-quoted above function body</li>
+</ul>
+<hr />
+<h1 id="loop"><a class="header" href="#loop">loop</a></h1>
+<h2 id="while-loop"><a class="header" href="#while-loop">while loop</a></h2>
+<ul>
+<li>while statement<code>while test_condition:</code></li>
+<li>loop body</li>
+</ul>
+<h2 id="for-loop"><a class="header" href="#for-loop">for loop</a></h2>
+<ul>
+<li>for statement <code>for membership_expression:</code></li>
+<li>loop body</li>
+<li>else statement <code>else:</code> execute if not break</li>
+</ul>
+<h3 id="membership-expression"><a class="header" href="#membership-expression">membership expression</a></h3>
+<ul>
+<li><code>a in b</code></li>
+<li><code>i in range(n)</code></li>
+</ul>
+<h2 id="break-out"><a class="header" href="#break-out">break out</a></h2>
+<p>exit loop <code>break</code>
+next iteration <code>continue</code></p>
+<hr />
+<h1 id="scope"><a class="header" href="#scope">scope</a></h1>
+<ul>
+<li>local scope</li>
+<li>global scope</li>
+<li>enclosing scope</li>
+</ul>
+<h2 id="legb-rule"><a class="header" href="#legb-rule">LEGB rule</a></h2>
+<p>Local <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7719400000000001em;vertical-align:-0.13597em;"></span><span class="mrel">≤</span></span></span></span> Enclosing <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7719400000000001em;vertical-align:-0.13597em;"></span><span class="mrel">≤</span></span></span></span> Global <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7719400000000001em;vertical-align:-0.13597em;"></span><span class="mrel">≤</span></span></span></span> Built-in</p>
+<ul>
+<li>violate scope <code>global var_name</code> let local access global</li>
+</ul>
+<hr />
+<h1 id="class"><a class="header" href="#class">class</a></h1>
+<p><code>class Class1:</code> <em>CamelCase</em>
+empty structure to contain data</p>
+<h2 id="dunder-method-__method1__"><a class="header" href="#dunder-method-__method1__">dunder method <code>.__method1__()</code></a></h2>
+<h2 id="local-method-_method1-naming-convention"><a class="header" href="#local-method-_method1-naming-convention">local method <code>_method1()</code> <em>naming convention</em></a></h2>
+<h2 id="instance-method"><a class="header" href="#instance-method">(instance) method</a></h2>
+<p>function in class</p>
+<ul>
+<li>change what is printed <code>.__str__()</code></li>
+</ul>
+<h2 id="instance"><a class="header" href="#instance">instance</a></h2>
+<p>object built from class</p>
+<h3 id="instantiate"><a class="header" href="#instantiate">instantiate</a></h3>
+<p><code>Class1(para1,…)</code></p>
+<h2 id="attribute"><a class="header" href="#attribute">attribute</a></h2>
+<p>mutable</p>
+<h3 id="class-attribute"><a class="header" href="#class-attribute">class attribute</a></h3>
+<p>variable with initial value every object of this class has, defined right under the class structure</p>
+<h3 id="instance-attribute"><a class="header" href="#instance-attribute">instance attribute</a></h3>
+<ul>
+<li>initialize method <code>.__init__()</code>
+<code>def __init__(self,para1,…):</code></li>
+</ul>
+<h3 id="access-object1attribute1-dot-notation"><a class="header" href="#access-object1attribute1-dot-notation">access <code>object1.attribute1</code> <em>dot notation</em></a></h3>
+<h2 id="inheritance"><a class="header" href="#inheritance">inheritance</a></h2>
+<ul>
+<li>create child class <code>class ChildClass1(ParentClass1):</code></li>
+<li>common ancestor <code>object</code></li>
+<li>check class and parent class of instance <code>isinstance(object1,Class1)</code></li>
+</ul>
+<h3 id="method-inheritance"><a class="header" href="#method-inheritance">method inheritance</a></h3>
+<ul>
+<li>completely overwrite parent method</li>
+<li>access parent (<em>direct, not grand</em>) method using <code>super().method1(arg1,…)</code></li>
+</ul>
+<hr />
+<h1 id="module"><a class="header" href="#module">module</a></h1>
+<h2 id="calling-module-import-module1"><a class="header" href="#calling-module-import-module1">calling module <code>import module1</code></a></h2>
+<p>variation (can be combined)</p>
+<ul>
+<li><code>import module1 as name1</code></li>
+<li><code>from module1 import name1,…</code></li>
+</ul>
+<h2 id="namespace-module1-in-module1name1"><a class="header" href="#namespace-module1-in-module1name1">namespace <code>module1</code> in <code>module1.name1</code></a></h2>
+<h3 id="specify-different-options-for-import-and-ran-directly"><a class="header" href="#specify-different-options-for-import-and-ran-directly">specify different options for import and ran directly</a></h3>
+<p><code>if __name__ == '__main__':</code></p>
+<hr />
+<h1 id="package"><a class="header" href="#package">package</a></h1>
+<p>a folder to group modules</p>
+<h2 id="must-have-module-__init__py"><a class="header" href="#must-have-module-__init__py"><em>must-have module</em> <code>__init__.py</code></a></h2>
+<p>for the package to be recognized</p>
+<h2 id="import-module-from-package-import-package1module1"><a class="header" href="#import-module-from-package-import-package1module1">import module from package <code>import package1.module1</code></a></h2>
+<ul>
+<li><code>from package1.module1 import name1</code></li>
+</ul>
+<h2 id="subpackage"><a class="header" href="#subpackage">subpackage</a></h2>
+<p>a package under a package</p>
+<h2 id="package-manager"><a class="header" href="#package-manager">package manager</a></h2>
+<p>automate install, update, remove of third-party package</p>
+<h3 id="de-facto-package-manager-pip"><a class="header" href="#de-facto-package-manager-pip"><em>de facto</em> package manager <code>pip</code></a></h3>
+<p><strong>virtual environment</strong> is used to make sure things work after some update</p>
+<hr />
+<h1 id="file-input-output"><a class="header" href="#file-input-output">file input/ output</a></h1>
+<h2 id="path-library-module-pathlib"><a class="header" href="#path-library-module-pathlib">path library module <code>pathlib</code></a></h2>
+<h3 id="path-object"><a class="header" href="#path-object"><code>Path</code> object</a></h3>
+<ul>
+<li>file or directory name <code>path1.name</code></li>
+<li>component of file name <code>path1.stem</code> <code>path1.suffix</code></li>
+<li>check existence <code>path1.exists()</code> → <em>boolean</em></li>
+<li>check if is file <code>path1.is_file()</code> → <em>boolean</em></li>
+<li>check if is directory <code>path1.is_dir()</code> → <em>boolean</em></li>
+</ul>
+<h4 id="create-2"><a class="header" href="#create-2">create</a></h4>
+<ul>
+<li>from string <code>Path(string1)</code></li>
+<li><code>Path.home()</code> or <code>Path.cwd()</code></li>
+<li><code>path1 / string1</code> or <code>path1 / path2</code></li>
+</ul>
+<h4 id="absolute-relative-path"><a class="header" href="#absolute-relative-path">absolute/ relative path</a></h4>
+<h5 id="absolute-path"><a class="header" href="#absolute-path">absolute path</a></h5>
+<p>start from root</p>
+<ul>
+<li>test <code>path1.is_absolute()</code> → <em>boolean</em></li>
+<li>access root directory <code>path1.anchor</code></li>
+</ul>
+<h5 id="relative-path"><a class="header" href="#relative-path">relative path</a></h5>
+<p>start from cwd</p>
+<ul>
+<li><code>path1.anchor</code> → <code>''</code></li>
+</ul>
+<h4 id="path-component"><a class="header" href="#path-component">path component</a></h4>
+<p>all level of directory from low to high <code>path1.parents</code> → <em>iterable</em>
+one level up <code>path1.parent</code> → <em>Path</em></p>
+<h4 id="manipulation"><a class="header" href="#manipulation">manipulation</a></h4>
+<ul>
+<li>make directory <code>path1.mkdir()</code>
+avoid error if directory already exist <code>path1.mkdir(exist_ok=True)</code>
+create all the parents directory if not exist <code>path1.mkdir(parents=True)</code></li>
+<li>make file <code>path1.touch()</code>
+trying to make file that already exist do nothing</li>
+<li>iterate all content of directory <code>path1.iterdir()</code> → <em>iterable</em></li>
+<li>move <code>src_path1.replace(des_path1)</code> <em>overwrite destination by default</em></li>
+<li>delete file <code>path1.unlink()</code>
+avoid error if not exist <code>path1.unlink(missing_ok=True)</code></li>
+</ul>
+<h4 id="search-for-file-in-directory"><a class="header" href="#search-for-file-in-directory">search for file in directory</a></h4>
+<p><code>path1.glob(pattern1)</code> → <em>iterable</em></p>
+<ul>
+<li>wildcard character. <code>*</code>—any number of character; <code>?</code>—1 character; <code>[abc]</code>—any included character</li>
+<li><strong>match</strong> to a pattern</li>
+<li>recursive matching
+use <code>**/</code> search in the subtree
+or use <code>path1.rglob(pattern1)</code></li>
+</ul>
+<h2 id="shutil-module"><a class="header" href="#shutil-module"><code>shutil</code> module</a></h2>
+<p>remove subtree <code>shuril.rmtree(path1)</code></p>
+<h2 id="os-module"><a class="header" href="#os-module"><code>os</code> module</a></h2>
+<p>both <code>pathlib</code> and <code>shutil</code> are implemented using <code>os</code></p>
+<hr />
+<h1 id="file"><a class="header" href="#file">file</a></h1>
+<h2 id="text-file"><a class="header" href="#text-file">text file</a></h2>
+<h3 id="character-encoding"><a class="header" href="#character-encoding">character encoding</a></h3>
+<h3 id="line-ending"><a class="header" href="#line-ending">line ending</a></h3>
+<ul>
+<li>carriage return <code>\r</code></li>
+<li>line feed <code>\n</code></li>
+</ul>
+<h3 id="csv-file"><a class="header" href="#csv-file">csv file</a></h3>
+<p><code>csv</code> module</p>
+<h4 id="write"><a class="header" href="#write">write</a></h4>
+<ul>
+<li>writer object <code>csv.writer(file1)</code>
+<ul>
+<li>write one line <code>writer1.writerow(list_of_str1)</code> add <code>','</code> between all item and <code>\n</code> at the end</li>
+<li>write multiple lines <code>writer1.writerows(list_of_list_of_str1)</code></li>
+</ul>
+</li>
+<li>dictionary writer object <code>csv.DictWriter(file1,fieldname=list_of_str1)</code>
+<ul>
+<li>write header <code>DictWriter1.writeheader()</code> → <em>int of character written</em></li>
+<li>write one line <code>DictWriter1.writerow(dict1)</code></li>
+<li>write multiple line<code>DictWriter1.writerows(list_of_dict1)</code>
+<em>it in fact work with any object with <code>write()</code> method</em></li>
+</ul>
+</li>
+</ul>
+<h4 id="read"><a class="header" href="#read">read</a></h4>
+<ul>
+<li>reader object <code>csv.reader(file1)</code> → <em>iterable of list of str</em></li>
+<li>dictionary reader object <code>csv.DictReader(file1)</code> → *iterable of dict of <code>header:val</code></li>
+</ul>
+<h2 id="binary-file"><a class="header" href="#binary-file">binary file</a></h2>
+<p>can only interact with byte directly</p>
+<h2 id="file-object"><a class="header" href="#file-object">file object</a></h2>
+<h3 id="create-3"><a class="header" href="#create-3">create</a></h3>
+<h4 id="path1open-from-pathlib"><a class="header" href="#path1open-from-pathlib"><code>path1.open()</code> from <code>pathlib</code></a></h4>
+<ul>
+<li>mode <code>path1.open(mode=mode1)</code>. <code>&quot;r&quot;</code>—read; <code>&quot;w&quot;</code>—write; <code>&quot;a&quot;</code>—append; <code>&quot;~b&quot;</code>—for binary file with <code>~</code> be one of the mentioned</li>
+<li>encoding <code>path1.open(encoding=encoding1)</code>. <code>&quot;ascii&quot;</code> <code>&quot;utf-8&quot;</code></li>
+</ul>
+<h4 id="openstring1-built-in"><a class="header" href="#openstring1-built-in"><code>open(string1)</code> built-in</a></h4>
+<p>exactly like <code>path1.open()</code> except using a <code>string</code></p>
+<h4 id="with-statement-with--as-file1"><a class="header" href="#with-statement-with--as-file1">with statement <code>with … as file1:</code></a></h4>
+<h3 id="close-file1close"><a class="header" href="#close-file1close">close <code>file1.close()</code></a></h3>
+<h3 id="read-1"><a class="header" href="#read-1">read</a></h3>
+<ul>
+<li>all at once <code>file1.read()</code> → <em>str</em></li>
+<li>line by line <code>file1.readlines()</code> → <em>iterable of str</em></li>
+</ul>
+<h3 id="write-1"><a class="header" href="#write-1">write</a></h3>
+<p>create file if not exist and parent exist</p>
+<h4 id="write-a-string"><a class="header" href="#write-a-string">write a string</a></h4>
+<p><code>file1.write(string1)</code> → <em>int of character written</em></p>
+<ul>
+<li>overwrite when in write mode</li>
+<li>append when in append mode</li>
+</ul>
+<h4 id="write-a-list-of-string"><a class="header" href="#write-a-list-of-string">write a list of string</a></h4>
+<p><code>file1.writelines(list1)</code></p>
+<hr />
+<h1 id="regular-expression-regex"><a class="header" href="#regular-expression-regex">regular expression (regex)</a></h1>
+<h2 id="meta-character"><a class="header" href="#meta-character">meta-character</a></h2>
+<h3 id="wild-card"><a class="header" href="#wild-card">wild card</a></h3>
+<ul>
+<li><code>*</code> any number of the character left to it, greedy, excluding <code>\n</code></li>
+<li><code>.</code> a character, excluding <code>\n</code></li>
+<li><code>*?</code> any number of the character left to it, non-greedy, excluding <code>\n</code></li>
+</ul>
+<h3 id="string-method-1"><a class="header" href="#string-method-1">string method</a></h3>
+<ul>
+<li>find all <code>re.findall(pattern_string1,checked_string1)</code> → <em>list of str</em></li>
+<li>not case sensitive <code>re.meth1(…,re.IGNORECASE)</code></li>
+<li><code>re.search(pattern_string1,checked_string1)</code> → <em>MatchObject</em>
+<ul>
+<li><code>match_object1.group()</code> → <em>the first greedy result</em></li>
+</ul>
+</li>
+<li>find replace <code>re.sub(pattern_string1,replace_string1,checked_string1)</code></li>
+</ul>
+<hr />
+<h1 id="mistake"><a class="header" href="#mistake">mistake</a></h1>
+<h2 id="error"><a class="header" href="#error">error</a></h2>
+<ul>
+<li>syntax error</li>
+<li>run-time error</li>
+</ul>
+<h2 id="try"><a class="header" href="#try">try</a></h2>
+<pre><code class="language-python">try:
+    execution1
+except error_name:
+    execution2
+finally:
+    execution3
+</code></pre>
+<ul>
+<li>multiple kinds of error <code>except (error_name1,error_name2):</code></li>
+<li>catch error individually using multiple <code>except</code></li>
+<li>bare exception clause <code>except:</code> catch any error</li>
+</ul>
+<hr />
+<h1 id="comment"><a class="header" href="#comment">comment</a></h1>
+<ul>
+<li>block comment
+<code># block comment</code></li>
+<li>in-line comment
+<code>code  # in-line comment</code></li>
+<li>document code
+docstring <code>&quot;&quot;&quot;description of this program&quot;&quot;&quot;</code></li>
+</ul>
+                </main>
+
+                <nav class="nav-wrapper" aria-label="Page navigation">
+                    <!-- Mobile navigation buttons -->
+                    <a rel="prev" href="../programming/perl.html" class="mobile-nav-chapters previous"
+                        title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../programming/pip.html" class="mobile-nav-chapters next"
+                        title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                    <div style="clear: both"></div>
+                </nav>
+            </div>
+        </div>
+
+        <nav class="nav-wide-wrapper" aria-label="Page navigation">
+            <a rel="prev" href="../programming/perl.html" class="nav-chapters previous" title="Previous chapter"
+                aria-label="Previous chapter" aria-keyshortcuts="Left">
+                <i class="fa fa-angle-left"></i>
+            </a>
+            <a rel="next" href="../programming/pip.html" class="nav-chapters next" title="Next chapter"
+                aria-label="Next chapter" aria-keyshortcuts="Right">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        </nav>
+
+    </div>
+
+    <script type="text/javascript">
+        window.playground_copyable = true;
+    </script>
+    <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+    <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+    <!-- Custom JS scripts -->
+</body>
+
+</html>
