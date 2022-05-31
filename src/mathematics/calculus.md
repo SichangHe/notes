@@ -638,3 +638,8 @@ $$
 - **convergent** if limit exist
     - **divergent** if limit DNE
 - both side exist $⇒$ can connect them
+
+### improper integral comparison
+
+$f(x)≥g(x)≥0$, $∫_a^∞f(x)\ dx$ converge\
+$⇒ ∫_a^∞g(x)\ dx$ converge

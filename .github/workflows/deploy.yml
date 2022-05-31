@@ -13,18 +13,12 @@ jobs:
       run: |
         git config --global user.name "SichangHe"
         git config --global user.email "sichanghe@users.noreply.github.com"
+    - name: pull mdbook build
+      run: git clone https://github.com/SichangHe/mdbook_binaries.git
     - name: make bin
       run: |
-        mkdir bin
+        mv mdbook_binaries/bin bin
         echo "$(pwd)/bin" >> $GITHUB_PATH
-    - name: Install mdbook
-      run: |
-        curl -sSL https://github.com/rust-lang/mdBook/releases/download/v0.4.18/mdbook-v0.4.18-x86_64-unknown-linux-gnu.tar.gz | tar -xz --directory=bin
-    - name: Install mdbook-katex
-      run: |
-        curl -sSL https://github.com/lzanini/mdbook-katex/releases/download/v0.2.10/mdbook-katex-v0.2.10-x86_64-unknown-linux-gnu.tar.gz | tar -xz
-        mv target/x86_64-unknown-linux-gnu/release/mdbook-katex bin
-        rm -rf target
     - name: Build
       run: mdbook build
     - name: push
