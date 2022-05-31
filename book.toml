@@ -6,7 +6,7 @@ src = "src"
 title = "Steven's Notes"
 
 [build]
-build-dir = "docs"
+build-dir = "."
 
 [output.html]
 git-repository-url = "https://github.com/SichangHe/notes"
