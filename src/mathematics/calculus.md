@@ -22,9 +22,9 @@ $f$ is defined on interval containing $a$ except possibly $a$
 
 $$
 \lim_{x → a}f(x)=L
-\\\\[12pt]
+\\[12pt]
 ⇔ ∀\ \varepsilon>0,\ ∃\ \delta>0,
-\\\\[12pt]
+\\[12pt]
 \text{if}\quad
 0<|x-a|<\delta
 \quad\text{then}\quad
@@ -87,7 +87,7 @@ $f(x)≤g(x)≤h(x)$ near $a$,
 
 $$
 \lim_{x → a}f(x)=\lim_{x → a}h(x)=L
-\\\\[12pt]
+\\[12pt]
 ⇒ \lim_{x → a}g(x)=L
 $$
 
@@ -135,7 +135,7 @@ derivative of $f$ at $a$
 
 $$
 f'(a)=\lim_{h → 0}\frac{f(a+h)-f(a)}{h}
-\\\\[12pt]
+\\[12pt]
 =\lim_{x → a}\frac{f(x)-f(a)}{x-a}
 $$
 
@@ -143,7 +143,7 @@ $$
 
 $$
 f'(x)=\lim_{h → 0}\frac{f(x+h)-f(x)}{h}
-\\\\[12pt]
+\\[12pt]
 =y'
 =\frac{dy}{dx}
 =\frac{df}{dx}
@@ -215,32 +215,32 @@ differentiate both side of equation
 ### derivative of (inverse) trigonometric function
 
 $$
-\frac{d}{dx}(\tan x)=\sec^2\\!x
-\\\\[12pt]
+\frac{d}{dx}(\tan x)=\sec^2\!x
+\\[12pt]
 \frac{d}{dx}(\csc x)=-\csc x\cot x
-\\\\[12pt]
+\\[12pt]
 \frac{d}{dx}(\sec x)=\sec x\tan x
-\\\\[12pt]
-\frac{d}{dx}(\cot x)=-\csc^2\\!x
-\\\\[12pt]
-\frac{d}{dx}(\sin^{-1}\\!x)=\frac{1}{\sqrt{1-x^2}}
-\\\\[12pt]
-\frac{d}{dx}(\cos^{-1}\\!x)=-\frac{1}{\sqrt{1-x^2}}
-\\\\[12pt]
-\frac{d}{dx}(\tan^{-1}\\!x)=\frac{1}{1+x^2}
-\\\\[12pt]
-\frac{d}{dx}(\cot^{-1}\\!x)=-\frac{1}{1+x^2}
-\\\\[12pt]
-\frac{d}{dx}(\sec^{-1}\\!x)=\frac{1}{x\sqrt{x^2-1}}
-\\\\[12pt]
-\frac{d}{dx}(\csc^{-1}\\!x)=-\frac{1}{x\sqrt{x^2-1}}
+\\[12pt]
+\frac{d}{dx}(\cot x)=-\csc^2\!x
+\\[12pt]
+\frac{d}{dx}(\sin^{-1}\!x)=\frac{1}{\sqrt{1-x^2}}
+\\[12pt]
+\frac{d}{dx}(\cos^{-1}\!x)=-\frac{1}{\sqrt{1-x^2}}
+\\[12pt]
+\frac{d}{dx}(\tan^{-1}\!x)=\frac{1}{1+x^2}
+\\[12pt]
+\frac{d}{dx}(\cot^{-1}\!x)=-\frac{1}{1+x^2}
+\\[12pt]
+\frac{d}{dx}(\sec^{-1}\!x)=\frac{1}{x\sqrt{x^2-1}}
+\\[12pt]
+\frac{d}{dx}(\csc^{-1}\!x)=-\frac{1}{x\sqrt{x^2-1}}
 $$
 
 ### derivative of logarithmic function
 
 $$
 \frac{d}{dx}(\ln|u|)=\frac{du}{udx}
-\\\\[12pt]
+\\[12pt]
 \frac{d}{dx}\ln|x|=\frac{1}{x}
 $$
 
@@ -258,7 +258,7 @@ $$
 
 $$
 \sinh x=\frac{e^x-e^{-x}}{2}
-\\\\[12pt]
+\\[12pt]
 \cosh x=\frac{e^x+e^{-x}}{2}
 $$
 
@@ -376,16 +376,16 @@ choose $x^*$ to be the midpoint
 
 $$
 ∫_a^bf(x)\ d(x)=-∫_b^af(x)\ dx
-\\\\[12pt]
+\\[12pt]
 ∫_a^af(x)\ dx=0
-\\\\[12pt]
+\\[12pt]
 ∫_a^bf(x)\ d(x)+∫_b^cf(x)\ d(x)
 =∫_a^cf(x)\ d(x)
-\\\\[12pt]
+\\[12pt]
 f(x)≥0 ⇒ ∫_a^bf(x)\ d(x)≥0
-\\\\[12pt]
+\\[12pt]
 f(x)≥g(x) ⇒ ∫_a^bf(x)\ d(x)≥∫_a^bg(x)\ d(x)
-\\\\[12pt]
+\\[12pt]
 m≤f(x)≤M ⇒ m(b-a)≤∫_a^bf(x)\ d(x)≤M(b-a)
 $$
 
@@ -431,31 +431,31 @@ $$
 $$
 ∫v(u(x))\frac{du}{dx}dx
 =∫v(u)du
-\\\\[12pt]
+\\[12pt]
 ∫_a^bv(u(x))\frac{du}{dx}dx
 =∫_{u(a)}^{u(b)}v(u)du
 $$
 
 $\Leftarrow$ chain rule
 
-### trigonometric integral
+### trigonometric integral and trigonometric substitution
 
-from $\sin^2\\!x+\cos^2\\!x=1$
+from $\sin^2\!x+\cos^2\!x=1$
 
 $$
 \sqrt{a-x^2}=\sqrt{a}\cos\theta
 \qquad(x=\sqrt{a}\sin\theta,\theta\in \left[
     -\frac{\pi}{2},\frac{\pi}{2}
 \right])
-\\\\[12pt]
-∫\sin^{2k-1}\\!x\cos^n\\!x\ dx
-=-∫(1-\cos^2\\!x)^{k-1}\cos^n\\!x\ d(\cos x)
-\\\\[12pt]
-∫\sin^m\\!x\cos^{2k-1}\\!x\ dx
-=∫\sin^m\\!x(1-\sin^2\\!x)^{k-1}\ d(\sin x)
+\\[12pt]
+∫\sin^{2k-1}\!x\cos^n\!x\ dx
+=-∫(1-\cos^2\!x)^{k-1}\cos^n\!x\ d(\cos x)
+\\[12pt]
+∫\sin^m\!x\cos^{2k-1}\!x\ dx
+=∫\sin^m\!x(1-\sin^2\!x)^{k-1}\ d(\sin x)
 $$
 
-from $\sec^2\\!x-\tan^2\\!x=1$
+from $\sec^2\!x-\tan^2\!x=1$
 
 $$
 \sqrt{x^2-a}=\sqrt{a}\tan\theta
@@ -464,21 +464,21 @@ $$
 \right) \cup \left[
     \pi,\frac{3\pi}{2}
 \right))
-\\\\[12pt]
-∫\tan^m\\!x\sec^{2k}\\!x\ dx
-=∫\tan^m\\!x(\tan^2\\!x+1)^{k-1}\ d(\tan x)
-\\\\[12pt]
-∫\tan^{2k-1}\\!x\sec^n\\!x\ dx
-=∫(\sec^2\\!x-1)^{k-1}\sec^{n-1}\\!x\ d(\sec x)
+\\[12pt]
+∫\tan^m\!x\sec^{2k}\!x\ dx
+=∫\tan^m\!x(\tan^2\!x+1)^{k-1}\ d(\tan x)
+\\[12pt]
+∫\tan^{2k-1}\!x\sec^n\!x\ dx
+=∫(\sec^2\!x-1)^{k-1}\sec^{n-1}\!x\ d(\sec x)
 $$
 
 $$
 ∫\tan x\ dx=\ln|\sec x|+C
-\\\\[12pt]
+\\[12pt]
 ∫\sec x\ dx=\ln|\sec x+\tan x|+C
 $$
 
-## polynomial integral
+## rational function integral
 
 $$
 \frac{
@@ -494,7 +494,7 @@ $$
         d_{q} x^{2}+h_{q}
     \right)^{p_{q}}
 }
-\\\\
+\\
 =\frac{A_{11}}{b_{1} x+c_{1}}
 +\cdots
 +\frac{A_{1 m_{1}}}{\left(
@@ -508,7 +508,7 @@ $$
 \right)^{m_{n}}}
 +\frac{C_{11} x+D_{11}}{d_{1} x^{2}+h_{1}}
 +\cdots
-\\\\
+\\
 +\frac{C_{1 p_{1}} x+D_{1 p_{1}}}{\left(
     d_{1} x^{2}+h_{1}
 \right)^{p_{1}}}
@@ -520,11 +520,21 @@ $$
 \right)^{p_{q}}}
 $$
 
+$$
+∫\frac{dx}{x^2+a^2}=\frac{1}{a}\tan^{-1}\left(
+    \frac{x}{a}
+\right)
+\\[12pt]
+∫\frac{dx}{x^2-a^2}=\frac{1}{2a}\ln\left|
+    \frac{x-a}{x+a}
+\right|
+$$
+
 ## symmetric integral
 
 $$
 f(-x)=f(x) ⇒ ∫_{-a}^af(x)\ dx=2∫_0^af(x)\ dx
-\\\\[12pt]
+\\[12pt]
 f(-x)=-f(x) ⇒ ∫_{-a}^af(x)\ dx=0
 $$
 
@@ -555,7 +565,7 @@ $$
 $$
 ∫_P^Q\ ds
 =∫_P^Q\sqrt{(dx)^2+(dy)^2}
-\\\\[12pt]
+\\[12pt]
 =∫_a^b\sqrt{1+\left(
     \frac{df}{dx}
 \right)^2}\ dx
@@ -569,7 +579,7 @@ surface area:
 
 $$
 ∫_a^bl(x)\ d(arc\\_length(x))
-\\\\[12pt]
+\\[12pt]
 =∫_a^b2\pi f(x)\sqrt{1+\left(
     \frac{df}{dx}
 \right)^2}\ dx
@@ -596,3 +606,35 @@ $$
 $$
 
 $\Leftarrow$ power rule
+
+## improper integral
+
+### integral with infinite interval
+
+- $f$ continuous on $[a,∞)$
+- $\lim_{t → ∞}∫_a^tf(x)\ dx$ exist
+
+$$
+⇒∫_a^∞f(x)\ dx
+=\lim_{t → ∞}∫_a^tf(x)\ dx
+$$
+
+- opposite for $∫_{-∞}^af(x)\ dx$
+- **convergent** if limit exist
+    - **divergent** if limit DNE
+- both side exist $⇒ ∫_{-∞}^∞f(x)\ dx$ is their sum
+
+### discontinuous integral
+
+- $f$ continuous on $[a,b)$, discontinuous at $b$
+- $\lim_{t → b^-}∫_a^tf(x)\ dx$ exist
+
+$$
+⇒ ∫_a^bf(x)\ dx
+=\lim_{t → b^-}∫_a^tf(x)\ dx
+$$
+
+- opposite for when $f$ continuous on $(a,b]$, discontinuous at $a$
+- **convergent** if limit exist
+    - **divergent** if limit DNE
+- both side exist $⇒$ can connect them

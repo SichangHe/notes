@@ -47,12 +47,6 @@
     <link rel="stylesheet" href="{{ ../path_to_root }}{{ this }}">
     {{/each}}
 
-    <!-- MathJax -->
-    <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({ tex2jax: {inlineMath: [["$","$"]]} });
-    </script>
-    <script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </head>
 
 <body>
@@ -94,10 +88,6 @@
         }
         html.classList.remove('sidebar-visible');
         html.classList.add("sidebar-" + sidebar);
-
-        // don't show body until MathJax finish
-        setTimeout(() => { document.body.style.visibility = "visible" }, 1000); // show the body anyway after 1 sec
-        MathJax.Hub.Queue(() => document.body.style.visibility = "visible");
     </script>
 
     <nav id="sidebar" class="sidebar" aria-label="Table of contents">
