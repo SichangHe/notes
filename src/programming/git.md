@@ -114,3 +114,9 @@ create orphan branch
 ```shell
 git switch --orphan <branch>
 ```
+
+force sync from origin
+
+```shell
+git reset --hard origin/master
+```
