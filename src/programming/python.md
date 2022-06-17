@@ -98,7 +98,7 @@ del var1
 
 - `print(string1, string2…)`\
     each part must be string\
-    **`` are added between string**
+    `' '` **are added between string**
 - formatted string literals (f-string)\
     `f"{string1}string_literal…"` → *str*
 
