@@ -149,7 +149,7 @@
 <h1 id="environment"><a class="header" href="#environment">environment</a></h1>
 <ul>
 <li>Python REPL (Read-Evaluate-Print Loop)/ Python shell</li>
-<li>script<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">∈</span></span></span></span>script file</li>
+<li>script <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">∈</span></span></span></span> script file</li>
 </ul>
 <h1 id="variable"><a class="header" href="#variable">variable</a></h1>
 <h2 id="operator"><a class="header" href="#operator">operator</a></h2>
@@ -163,7 +163,9 @@
 </ul>
 <h3 id="pep-8-guideline"><a class="header" href="#pep-8-guideline">PEP 8 guideline</a></h3>
 <h2 id="inspect-in-repl"><a class="header" href="#inspect-in-repl">inspect (in REPL)</a></h2>
-<h2 id="unassign-delete-del-var1"><a class="header" href="#unassign-delete-del-var1">unassign (delete) <code>del var1</code></a></h2>
+<h2 id="unassign-delete"><a class="header" href="#unassign-delete">unassign (delete)</a></h2>
+<pre><code class="language-python">del var1
+</code></pre>
 <hr />
 <h1 id="data-type"><a class="header" href="#data-type">data type</a></h1>
 <ul>
@@ -179,23 +181,32 @@
 </ul>
 <h3 id="string-literal-string-literal"><a class="header" href="#string-literal-string-literal">string literal <code>&quot;string literal&quot;</code></a></h3>
 <ul>
-<li>delimiter <code>&quot;&quot;</code> or <code>''</code></li>
-<li>multiline string <code>&quot;first and \</code>
-<code>second&quot;</code>
-or
-<code>&quot;&quot;&quot;first line</code>
-<code>second line&quot;&quot;&quot;</code></li>
-<li>raw string <code>r&quot;raw string&quot;</code></li>
+<li>
+<p>delimiter <code>&quot;&quot;</code> or <code>''</code></p>
+</li>
+<li>
+<p>multiline string</p>
+<pre><code class="language-python">&quot;first and \
+second&quot;
+</code></pre>
+<p>or</p>
+<pre><code class="language-python">&quot;&quot;&quot;first line
+second line&quot;&quot;&quot;
+</code></pre>
+</li>
+<li>
+<p>raw string <code>r&quot;raw string&quot;</code></p>
+</li>
 </ul>
 <h3 id="string-operation"><a class="header" href="#string-operation">string operation</a></h3>
 <ul>
-<li>concatenation <code>string1 + string2</code>
+<li>concatenation <code>string1 + string2</code><br />
 need to manually make sure both are string</li>
-<li>indexing <code>string1[index1]</code> → <em>character</em>
+<li>indexing <code>string1[index1]</code> → <em>character</em><br />
 negative index count from right</li>
-<li>slicing (slicing) <code>string1[index1:index2]</code>
-return string consisting of <code>string1[index1]</code> to <code>string1[index2 - 1]</code>
-leaving <code>index1</code> or <code>index2</code> empty means <code>0</code> or <code>-1</code> by default
+<li>slicing (slicing) <code>string1[index1:index2]</code><br />
+return string consisting of <code>string1[index1]</code> to <code>string1[index2 - 1]</code><br />
+leaving <code>index1</code> or <code>index2</code> empty means <code>0</code> or <code>-1</code> by default<br />
 exceeding string length return empty string <code>''</code> for those parts</li>
 <li>multiplication <code>string1 * n</code>
 repeat <code>n</code> time</li>
@@ -204,28 +215,33 @@ repeat <code>n</code> time</li>
 <h3 id="string-method"><a class="header" href="#string-method">string method</a></h3>
 <ul>
 <li>convert case <code>.lower()</code> <code>.upper()</code></li>
-<li>remove whitespace
-<code>.rstript()</code> from the right
-<code>lstript()</code> from the left
+<li>remove whitespace<br />
+<code>.rstript()</code> from the right<br />
+<code>lstript()</code> from the left<br />
 <code>stript()</code> both side</li>
 <li>check start/ end <code>.startswith()</code> <code>.endswith()</code> → <em>boolean</em></li>
-<li>find substring <code>.find(substring1)</code> → <em>int</em> index of the first found; <code>-1</code> if not found</li>
+<li>find substring <code>.find(substring1)</code> → <em>int</em> index of the first found;
+<code>-1</code> if not found</li>
 <li>replace <code>.replace(string1,string2)</code></li>
 </ul>
 <h3 id="input"><a class="header" href="#input">input</a></h3>
 <p><code>input(prompt_string)</code> → <em>str</em></p>
-<h3 id="conversion"><a class="header" href="#conversion">conversion</a></h3>
+<h3 id="string-conversion"><a class="header" href="#string-conversion">string conversion</a></h3>
 <ul>
 <li>anything to string <code>str(var1)</code></li>
 </ul>
 <h3 id="output"><a class="header" href="#output">output</a></h3>
 <ul>
-<li><code>print(string1,string2…)</code>
-each part must be string
-<strong>`` are added between string</strong></li>
-<li>formatted string literals (f-string)
-<code>f&quot;{string1}string_literal…&quot;</code> → <em>str</em>
-enclose variable name in <code>{}</code></li>
+<li>
+<p><code>print(string1, string2…)</code><br />
+each part must be string<br />
+<strong>`` are added between string</strong></p>
+</li>
+<li>
+<p>formatted string literals (f-string)<br />
+<code>f&quot;{string1}string_literal…&quot;</code> → <em>str</em></p>
+<p>enclose variable name in <code>{}</code></p>
+</li>
 </ul>
 <h2 id="number-int-float"><a class="header" href="#number-int-float">number <code>int</code> <code>float</code></a></h2>
 <h3 id="number-literal-1"><a class="header" href="#number-literal-1">number literal <code>1</code></a></h3>
@@ -237,23 +253,27 @@ enclose variable name in <code>{}</code></li>
 <h3 id="arithmetic-operation"><a class="header" href="#arithmetic-operation">arithmetic operation</a></h3>
 <ul>
 <li>operand and operator</li>
-<li>addition <code>+</code> subtraction <code>-</code> multiplication <code>*</code> → <em>int</em> iff both operand int, else <em>float</em></li>
+<li>addition <code>+</code> subtraction <code>-</code> multiplication <code>*</code> → <em>int</em> iff both operand int,
+else <em>float</em></li>
 <li>division <code>/</code> → <em>float</em></li>
-<li>integer division <code>//</code> → <em>int</em> iff both operand int, else <em>float</em>, round down
+<li>integer division <code>//</code> → <em>int</em> iff both operand int,
+else <em>float</em>, round down<br />
 no <code>0</code> denominator allowed regardless of type</li>
 <li>exponent <code>**</code> → <em>int</em> iff both operand positive int, else *float</li>
 <li>modulus <code>%</code> → <em>int</em> iff both operand int, else *float</li>
 </ul>
 <h3 id="number-method"><a class="header" href="#number-method">number method</a></h3>
 <ul>
-<li>round tie to even <code>round(num1,n)</code>
-by default, blank precision → <em>int</em> with <code>None</code> precision
-with int <code>n</code> → <em>int</em> iff both int, else <em>float</em> with <code>n</code> floating digit (negative precision go beyond decimal)</li>
+<li>round tie to even <code>round(num1,n)</code><br />
+by default, blank precision → <em>int</em> with <code>None</code> precision<br />
+with int <code>n</code> → <em>int</em> iff both int, else <em>float</em> with <code>n</code> floating digit
+(negative precision go beyond decimal)</li>
 <li>absolute value <code>abs()</code> return same type</li>
-<li>power <code>pow(base1,exponent1) = base1 ** exponent1</code>, <code>pow(base1,exponent1,mod1) = (base1 ** exponent1) % mod1</code></li>
+<li>power <code>pow(base1,exponent1) = base1 ** exponent1</code>,
+<code>pow(base1,exponent1,mod1) = (base1 ** exponent1) % mod1</code></li>
 <li>check if float is int <code>float1.is_integer()</code> → <em>boolean</em></li>
 </ul>
-<h3 id="conversion-1"><a class="header" href="#conversion-1">conversion</a></h3>
+<h3 id="number-conversion"><a class="header" href="#number-conversion">number conversion</a></h3>
 <ul>
 <li>string to int <code>int(string1)</code>
 can only take string in integer form</li>
@@ -271,7 +291,7 @@ format</p>
 <h3 id="format-n-num_real--num_imaginej"><a class="header" href="#format-n-num_real--num_imaginej">format <code>n =</code><em><code>num_real + num_imagine</code></em><code>j</code></a></h3>
 <ul>
 <li>getting real part and imaginary part <code>n.real</code> <code>n.imag</code> → <em>float</em></li>
-<li>conjugate number <code>n.conjugate()</code>
+<li>conjugate number <code>n.conjugate()</code><br />
 *<code>int</code> and <code>float</code> also have these</li>
 </ul>
 <h2 id="none-nonetype"><a class="header" href="#none-nonetype">None <code>NoneType</code></a></h2>
@@ -316,7 +336,7 @@ format</p>
 <ul>
 <li>replace element <code>list1[index1] = elem1</code></li>
 <li>slice replace <code>list1[index1:index2] = list2</code> <em>not necessarily same length</em></li>
-<li>insert <code>list1.insert(index1,elem1)</code>
+<li>insert <code>list1.insert(index1,elem1)</code><br />
 index too big is seen as last index</li>
 <li>append <code>list1.append(elem1)</code> append to last space, equivalent to <code>list1.insert(list1.__len__(),elem1)</code></li>
 <li>extend <code>list1.extend(iterable1)</code> append an iterable</li>
@@ -328,7 +348,7 @@ index too big is seen as last index</li>
 <li><code>min()</code></li>
 <li><code>max()</code></li>
 <li>shallow copy <code>list1[:]</code> or <code>list1.copy()</code></li>
-<li>sort <code>list1.sort()</code>
+<li>sort <code>list1.sort()</code><br />
 key <code>list1.sort(key=func1)</code> sort by return value of <code>func1(elem)</code></li>
 </ul>
 <h3 id="dictionary"><a class="header" href="#dictionary">dictionary</a></h3>
@@ -424,8 +444,8 @@ next iteration <code>continue</code></p>
 </ul>
 <hr />
 <h1 id="class"><a class="header" href="#class">class</a></h1>
-<p><code>class Class1:</code> <em>CamelCase</em>
-empty structure to contain data</p>
+<p><code>class Class1:</code> <em>CamelCase</em></p>
+<p>empty structure to contain data</p>
 <h2 id="dunder-method-__method1__"><a class="header" href="#dunder-method-__method1__">dunder method <code>.__method1__()</code></a></h2>
 <h2 id="local-method-_method1-naming-convention"><a class="header" href="#local-method-_method1-naming-convention">local method <code>_method1()</code> <em>naming convention</em></a></h2>
 <h2 id="instance-method"><a class="header" href="#instance-method">(instance) method</a></h2>
@@ -440,7 +460,8 @@ empty structure to contain data</p>
 <h2 id="attribute"><a class="header" href="#attribute">attribute</a></h2>
 <p>mutable</p>
 <h3 id="class-attribute"><a class="header" href="#class-attribute">class attribute</a></h3>
-<p>variable with initial value every object of this class has, defined right under the class structure</p>
+<p>variable with initial value every object of this class has,
+defined right under the class structure</p>
 <h3 id="instance-attribute"><a class="header" href="#instance-attribute">instance attribute</a></h3>
 <ul>
 <li>initialize method <code>.__init__()</code>
@@ -518,23 +539,29 @@ empty structure to contain data</p>
 one level up <code>path1.parent</code> → <em>Path</em></p>
 <h4 id="manipulation"><a class="header" href="#manipulation">manipulation</a></h4>
 <ul>
-<li>make directory <code>path1.mkdir()</code>
-avoid error if directory already exist <code>path1.mkdir(exist_ok=True)</code>
+<li>make directory <code>path1.mkdir()</code><br />
+avoid error if directory already exist <code>path1.mkdir(exist_ok=True)</code><br />
 create all the parents directory if not exist <code>path1.mkdir(parents=True)</code></li>
-<li>make file <code>path1.touch()</code>
+<li>make file <code>path1.touch()</code><br />
 trying to make file that already exist do nothing</li>
 <li>iterate all content of directory <code>path1.iterdir()</code> → <em>iterable</em></li>
 <li>move <code>src_path1.replace(des_path1)</code> <em>overwrite destination by default</em></li>
-<li>delete file <code>path1.unlink()</code>
+<li>delete file <code>path1.unlink()</code><br />
 avoid error if not exist <code>path1.unlink(missing_ok=True)</code></li>
 </ul>
 <h4 id="search-for-file-in-directory"><a class="header" href="#search-for-file-in-directory">search for file in directory</a></h4>
 <p><code>path1.glob(pattern1)</code> → <em>iterable</em></p>
 <ul>
-<li>wildcard character. <code>*</code>—any number of character; <code>?</code>—1 character; <code>[abc]</code>—any included character</li>
+<li>wildcard character
+<ul>
+<li><code>*</code>—any number of character</li>
+<li><code>?</code>—1 character</li>
+<li><code>[abc]</code>—any included character</li>
+</ul>
+</li>
 <li><strong>match</strong> to a pattern</li>
-<li>recursive matching
-use <code>**/</code> search in the subtree
+<li>recursive matching<br />
+use <code>**/</code> search in the subtree<br />
 or use <code>path1.rglob(pattern1)</code></li>
 </ul>
 <h2 id="shutil-module"><a class="header" href="#shutil-module"><code>shutil</code> module</a></h2>
@@ -556,7 +583,8 @@ or use <code>path1.rglob(pattern1)</code></li>
 <ul>
 <li>writer object <code>csv.writer(file1)</code>
 <ul>
-<li>write one line <code>writer1.writerow(list_of_str1)</code> add <code>','</code> between all item and <code>\n</code> at the end</li>
+<li>write one line <code>writer1.writerow(list_of_str1)</code> add <code>','</code>
+between all item and <code>\n</code> at the end</li>
 <li>write multiple lines <code>writer1.writerows(list_of_list_of_str1)</code></li>
 </ul>
 </li>
@@ -580,7 +608,14 @@ or use <code>path1.rglob(pattern1)</code></li>
 <h3 id="create-3"><a class="header" href="#create-3">create</a></h3>
 <h4 id="path1open-from-pathlib"><a class="header" href="#path1open-from-pathlib"><code>path1.open()</code> from <code>pathlib</code></a></h4>
 <ul>
-<li>mode <code>path1.open(mode=mode1)</code>. <code>&quot;r&quot;</code>—read; <code>&quot;w&quot;</code>—write; <code>&quot;a&quot;</code>—append; <code>&quot;~b&quot;</code>—for binary file with <code>~</code> be one of the mentioned</li>
+<li>mode <code>path1.open(mode=mode1)</code>
+<ul>
+<li><code>&quot;r&quot;</code>—read</li>
+<li><code>&quot;w&quot;</code>—write</li>
+<li><code>&quot;a&quot;</code>—append</li>
+<li><code>&quot;~b&quot;</code>—for binary file with <code>~</code> be one of the mentioned</li>
+</ul>
+</li>
 <li>encoding <code>path1.open(encoding=encoding1)</code>. <code>&quot;ascii&quot;</code> <code>&quot;utf-8&quot;</code></li>
 </ul>
 <h4 id="openstring1-built-in"><a class="header" href="#openstring1-built-in"><code>open(string1)</code> built-in</a></h4>
@@ -645,11 +680,11 @@ finally:
 <hr />
 <h1 id="comment"><a class="header" href="#comment">comment</a></h1>
 <ul>
-<li>block comment
+<li>block comment<br />
 <code># block comment</code></li>
-<li>in-line comment
+<li>in-line comment<br />
 <code>code  # in-line comment</code></li>
-<li>document code
+<li>document code<br />
 docstring <code>&quot;&quot;&quot;description of this program&quot;&quot;&quot;</code></li>
 </ul>
 

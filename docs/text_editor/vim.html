@@ -148,39 +148,33 @@
 <h1 id="vim"><a class="header" href="#vim">Vim</a></h1>
 <h1 id="movement"><a class="header" href="#movement">movement</a></h1>
 <h2 id="arrow-equivalent"><a class="header" href="#arrow-equivalent">arrow equivalent</a></h2>
-<blockquote>
-<pre><code>       ↑
- ← h j k l →
-     ↓
+<pre><code>        ↑
+    ← h j k l →
+        ↓
 </code></pre>
-</blockquote>
 <h2 id="by-word"><a class="header" href="#by-word">by word</a></h2>
 <h3 id="to-start-of-word"><a class="header" href="#to-start-of-word">to start of word</a></h3>
-<blockquote>
-<p>&lt;–b– ○ –w–&gt;
-word word word</p>
-</blockquote>
+<pre><code>&lt;–b– ○ –w–&gt;
+word word word
+</code></pre>
 <h3 id="to-end-of-word"><a class="header" href="#to-end-of-word">to end of word</a></h3>
-<blockquote>
-<p>ㅤㅤ&lt;–ge–○ –e–&gt;
-word word word</p>
-</blockquote>
+<pre><code>ㅤㅤ&lt;–ge–○ –e–&gt;
+word word word
+</code></pre>
 <h3 id="by-word-1"><a class="header" href="#by-word-1">by WORD</a></h3>
-<p>same as <strong>by word</strong> but capitalize the last letter
-a <strong>WORD</strong> contains any consecutive non-whitespace character</p>
+<p>same as <strong>by word</strong> but capitalize the last letter</p>
+<p>a <strong>WORD</strong> contains any consecutive non-whitespace character</p>
 <h2 id="search"><a class="header" href="#search">search</a></h2>
 <h3 id="search-character"><a class="header" href="#search-character">search character</a></h3>
 <p>type a character in replace of <code>w</code> below</p>
 <h4 id="move-to-result"><a class="header" href="#move-to-result">move to result</a></h4>
-<blockquote>
-<p>○–fw–&gt;
-word word</p>
-</blockquote>
+<pre><code>○–fw–&gt;
+word word
+</code></pre>
 <h4 id="move-to-left-of-result"><a class="header" href="#move-to-left-of-result">move to left of result</a></h4>
-<blockquote>
-<p>○–tw–&gt;
-word sword</p>
-</blockquote>
+<pre><code>○–tw–&gt;
+word sword
+</code></pre>
 <h4 id="backward"><a class="header" href="#backward">backward</a></h4>
 <p>capitalize the letter</p>
 <h3 id="search-expression"><a class="header" href="#search-expression">search expression</a></h3>
@@ -200,26 +194,23 @@ word sword</p>
 </ul>
 <h2 id="end-of-line"><a class="header" href="#end-of-line">end of line</a></h2>
 <h3 id="the-end-character"><a class="header" href="#the-end-character">the end character</a></h3>
-<blockquote>
-<p>&lt;–0– ○ ––&gt;
-ㅤㅤlineㅤㅤ</p>
-</blockquote>
+<pre><code>&lt;–0– ○ ––&gt;
+ㅤㅤlineㅤㅤ
+</code></pre>
 <h3 id="the-end-non-whitespace-character"><a class="header" href="#the-end-non-whitespace-character">the end non-whitespace character</a></h3>
-<blockquote>
-<p>ㅤㅤ&lt;–^–– ○ ––g_–&gt;
-ㅤㅤnot whitespaceㅤㅤ</p>
-</blockquote>
+<pre><code>ㅤㅤ&lt;–^–– ○ ––g_–&gt;
+ㅤㅤnot whitespaceㅤㅤ
+</code></pre>
 <h2 id="by-chunk"><a class="header" href="#by-chunk">by chunk</a></h2>
 <h3 id="by-paragraph"><a class="header" href="#by-paragraph">by paragraph</a></h3>
-<blockquote>
-<p>paragraph 1
+<pre><code>paragraph 1
 stuff
 &lt;–––– { ––––-+
-paragraph 2 ○
-more stuff ㅤ|
+paragraph 2  ○
+more stuff   |
 &lt;–––– } ––––-+
-paragraph 3</p>
-</blockquote>
+paragraph 3
+</code></pre>
 <h3 id="by-page"><a class="header" href="#by-page">by page</a></h3>
 <h4 id="half-page"><a class="header" href="#half-page">half page</a></h4>
 <ul>
@@ -234,7 +225,7 @@ paragraph 3</p>
 <h1 id="count"><a class="header" href="#count">count</a></h1>
 <p><code>number</code> + <code>keys</code> is the same as pressing <code>keys</code> for <code>number</code> times</p>
 <h1 id="write-as-root"><a class="header" href="#write-as-root">write as root</a></h1>
-<pre><code class="language-text">:w !sudo tee %
+<pre><code>:w !sudo tee %
 </code></pre>
 
                 </main>
