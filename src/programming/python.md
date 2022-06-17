@@ -3,7 +3,7 @@
 # environment
 
 - Python REPL (Read-Evaluate-Print Loop)/ Python shell
-- script$\in$script file
+- script $\in$ script file
 
 # variable
 
@@ -20,7 +20,11 @@
 
 ## inspect (in REPL)
 
-## unassign (delete) `del var1`
+## unassign (delete)
+
+```python
+del var1
+```
 
 ---
 
@@ -39,55 +43,66 @@
 ### string literal `"string literal"`
 
 - delimiter `""` or `''`
-- multiline string `"first and \`
-`second"`
-or
-`"""first line`
-`second line"""`
+- multiline string
+
+    ```python
+    "first and \
+    second"
+    ```
+
+    or
+
+    ```python
+    """first line
+    second line"""
+    ```
+
 - raw string `r"raw string"`
 
 ### string operation
 
-- concatenation `string1 + string2`
-need to manually make sure both are string
-- indexing `string1[index1]` → *character*
-negative index count from right
-- slicing (slicing) `string1[index1:index2]`
-return string consisting of `string1[index1]` to `string1[index2 - 1]`
-leaving `index1` or `index2` empty means `0` or `-1` by default
-exceeding string length return empty string `''` for those parts
+- concatenation `string1 + string2`\
+    need to manually make sure both are string
+- indexing `string1[index1]` → *character*\
+    negative index count from right
+- slicing (slicing) `string1[index1:index2]`\
+    return string consisting of `string1[index1]` to `string1[index2 - 1]`\
+    leaving `index1` or `index2` empty means `0` or `-1` by default\
+    exceeding string length return empty string `''` for those parts\
 - multiplication `string1 * n`
-repeat `n` time
+    repeat `n` time
 
 ### immutability
 
 ### string method
 
 - convert case `.lower()` `.upper()`
-- remove whitespace
-`.rstript()` from the right
-`lstript()` from the left
-`stript()` both side
+- remove whitespace\
+    `.rstript()` from the right\
+    `lstript()` from the left\
+    `stript()` both side
 - check start/ end `.startswith()` `.endswith()` → *boolean*
-- find substring `.find(substring1)` → *int* index of the first found; `-1` if not found
+- find substring `.find(substring1)` → *int* index of the first found;
+    `-1` if not found
 - replace `.replace(string1,string2)`
 
 ### input
 
 `input(prompt_string)` → *str*
 
-### conversion
+### string conversion
 
 - anything to string `str(var1)`
 
 ### output
 
-- `print(string1,string2…)`
-each part must be string
-**`` are added between string**
-- formatted string literals (f-string)
-`f"{string1}string_literal…"` → *str*
-enclose variable name in `{}`
+- `print(string1, string2…)`\
+    each part must be string\
+    **`` are added between string**
+- formatted string literals (f-string)\
+    `f"{string1}string_literal…"` → *str*
+
+    enclose variable name in `{}`
 
 ## number `int` `float`
 
@@ -100,23 +115,27 @@ enclose variable name in `{}`
 ### arithmetic operation
 
 - operand and operator
-- addition `+` subtraction `-` multiplication `*` → *int* iff both operand int, else *float*
+- addition `+` subtraction `-` multiplication `*` → *int* iff both operand int,
+    else *float*
 - division `/` → *float*
-- integer division `//` → *int* iff both operand int, else *float*, round down
-no `0` denominator allowed regardless of type
+- integer division `//` → *int* iff both operand int,
+    else *float*, round down\
+    no `0` denominator allowed regardless of type
 - exponent `**` → *int* iff both operand positive int, else *float
 - modulus `%` → *int* iff both operand int, else *float
 
 ### number method
 
-- round tie to even `round(num1,n)`
-by default, blank precision → *int* with `None` precision
-with int `n` → *int* iff both int, else *float* with `n` floating digit (negative precision go beyond decimal)
+- round tie to even `round(num1,n)`\
+    by default, blank precision → *int* with `None` precision\
+    with int `n` → *int* iff both int, else *float* with `n` floating digit
+    (negative precision go beyond decimal)
 - absolute value `abs()` return same type
-- power `pow(base1,exponent1) = base1 ** exponent1`, `pow(base1,exponent1,mod1) = (base1 ** exponent1) % mod1`
+- power `pow(base1,exponent1) = base1 ** exponent1`,
+    `pow(base1,exponent1,mod1) = (base1 ** exponent1) % mod1`
 - check if float is int `float1.is_integer()` → *boolean*
 
-### conversion
+### number conversion
 
 - string to int `int(string1)`
 can only take string in integer form
@@ -137,8 +156,8 @@ format
 ### format `n =`*`num_real + num_imagine`*`j`
 
 - getting real part and imaginary part `n.real` `n.imag` → *float*
-- conjugate number `n.conjugate()`
-*`int` and `float` also have these
+- conjugate number `n.conjugate()`\
+    *`int` and `float` also have these
 
 ## None `NoneType`
 
@@ -191,8 +210,8 @@ no data
 
 - replace element `list1[index1] = elem1`
 - slice replace `list1[index1:index2] = list2` *not necessarily same length*
-- insert `list1.insert(index1,elem1)`
-index too big is seen as last index
+- insert `list1.insert(index1,elem1)`\
+    index too big is seen as last index
 - append `list1.append(elem1)` append to last space, equivalent to `list1.insert(list1.__len__(),elem1)`
 - extend `list1.extend(iterable1)` append an iterable
 - pop `list1.pop(index1)` return and remove `list1[index1]`
@@ -203,8 +222,8 @@ index too big is seen as last index
 - `min()`
 - `max()`
 - shallow copy `list1[:]` or `list1.copy()`
-- sort `list1.sort()`
-key `list1.sort(key=func1)` sort by return value of `func1(elem)`
+- sort `list1.sort()`\
+    key `list1.sort(key=func1)` sort by return value of `func1(elem)`
 
 ### dictionary
 
@@ -320,6 +339,7 @@ Local $\leq$ Enclosing $\leq$ Global $\leq$ Built-in
 # class
 
 `class Class1:` *CamelCase*
+
 empty structure to contain data
 
 ## dunder method `.__method1__()`
@@ -346,7 +366,8 @@ mutable
 
 ### class attribute
 
-variable with initial value every object of this class has, defined right under the class structure
+variable with initial value every object of this class has,
+defined right under the class structure
 
 ### instance attribute
 
@@ -451,25 +472,28 @@ one level up `path1.parent` → *Path*
 
 #### manipulation
 
-- make directory `path1.mkdir()`
-avoid error if directory already exist `path1.mkdir(exist_ok=True)`
-create all the parents directory if not exist `path1.mkdir(parents=True)`
-- make file `path1.touch()`
-trying to make file that already exist do nothing
+- make directory `path1.mkdir()`\
+    avoid error if directory already exist `path1.mkdir(exist_ok=True)`\
+    create all the parents directory if not exist `path1.mkdir(parents=True)`
+- make file `path1.touch()`\
+    trying to make file that already exist do nothing
 - iterate all content of directory `path1.iterdir()` → *iterable*
 - move `src_path1.replace(des_path1)` *overwrite destination by default*
-- delete file `path1.unlink()`
-avoid error if not exist `path1.unlink(missing_ok=True)`
+- delete file `path1.unlink()`\
+    avoid error if not exist `path1.unlink(missing_ok=True)`
 
 #### search for file in directory
 
 `path1.glob(pattern1)` → *iterable*
 
-- wildcard character. `*`—any number of character; `?`—1 character; `[abc]`—any included character
+- wildcard character
+    - `*`—any number of character
+    - `?`—1 character
+    - `[abc]`—any included character
 - **match** to a pattern
-- recursive matching
-use `**/` search in the subtree
-or use `path1.rglob(pattern1)`
+- recursive matching\
+    use `**/` search in the subtree\
+    or use `path1.rglob(pattern1)`
 
 ## `shutil` module
 
@@ -499,7 +523,8 @@ both `pathlib` and `shutil` are implemented using `os`
 #### write
 
 - writer object `csv.writer(file1)`
-    - write one line `writer1.writerow(list_of_str1)` add `','` between all item and `\n` at the end
+    - write one line `writer1.writerow(list_of_str1)` add `','`
+        between all item and `\n` at the end
     - write multiple lines `writer1.writerows(list_of_list_of_str1)`
 - dictionary writer object `csv.DictWriter(file1,fieldname=list_of_str1)`
     - write header `DictWriter1.writeheader()` → *int of character written*
@@ -522,7 +547,11 @@ can only interact with byte directly
 
 #### `path1.open()` from `pathlib`
 
-- mode `path1.open(mode=mode1)`. `"r"`—read; `"w"`—write; `"a"`—append; `"~b"`—for binary file with `~` be one of the mentioned
+- mode `path1.open(mode=mode1)`
+    - `"r"`—read
+    - `"w"`—write
+    - `"a"`—append
+    - `"~b"`—for binary file with `~` be one of the mentioned
 - encoding `path1.open(encoding=encoding1)`. `"ascii"` `"utf-8"`
 
 #### `open(string1)` built-in
@@ -601,9 +630,9 @@ finally:
 
 # comment
 
-- block comment
-`# block comment`
-- in-line comment
-`code  # in-line comment`
-- document code
-docstring `"""description of this program"""`
+- block comment\
+    `# block comment`
+- in-line comment\
+    `code  # in-line comment`
+- document code\
+    docstring `"""description of this program"""`

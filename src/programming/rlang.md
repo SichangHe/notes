@@ -59,6 +59,6 @@ can also take vector as element, will expand
 
 `install.packages("package_name")`
 
-- install multiple packages
-use a vector
+- install multiple packages\
+    use a vector
 `install.packages(c("package1","package2",…))`
