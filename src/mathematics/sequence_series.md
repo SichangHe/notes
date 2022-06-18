@@ -133,7 +133,7 @@ s_n=\frac{a(1-r^n)}{1-r}
 \end{cases}
 $$
 
-#### power series
+#### power series $\sum x^n$
 
 $$
 \sum_{n=0}^∞ x^n=\frac{1}{1-x}
@@ -280,3 +280,85 @@ $$
     1. ratio test
     1. $(b_n)^n ⇒ $ root test
 1. integral test
+
+## power series
+
+power series centered at $a$
+(power series about $a$)
+
+$$
+\sum_{n=0}^∞ c_n(x-a)^n
+$$
+
+- $c_n$ coefficient
+
+### radius of convergence $R$
+
+$a_n$ converge when $x$ is within $R$ to $a$
+
+1. $R=0$\
+    converge iff $x=a$
+1. $R=∞$\
+    converge for $x\in\R$
+1. $R=C>0$\
+    converge if $|x-a|<R$,
+    diverge if $|x-a|>R$
+
+#### interval of convergence
+
+1. $\{a\}$
+1. $\R$
+1. ⏎
+
+    - $[a-R,a+R]$
+    - $[a-R,a+R)$
+    - $(a-R,a+R]$
+    - $(a-R,a+R)$
+
+#### find interval of convergence
+
+1. find radius of convergence using ratio test/ root test
+1. check endpoint
+
+### differentiation or integration of power series
+
+equal to each term different or integrate
+
+#### convergence and differentiability of power series
+
+power series
+$$
+\sum a_n=\sum_{n=0}^∞ c_n(x-a)^n
+$$
+
+has radius of convergence $R$
+
+$ ⇒ $ function
+
+$$
+f(x)=\sum_{n=0}^∞ c_n(x-a)^n
+$$
+
+differentiable on $(a-R,a+R)$
+
+1. derivative
+
+    $$
+    f'(x)
+    =\sum_{n=0}^∞ \frac{d}{dx}\left(
+        c_n(x-a)^n
+    \right)
+    \\[12pt]
+    =\sum_{n=1}^∞ c_nn(x-a)^{n-1}
+    $$
+
+    - $n$ start from $1$ because the term at $0$ is $0$
+
+1. integral
+
+    $$
+    ∫f(x)\ dx
+    =\sum_{n=0}^∞ ∫c_n(x-a)^n\ dx
+    \\[12pt]
+    =\sum_{n=0}^∞ c_n\frac{(x-a)^{n+1}}{x+1}+C
+    $$

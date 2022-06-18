@@ -229,7 +229,7 @@ no data
 
 - key-value pair
 
-#### create
+#### create dictionary
 
 - dictionary literal `{key1:val1,…}`
 - from tuple of tuple `((key1:val1),…)`
@@ -241,10 +241,32 @@ no data
 - index `dict[index1]`
 - convert to dict_items `dict1.items()`
 
-#### mutate
+#### mutate dictionary
 
 - add or overwrite `dict1[key1] = val1`
 - remove `del dict1[key1]`
+
+### set
+
+dictionary without value
+
+#### create set
+
+```python
+set(a) # or
+{a, b, c}
+```
+
+#### set method
+
+some method map to arithmetic operator but those only work on other set
+instead of any iterable
+
+- `.union(iter1)` ≈ `|`
+- `.difference(iter1)` ≈ `-`
+- `.symmetrical_difference(iter1)` ≈ `^`
+- `issubset(set1)` ≈ `<=`
+- `issuperset(set1)` ≈ `>=`
 
 ---
 
