@@ -355,7 +355,7 @@ key <code>list1.sort(key=func1)</code> sort by return value of <code>func1(elem)
 <ul>
 <li>key-value pair</li>
 </ul>
-<h4 id="create-1"><a class="header" href="#create-1">create</a></h4>
+<h4 id="create-dictionary"><a class="header" href="#create-dictionary">create dictionary</a></h4>
 <ul>
 <li>dictionary literal <code>{key1:val1,…}</code></li>
 <li>from tuple of tuple <code>((key1:val1),…)</code></li>
@@ -367,10 +367,26 @@ key <code>list1.sort(key=func1)</code> sort by return value of <code>func1(elem)
 <li>index <code>dict[index1]</code></li>
 <li>convert to dict_items <code>dict1.items()</code></li>
 </ul>
-<h4 id="mutate-1"><a class="header" href="#mutate-1">mutate</a></h4>
+<h4 id="mutate-dictionary"><a class="header" href="#mutate-dictionary">mutate dictionary</a></h4>
 <ul>
 <li>add or overwrite <code>dict1[key1] = val1</code></li>
 <li>remove <code>del dict1[key1]</code></li>
+</ul>
+<h3 id="set"><a class="header" href="#set">set</a></h3>
+<p>dictionary without value</p>
+<h4 id="create-set"><a class="header" href="#create-set">create set</a></h4>
+<pre><code class="language-python">set(a) # or
+{a, b, c}
+</code></pre>
+<h4 id="set-method"><a class="header" href="#set-method">set method</a></h4>
+<p>some method map to arithmetic operator but those only work on other set
+instead of any iterable</p>
+<ul>
+<li><code>.union(iter1)</code> ≈ <code>|</code></li>
+<li><code>.difference(iter1)</code> ≈ <code>-</code></li>
+<li><code>.symmetrical_difference(iter1)</code> ≈ <code>^</code></li>
+<li><code>issubset(set1)</code> ≈ <code>&lt;=</code></li>
+<li><code>issuperset(set1)</code> ≈ <code>&gt;=</code></li>
 </ul>
 <hr />
 <h1 id="function"><a class="header" href="#function">function</a></h1>
@@ -516,7 +532,7 @@ defined right under the class structure</p>
 <li>check if is file <code>path1.is_file()</code> → <em>boolean</em></li>
 <li>check if is directory <code>path1.is_dir()</code> → <em>boolean</em></li>
 </ul>
-<h4 id="create-2"><a class="header" href="#create-2">create</a></h4>
+<h4 id="create-1"><a class="header" href="#create-1">create</a></h4>
 <ul>
 <li>from string <code>Path(string1)</code></li>
 <li><code>Path.home()</code> or <code>Path.cwd()</code></li>
@@ -605,7 +621,7 @@ between all item and <code>\n</code> at the end</li>
 <h2 id="binary-file"><a class="header" href="#binary-file">binary file</a></h2>
 <p>can only interact with byte directly</p>
 <h2 id="file-object"><a class="header" href="#file-object">file object</a></h2>
-<h3 id="create-3"><a class="header" href="#create-3">create</a></h3>
+<h3 id="create-2"><a class="header" href="#create-2">create</a></h3>
 <h4 id="path1open-from-pathlib"><a class="header" href="#path1open-from-pathlib"><code>path1.open()</code> from <code>pathlib</code></a></h4>
 <ul>
 <li>mode <code>path1.open(mode=mode1)</code>
