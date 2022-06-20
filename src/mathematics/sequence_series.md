@@ -362,3 +362,33 @@ differentiable on $(a-R,a+R)$
     \\[12pt]
     =\sum_{n=0}^∞ c_n\frac{(x-a)^{n+1}}{x+1}+C
     $$
+
+### function $f(x)$'s power series expansion
+
+$$
+f(x)=\sum_{n=0}^∞ c_n(x-a)^n
+\qquad
+|x-a|<R
+$$
+
+$ ⇔ $
+
+$$
+c_n=\frac{f^{(n)}(a)}{n!}
+$$
+
+## Taylor series
+
+Taylor series of $f$ at $a$ (/ about $a$ / centered at $a$)
+
+$$
+f(x)=\sum_{n=0}^∞ \frac{f^{(n)}(a)}{n!}(x-a)^n
+$$
+
+### Maclaurin series
+
+Taylor series at $0$
+
+$$
+f(x)=\sum_{n=0}^∞ \frac{f^{(n)}(0)}{n!}x^n
+$$

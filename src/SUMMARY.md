@@ -30,6 +30,7 @@
     - [Mathematica](programming/mathematica.md)
     - [MATLAB](programming/matlab.md)
     - [Ruby](programming/ruby.md)
+        - [Rails](programming/rails.md)
     - [Rust](programming/rust.md)
     - [R lang](programming/rlang.md)
     - [Shell](programming/shell.md)
