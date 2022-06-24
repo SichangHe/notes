@@ -208,7 +208,22 @@ article = Article.new(title: 'Example', body: 'Example text.')
 # save to database
 article.save # =&gt; true
 </code></pre>
-<h4 id="validation-of-new-model-object"><a class="header" href="#validation-of-new-model-object">validation of new model object</a></h4>
+<h3 id="update-model-object"><a class="header" href="#update-model-object">update model object</a></h3>
+<pre><code class="language-ruby">article.update # =&gt; true
+</code></pre>
+<h4 id="validation-of-model-object-when-save-or-update"><a class="header" href="#validation-of-model-object-when-save-or-update">validation of model object when save or update</a></h4>
+<pre><code class="language-ruby"># declare a `article_params` method to validate
+def article_params
+    params.require(:article).permit(:title, :author, :body, :status)
+end
+
+# use the method when try saving or updating
+if @article.update(article_params)
+    redirect_to @article
+else
+    render :edit, status: :unprocessable_entity
+end
+</code></pre>
 <h3 id="query-model-object-from-database"><a class="header" href="#query-model-object-from-database">query model object from database</a></h3>
 <pre><code class="language-ruby"># query article by id
 Article.find(1) # =&gt; 1 Article object or Nil
@@ -223,17 +238,22 @@ Article.all # =&gt; 1 ActiveRecord::Relation object
 <ul>
 <li>
 <p>run ruby code</p>
-<pre><code class="language-ruby">&lt;% … %&gt;
+<pre><code class="language-erb">&lt;% … %&gt;
 </code></pre>
 </li>
 <li>
 <p>run ruby code and render the return value</p>
-<pre><code class="language-ruby">&lt;%= … %&gt;
+<pre><code class="language-erb">&lt;%= … %&gt;
+</code></pre>
+</li>
+<li>
+<p>write comment that does not render in result</p>
+<pre><code class="language-erb">&lt;%# comment %&gt;
 </code></pre>
 </li>
 </ul>
 <h3 id="access-instance-variable-in-view"><a class="header" href="#access-instance-variable-in-view">access instance variable in view</a></h3>
-<pre><code class="language-ruby">&lt;ul&gt;
+<pre><code class="language-erb">&lt;ul&gt;
     &lt;% @articles.each do |article| %&gt;
         &lt;li&gt;
             &lt;%= article.title %&gt;
@@ -245,7 +265,7 @@ Article.all # =&gt; 1 ActiveRecord::Relation object
 <ul>
 <li>
 <p>product a link with some_text to <code>article_path</code></p>
-<pre><code class="language-ruby">&lt;%= link_to some_text, article %&gt;
+<pre><code class="language-erb">&lt;%= link_to some_text, article %&gt;
 </code></pre>
 </li>
 <li>
@@ -256,6 +276,42 @@ Article.all # =&gt; 1 ActiveRecord::Relation object
 <li>the browser make a new request</li>
 <li>use <code>redirect_to</code> to mutate database</li>
 </ul>
+</li>
+</ul>
+<h3 id="partial-template"><a class="header" href="#partial-template">partial template</a></h3>
+<p>partial has name starting with <code>_</code></p>
+<p>e.g.</p>
+<p><code>_form.html.erb</code></p>
+<h4 id="access-partial-template-from-another-view"><a class="header" href="#access-partial-template-from-another-view">access partial template from another view</a></h4>
+<pre><code class="language-erb">&lt;%= render 'comments/form' %&gt;
+</code></pre>
+<ul>
+<li>
+<p>relative path without <code>_</code></p>
+</li>
+<li>
+<p>add argument</p>
+<pre><code class="language-ruby">render 'form', article: @article
+
+# or the longer format
+render partial: 'form', locals: { article: @article }
+
+# or even longer format
+render partial: 'form', object: @article, as: 'article'
+</code></pre>
+</li>
+<li>
+<p>render a collection</p>
+<pre><code class="language-ruby">render @products
+
+# or longer format
+render partial: 'product', collection: @products    
+</code></pre>
+<p>or even longer format</p>
+<pre><code class="language-erb">&lt;% @products.each do |product| %&gt;
+    &lt;%= render partial: &quot;product&quot;, locals: { product: product } %&gt;
+&lt;% end %&gt;
+</code></pre>
 </li>
 </ul>
 <h2 id="controller"><a class="header" href="#controller">controller</a></h2>
