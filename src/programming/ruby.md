@@ -218,6 +218,20 @@ def self.static_method_name(arg)
 end
 ```
 
+### safe navigation syntax `&.`
+
+same as `optional chaining`
+
+# module
+
+```ruby
+module ModuleName
+    def self.static_method1
+        # …
+    end
+end
+```
+
 # exception
 
 ```ruby

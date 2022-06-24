@@ -392,3 +392,25 @@ Taylor series at $0$
 $$
 f(x)=\sum_{n=0}^∞ \frac{f^{(n)}(0)}{n!}x^n
 $$
+
+### $n$-th degree Taylor polynomial $T_n$
+
+$n$-th degree Taylor polynomial $T_n$ of $f$ at $a$
+
+$$
+T_n(x)=\sum_{i=0}^n \frac{f^{(n)}(a)}{n!}(x-a)^n
+$$
+
+### remainder of Taylor series $R_n$
+
+$$
+R_n(x)=f(x)-T_n(x)
+$$
+
+- for $|x-a|<R$
+
+    $$
+    \lim_{n → ∞}R_n(x)=0
+    $$
+
+    $ ⇒ f$ equal sum of its Taylor series

@@ -117,6 +117,12 @@ paragraph 3
 
 `number` + `keys` is the same as pressing `keys` for `number` times
 
+# undo and redo
+
+- undo `u`
+- redo `^r`
+- undo a line `U`
+
 # write as root
 
 ```
