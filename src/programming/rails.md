@@ -87,7 +87,27 @@ article = Article.new(title: 'Example', body: 'Example text.')
 article.save # => true
 ```
 
-#### validation of new model object
+### update model object
+
+```ruby
+article.update # => true
+```
+
+#### validation of model object when save or update
+
+```ruby
+# declare a `article_params` method to validate
+def article_params
+    params.require(:article).permit(:title, :author, :body, :status)
+end
+
+# use the method when try saving or updating
+if @article.update(article_params)
+    redirect_to @article
+else
+    render :edit, status: :unprocessable_entity
+end
+```
 
 ### query model object from database
 
@@ -109,19 +129,25 @@ embedded Ruby in HTML
 
 - run ruby code
 
-    ```ruby
+    ```erb
     <% … %>
     ```
 
 - run ruby code and render the return value
 
-    ```ruby
+    ```erb
     <%= … %>
+    ```
+
+- write comment that does not render in result
+
+    ```erb
+    <%# comment %>
     ```
 
 ### access instance variable in view
 
-```ruby
+```erb
 <ul>
     <% @articles.each do |article| %>
         <li>
@@ -135,7 +161,7 @@ embedded Ruby in HTML
 
 - product a link with some_text to `article_path`
 
-    ```ruby
+    ```erb
     <%= link_to some_text, article %>
     ```
 
@@ -147,6 +173,50 @@ embedded Ruby in HTML
 
     - the browser make a new request
     - use `redirect_to` to mutate database
+
+### partial template
+
+partial has name starting with `_`
+
+e.g.
+
+`_form.html.erb`
+
+#### access partial template from another view
+
+```erb
+<%= render 'comments/form' %>
+```
+
+- relative path without `_`
+- add argument
+
+    ```ruby
+    render 'form', article: @article
+
+    # or the longer format
+    render partial: 'form', locals: { article: @article }
+    
+    # or even longer format
+    render partial: 'form', object: @article, as: 'article'
+    ```
+
+- render a collection
+
+    ```ruby
+    render @products
+
+    # or longer format
+    render partial: 'product', collection: @products    
+    ```
+
+    or even longer format
+
+    ```erb
+    <% @products.each do |product| %>
+        <%= render partial: "product", locals: { product: product } %>
+    <% end %>
+    ```
 
 ## controller
 
