@@ -147,14 +147,24 @@ $$
 
 - divergent
 
+    $$
+    \sum_{n=1}^∞ \frac{1}{n}=∞
+    $$
+
 ### $p$-series
 
 $$
-\sum\frac{1}{n^p}\begin{cases}
+\sum_{n=1}^∞ \frac{1}{n^p}\begin{cases}
     \text{converge}&p>1
     \\
     \text{diverge}&p≤1
 \end{cases}
+$$
+
+- $p=2$
+
+$$
+\sum_{n=1}^∞ \frac{1}{n^2}=\frac{\pi^2}{6}
 $$
 
 ## divergence test
@@ -189,10 +199,14 @@ $⇒ a_n$ diverge
 ## limit comparison test
 
 $$
-\lim_{n → ∞}\frac{a_n}{b_n}=C>0
+\lim_{n → ∞}\frac{a_n}{b_n}=\begin{cases}
+    C≠0& ⇒ a_n,b_n\text{ have same convergence}
+    \\[12pt]
+    0,b_n\text{ converge}& ⇒ a_n\text{ converge}
+    \\[12pt]
+    ∞,b_n\text{diverge}& ⇒ a_n\text{ diverge}
+\end{cases}
 $$
-
-$⇒ a_n,b_n$ have same convergence
 
 ## alternating series
 
@@ -244,26 +258,24 @@ $ ⇒ \sum a_n$ conditionally converge
 ### ratio test
 
 $$
-\left|
-    \lim_{n → ∞}\frac{a_{n+1}}{a_n}
+\lim_{n → ∞}\left|
+    \frac{a_{n+1}}{a_n}
 \right|
-=\begin{cases}
-    L<1 ⇒ \sum a_n\text{ absolutely converge}
+=L\begin{cases}
+    <1 ⇒ \sum a_n\text{ absolutely converge}
     \\[12pt]
-    L>1\text{ or } ∞ ⇒ \sum a_n\text{ diverge}
+    >1\text{ or } ∞ ⇒ \sum a_n\text{ diverge}
 \end{cases}
 $$
 
 ### root test
 
 $$
-\left|
-    \lim_{n → ∞}\sqrt[n]{|a_n|}
-\right|
-=\begin{cases}
-    L<1 ⇒ \sum a_n\text{ absolutely converge}
+\lim_{n → ∞}\sqrt[n]{|a_n|}
+=L\begin{cases}
+    <1 ⇒ \sum a_n\text{ absolutely converge}
     \\[12pt]
-    L>1\text{ or } ∞ ⇒ \sum a_n\text{ diverge}
+    >1\text{ or } ∞ ⇒ \sum a_n\text{ diverge}
 \end{cases}
 $$
 
@@ -414,3 +426,55 @@ $$
     $$
 
     $ ⇒ f$ equal sum of its Taylor series
+
+#### Taylor's inequality
+
+$|f^{(n+1)}(x)|≤M$ for $|x-a|≤d$
+
+$$
+⇒
+|R_n(x)|≤\frac{M}{(n+1)!}|x-a|^{n+1}
+$$
+
+for $|x-a|≤d$
+
+- used to prove equivalence between function and sum of Taylor series
+- a convergent sequence $(x\in\R)$
+
+    $$
+    \lim_{n → ∞}\frac{x^n}{n!}=0
+    $$
+
+#### Maclaurin series for $e^x$
+
+$$
+e^x=\sum_{n=0}^∞ \frac{x^n}{n!}
+$$
+
+- let $x=1$
+    $$
+    e=\sum_{n=0}^∞ \frac{1}{n!}
+    $$
+
+#### Maclaurin series for trigonometric function
+
+$$
+\sin x
+=\sum_{n=0}^∞ (-1)^n \frac{x^{2n+1}}{(2n+1)!}
+\\[12pt]
+\cos x
+=\sum_{n=0}^∞ (-1)^n \frac{x^{2n}}{(2n)!}
+$$
+
+#### binomial series
+
+$|x|<1$
+
+$$
+(1+x)^k
+=\sum_{n=0}^∞ \Bigr(
+    \begin{matrix}
+        k \\ n
+    \end{matrix}
+\Bigr)x^n
+$$

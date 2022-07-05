@@ -47,3 +47,24 @@ $$
 \cos A\cos B
 =\frac{1}{2}[\cos(A-B)+\cos(A+B)]
 $$
+
+$\lfloor x\rfloor$ greatest integer smaller or equal than $x$
+
+$$
+\lim_{n → ∞}\frac{A'}{B'}=1
+\quad ⇒
+\lim_{n → ∞}\left(
+    1+\frac{r}{B}
+\right)^A=e^r
+$$
+
+binomial coefficient
+
+$$
+\Bigr(
+    \begin{matrix}
+        k \\ n
+    \end{matrix}
+\Bigr)
+=\frac{k(k-1)\cdots(k-n+1)}{n!}
+$$
