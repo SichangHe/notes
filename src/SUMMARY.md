@@ -10,7 +10,7 @@
 - [Mathematics](mathematics/index.md)
     - [Arithmetics](mathematics/arithmetics.md)
     - [Calculus](mathematics/calculus.md)
-    - [Differential Equation](mathematics/../differential_equation.md)
+    - [Differential Equation](mathematics/differential_equation.md)
     - [Geometric Vector](mathematics/geometric_vector.md)
     - [Linear Algebra](mathematics/linear_algebra.md)
     - [Parametric Equation](mathematics/parametric_equation.md)
