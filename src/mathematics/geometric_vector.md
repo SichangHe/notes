@@ -194,3 +194,157 @@ $$
     =\frac{y-y_0}{b}
     =\frac{z-z_0}{c}
     $$
+
+# plane
+
+- vector equation
+
+    $$
+    \vec n\cdot(\vec r-\vec r_0)=0
+    $$
+
+    - $\vec n$ normal vector
+
+- scalar equation
+
+    $$
+    a(x-x_0)+b(y-y_0)+c(z-z_0)=0
+    $$
+
+    where
+
+    $$
+    \vec n=\langle a,b,c \rangle
+    $$
+
+- linear equation
+
+    $$
+    ax+by+cz+d=0
+    $$
+
+## plane-plane relation
+
+- parallel plane\
+    normal vector parallel
+- angle between plane\
+    acute angle between normal vector
+
+## point-plane distance
+
+$$
+D=|\text{comp}_{\vec n}\vec b|
+\\[12pt]
+=\frac{|ax_1+by_1+cz_1+d|}{\sqrt{a^2+b^2+c^2}}
+$$
+
+# cylinder
+
+consist of parallel **ruling** through a plane curve
+
+## quadratic surface
+
+second degree equation in three variable
+
+### standard form of quadratic surface
+
+obtained after translation and rotation
+
+$$
+Ax^2+By^2+Cz^2+J=0
+$$
+
+or
+
+$$
+Ax^2+By^2+Iz=0
+$$
+
+<!-- below copied from book -->
+
+- ellipsoid\
+    all traces are ellipses
+- cone\
+    horizontal traces are ellipses
+    vertical traces in the planes  $x = k$ and $y = k$ are hyperbolas if $k ≠ 0$
+    but are pairs of lines if $k = 0$.
+- elliptic paraboloid\
+    horizontal traces are ellipses\
+    vertical traces are parabolas\
+    variable to the first  power indicate axis of paraboloid
+- hyperboloid of one sheet\
+    horizontal traces are ellipses\
+    vertical traces are hyperbolas\
+    axis of symmetry corresponds to variable with negative coefficient
+- hyperbolic paraboloid\
+    horizontal traces are hyperbolas\
+    vertical traces are parabolas
+- hyperboloid of two sheets\
+    horizontal traces in $z = k$ are ellipses if $k > c$ or $k < -c$
+    vertical traces are hyperbolas
+    two minus signs indicate two sheets.
+
+# vector function (vector-valued function)
+
+$$
+\vec r(t)=\langle f(t),g(t),h(t) \rangle
+$$
+
+where $f(t),g(t),h(t)$ are component function of $\vec r$
+
+## limit of vector function
+
+take limit of its component function
+
+### continuity of vector function
+
+$\vec r$ continuous at $a ⇔ $
+
+$$
+\lim_{t → a}\vec r(t)=\vec r(a)
+$$
+
+## space curve
+
+set $C$ of all point
+
+$$
+x=f(t)
+\qquad
+y=g(t)
+\qquad
+z=h(t)
+$$
+
+- parametric equation
+- $t$ parameter
+- visualization\
+    draw projection onto three plane
+
+## derivative of vector function
+
+tangent vector
+
+$$
+\frac{d\vec r}{dt}
+=\vec r'(t)
+=\lim_{h → 0}\frac{\vec r(t+h)-\vec r(t)}{h}
+\\[12pt]
+=\langle f'(t),g'(t),h'(t) \rangle
+$$
+
+- all derivative rule apply except quotient rule
+    - dot product and cross product have separate rule
+    - inner part of chain rule must be scalar function
+- $|\vec r(t)|=C$\
+    $ ⇒ \frac{d}{dt}(\vec r(t)\cdot\vec r(t))=0 ⇒ \vec r(t)\cdot\vec r'(t)=0$
+
+### unit tangent vector
+
+$$
+\vec T(t)=\frac{\vec r'(t)}{|\vec r'(t)|}
+$$
+
+## integral of vector function
+
+integrate each component function
