@@ -348,3 +348,97 @@ $$
 ## integral of vector function
 
 integrate each component function
+
+## arc length
+
+$$
+s(t)=∫_a^t \frac{ds}{du}\ du
+\\[12pt]
+=∫_a^t|\vec r'(u)|\ du
+$$
+
+## curvature
+
+$$
+\kappa=\left|
+    \frac{d\vec T}{ds}
+\right|
+\\[12pt]
+=\frac{|\vec T'|}{|\vec r'|}
+\\[12pt]
+=\frac{|\vec r' × \vec r''|}{|\vec r'|^3}
+$$
+
+### smooth parametrized curve
+
+$\vec r'$ continuous and $\vec r'≠\vec0$
+
+## (principal) unit normal vector
+
+$$
+\vec N(t)=\frac{\vec T'(t)}{|\vec T'(t)|}
+$$
+
+- $\vec N(t)\perp\vec T(t)$
+- $\vec N(t)\perp\vec r'(t)$
+
+### osculating plane
+
+determined by $\vec T,\vec N$
+
+#### osculating circle (circle of curvature)
+
+- in osculating plane
+- tangent the curve
+- center towards $\vec N$
+- radius
+
+    $$
+    \rho=\frac{1}{\kappa}
+    $$
+
+## binormal vector
+
+$$
+\vec B(t)=\vec T(t) × \vec N(t)
+$$
+
+- $\vec B(t)\perp\vec T(t)$
+- $\vec B(t)\perp\vec N(t)$
+
+### normal plane
+
+determined by $\vec N,\vec B$
+
+## velocity vector
+
+$$
+\vec v=\vec r'
+$$
+
+### speed (magnitude of velocity vector)
+
+$$
+v
+=|\vec v(t)|
+=|\vec r'(t)|
+=\frac{ds}{dt}
+$$
+
+- $\vec v=v\vec T$
+- $|\vec T'|=\kappa v$
+
+## acceleration vector
+
+$$
+\vec a=\vec v'=\vec r''
+\\[12pt]
+=v'\vec T+v\vec T'
+\\[12pt]
+=v'\vec T+\kappa v^2\vec N
+\\[12pt]
+=a_T\vec T+a_N\vec N
+\\[12pt]
+=\frac{\vec r'(t)\cdot\vec r''(t)}{|\vec r'(t)|}\vec T
++\frac{|\vec r'(t) × \vec r''(t)|}{|\vec r'(t)|}\vec N
+$$

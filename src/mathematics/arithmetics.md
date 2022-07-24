@@ -68,3 +68,9 @@ $$
 \Bigr)
 =\frac{k(k-1)\cdots(k-n+1)}{n!}
 $$
+
+triangle inequality
+
+$$
+|a+b|≤|a|+|b|
+$$
