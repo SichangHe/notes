@@ -23,6 +23,7 @@
     - [Pip](package_manager/pip.md)
 - [Programming](programming/index.md)
     - [C](programming/c.md)
+        -[clang](programming/clang.md)
     - [Git](programming/git.md)
     - [Java](programming/java.md)
     - [JavaScript](programming/javascript.md)
