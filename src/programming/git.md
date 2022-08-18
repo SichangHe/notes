@@ -78,6 +78,18 @@ push master to all remote
 git remote | xargs -L1 -I R git push R master
 ```
 
+pull every repo under the current folder
+
+```shell
+fd .git -H -t d -x git --git-dir={} pull
+```
+
+fetch and status every repo under the current folder
+
+```shell
+fd .git -H -t d -x git --git-dir={} fetch \; -x git --git-dir={} --work-tree {}/.. status
+```
+
 delete all history of a certain file (*deprecated*)
 
 ```shell

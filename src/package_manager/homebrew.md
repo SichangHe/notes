@@ -15,7 +15,10 @@ brew install <package>
 update
 
 ```shell
-brew update && brew upgrade --greedy
+brew update \
+&& brew upgrade --greedy \
+&& brew cleanup \
+&& brew autoremove
 ```
 
 list installed packages
@@ -34,4 +37,10 @@ display information about package
 
 ```shell
 brew info <package>
+```
+
+clean up junk
+
+```shell
+brew cleanup && brew autoremove
 ```

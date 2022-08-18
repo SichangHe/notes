@@ -174,6 +174,19 @@ embedded Ruby in HTML
     - the browser make a new request
     - use `redirect_to` to mutate database
 
+- render image
+
+    ```erb
+    <%= image_tag image_path %>
+    ```
+
+- link to the same page with different params
+
+    ```erb
+    <%= link_to some_text,
+      url_for(params.permit!.merge(field_to_change: field_value)) %>
+    ```
+
 ### partial template
 
 partial has name starting with `_`
@@ -295,3 +308,9 @@ open a rails irb console
 ```shell
 rails console
 ```
+
+# Hotwire
+
+## Turbo
+
+[Turbo events](https://turbo.hotwired.dev/reference/events)

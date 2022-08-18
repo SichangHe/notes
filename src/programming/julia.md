@@ -37,8 +37,95 @@ or use `big"…"` if the number if too big for Int or Float
 
 ### machine epsilon `eps(Type1)`
 
+### implicit numeric multiplication
+
+`2x^2x` is equivalent to `2 * x^(2 * x)`
+
+## arithmetic operation
+
+- `÷` integer division
+- `^` power
+- `.` make the next operator element-wise\
+    e.g. `.+` element-wise add
+
+## numeric comparison
+
+Julia support real Unicode operator
+
+- `isequal()` compare object
+- `isfinite()`
+- `isinf()`
+- `isnan()`
+
+Julia support arbitrary comparison chaining
+
 ## conversion `Type1(…)`
 
 ## pattern matching
 
 `_` can be assigned value
+
+## string
+
+Use double or triple quote for string literal
+
+index take raw bytes
+
+index start at 1
+
+can use `begin` and `end` for index
+
+- `r"…"` regex string
+- `b"…"` byte string
+- `v"…"` version literal
+- `raw"…"` raw string
+
+### string concatenation
+
+`string(str1, str2, …)` combine multiple string
+
+`str1 * str2` concatenate them
+
+`"$str1 and $(str2)."` formatted string
+
+## function
+
+traditional syntax
+
+```julia
+function func1(args)
+    # …
+end
+```
+
+assignment form
+
+```julia
+func1(args) = # …
+```
+
+- the last expression is returned
+- `nothing` is returned without a return value
+
+### function argument type annotation
+
+`func1(arg1::Type1, …)`
+
+### dispatch
+
+function can have different method for different type
+
+### anonymous function
+
+```julia
+(args…) -> # …
+```
+
+or
+
+```julia
+function (args)
+    # …
+end
+```
+
