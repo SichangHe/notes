@@ -39,6 +39,12 @@ comp1 = comp[:comp1]
 comp2 = comp[:comp2]
 ```
 
+### get all word from string
+
+```ruby
+str1.split(/[^[[:word:]]]+/)
+```
+
 # array
 
 ```ruby

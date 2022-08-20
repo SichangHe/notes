@@ -118,6 +118,12 @@ for element in iterable1 do
 end
 ```
 
+emulate ternary operator (neither option can be falsy)
+
+```lua
+result = bool1 and option1 or option2
+```
+
 ## input/output
 
 ### command line argument
@@ -167,7 +173,7 @@ local function use(module)
 end
 ```
 
-### create a module\
+### create a module
 
 - file name is module name
 
