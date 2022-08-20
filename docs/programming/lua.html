@@ -1,0 +1,318 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+
+<head>
+    <!-- Book generated using mdBook -->
+    <meta charset="UTF-8">
+    <title>Lua - Steven&#x27;s Notes</title>
+
+    <!-- Custom HTML head -->
+    
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff" />
+
+    <link rel="icon" href="../favicon.svg">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/chrome.css">
+    <link rel="stylesheet" href="../css/print.css" media="print">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+    <link rel="stylesheet" href="../fonts/fonts.css">
+
+    <!-- Highlight.js Stylesheets -->
+    <link rel="stylesheet" href="../highlight.css">
+    <link rel="stylesheet" href="../tomorrow-night.css">
+    <link rel="stylesheet" href="../ayu-highlight.css">
+
+    <!-- Custom theme stylesheets -->
+
+</head>
+
+<body>
+    <script type="text/javascript">
+        // Provide site root to javascript
+        var path_to_root = "../";
+        var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+
+        // Work around some values being stored in localStorage wrapped in quotes
+        try {
+            var theme = localStorage.getItem('mdbook-theme');
+            var sidebar = localStorage.getItem('mdbook-sidebar');
+
+            if (theme.startsWith('"') && theme.endsWith('"')) {
+                localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+            }
+
+            if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+            }
+        } catch (e) { }
+
+        // Set the theme before any content is loaded, prevents flash
+        var theme;
+        try { theme = localStorage.getItem('mdbook-theme'); } catch (e) { }
+        if (theme === null || theme === undefined) { theme = default_theme; }
+        var html = document.querySelector('html');
+        html.classList.remove('no-js')
+        html.classList.remove('light')
+        html.classList.add(theme);
+        html.classList.add('js');
+
+        // Hide / unhide sidebar before it is displayed
+        var html = document.querySelector('html');
+        var sidebar = 'hidden';
+        if (document.body.clientWidth >= 1080) {
+            try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch (e) { }
+            sidebar = sidebar || 'visible';
+        }
+        html.classList.remove('sidebar-visible');
+        html.classList.add("sidebar-" + sidebar);
+    </script>
+
+    <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+        <div class="sidebar-scrollbox">
+            <ol class="chapter"><li class="chapter-item expanded "><a href="../automation_software/index.html"><strong aria-hidden="true">1.</strong> Automation Software</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../automation_software/hammerspoon.html"><strong aria-hidden="true">1.1.</strong> Hammerspoon</a></li></ol></li><li class="chapter-item expanded "><a href="../cs/index.html"><strong aria-hidden="true">2.</strong> Computer Science</a></li><li class="chapter-item expanded "><a href="../documentation/index.html"><strong aria-hidden="true">3.</strong> Documentation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../documentation/pandoc.html"><strong aria-hidden="true">3.1.</strong> Pandoc</a></li></ol></li><li class="chapter-item expanded "><a href="../macos/index.html"><strong aria-hidden="true">4.</strong> macOS</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../macos/sucklessfy.html"><strong aria-hidden="true">4.1.</strong> Sucklessfy</a></li></ol></li><li class="chapter-item expanded "><a href="../mathematics/index.html"><strong aria-hidden="true">5.</strong> Mathematics</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../mathematics/arithmetics.html"><strong aria-hidden="true">5.1.</strong> Arithmetics</a></li><li class="chapter-item expanded "><a href="../mathematics/calculus.html"><strong aria-hidden="true">5.2.</strong> Calculus</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../mathematics/differential_equation.html"><strong aria-hidden="true">5.2.1.</strong> Differential Equation</a></li><li class="chapter-item expanded "><a href="../mathematics/geometric_vector.html"><strong aria-hidden="true">5.2.2.</strong> Geometric Vector</a></li><li class="chapter-item expanded "><a href="../mathematics/parametric_equation.html"><strong aria-hidden="true">5.2.3.</strong> Parametric Equation</a></li><li class="chapter-item expanded "><a href="../mathematics/sequence_series.html"><strong aria-hidden="true">5.2.4.</strong> Sequence and Series</a></li></ol></li><li class="chapter-item expanded "><a href="../mathematics/linear_algebra.html"><strong aria-hidden="true">5.3.</strong> Linear Algebra</a></li><li class="chapter-item expanded "><a href="../mathematics/shorthand.html"><strong aria-hidden="true">5.4.</strong> Shorthand</a></li></ol></li><li class="chapter-item expanded "><a href="../package_manager/index.html"><strong aria-hidden="true">6.</strong> Package Manager</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../package_manager/cargo.html"><strong aria-hidden="true">6.1.</strong> Cargo</a></li><li class="chapter-item expanded "><a href="../package_manager/homebrew.html"><strong aria-hidden="true">6.2.</strong> Homebrew</a></li><li class="chapter-item expanded "><a href="../package_manager/gem.html"><strong aria-hidden="true">6.3.</strong> Gem</a></li><li class="chapter-item expanded "><a href="../package_manager/npm.html"><strong aria-hidden="true">6.4.</strong> NPM</a></li><li class="chapter-item expanded "><a href="../package_manager/pacman.html"><strong aria-hidden="true">6.5.</strong> Pacman</a></li><li class="chapter-item expanded "><a href="../package_manager/pip.html"><strong aria-hidden="true">6.6.</strong> Pip</a></li></ol></li><li class="chapter-item expanded "><a href="../programming/index.html"><strong aria-hidden="true">7.</strong> Programming</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../programming/c.html"><strong aria-hidden="true">7.1.</strong> C</a></li><li class="chapter-item expanded "><a href="../programming/git.html"><strong aria-hidden="true">7.2.</strong> Git</a></li><li class="chapter-item expanded "><a href="../programming/java.html"><strong aria-hidden="true">7.3.</strong> Java</a></li><li class="chapter-item expanded "><a href="../programming/javascript.html"><strong aria-hidden="true">7.4.</strong> JavaScript</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../programming/mathjax.html"><strong aria-hidden="true">7.4.1.</strong> MathJax</a></li></ol></li><li class="chapter-item expanded "><a href="../programming/julia.html"><strong aria-hidden="true">7.5.</strong> Julia</a></li><li class="chapter-item expanded "><a href="../programming/lua.html" class="active"><strong aria-hidden="true">7.6.</strong> Lua</a></li><li class="chapter-item expanded "><a href="../programming/perl.html"><strong aria-hidden="true">7.7.</strong> Perl</a></li><li class="chapter-item expanded "><a href="../programming/python.html"><strong aria-hidden="true">7.8.</strong> Python</a></li><li class="chapter-item expanded "><a href="../programming/mathematica.html"><strong aria-hidden="true">7.9.</strong> Mathematica</a></li><li class="chapter-item expanded "><a href="../programming/matlab.html"><strong aria-hidden="true">7.10.</strong> MATLAB</a></li><li class="chapter-item expanded "><a href="../programming/racket.html"><strong aria-hidden="true">7.11.</strong> Racket</a></li><li class="chapter-item expanded "><a href="../programming/ruby.html"><strong aria-hidden="true">7.12.</strong> Ruby</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../programming/rails.html"><strong aria-hidden="true">7.12.1.</strong> Rails</a></li></ol></li><li class="chapter-item expanded "><a href="../programming/rust.html"><strong aria-hidden="true">7.13.</strong> Rust</a></li><li class="chapter-item expanded "><a href="../programming/rlang.html"><strong aria-hidden="true">7.14.</strong> R lang</a></li><li class="chapter-item expanded "><a href="../programming/shell.html"><strong aria-hidden="true">7.15.</strong> Shell</a></li></ol></li><li class="chapter-item expanded "><a href="../server/index.html"><strong aria-hidden="true">8.</strong> Server</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../server/nfs.html"><strong aria-hidden="true">8.1.</strong> NFS</a></li><li class="chapter-item expanded "><a href="../server/ssh.html"><strong aria-hidden="true">8.2.</strong> SSH</a></li></ol></li><li class="chapter-item expanded "><a href="../text_editor/index.html"><strong aria-hidden="true">9.</strong> Text Editor</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../text_editor/vim.html"><strong aria-hidden="true">9.1.</strong> Vim</a></li><li class="spacer"></li></ol></li><li class="chapter-item expanded "><a href="../license.html">License</a></li></ol>
+        </div>
+        <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+    </nav>
+
+    <div id="page-wrapper" class="page-wrapper">
+
+        <div class="page">
+            <div id="menu-bar-hover-placeholder"></div>
+            <div id="menu-bar" class="menu-bar sticky bordered">
+                <div class="left-buttons">
+                    <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents"
+                        aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <button id="theme-toggle" class="icon-button" type="button" title="Change theme"
+                        aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                        <i class="fa fa-paint-brush"></i>
+                    </button>
+                    <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                        <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                        <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                        <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                        <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                        <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button>
+                        </li>
+                    </ul>
+                    <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)"
+                        aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S"
+                        aria-controls="searchbar">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+
+                <h1 class="menu-title">Steven&#x27;s Notes</h1>
+
+                <div class="right-buttons">
+                    <a href="../print.html" title="Print this book" aria-label="Print this book">
+                        <i id="print-button" class="fa fa-print"></i>
+                    </a>
+                    <a href="https://github.com/SichangHe/notes" title="Git repository" aria-label="Git repository">
+                        <i id="git-repository-button" class="fa fa-github"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div id="search-wrapper" class="hidden">
+                <form id="searchbar-outer" class="searchbar-outer">
+                    <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..."
+                        aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                </form>
+                <div id="searchresults-outer" class="searchresults-outer hidden">
+                    <div id="searchresults-header" class="searchresults-header"></div>
+                    <ul id="searchresults">
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+            <script type="text/javascript">
+                document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                Array.from(document.querySelectorAll('#sidebar a')).forEach(function (link) {
+                    link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                });
+            </script>
+
+            <div id="content" class="content">
+                <main>
+                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="lua"><a class="header" href="#lua">Lua</a></h1>
+<h2 id="data-type"><a class="header" href="#data-type">data type</a></h2>
+<pre><code class="language-lua">nil
+</code></pre>
+<h3 id="string"><a class="header" href="#string">string</a></h3>
+<p><code>str1 .. str2</code> concatenation</p>
+<p><code>string.format(&quot;literal and %s…&quot;, variables…)</code> formatted string</p>
+<h3 id="boolean"><a class="header" href="#boolean">boolean</a></h3>
+<p>only <code>false</code> and <code>nil</code> are falsy</p>
+<h3 id="map"><a class="header" href="#map">map</a></h3>
+<pre><code class="language-lua">map1 = {
+    key1 = val1,
+    -- …
+}
+</code></pre>
+<p>loop through map in order</p>
+<pre><code class="language-lua">for index, element in ipairs(map1) do
+    -- …
+end
+</code></pre>
+<p><code>pairs</code> loop not necessarily in order</p>
+<p><code>#map1</code> length</p>
+<h4 id="array"><a class="header" href="#array">array</a></h4>
+<p>array is just map with key 1, 2, 3, …</p>
+<p>insert element into array in order</p>
+<pre><code class="language-lua">list = {}
+for element in iterable1 do
+    table.insert(list, element)
+end
+</code></pre>
+<p>sort array</p>
+<pre><code class="language-lua">table.sort(list)
+</code></pre>
+<h2 id="arithmetic-operation"><a class="header" href="#arithmetic-operation">arithmetic operation</a></h2>
+<p><code>~</code> not
+<code>~=</code> not equal</p>
+<h2 id="variable"><a class="header" href="#variable">variable</a></h2>
+<ul>
+<li>variable are global by default</li>
+<li><code>local</code> make variable local</li>
+</ul>
+<h3 id="function"><a class="header" href="#function">function</a></h3>
+<pre><code class="language-lua">function func1(args)
+    -- …
+    return …
+end
+</code></pre>
+<ul>
+<li>missing argument is nil</li>
+<li><code>{ ... }</code> put</li>
+</ul>
+<p>use a variable amount of argument</p>
+<pre><code class="language-lua">function func1(...)
+    local args = { ... }
+    -- …
+end
+</code></pre>
+<h2 id="condition"><a class="header" href="#condition">condition</a></h2>
+<p>if statement</p>
+<pre><code class="language-lua">if bool1 then
+    -- …
+else if bool2 then
+        -- …
+    end
+else
+    -- …
+end
+</code></pre>
+<p>while statement</p>
+<pre><code class="language-lua">while bool1 do
+    -- …
+end
+</code></pre>
+<p>for statement</p>
+<pre><code class="language-lua">for element in iterable1 do
+    -- …
+end
+</code></pre>
+<h2 id="inputoutput"><a class="header" href="#inputoutput">input/output</a></h2>
+<h3 id="command-line-argument"><a class="header" href="#command-line-argument">command line argument</a></h3>
+<pre><code class="language-lua">local args = { ... }
+</code></pre>
+<h3 id="get-script-file-parent-directory"><a class="header" href="#get-script-file-parent-directory">get script file parent directory</a></h3>
+<pre><code class="language-lua">debug.getinfo(1).source:match(&quot;@?(.*/)&quot;)
+</code></pre>
+<h3 id="get-home-directory"><a class="header" href="#get-home-directory">get home directory</a></h3>
+<pre><code class="language-lua">os.getenv('HOME')
+</code></pre>
+<h2 id="run-command"><a class="header" href="#run-command">run command</a></h2>
+<pre><code class="language-lua">function run_command(command, pattern)
+    handle = io.popen(command)
+    result = handle:read(pattern or &quot;*a&quot;)
+    handle:close()
+    return result
+end
+</code></pre>
+<h2 id="module"><a class="header" href="#module">module</a></h2>
+<h3 id="load-a-module"><a class="header" href="#load-a-module">load a module</a></h3>
+<pre><code class="language-lua">mod1 = require(&quot;mod1&quot;)
+</code></pre>
+<p>reload module eagerly
+(Lua does not read the file again by default at the second <code>require</code>)</p>
+<pre><code class="language-lua">local function use(module)
+    package.loaded[module] = nil
+    return require(module)
+end
+</code></pre>
+<h3 id="create-a-module"><a class="header" href="#create-a-module">create a module\</a></h3>
+<ul>
+<li>file name is module name</li>
+</ul>
+<pre><code class="language-lua">Mod1 = {}
+function Mod1.func1(args)
+    -- …
+end
+
+return Mod1
+</code></pre>
+
+                </main>
+
+                <nav class="nav-wrapper" aria-label="Page navigation">
+                    <!-- Mobile navigation buttons -->
+                    <a rel="prev" href="../programming/julia.html" class="mobile-nav-chapters previous"
+                        title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../programming/perl.html" class="mobile-nav-chapters next"
+                        title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+
+                    <div style="clear: both"></div>
+                </nav>
+            </div>
+        </div>
+
+        <nav class="nav-wide-wrapper" aria-label="Page navigation">
+            <a rel="prev" href="../programming/julia.html" class="nav-chapters previous" title="Previous chapter"
+                aria-label="Previous chapter" aria-keyshortcuts="Left">
+                <i class="fa fa-angle-left"></i>
+            </a>
+
+            <a rel="next" href="../programming/perl.html" class="nav-chapters next" title="Next chapter"
+                aria-label="Next chapter" aria-keyshortcuts="Right">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        </nav>
+
+    </div>
+
+
+
+    <script type="text/javascript">
+        window.playground_copyable = true;
+    </script>
+
+
+    <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+    <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+    <!-- Custom JS scripts -->
+</body>
+
+</html>
