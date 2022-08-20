@@ -3323,6 +3323,9 @@ end
     -- …
 end
 </code></pre>
+<p>emulate ternary operator (neither option can be falsy)</p>
+<pre><code class="language-lua">result = bool1 and option1 or option2
+</code></pre>
 <h2 id="inputoutput"><a class="header" href="#inputoutput">input/output</a></h2>
 <h3 id="command-line-argument-1"><a class="header" href="#command-line-argument-1">command line argument</a></h3>
 <pre><code class="language-lua">local args = { ... }
@@ -3352,7 +3355,7 @@ end
     return require(module)
 end
 </code></pre>
-<h3 id="create-a-module"><a class="header" href="#create-a-module">create a module\</a></h3>
+<h3 id="create-a-module"><a class="header" href="#create-a-module">create a module</a></h3>
 <ul>
 <li>file name is module name</li>
 </ul>
@@ -4168,6 +4171,9 @@ c-16-25.333-24-45-24-59z'/&gt;</svg></span></span></span></span></span></span></
 <pre><code class="language-ruby">comp = /\[(?&lt;comp1&gt;.*)\](?&lt;comp2&gt;.*)/.match(str)
 comp1 = comp[:comp1]
 comp2 = comp[:comp2]
+</code></pre>
+<h3 id="get-all-word-from-string"><a class="header" href="#get-all-word-from-string">get all word from string</a></h3>
+<pre><code class="language-ruby">str1.split(/[^[[:word:]]]+/)
 </code></pre>
 <h1 id="array-3"><a class="header" href="#array-3">array</a></h1>
 <pre><code class="language-ruby">arr = [ &quot;a&quot;, 1, true ]

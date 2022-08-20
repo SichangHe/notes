@@ -223,6 +223,9 @@ end
     -- …
 end
 </code></pre>
+<p>emulate ternary operator (neither option can be falsy)</p>
+<pre><code class="language-lua">result = bool1 and option1 or option2
+</code></pre>
 <h2 id="inputoutput"><a class="header" href="#inputoutput">input/output</a></h2>
 <h3 id="command-line-argument"><a class="header" href="#command-line-argument">command line argument</a></h3>
 <pre><code class="language-lua">local args = { ... }
@@ -252,7 +255,7 @@ end
     return require(module)
 end
 </code></pre>
-<h3 id="create-a-module"><a class="header" href="#create-a-module">create a module\</a></h3>
+<h3 id="create-a-module"><a class="header" href="#create-a-module">create a module</a></h3>
 <ul>
 <li>file name is module name</li>
 </ul>
