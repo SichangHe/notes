@@ -88,6 +88,18 @@ can use `begin` and `end` for index
 
 `"$str1 and $(str2)."` formatted string
 
+## tuple and list
+
+- `(a, b, c)` tuple
+- `[a, b, c]` list
+
+### match tuple or list or variable length
+
+```julia
+first, second, rest... = (a, b, c, d, e)
+# rest = (c, d, e)
+```
+
 ## function
 
 traditional syntax
@@ -111,6 +123,39 @@ func1(args) = # …
 
 `func1(arg1::Type1, …)`
 
+### optional argument
+
+`func1(arg1, opt_arg1=default_val1, …)`
+
+- optional argument are positional
+
+### keyword argument
+
+`func1(arg1, ¬; keyword_arg1=default_val1, …)`
+
+- keyword argument must have the keyword specified when called
+- keyword argument does not need a default value, but then it will be mandatory
+- keyword name is implied as the variable name if it appear after `;` when called
+
+### function taking function as argument
+
+`func1(f::Function, arg2, …)`
+
+- call with named function
+- use with anonymous function
+
+    ```julia
+    func1(x -> …, val2, …)
+    ```
+
+- use with do-block
+
+    ```julia
+    func1(val2, …) do arg1_for_function_passed_in, …
+        # …
+    end
+    ```
+
 ### dispatch
 
 function can have different method for different type
@@ -129,3 +174,38 @@ function (args)
 end
 ```
 
+### function composition
+
+```julia
+(f ∘ g)(args)
+```
+
+is equivalent to
+
+```julia
+f(g(args))
+```
+
+### function chaining (function piping)
+
+```julia
+args |> g |> f
+```
+
+is equivalent to example above
+
+#### use piping with broadcasting
+
+`.|>` apply piping element-wise
+
+### vectorize function
+
+```julia
+func1.(args)
+```
+
+apply `func1` to each element in each argument, equivalent to
+
+```julia
+broadcast(f, args)
+```

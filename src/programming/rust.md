@@ -96,6 +96,14 @@ can be used as return statement
 
 ## print `println!()`
 
+## debug print `dbg!()`
+
+pass it a reference because it take ownership of argument
+
+## todo `todo!()`
+
+## unreachable `unreachable!()`
+
 # comment
 
 inline comment `//`

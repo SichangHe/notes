@@ -12,6 +12,7 @@
     - [Calculus](mathematics/calculus.md)
         - [Differential Equation](mathematics/differential_equation.md)
         - [Geometric Vector](mathematics/geometric_vector.md)
+        - [Multivariate Calculus](mathematics/multivariate_calculus.md)
         - [Parametric Equation](mathematics/parametric_equation.md)
         - [Sequence and Series](mathematics/sequence_series.md)
     - [Linear Algebra](mathematics/linear_algebra.md)
