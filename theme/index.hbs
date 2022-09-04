@@ -102,7 +102,7 @@
 
         <div class="page">
             <div id="menu-bar-hover-placeholder"></div>
-            <div id="menu-bar" class="menu-bar sticky bordered">
+            <div id="menu-bar" class="sticky menu-bar bordered">
                 <div class="left-buttons">
                     <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents"
                         aria-label="Toggle Table of Contents" aria-controls="sidebar">
@@ -121,7 +121,8 @@
                                 }}</button></li>
                         <li role="none"><button role="menuitem" class="theme" id="navy">{{ theme_option "Navy"
                                 }}</button></li>
-                        <li role="none"><button role="menuitem" class="theme" id="ayu">{{ theme_option "Ayu" }}</button>
+                        <li role="none"><button role="menuitem" class="theme" id="ayu">{{ theme_option "Ayu"
+                                }}</button>
                         </li>
                     </ul>
                     <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)"
@@ -157,7 +158,7 @@
                     <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..."
                         aria-controls="searchresults-outer" aria-describedby="searchresults-header">
                 </form>
-                <div id="searchresults-outer" class="searchresults-outer hidden">
+                <div id="searchresults-outer" class="hidden searchresults-outer">
                     <div id="searchresults-header" class="searchresults-header"></div>
                     <ul id="searchresults">
                     </ul>
@@ -175,7 +176,6 @@
 
             <div id="content" class="content">
                 <main>
-                    {{!-- this will be included in all pages --}}
                     {{{ content }}}
                 </main>
 
@@ -215,13 +215,14 @@
             </a>
             {{/next}}
         </nav>
-
     </div>
 
-    {{#if livereload}}
+    {{#if live_reload_endpoint}}
     <!-- Livereload script (if served using the cli tool) -->
     <script type="text/javascript">
-        var socket = new WebSocket("{{{livereload}}}");
+        const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+        const wsAddress = wsProtocol + "//" + location.host + "/" + "{{{live_reload_endpoint}}}";
+        const socket = new WebSocket(wsAddress);
         socket.onmessage = function (event) {
             if (event.data === "reload") {
                 socket.close();
@@ -259,14 +260,18 @@
     <script src="{{ path_to_root }}mark.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="{{ path_to_root }}searcher.js" type="text/javascript" charset="utf-8"></script>
 
-    <script src="{{ path_to_root }}clipboard.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="{{ path_to_root }}highlight.js" type="text/javascript" charset="utf-8"></script>
-    <script src="{{ path_to_root }}book.js" type="text/javascript" charset="utf-8"></script>
-
     <!-- Custom JS scripts -->
     {{#each additional_js}}
     <script type="text/javascript" src="{{ ../path_to_root }}{{this}}"></script>
     {{/each}}
+
+    {{#if is_print}}
+    <script type="text/javascript">
+        window.addEventListener('load', function () {
+            window.setTimeout(window.print, 100);
+        });
+    </script>
+    {{/if}}
 </body>
 
 </html>

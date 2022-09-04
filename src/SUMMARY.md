@@ -3,6 +3,7 @@
 - [Automation Software](automation_software/index.md)
     - [Hammerspoon](automation_software/hammerspoon.md)
 - [Computer Science](cs/index.md)
+    - [Machine Learning](cs/machine_learning.md)
 - [Documentation](documentation/index.md)
     - [Pandoc](documentation/pandoc.md)
 - [macOS](macos/index.md)
