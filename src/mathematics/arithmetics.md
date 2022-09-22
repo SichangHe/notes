@@ -74,3 +74,9 @@ triangle inequality
 $$
 |a+b|≤|a|+|b|
 $$
+
+reverse triangle inequality
+
+$$
+||x|-|y||≤|x-y|
+$$

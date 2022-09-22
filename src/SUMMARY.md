@@ -17,6 +17,7 @@
         - [Parametric Equation](mathematics/parametric_equation.md)
         - [Sequence and Series](mathematics/sequence_series.md)
     - [Linear Algebra](mathematics/linear_algebra.md)
+    - [Proof](mathematics/proof.md)
     - [Shorthand](mathematics/shorthand.md)
 - [Package Manager](package_manager/index.md)
     - [Cargo](package_manager/cargo.md)

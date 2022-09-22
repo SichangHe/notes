@@ -61,3 +61,39 @@ average lost based on the training set
 $$
 L_T(h):=\frac{1}{N}\sum_{n=1}^N\ell(y_n,h(\vec x_n))
 $$
+
+## three types of machine learning problems
+
+### classification problem
+
+label given data
+
+- classifier (predictor) $h$: the produced function
+
+#### all possible training set
+
+$$
+\mathcal T:=2^{X\times Y}
+$$
+
+#### signature of machine learning function $\lambda$
+
+$$
+\lambda:\mathcal T\rightarrow\mathcal H
+\quad\text{such that}\quad
+\lambda(T)=h
+$$
+
+- $\lambda$ learn (or train) classifier $h$ from training set $T$
+- inference: apply classifier $h$ on any data
+    - testing: apply classifier $h$ on unseen data
+
+#### classifier $h$ define a partition of $X$
+
+### regression problem
+
+given data, return a vector
+
+### clustering problem
+
+group given data
