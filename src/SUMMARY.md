@@ -41,6 +41,7 @@
     - [Python](programming/python.md)
     - [Mathematica](programming/mathematica.md)
     - [MATLAB](programming/matlab.md)
+    - [MIPS Assembly](programming/mips.md)
     - [Racket](programming/racket.md)
     - [Ruby](programming/ruby.md)
         - [Rails](programming/rails.md)
