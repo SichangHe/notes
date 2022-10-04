@@ -10,6 +10,7 @@
 - [macOS](macos/index.md)
     - [Sucklessfy](macos/sucklessfy.md)
 - [Mathematics](mathematics/index.md)
+    - [Abstract Algebra](mathematics/abstract_algebra.md)
     - [Arithmetics](mathematics/arithmetics.md)
     - [Calculus](mathematics/calculus.md)
         - [Differential Equation](mathematics/differential_equation.md)
