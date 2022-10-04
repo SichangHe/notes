@@ -113,9 +113,47 @@ paragraph 3
 - up `^b`
 - down `^f`
 
+#### to some position in this page
+
+- Move to top of screen `H`
+- Move to middle of screen `M`
+- Move to bottom of screen `L`
+- Top current line `zt`
+- Center current line `zz`
+- Bottom current line `zb`
+
+## to past position
+
+- go back to the previous jump position `''`
+- go to mark `letter`: ` + `letter`
+
+# change
+
+- delete current character and switch to insert mode `s`
+- delete current line and switch to insert mode `S`
+- delete current word and switch to insert mode `ciw`
+- increase (decrease) line indent `>` (`<`)
+- automatically indent line `=`
+
 # count
 
 `number` + `keys` is the same as pressing `keys` for `number` times
+
+## go to line
+
+`number` + `G`
+
+or
+
+`number` + `gg`
+
+`:` + `number`
+
+# visual mode
+
+## visual mode navigation
+
+- select whole paragraph `vip`
 
 # undo and redo
 
