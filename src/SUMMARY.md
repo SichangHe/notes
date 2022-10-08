@@ -1,6 +1,7 @@
 # Summary
 
 - [Automation Software](automation_software/index.md)
+    - [Command-Line Utilities](automation_software/cli_util.md)
     - [Hammerspoon](automation_software/hammerspoon.md)
 - [Computer Science](cs/index.md)
     - [Discrete Mathematics for Computer Science](cs/discrete_math.md)
