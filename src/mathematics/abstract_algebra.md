@@ -29,7 +29,13 @@ $*$ is commutative
 ### general linear group of degree $n$ over $R$
 
 $$
-GL(n,\R):=\{A\in\R^{n × n}|A\text{ is invertible}\}
+GL(n,R):=\{A\in R^{n × n}|A\text{ is invertible}\}
+$$
+
+#### special linear group of degree $n$ over $R$
+
+$$
+SL(n,R):=\{A\in GL(n,R)|\det A=1\}
 $$
 
 ## binary operation

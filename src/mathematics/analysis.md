@@ -42,6 +42,67 @@ $$
 - one-to-one: $∀\ t\in Ran(f),∃!\ s\in S,f(s)=t$
 - one-to-one correspondence: onto and one-to-one
 
+### sequence
+
+$\{a_n\}_{n=1}^∞$ or $\{a_n\}$
+
+$$
+a_n:\N → \R
+$$
+
+#### sequence convergence
+
+$$
+\lim_{n → ∞}a_n=a
+\quad\text{or}\quad
+a_n → a
+$$
+
+or $\{a_n\}$ converge to limit $a$ iff,
+
+$∀\ \varepsilon>0,∃$ integer $N(\varepsilon)$, so that $∀\ n≥N$,
+
+$$
+|a_n-a|≤\varepsilon
+$$
+
+### sequence diverge to infinite
+
+$∀\ M,∃\ N$, so that $∀\ n≥N$,
+
+$$
+a_n≥M
+$$
+
+### bounded sequence
+
+$a_n$ is bounded iff
+
+$∃\ M$ so that $∀\ n$
+
+$$
+|a_n|≤M
+$$
+
+### limit theorem
+
+- bounded sequence
+- squeeze theorem
+- limit are linear
+- multiplication and division can be extracted
+
+#### Cauchy sequence
+
+$∀\ \varepsilon>0,∃\ N$ so that, if $n≥N,m≥N$, then
+
+$$
+|a_n-a_m|≤\varepsilon
+$$
+
+- convergent sequence are Cauchy sequence
+- axiom of completeness\
+    Cauchy sequence in $\R$ converge to finite number in $\R$
+
 ## inverse function
 
 for one-to-one function $f$, inverse function $f^{-1}$ of $f\iff$

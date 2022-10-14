@@ -27,6 +27,7 @@
     - [Cargo](package_manager/cargo.md)
     - [Homebrew](package_manager/homebrew.md)
     - [Gem](package_manager/gem.md)
+    - [Nix](package_manager/nix.md)
     - [NPM](package_manager/npm.md)
     - [Pacman](package_manager/pacman.md)
     - [Pip](package_manager/pip.md)
