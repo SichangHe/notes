@@ -59,7 +59,7 @@ $a,b\in\Z\backslash\{0\}$
 
 1. $r_n=\gcd(a,b)$
 
-- $a,b,q,r\in\Z,b>0,a=bq+ ⇒ \gcd(a,b)=\gcd(b,r)$
+- $a,b,q,r\in\Z,b>0,a=bq+r ⇒ \gcd(a,b)=\gcd(b,r)$
 
 #### Bézout's identity
 
@@ -215,6 +215,17 @@ axiom group satisfy:
 1. identity: $∃\ e\in G,\ ∀\ a\in G,\ a*e=e*a=a$
 1. inverse: $∀\ a\in G,\ ∃\ a^{-1}\in G,\ a*a^{-1}=a^{-1}*a=e$
 
+property
+
+1. $e$ is unique
+1. $∀\ a\in G$, $a$ has unique inverse
+1. $a*x=b$ and $y*a=b$ has unique solution,
+    cancellation law work
+
+- $(a^{-1})^{-1}=a$
+- $(a*b)^{-1}=b^{-1}*a^{-1}$
+- value of $a_1*a_2*\cdots*a_n$ is independent of the bracketing
+
 ## abelian group (commutative group)
 
 $*$ is commutative
@@ -257,3 +268,39 @@ $$
 $$
 a*b=b*a
 $$
+
+## order of group
+
+$|G|$, or order of $G$, is the number of distinct elements in $G$
+
+### order of element in group
+
+$|a|$, or order of $a$, is the smallest $n\in\Z_+$ s.t.
+
+$$
+a^n=e
+$$
+
+or $∞$ if $n$ DNE
+
+- $e,a,a^2,\cdots,a^{n-1}$ are distinct
+- $a^m=1 ⇔ n|m$
+- $∀\ m\in\Z_+,|a^m|=\frac{n}{\gcd(m,n)}$
+
+## Torsion group
+
+$G$ is a Torsion group, then
+$∀\ a\in G,|a|$ is finite
+
+- Torsion-free group: $∀\ a\in G,a≠e,|a|= ∞$
+- Torsion subgroup of $G$: for abelian group $G$,
+
+    $$
+    \text{Tor}(G):=\{a\in G||a|\text{ is finite}\}
+    $$
+
+- $ab=ba,\gcd(|a|,|b|)=1 ⇒ |ab|=|a||b|$
+- $G$ is abelian Torsion group,
+    then $c$ has largest order $⇒ ∀\ a\in G,|a|\big||c|$
+
+## dihedral group of order $2n$
