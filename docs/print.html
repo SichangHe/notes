@@ -5705,6 +5705,12 @@ paragraph 3
 <ul>
 <li>go back to the previous jump position <code>''</code></li>
 <li>go to mark <code>letter</code>: <code>+</code>letter`</li>
+<li>go to top of last visual selection '`&lt;'</li>
+<li>go to bottom of last visual selection '`&gt;'</li>
+<li>go to top of last yanked '`['</li>
+<li>go to bottom of last yanked '`]'</li>
+<li>go to last change <code>g;</code></li>
+<li>go to previous change in change history <code>g,</code></li>
 </ul>
 <h1 id="change"><a class="header" href="#change">change</a></h1>
 <ul>
@@ -5713,6 +5719,8 @@ paragraph 3
 <li>delete current word and switch to insert mode <code>ciw</code></li>
 <li>increase (decrease) line indent <code>&gt;</code> (<code>&lt;</code>)</li>
 <li>automatically indent line <code>=</code></li>
+<li>change to uppercase/ lowercase <code>gU</code> (<code>gu</code>)</li>
+<li>toggle case <code>~</code></li>
 </ul>
 <h1 id="count"><a class="header" href="#count">count</a></h1>
 <p><code>number</code> + <code>keys</code> is the same as pressing <code>keys</code> for <code>number</code> times</p>
@@ -5725,12 +5733,30 @@ paragraph 3
 <h2 id="visual-mode-navigation"><a class="header" href="#visual-mode-navigation">visual mode navigation</a></h2>
 <ul>
 <li>select whole paragraph <code>vip</code></li>
+<li>select all inside quotes <code>vi&quot;</code> (not only quotes, others are similar)</li>
+<li>select all inside tags <code>vit</code></li>
+<li>select all and including quotes <code>va&quot;</code> (not only quotes, others are similar)</li>
 </ul>
 <h1 id="undo-and-redo"><a class="header" href="#undo-and-redo">undo and redo</a></h1>
 <ul>
 <li>undo <code>u</code></li>
 <li>redo <code>^r</code></li>
 <li>undo a line <code>U</code></li>
+</ul>
+<h1 id="fold"><a class="header" href="#fold">fold</a></h1>
+<ul>
+<li>toggle all fold <code>zi</code></li>
+<li>toggle current fold <code>za</code></li>
+</ul>
+<h1 id="spelling"><a class="header" href="#spelling">spelling</a></h1>
+<ul>
+<li>spelling suggestions for current word <code>z=</code></li>
+<li>add spelling of current word to dictionary <code>zg</code></li>
+<li>remove spelling of current word to dictionary <code>zw</code></li>
+</ul>
+<h1 id="quit"><a class="header" href="#quit">quit</a></h1>
+<ul>
+<li>save all and quit <code>ZZ</code></li>
 </ul>
 <h1 id="write-as-root"><a class="header" href="#write-as-root">write as root</a></h1>
 <pre><code>:w !sudo tee %
