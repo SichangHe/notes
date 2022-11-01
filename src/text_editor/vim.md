@@ -126,6 +126,12 @@ paragraph 3
 
 - go back to the previous jump position `''`
 - go to mark `letter`: ` + `letter`
+- go to top of last visual selection '`<'
+- go to bottom of last visual selection '`>'
+- go to top of last yanked '`['
+- go to bottom of last yanked '`]'
+- go to last change `g;`
+- go to previous change in change history `g,`
 
 # change
 
@@ -134,6 +140,8 @@ paragraph 3
 - delete current word and switch to insert mode `ciw`
 - increase (decrease) line indent `>` (`<`)
 - automatically indent line `=`
+- change to uppercase/ lowercase `gU` (`gu`)
+- toggle case `~`
 
 # count
 
@@ -154,6 +162,9 @@ or
 ## visual mode navigation
 
 - select whole paragraph `vip`
+- select all inside quotes `vi"` (not only quotes, others are similar)
+- select all inside tags `vit`
+- select all and including quotes `va"` (not only quotes, others are similar)
 
 # undo and redo
 
@@ -161,8 +172,24 @@ or
 - redo `^r`
 - undo a line `U`
 
+# fold
+
+- toggle all fold `zi`
+- toggle current fold `za`
+
+# spelling
+
+- spelling suggestions for current word `z=`
+- add spelling of current word to dictionary `zg`
+- remove spelling of current word to dictionary `zw`
+
+# quit
+
+- save all and quit `ZZ`
+
 # write as root
 
 ```
 :w !sudo tee %
 ```
+
