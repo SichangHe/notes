@@ -1,5 +1,11 @@
 # Sucklessfy
 
+allow apps from anywhere
+
+```shell
+sudo spctl --master-disable
+```
+
 ## DS.Store
 
 remove all .DS_Store in subfolder

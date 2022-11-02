@@ -97,3 +97,29 @@ given data, return a vector
 ### clustering problem
 
 group given data
+
+## supervised/ unsupervised machine learning
+
+supervised learning: classification, regression
+
+unsupervised learning: clustering
+
+# k-nearest neighbors predictor
+
+remember the whole training set
+
+$$
+T=\{(\vec x_i,y_i)|i=1,\cdots,N\}
+$$
+
+return average of $y_n$s corresponding to
+the $k$ closest $\vec x_n$s to $\vec x$
+
+- useful for both classification and regression
+- smaller $k$ results in worse overfitting
+- good interpolation and poor extrapolation
+
+## Voronoi diagram
+
+![example of a Voronoi diagram](https://www.baeldung.com/wp-content/uploads/sites/4/2021/11/plotcrop-768x768.png)
+

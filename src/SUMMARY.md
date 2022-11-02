@@ -20,6 +20,7 @@
         - [Parametric Equation](mathematics/parametric_equation.md)
         - [Sequence and Series](mathematics/sequence_series.md)
     - [Linear Algebra](mathematics/linear_algebra.md)
+    - [Numerical Analysis](mathematics/numerical_analysis.md)
     - [Proof](mathematics/proof.md)
     - [Real Analysis](mathematics/analysis.md)
     - [Shorthand](mathematics/shorthand.md)
