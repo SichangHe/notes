@@ -303,4 +303,105 @@ $∀\ a\in G,|a|$ is finite
 - $G$ is abelian Torsion group,
     then $c$ has largest order $⇒ ∀\ a\in G,|a|\big||c|$
 
-## dihedral group of order $2n$
+## dihedral group $D_{2n}$
+
+rotation ($r$) and reflection ($s$) of n-gon
+
+$$
+\{1,s,r,sr,r^2,sr^2,\cdots,r^{n-1},sr^{n-1}\}
+\qquad n≥3
+\\[12pt]
+r^i=\sigma_{i+1}
+$$
+
+- order $2n$
+- degree $n$
+- $|s|=2$
+- $|r|=n$
+- $∀\ 0≤i≠j≤n-1,sr^i≠sr^j$
+- $∀\ 0≤i≤n,r^is=sr^{-i}$
+
+### permutation of set
+
+permutation of $X$: bijection
+
+$$
+\sigma_i(k)=
+i+(k-1)\mod n
+:X → X
+$$
+
+## symmetric group on set
+
+set $\Omega≠ ∅$
+
+$S_\Omega$, the set of permutation of $\Omega$
+
+$(S_\Omega,\circ)$, symmetric group on $\Omega$
+
+- $n≥1,\Omega=X_n ⇒ (S_n,\circ)$, symmetric group of degree $n$
+- $|S_\Omega|=n!$
+- $n≥3 ⇒ (S_n,\circ)$ nonabelian
+
+### array notation of permutation
+
+$α$ is permutation on $X_n$
+
+$$
+α=\begin{pmatrix}
+    1&2&\cdots&n
+    \\
+    α(1)&α(2)&\cdots&α(n)
+\end{pmatrix}
+$$
+
+### cycle notation of permutation
+
+cyclically permute and fix the rest
+
+$$
+(a_1\ a_2\ \cdots\ a_m)=
+\begin{pmatrix}
+    a_1&a_2&\cdots&a_m
+    \\
+    a_2&a_3&\cdots&a_1
+\end{pmatrix}
+$$
+
+- $m$-cycle (or cycle of length $m$)
+
+#### transposition
+
+$2$-cycle
+
+- $∀\ \sigma\in S_n,\sigma$ can be expressed as product of transposition
+    - not unique
+    - even permutation: length of such transposition is even
+    - odd permutation
+
+#### disjoint cycle
+
+no common number
+
+- $α,\beta\in S_n$ disjoint $⇒ α\beta=\beta α$
+- $∀\ \pi\in S_n,\pi≠1,\pi$ can be
+    uniquely expressed as product of disjoint cycle of length at least 2
+
+## subgroup
+
+$H≤G$, or $H ⊆ G$ is a subgroup of $G$
+
+1. $H≠ ∅$
+1. $∀\ x,y\in H,xy\in H$
+1. $∀\ x\in H,x^{-1}\in H$
+
+- $H<G$, or $H$ is a proper subgroup of $G$
+
+### subgroup test
+
+1. $H≤G ⇔$
+    1. $H≠ ∅$
+    1. $∀\ x,y\in H,xy^{-1}\in H$
+1. $|G|< ∞,H≤G ⇔$
+    1. $H≠ ∅$
+    1. $∀\ x,y\in H,xy\in H$
