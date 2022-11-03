@@ -405,3 +405,55 @@ $H≤G$, or $H ⊆ G$ is a subgroup of $G$
 1. $|G|< ∞,H≤G ⇔$
     1. $H≠ ∅$
     1. $∀\ x,y\in H,xy\in H$
+
+### centralizer of group
+
+$$
+C_G(A):=\{g\in G| ∀\ a\in A,ga=ag\}
+$$
+
+- $C_G(a)$ if $A=\{a\}$
+
+#### center of group
+
+$$
+Z(G):=\{g\in G| ∀\ a\in G,ga=ag\}
+$$
+
+### normalizer of group
+
+$$
+N_G(A):=\{g\in G|gAg^{-1}=A\}
+$$
+
+where
+
+$$
+gAg^{-1}:=\{gag^{-1}|a\in A\}
+$$
+
+for group $G$ and subset $A ⊆ G$
+
+- $C_G(A)≤N_G(A)≤G$
+- $G$ abelian $⇒ Z(G)=G,C_G(A)=N_G(A)$
+
+## cyclic group
+
+$$
+G=\langle x \rangle=\{x^n|n\in\Z\}
+$$
+
+- generator $x$
+- cyclic group are abelian
+- $|G|=|x|$
+
+### fundamental theorem of cyclic group
+
+1. $H≤G ⇒ ∃!\ k\in\N,k=\min_k\{x^k\in H\},\ H=\langle x^k \rangle$
+1. $|G|=n ⇒$
+    - $∀\ a\in\N,a|n,∃!\ A,|A|=a$
+        - $A=\langle x^d\rangle$
+        - $d=\frac{n}{a}$
+    - $∀\ m\in\Z,\langle x^m \rangle=\langle x^{\gcd(m,n)} \rangle$
+    - $∀\ i,j,x^i=x^j ⇔ i\equiv j\mod n$
+1. $|G|=∞ ⇒ ∀\ m\in\Z,\langle x^m \rangle=\langle x^{|m|} \rangle$
