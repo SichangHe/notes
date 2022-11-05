@@ -311,7 +311,7 @@ $$
 \{1,s,r,sr,r^2,sr^2,\cdots,r^{n-1},sr^{n-1}\}
 \qquad n≥3
 \\[12pt]
-r^i=\sigma_{i+1}
+(r^i)(k)=i+k\mod n
 $$
 
 - order $2n$
@@ -326,9 +326,7 @@ $$
 permutation of $X$: bijection
 
 $$
-\sigma_i(k)=
-i+(k-1)\mod n
-:X → X
+\sigma:X → X
 $$
 
 ## symmetric group on set
