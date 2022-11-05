@@ -94,6 +94,7 @@
         <div class="sidebar-scrollbox">
             {{#toc}}{{/toc}}
         </div>
+        <div class="sidebar-scrollbox chapter toc"></div>
         <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
     </nav>
 
@@ -106,6 +107,10 @@
                 <div class="left-buttons">
                     <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents"
                         aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <button id="toc-toggle" class="icon-button" type="button" title="Toggle Table of Contents in Current Article"
+                        aria-label="Toggle Table of Contents in Current Article" aria-controls="toc">
                         <i class="fa fa-bars"></i>
                     </button>
                     <button id="theme-toggle" class="icon-button" type="button" title="Change theme"

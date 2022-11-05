@@ -1,3 +1,4 @@
+<!-- toc -->
 # Cargo
 
 install binary

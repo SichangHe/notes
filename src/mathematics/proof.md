@@ -1,3 +1,4 @@
+<!-- toc -->
 # Proof
 
 ## proof by induction

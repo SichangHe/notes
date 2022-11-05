@@ -1,3 +1,4 @@
+<!-- toc -->
 # Pacman
 
 get the fastest mirror (France for example)

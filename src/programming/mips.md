@@ -1,3 +1,4 @@
+<!-- toc -->
 # MIPS Assembly
 
 # register

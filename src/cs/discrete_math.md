@@ -1,3 +1,4 @@
+<!-- toc -->
 # Discrete Mathematics for Computer Science
 
 ## proof by induction

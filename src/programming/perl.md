@@ -1,3 +1,4 @@
+<!-- toc -->
 # Perl
 
 install package A/B

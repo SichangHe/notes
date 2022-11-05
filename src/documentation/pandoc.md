@@ -1,3 +1,4 @@
+<!-- toc -->
 # Pandoc
 
 [How to use Pandoc to produce a research paper](https://opensource.com/article/18/9/pandoc-research-paper)

@@ -1,3 +1,4 @@
+<!-- toc -->
 # Abstract Algebra
 
 # integer

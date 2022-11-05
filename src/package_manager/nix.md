@@ -1,3 +1,4 @@
+<!-- toc -->
 # Nix
 
 find package: search online

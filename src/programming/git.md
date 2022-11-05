@@ -1,3 +1,4 @@
+<!-- toc -->
 # Git
 
 start using git

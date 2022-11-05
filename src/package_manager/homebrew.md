@@ -1,3 +1,4 @@
+<!-- toc -->
 # Homebrew
 
 search package

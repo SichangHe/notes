@@ -1,3 +1,4 @@
+<!-- toc -->
 # Sequence and Series
 
 # sequence $\{a_n\}$
