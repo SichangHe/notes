@@ -677,3 +677,23 @@ function playground_text(playground) {
         }, { passive: true });
     })();
 })();
+
+(() => {
+    const toc = document.querySelector("#content > main > ul");
+    const sidebar = document.querySelector("#sidebar > div.sidebar-scrollbox:not(.toc)");
+    const sidebar_toc = document.querySelector("#sidebar > div.toc")
+    sidebar_toc.appendChild(toc);
+
+    const toc_toggle_button = document.getElementById("toc-toggle");
+    toc_toggle_button.addEventListener("click", () => {
+        if (html.classList.contains("toc-shown")) {
+            html.classList.remove("toc-shown");
+            sidebar.style.display = "block";
+            sidebar_toc.style.display = "none";
+        } else {
+            html.classList.add("toc-shown");
+            sidebar.style.display = "none";
+            sidebar_toc.style.display = "block";
+        }
+    })
+})();

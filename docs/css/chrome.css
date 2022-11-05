@@ -344,6 +344,9 @@ ul#searchresults span.teaser em {
     right: 0;
     padding: 10px 10px;
 }
+.sidebar .sidebar-scrollbox.toc {
+    display: none;
+}
 .sidebar .sidebar-resize-handle {
     position: absolute;
     cursor: col-resize;
@@ -390,6 +393,9 @@ ul#searchresults span.teaser em {
     display: flex;
     color: var(--sidebar-non-existant);
 }
+.toc li {
+    flex-direction: column;
+}
 .chapter li a {
     display: block;
     padding: 0;
@@ -423,7 +429,7 @@ ul#searchresults span.teaser em {
     display: none;
 }
 
-.chapter li.chapter-item {
+.chapter li.chapter-item, .toc li {
     line-height: 1.5em;
     margin-top: 0.6em;
 }
