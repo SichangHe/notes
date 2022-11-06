@@ -701,7 +701,9 @@ function playground_text(playground) {
     const elements_w_refs = [];
     for (const anchor of toc_anchors) {
         try {
-            const element = document.querySelector(anchor.getAttribute("href"))
+            const element = document.querySelector(
+                decodeURIComponent(anchor.getAttribute("href"))
+            )
             elements_w_refs.push([element, anchor]);
         } catch (_) {};
     }
