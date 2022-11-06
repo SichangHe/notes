@@ -434,6 +434,15 @@ ul#searchresults span.teaser em {
     margin-top: 0.6em;
 }
 
+.toc ul {
+    padding-left: 1em;
+}
+
+.toc li {
+    display: list-item;
+    list-style: upper-roman;
+}
+
 .chapter li.expanded > a.toggle div {
     transform: rotate(90deg);
 }
