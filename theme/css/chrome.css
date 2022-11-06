@@ -409,6 +409,7 @@ ul#searchresults span.teaser em {
 
 .chapter li a.active {
     color: var(--sidebar-active);
+    text-decoration: underline;
 }
 
 .chapter li > a.toggle {
