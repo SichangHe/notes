@@ -37,7 +37,7 @@ $b|a$, or $b$ divide $a ⇔ ∃\ c\in\Z$, s.t. $a=bc$
 
 ### greatest common divisor
 
-$a,b\in\Z\backslash\{0\},∃!\ d:=\gcd(a,b)$, s.t.
+$a,b\in\Z\setminus\{0\},∃!\ d:=\gcd(a,b)$, s.t.
 
 1. $d|a,d|b$
 1. $c|a,c|b ⇒ c≤d$
@@ -49,7 +49,7 @@ or
 
 #### Euclidean algorithm
 
-$a,b\in\Z\backslash\{0\}$
+$a,b\in\Z\setminus\{0\}$
 
 1. let $r_{-2}=a,r_{-1}=b$
 1. apply division algorithm on $r_{i-1},r_i$ until $r_{n+1}=0$
@@ -64,7 +64,7 @@ $a,b\in\Z\backslash\{0\}$
 
 #### Bézout's identity
 
-$a,b\in\Z\backslash\{0\},∃\ u,v$ s.t.
+$a,b\in\Z\setminus\{0\},∃\ u,v$ s.t.
 
 $$
 \gcd(a,b)=au+bv
@@ -92,13 +92,13 @@ $p\in\Z$, then $p$ is prime $⇔ p≠0,p≠±1$, the only divisor of $p$ are $±
 
 $p$ prime, $p|ab ⇒ p|a$ or $p|b$
 
-- $p\in\Z\backslash\{0,±1\}$,
+- $p\in\Z\setminus\{0,±1\}$,
     then $p$ prime $⇔$ if $p|ab$, then $p|a$ or $p|b$
 - $p$ prime, $p|a_1a_2\cdots a_n ⇒ ∃\ i,p|a_i$
 
 #### fundamental theorem of arithmetic
 
-$∀\ n\in\Z\backslash\{0,±1\},n$ can be factored uniquely into product of primes
+$∀\ n\in\Z\setminus\{0,±1\},n$ can be factored uniquely into product of primes
 
 # relation
 
@@ -194,7 +194,7 @@ $∃\ x\in\Z/n,[a]x=[1]$
 
 $∃\ x≠[0],[a]x=[0]$
 
-- $p\in\N\backslash\{0,1\}$, then
+- $p\in\N\setminus\{0,1\}$, then
 
     $p$ is prime
 
@@ -232,7 +232,7 @@ property
 $*$ is commutative
 
 - $\Z,\mathbb Q,\R,\mathbb C,\Z/n,\R^{m × n}$ under $+$
-- $\mathbb Q\backslash\{0\},\R\backslash\{0\},\mathbb C\backslash\{0\},(\Z/n)^×$
+- $\mathbb Q\setminus\{0\},\R\setminus\{0\},\mathbb C\setminus\{0\},(\Z/n)^×$
     under $\cdot$
 
 ## nonabelian group
