@@ -549,3 +549,96 @@ $h\in H$
     $$
 
     - $\varphi$ is surjective $⇔ \text{Im }\varphi=H$
+
+## coset
+
+$H≤(G,\cdot)$, $g,a,b\in G$
+
+1. left coset of $H$ in $G$
+
+    $$
+    gH:=\{gh|h\in H\}
+    $$
+
+    - $∃$ bijection between $H$ and $gH$
+    - $aH=bH ⇔b^{-1}a\in H$
+    - $aH=bH$ or $aH\cap bH= ∅$
+1. right coset of $H$ in $G$
+
+    $$
+    Hg:=\{hg|h\in H\}
+    $$
+
+    - $∃$ bijection between $H$ and $Hg$
+    - $Ha=Hb ⇔ab^{-1}\in H$
+    - $Ha=Hb$ or $Ha\cap Hb= ∅$
+1. $g$ is representative
+
+- left and right coset are not necessarily equal
+- $gH≤H ⇔ g=1$
+- $|H|=|gH|=|Hg|$
+
+### set of coset
+
+1. set of left coset
+
+    $$
+    G/H:=\{aH|a\in G\}
+    $$
+
+1. set of right coset
+
+    $$
+    H\setminus G:=\{Ha|a\in G\}
+    $$
+
+- $∃$ bijection between $G/H$ and $H\setminus G$
+
+#### index of subgroup in group
+
+index of $H$ in $G$
+
+$$
+[G:H]
+$$
+
+is number of distinct left (right) coset
+
+#### Lagrange's theorem
+
+1. $|H|\big||G|$
+1. $[G:H]=\frac{|G|}{|H|}$
+
+for finite $G$
+
+- $a\in G ⇒ |a|\big||G|$
+- $∀\ a\in G,\quad a^{|G|}=1$
+
+## normal subgroup
+
+$N\unlhd G$, or $N$ is normal in $G ⇔$
+
+$$
+∀\ a\in G,\quad
+aN=Na
+$$
+
+### normal subgroup test
+
+1. $N\unlhd G$
+1. $⇔ ∀\ a\in G,\quad aNa^{-1} ⊆ N$
+1. $⇔ ∀\ a\in G,\quad aNa^{-1} = N$
+1. $⇔ N_G(N)=G$
+1. $⇔$ if $aN=bN,cN=dN$, then $(ac)N=(bd)N$
+
+## quotient subgroup
+
+$N\unlhd G$
+
+$G/N=N\setminus G$ is the quotient group of $G$ by $N$
+
+under operation $\cdot$:
+
+$$
+(aN)(bN):=(ab)N
+$$
