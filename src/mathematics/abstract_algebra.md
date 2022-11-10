@@ -468,6 +468,11 @@ $$
 \varphi(ab)=\varphi(a)\varphi(b)
 $$
 
+property
+
+1. $\varphi(1_G)=1_H$
+1. $∀\ n\in\Z,\quad\varphi(a^n)=\varphi(a)^n$
+
 - monomorphism: $\varphi$ injective
 - epimorphism: $\varphi$ surjective
 - $\cong$, or isomorphism: $\varphi$ bijective
@@ -479,3 +484,37 @@ $f:A → B$ is well-defined $⇔$
 $$
 ∀\ x=y\in A ⇒ f(x)=f(y)
 $$
+
+### automorphism
+
+isomorphism from $G$ to $G$
+
+- inner automorphism of $G$, $\varphi_a(g)=aga^{-1}\quad(a\in G)$
+
+### isomorphism
+
+property
+
+1. $|G|=|H|$
+1. $G$ abelian $⇔ H$ abelian
+1. $∀\ g\in G,\quad|g|=|\varphi(g)|$
+1. $∀\ n\in\Z^+,\quad G,H$ have same number of elements of order $n$
+
+- $|G|=p$ prime $⇒ G\cong\Z/p$
+
+#### equivalence relation from isomorphism
+
+$\mathcal G$ is set of groups
+
+$\cong$ is equivalence relation on $\mathcal G$
+
+#### cyclic isomorphism
+
+$G=\langle x \rangle$
+
+- $|x|= ∞ ⇒ G\cong\Z$
+- $|x|= n ⇒ G\cong\Z/n$
+
+#### Cayley's theorem
+
+$∀$ group $G$, $∃$ permutation $H≤S_G$, s.t. $G\cong H$
