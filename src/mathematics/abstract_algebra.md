@@ -518,3 +518,34 @@ $G=\langle x \rangle$
 #### Cayley's theorem
 
 $∀$ group $G$, $∃$ permutation $H≤S_G$, s.t. $G\cong H$
+
+### kernel and image of homomorphism
+
+$\varphi:G → H$ is homomorphism
+
+$h\in H$
+
+1. kernel of $\varphi$
+
+    $$
+    \text{Ker }\varphi:=\{a\in G|\varphi(a)=1\}
+    $$
+
+    - $\text{Ker }\varphi≤G$
+    - measure how much $\varphi$ is not injective
+    - $\varphi$ is injective $⇔ \text{Ker }\varphi=\{1\}$
+1. image of $\varphi$
+
+    $$
+    \text{Im }\varphi=\varphi(G):=\{\varphi(a)|a\in G\}
+    $$
+
+    - $\text{Im }\varphi≤H$
+    - $\varphi$ is injective $⇔ \text{Im }\varphi\cong G$
+1. fiber of $h$ under $\varphi$
+
+    $$
+    \varphi^{-1}(h):=\{a\in G|\varphi(a)=h\}
+    $$
+
+    - $\varphi$ is surjective $⇔ \text{Im }\varphi=H$
