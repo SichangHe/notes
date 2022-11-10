@@ -456,3 +456,26 @@ $$
     - $∀\ m\in\Z,\langle x^m \rangle=\langle x^{\gcd(m,n)} \rangle$
     - $∀\ i,j,x^i=x^j ⇔ i\equiv j\mod n$
 1. $|G|=∞ ⇒ ∀\ m\in\Z,\langle x^m \rangle=\langle x^{|m|} \rangle$
+
+## homomorphism
+
+$(G,\cdot),(H,\cdot)$ are group
+
+well-defined map $\varphi:G → H$ is homomorphism $⇔$
+
+$$
+∀\ a,b\in G,\quad
+\varphi(ab)=\varphi(a)\varphi(b)
+$$
+
+- monomorphism: $\varphi$ injective
+- epimorphism: $\varphi$ surjective
+- $\cong$, or isomorphism: $\varphi$ bijective
+
+### well-defined map
+
+$f:A → B$ is well-defined $⇔$
+
+$$
+∀\ x=y\in A ⇒ f(x)=f(y)
+$$
