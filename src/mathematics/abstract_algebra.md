@@ -642,3 +642,58 @@ under operation $\cdot$:
 $$
 (aN)(bN):=(ab)N
 $$
+
+- $|G/N|=[G:N]$
+
+### natural projection
+
+$N\unlhd G$
+
+natural projection of $G$ onto $N$
+
+homomorphism $\pi:G → G/N$
+
+$$
+\pi(a)=aN
+$$
+
+- $\pi$ is epimorphism
+- $\text{Ker }\pi=N$
+
+## isomorphism theorem
+
+### first isomorphism theorem
+
+$\varphi:G → H$ homomorphism $⇒$
+
+$$
+G/\text{Ker }\varphi\cong\text{Im }\varphi
+$$
+
+- under $\Phi:G/\text{Ker }\varphi → \text{Im }\varphi$
+
+    $$
+    \Phi(g\text{Ker }\varphi):=\varphi(g)
+    $$
+
+### second isomorphism theorem (diamond theorem)
+
+$K≤G,N≤G,N\unlhd G ⇒$
+
+1. $KN≤ G$
+1. $K\cap N\ \unlhd K$
+1. $N\unlhd KN$
+1. $K/K\cap N\ \cong\ KN/N$
+1. $[KN:K]=[N:K\cap N]$
+
+### third isomorphism theorem
+
+$H\unlhd G,K\unlhd G,K≤H$
+
+1. $H/K\ \unlhd\ G/K$
+1. $(G/K)/(H/K)\ \cong\ G/H$
+    - $G/K\cong G/H$ under $\Gamma:G/K → G/H$
+
+        $$
+        \Gamma(gK):=gH
+        $$
