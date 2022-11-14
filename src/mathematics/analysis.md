@@ -78,6 +78,8 @@ $$
 a_n:\N → \R
 $$
 
+see also [Sequence and Series](sequence_series.md)
+
 ## sequence convergence
 
 $$
@@ -112,6 +114,8 @@ $$
 |a_n|≤M
 $$
 
+- bounded monotone sequence converge
+
 ## limit theorem
 
 - bounded sequence
@@ -130,3 +134,39 @@ $$
 - convergent sequence are Cauchy sequence
 - axiom of completeness\
     Cauchy sequence in $\R$ converge to finite number in $\R$
+
+## subsequence
+
+$k\mapsto n(k):\N → \N$
+
+$∀\ k\in\N,\quad n(k+1)>n(k)$
+
+subsequence of $\{a_n\}_{n=1}^∞$,
+
+$$
+\{a_{n(k)}\}
+_{k=1}^∞
+\text{ or }\{a
+_{n_k}\}
+$$
+
+## limit point
+
+limit point $d$ of $\{a_n\} ⇔$
+
+$$
+∀\ \varepsilon>0,N\in\Z,
+∃\ n≥N,\text{ s.t. }
+|a_n-d|≤\varepsilon
+$$
+
+- $d$ is limit point $⇔ ∃$ subsequence $\{a_{n_k}\} → d$
+
+## Bolzano-Weierstrass Theorem
+
+$\{a_n\}$ bounded
+$⇒ ∃\ \{a_{n_k}\},d$ s.t. $\{a_{n_k}\}→ d$
+
+- proof: successively shrink interval by half
+    and keep the half with infinite element
+- $a_n\in[b,c] ⇒ ∃\ \{a_{n_k}\},d\in[b,c]$ s.t. $a_{n_k} → d$
