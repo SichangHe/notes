@@ -171,9 +171,7 @@ $⇒ ∃\ \{a_{n_k}\},d$ s.t. $\{a_{n_k}\}→ d$
     and keep the half with infinite element
 - $a_n\in[b,c] ⇒ ∃\ \{a_{n_k}\},d\in[b,c]$ s.t. $a_{n_k} → d$
 
-# Riemann integral
-
-## continuity
+# continuity
 
 $f$ is continuous at $c\in Dom(f) ⇔$
 
@@ -190,7 +188,7 @@ $$
     |x-c|≤\delta ⇒ |f(x)-f(c)|≤\varepsilon
     $$
 
-### continuous function on closed interval
+## continuous function on closed interval
 
 $f$ is continuous on $S ⇒$
 $f$ is bounded:
