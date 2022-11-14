@@ -170,3 +170,89 @@ $⇒ ∃\ \{a_{n_k}\},d$ s.t. $\{a_{n_k}\}→ d$
 - proof: successively shrink interval by half
     and keep the half with infinite element
 - $a_n\in[b,c] ⇒ ∃\ \{a_{n_k}\},d\in[b,c]$ s.t. $a_{n_k} → d$
+
+# Riemann integral
+
+## continuity
+
+$f$ is continuous at $c\in Dom(f) ⇔$
+
+$$
+∀\text{ sequence }\{x_n\},x_n\in Dom(f),x_n → c,\\[12pt]
+\lim_{n → ∞}f(x_n)=f(c)
+$$
+
+- $f$ is continuous at $c\in Dom(f) ⇔$
+
+    $$
+    ∀\ \varepsilon>0,∃\ \delta>0,\text{ s.t. }
+    ∀\ x\in Dom(f),\\[12pt]
+    |x-c|≤\delta ⇒ |f(x)-f(c)|≤\varepsilon
+    $$
+
+### continuous function on closed interval
+
+$f$ is continuous on $S ⇒$
+$f$ is bounded:
+
+$$
+∃\ B\in\R,\text{ s.t. }∀\ x\in S,\\[12pt]
+|f(x)|≤B
+$$
+
+$f$ continuous on $[a,b] ⇒$
+
+$$
+∃\ c,d\in[a,b]\text{ s.t.}\\[12pt]
+f(c)=\sup_{[a,b]}f,\quad
+f(d)=\inf_{[a,b]}f
+$$
+
+and
+
+$$
+Range(f)=[\inf_{[a,b]}f,\sup_{[a,b]}f]
+$$
+
+and $f$ is uniformly continuous on $[a,b]$
+
+- supremum
+
+    $$
+    \sup_Sf:=\sup\{f(x)|x\in S\}
+    $$
+
+- infimum
+
+    $$
+    \inf_Sf:=\inf\{f(x)|x\in S\}
+    $$
+
+### intermediate value theorem
+
+$f$ continuous on $[a,b]$, $f(a)≠f(b)$,
+$y\in\R$ is between $f(a),f(b) ⇒$
+
+$$
+∃\ c\in(a,b)\text{ s.t. }
+f(c)=y
+$$
+
+## uniform continuity
+
+$f$ is uniformly continuous $⇔$
+
+$$
+∀\ \varepsilon>0,∃\ \delta>0\text{ s.t. }
+∀\ x,c\in Dom(f)\\[12pt]
+|x-c|≤\delta ⇒ |f(x)-f(c)|≤\varepsilon
+$$
+
+## Lipschitz continuity
+
+$f$ is Lipschitz continuous on $S ⇔$
+
+$$
+∃\ M\text{ s.t. }∀\ x,c\in S,x≠c,\quad
+\frac{f(x)-f(c)}{x-c}≤M
+$$
