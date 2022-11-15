@@ -340,7 +340,7 @@ $$
     \int_a^bf(x)\ dx≤\int_a^bg(x)\ dx
     $$
 
-- $f\in c[a,b] ⇒$
+- $f\in C[a,b] ⇒$
 
     $$
     \left|\int_a^bf(x)\ dx\right|≤\int_a^b|f(x)|\ dx\\[12pt]
@@ -364,4 +364,66 @@ where $x_i^*\in[x_{i-1},x_i]$
     S_k → \int_a^bf(x)\ dx
     \quad\text{as}\quad
     k → ∞
+    $$
+
+# differentiation
+
+## continuously differentiable
+
+$f$ differentiable on $[a,b]$
+and $f'$ continuous on $[a,b]$,
+or $f\in C^{(1)}[a,b]$
+
+- $f$ continuous on $\R$ is denoted as $f\in C(\R)$
+
+## Rolle's theorem
+
+$f\in C[a,b]$ differentiable on $(a,b)$,
+$f(a)=0=f(b) ⇒$
+
+$$
+∃\ c\in(a,b)
+,\text{ s.t. }
+f'(c)=0
+$$
+
+## mean value theorem
+
+$f\in C[a,b]$ differentiable on $(a,b)$, $⇒$
+
+$$
+∃\ c\in(a,b)
+,\text{ s.t. }
+f'(c)=\frac{f(b)-f(a)}{b-a}
+$$
+
+## Taylor's theorem
+
+$f\in C^{(n)}[a,b]$,
+$f^{(n+1)}$ exist on $(a,b)$,
+$x_0\in[a,b] ⇒$
+
+$$
+∀\ x\in[a,b],x≠x_0,∃\ \xi\text{ between }x,x_0
+\text{ s.t.}\\[12pt]
+f(x)=T^{(n)}(x,x_0)+\frac{f^{(n+1)}(\xi)}{(n+1)!}(x-x_0)^{n+1}
+$$
+
+where $T^{(n)}$ is define in
+[Sequence and Series](sequence_series.md#n-th-degree-taylor-polynomial-tn)
+
+- proof
+
+    fix $x$, let $\alpha$ s.t.
+
+    $$
+    f(x)=T^{(n)}(x,x_0)+\frac{f^{(n+1)}(\xi)}{(n+1)!}(x-x_0)^{n+1}
+    +\alpha(x-x_0)^{n+1}\\[12pt]
+    g(t)=f(t)-T^{(n)}(t,x_0)-\alpha(t-x_0)^{n+1}
+    $$
+
+    apply Rolle's theorem $n$ time to show $∃\ \xi$ between $x,x_0$ s.t.
+
+    $$
+    g^{(n+1)}(x_{n+1})=0
     $$
