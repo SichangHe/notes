@@ -11,7 +11,7 @@
 
 # integration
 
-followed from [Riemann sum](analysis.md#riemann-suma)
+followed from [Riemann sum](analysis.md#riemann-sum)
 
 $f\in c[a,b]$,
 partition evenly into $N$ subinterval
