@@ -254,3 +254,114 @@ $$
 ∃\ M\text{ s.t. }∀\ x,c\in S,x≠c,\quad
 \frac{f(x)-f(c)}{x-c}≤M
 $$
+
+# integral
+
+## partition
+
+partition $P$ of $[a,b]$ is any finite collection of point
+
+$$
+x_0<x_1<\cdots<x_N
+$$
+
+where
+
+$$
+x_0=a,\quad x_N=b
+$$
+
+## upper sum/ lower sum
+
+for subinterval $[x_{i-1},x_i]$ of partition $P$
+
+$$
+M_i:=\sup_x\{f(x)|x_{i-1}≤x≤x_i\}\\[12pt]
+m_i:=\inf\{f(x)|x_{i-1}≤x≤x_i\}
+$$
+
+lower sum
+
+$$
+L_P(f):=\sum_{i=1}^Nm_i(x_i-x_{i-1})
+$$
+
+upper sum
+
+$$
+U_P(f):=\sum_{i=1}^NM_i(x_i-x_{i-1})
+$$
+
+- $L_P(f)≤U_P(f)$
+- for any partition $Q$
+
+    $$
+    L_P(f)≤U_Q(f)
+    $$
+
+- for partition $Q$ that contain all point of $P$ and additional point
+
+    $$
+    L_P(f)≤L_Q(f),\quad
+    U_Q(f)≤U_P(f)
+    $$
+
+## Riemann integrability
+
+$f$ on $[a,b]$ is Riemann integrable $⇔$
+
+$$
+\sup_P\{L_P(f)\}=\inf\{U_P(f)\}
+$$
+
+- $∀\ \varepsilon>0,∃$ partition $P$ s.t.
+
+    $$
+    U_P(f)-L_P(f)≤\varepsilon
+    $$
+
+    $⇒ f$ is Riemann integrable
+
+- $f$ continuous on $[a,b] ⇒ f$ Riemann integrable
+
+## Riemann integral
+
+$f$ Riemann integrable on $[a,b]$
+
+Riemann integral
+
+$$
+\int_a^bf(x)\ dx:=\inf\{U_P(f)\}
+$$
+
+- $∀\ x\in[a,b],\ f(x)≤g(x) ⇒$
+
+    $$
+    \int_a^bf(x)\ dx≤\int_a^bg(x)\ dx
+    $$
+
+- $f\in c[a,b] ⇒$
+
+    $$
+    \left|\int_a^bf(x)\ dx\right|≤\int_a^b|f(x)|\ dx\\[12pt]
+    \left|\int_a^bf(x)\ dx\right|≤(b-a)\sup_{[a,b]}|f(x)|
+    $$
+
+## Riemann sum
+
+$$
+\sum_{i=1}^Nf(x_i^*)(x_i-x_{i-1})
+$$
+
+where $x_i^*\in[x_{i-1},x_i]$
+
+- $f$ continuous on $[a,b]$,
+    $\{P_k\}$ is sequence of partition s.t.
+    maximum length of subinterval $→ 0$ as $k → ∞$,
+    $S_k$ is any Riemann sum corresponding to $P_k ⇒$
+
+    $$
+    S_k → \int_a^bf(x)\ dx
+    \quad\text{as}\quad
+    k → ∞
+    $$
