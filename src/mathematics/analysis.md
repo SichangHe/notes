@@ -510,3 +510,55 @@ $$
 
 - $⇒ f_n$ converge in the sup norm
     - $C[a,b]$ is complete in the sup norm
+
+### integral equation
+
+$f\in C[a,b]$
+
+$Q:=[a,b]\times[a,b]$, $K\in C(Q)$, $∀\ x,y\in Q,|K(x,y)|≤M$
+
+$$
+\psi(x)=f(x)+\lambda\int_a^bK(x,y)\psi(y)\ dy
+$$
+
+$\alpha:=|\lambda|M(b-a)<1 ⇒ \psi$ has unique continuous solution
+
+proof of existence
+
+1. define any continuous $\psi_0$ and
+
+    $$
+    \psi_n(x)=f(x)+\lambda\int_a^bK(x,y)\psi_{n-1}(y)\ dy
+    $$
+
+1. show that $\psi_n\in C[a,b]$ by induction
+1. show that $∀\ x\in[a,b]$
+
+    $$
+    |\psi_{n+1}(x)-\psi_n(x)|≤\alpha\|\psi_n-\psi_{n-1}\|_ ∞
+    $$
+
+1. show by iteration that $\psi_n$ is Cauchy in sup norm
+
+proof of uniqueness by contradiction:
+subtract equation of two solution function
+
+# calculus of variation
+
+## functional
+
+function with domain containing function
+
+### Euler equation
+
+$f$ is twice continuously differentiable functional of three variables
+
+$$
+J:=\int_a^bf(x,y(x),y'(x))\ dx
+$$
+
+$y(x)$ is extremal for $J ⇒ y(x)$ satisfy Euler equation
+
+$$
+f_y-\frac{d}{dx}f_{y'}=0
+$$
