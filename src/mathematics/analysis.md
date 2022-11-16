@@ -562,3 +562,48 @@ $y(x)$ is extremal for $J ⇒ y(x)$ satisfy Euler equation
 $$
 f_y-\frac{d}{dx}f_{y'}=0
 $$
+
+# metric space
+
+$(\mathcal M,\rho)$
+
+## metric
+
+$$
+\rho:\mathcal M × \mathcal M → [0,∞]
+$$
+
+$∀\ x,y,z\in\mathcal M,$
+
+1. $\rho(x,y)≥0.\rho(x,y)=0 ⇔ x=y$
+1. $\rho(x,y)=\rho(y,x)$
+1. $\rho(x,y)+\rho(y,z)≥\rho(x,z)$
+
+## sequence of point in metric space converge
+
+$\{x_n\}$, $x_n\in(\mathcal M,\rho)$
+
+$\{x_n\}$ converge to $x\in\mathcal M ⇔$
+
+$$
+\lim_{n → ∞}\rho(x_n,x)=0
+$$
+
+also denoted as
+
+$$
+\lim_{n → ∞}x_n=x
+$$
+
+## equivalent metric
+
+metric $\rho,\sigma$ on $\mathcal M$ are equivalent $⇔$
+
+$$
+∀\ \varepsilon>0,x\in\mathcal M,
+∃\ \delta>0\text{ s.t. }∀\ y\in\mathcal M\\[12pt]
+\rho(x,y)<\delta ⇒ \sigma(x,y)<\varepsilon\\[12pt]
+\sigma(x,y)<\delta ⇒ \rho(x,y)<\varepsilon
+$$
+
+- $x_n → x$ in $\rho ⇔ x_n → x$ in $\sigma$
