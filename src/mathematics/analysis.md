@@ -88,7 +88,7 @@ $$
 a_n → a
 $$
 
-or $\{a_n\}$ converge to limit $a$ iff,
+or $\{a_n\}$ converge to limit $a ⇔$
 
 $∀\ \varepsilon>0,∃$ integer $N(\varepsilon)$, so that $∀\ n≥N$,
 
@@ -96,7 +96,7 @@ $$
 |a_n-a|≤\varepsilon
 $$
 
-## sequence diverge to infinite
+## sequence diverge to infinity
 
 $∀\ M,∃\ N$, so that $∀\ n≥N$,
 
@@ -209,7 +209,7 @@ $$
 and
 
 $$
-Range(f)=[\inf_{[a,b]}f,\sup_{[a,b]}f]
+Ran(f)=[\inf_{[a,b]}f,\sup_{[a,b]}f]
 $$
 
 and $f$ is uniformly continuous on $[a,b]$
@@ -277,7 +277,7 @@ for subinterval $[x_{i-1},x_i]$ of partition $P$
 
 $$
 M_i:=\sup_x\{f(x)|x_{i-1}≤x≤x_i\}\\[12pt]
-m_i:=\inf\{f(x)|x_{i-1}≤x≤x_i\}
+m_i:=\inf_x\{f(x)|x_{i-1}≤x≤x_i\}
 $$
 
 lower sum
@@ -607,3 +607,40 @@ $$
 $$
 
 - $x_n → x$ in $\rho ⇔ x_n → x$ in $\sigma$
+
+## Cauchy sequence of point in metric space
+
+### complete metric space
+
+### contraction
+
+$$
+T:\mathcal M →\mathcal M
+$$
+
+is contraction $⇔$
+
+$$
+∃\ \alpha\in[0,1)\text{ s.t.}\\[12pt]
+∀\ x,y\in\mathcal M,\rho(T(x),T(y))≤\alpha\rho(x,y)
+$$
+
+#### fixed point of contraction
+
+$$
+T(\bar x)=\bar x
+$$
+
+- stable
+
+    $$
+    ∃\ \delta>0\text{ s.t. }
+    x_0\in[\bar x-\delta,\bar x+\delta] ⇒ x_n → \bar x
+    $$
+
+#### contraction mapping principle
+
+$(\mathcal M,\rho)$ complete $⇒$
+
+1. $T$ has unique fixed point $x$
+1. $x_{n+1}:=T(x_n) ⇒ ∀\ x_0\in\mathcal M,x_n → x$
