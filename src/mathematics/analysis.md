@@ -427,3 +427,52 @@ where $T^{(n)}$ is define in
     $$
     g^{(n+1)}(x_{n+1})=0
     $$
+
+# sequence of function
+
+$\{f_n\}$, $f_n$ defined on $E$
+
+## sequence of function pointwise convergence
+
+$f_n$ converge pointwise to limiting function $f ⇔$
+
+$$
+∀\ x\in E,\quad
+\lim_{n → ∞}f_n(x)=f(x)
+$$
+
+## sequence of function uniform convergence
+
+$f_n$ converge uniformly to limiting function $f ⇔$
+
+$$
+∀\ \varepsilon>0,∃\ N\text{ s.t. }∀\ n≥N\\[12pt]
+∀\ x\in E,\quad
+|f_n(x)-f(x)|≤\varepsilon
+$$
+
+- $∀\ n,f_n\in C(E) ⇒ f\in C(E)$
+- $∀\ n,f_n\in C[a,b] ⇒$
+
+    $$
+    \lim_{n → ∞}\int_a^bf_n(x)\ dx=
+    \int_a^bf(x)\ dx
+    $$
+
+- sequence of function $F_n$,
+    $F_n\in C^{(1)}[a,b]$, $F'_n=f_n$, $∃\ x_0,\{F_n(x_0)\}$ converge
+    $⇒ F\in C^{(1)}[a,b]$, $F'=f$
+
+- $Q:=[a,b]\times[c,d]$, $f\in C(Q)$.
+    $∀\ x_0\in[a,b],f(x_0,\cdot)\in C[c,d]$, $f_y\in C(Q)$.
+    $F$ on $[c,d]$,
+
+    $$
+    F(y):=\int_a^bf(x,y)\ dx
+    $$
+
+    $⇒ F\in C^{(1)}[c,d]$,
+
+    $$
+    F'(y)=\int_a^bf_y(x,y)\ dx
+    $$
