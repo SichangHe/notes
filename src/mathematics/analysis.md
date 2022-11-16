@@ -476,3 +476,37 @@ $$
     $$
     F'(y)=\int_a^bf_y(x,y)\ dx
     $$
+
+## supremum norm
+
+$f$ bounded on $E$
+
+supremum norm or sup norm of $f$
+
+$$
+\|f\|_ ∞ :=\sup_E|f(x)|
+$$
+
+- sup norm is a metric
+
+### function converge in the sup norm
+
+$\{f_n\}$ on $E$ converge in the sup norm to $f ⇔$
+
+$$
+\lim_{n → ∞}\|f_n-f\|_ ∞ =0
+$$
+
+- $⇔ f_n$ converge to $f$ uniformly on $E$
+
+### Cauchy sequence in the sup norm
+
+$\{f_n\}$ on $E$ is Cauchy sequence in the sup norm $⇔$
+
+$$
+∀\ \varepsilon>0,∃\ N\text{ s.t.}\\[12pt]
+∀\ m,n≥N,\|f_m-f_n\|_ ∞ ≤\varepsilon
+$$
+
+- $⇒ f_n$ converge in the sup norm
+    - $C[a,b]$ is complete in the sup norm
