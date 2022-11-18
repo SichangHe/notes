@@ -686,6 +686,9 @@ $K≤G,N≤G,N\unlhd G ⇒$
 1. $K/K\cap N\ \cong\ KN/N$
 1. $[KN:K]=[N:K\cap N]$
 
+![diagram of diamond isomorphism theorem
+](https://upload.wikimedia.org/wikipedia/commons/d/dc/Diagram_for_the_First_Isomorphism_Theorem.png)
+
 ### third isomorphism theorem
 
 $H\unlhd G,K\unlhd G,K≤H$
@@ -697,3 +700,24 @@ $H\unlhd G,K\unlhd G,K≤H$
         $$
         \Gamma(gK):=gH
         $$
+
+### forth isomorphism theorem
+
+$N\unlhd G$, natural projection $\pi:G → G/N$
+
+$∃$ bijection $\Pi$
+
+$$
+\Pi:\{A≤G|N ⊆ A\} → \{\mathscr A≤G/N\}\\[12pt]
+\Pi(A)=\pi(A)=
+\{\pi(a)|a\in A\}=A/N
+$$
+
+$A,B≤G,N≤A,B$
+
+property of $\Pi$
+
+1. $A≤B ⇔ \Pi(A)≤\Pi(B)$
+1. $A≤B ⇒ [B:A]=[\Pi(B):\Pi(A)]$
+1. $\Pi(A\cap B)=\Pi(A)\cap\Pi(B)$
+1. $A\unlhd G ⇔ \Pi(A)\unlhd G/N$

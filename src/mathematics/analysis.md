@@ -311,7 +311,7 @@ $$
 $f$ on $[a,b]$ is Riemann integrable $⇔$
 
 $$
-\sup_P\{L_P(f)\}=\inf\{U_P(f)\}
+\sup_P\{L_P(f)\}=\inf_P\{U_P(f)\}
 $$
 
 - $∀\ \varepsilon>0,∃$ partition $P$ s.t.
