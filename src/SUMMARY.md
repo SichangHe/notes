@@ -35,6 +35,7 @@
 - [Programming](programming/index.md)
     - [C](programming/c.md)
         -[clang](programming/clang.md)
+    - [Elixir](programming/elixir.md)
     - [Git](programming/git.md)
     - [Java](programming/java.md)
     - [JavaScript](programming/javascript.md)
