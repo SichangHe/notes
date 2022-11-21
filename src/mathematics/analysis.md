@@ -644,3 +644,47 @@ $(\mathcal M,\rho)$ complete $⇒$
 
 1. $T$ has unique fixed point $x$
 1. $x_{n+1}:=T(x_n) ⇒ ∀\ x_0\in\mathcal M,x_n → x$
+
+# series of function
+
+## limit superior and limit inferior
+
+$\{a_n\}$, $a_n\in\R$
+
+$$
+\bar s_N=\sup\{a_n|n≥N\}\\[12pt]
+\underbar s_N=\inf\{a_n|n≥N\}
+$$
+
+- $a_n → a=\lim\sup a_n=\lim\inf a_n ⇔$
+
+    $$
+    -∞ <\lim\sup a_n≤\lim\inf a_n< ∞
+    $$
+
+- $a_n>0 ⇒$
+
+    $$
+    \lim\inf \frac{a_{n+1}}{a_n}≤\lim\inf\sqrt[n]{a_n}
+    ≤\lim\sup\sqrt[n]{a_n}≤\lim\sup \frac{a_{n+1}}{a_n}
+    $$
+
+### limit superior
+
+$$
+\lim\sup a_n:=\bar s:=\lim_{N → ∞}\bar s_N
+$$
+
+- $-∞ <\bar s=s< ∞ ⇔ ∀\ \varepsilon>0,$
+    - $∃\ N$ s.t. $∀\ n≥N,a_n≤s+\varepsilon$
+    - $∀\ N,∃\ n≥N$ s.t. $a_n≥s-\varepsilon$
+
+### limit inferior
+
+$$
+\lim\inf a_n:=\underbar s:=\lim_{N → ∞}\underbar s_N
+$$
+
+- $-∞ <\underbar s=s< ∞ ⇔ ∀\ \varepsilon>0,$
+    - $∃\ N$ s.t. $∀\ n≥N,a_n≥s+\varepsilon$
+    - $∀\ N,∃\ n≥N$ s.t. $a_n≤s-\varepsilon$
