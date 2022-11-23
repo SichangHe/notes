@@ -28,6 +28,5 @@ jobs:
         rm -rf docs
         mv html docs
         git add docs
-        git add katex
         git commit --allow-empty -m "Deploy $GITHUB_SHA to gh-pages"
         git push -f
