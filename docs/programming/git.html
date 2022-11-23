@@ -207,7 +207,7 @@
 <pre><code class="language-shell">git filter-repo --invert-paths --path '&lt;path_to_file&gt;' --use-base-name
 </code></pre>
 <p>ignore all symlink</p>
-<pre><code class="language-bash">find * -type l -not -exec grep -q &quot;^{}&quot; .gitignore \; -print &gt;&gt; .gitignore
+<pre><code class="language-bash">find * -type l -not -exec grep -q &quot;^{}$&quot; .gitignore \; -print &gt;&gt; .gitignore
 </code></pre>
 <p>check what are the branches</p>
 <pre><code class="language-shell">git fetch &amp;&amp; git branch
