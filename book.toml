@@ -11,9 +11,9 @@ build-dir = "."
 [output.html]
 git-repository-url = "https://github.com/SichangHe/notes"
 
-[output.katex2]
+[output.katex]
 
-[preprocessor.katex2]
+[preprocessor.katex]
 
 [preprocessor.toc]
 command = "mdbook-toc"
