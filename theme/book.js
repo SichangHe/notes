@@ -724,5 +724,17 @@ function playground_text(playground) {
                 }
             }
         }
+
+    })
+
+    // Click katex element to copy their source.
+    const math_srcs = document.querySelectorAll("span.katex-src");
+    document.querySelectorAll("span.katex").forEach((math, index) => {
+        const math_src = math_srcs[index];
+        math.title = "Click to copy source.";
+        math.addEventListener(
+            "click",
+            () => navigator.clipboard.writeText(math_src.innerText),
+        );
     })
 })();
