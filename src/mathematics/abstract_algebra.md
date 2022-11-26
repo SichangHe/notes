@@ -803,3 +803,26 @@ $$
 
 - group of units of $R$, $R^\times:=\{\text{units in }R\}$
 - zero divisor cannot be unit
+
+## subring
+
+$S ⊆ R$
+
+$S$ is subring of $R ⇔$
+
+1. $(S,+)$ is a subgroup of $S$
+1. $S$ is closed under multiplication
+
+### subring test
+
+$S$ is subring of $R ⇔$
+
+1. $S≠ ∅$
+1. $∀\ a,b\in S,\quad a-b\in S$
+1. $∀\ a,b\in S,\quad ab\in S$
+
+$⇔$
+
+1. $S≠ ∅$
+1. $∀\ a,b\in S,\quad a+b\in S$
+1. $∀\ a,b\in S,\quad ab\in S$
