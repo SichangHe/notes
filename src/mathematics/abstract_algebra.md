@@ -721,3 +721,85 @@ property of $\Pi$
 1. $A≤B ⇒ [B:A]=[\Pi(B):\Pi(A)]$
 1. $\Pi(A\cap B)=\Pi(A)\cap\Pi(B)$
 1. $A\unlhd G ⇔ \Pi(A)\unlhd G/N$
+
+# ring
+
+a triple $(R,+,\cdot)$ s.t.
+
+1. $(R,+)$ is abelian group
+1. $\cdot$ is associative
+
+    $$
+    ∀\ a,b,c\in R,\quad(ab)c=a(bc)
+    $$
+
+1. distributive
+
+    $$
+    ∀\ a,b,c\in R,\quad a(b+c)=ab+ac
+    $$
+
+- $∀\ a,b\in R,\quad 0a=a0=0$
+- $∀\ a,b\in R,\quad (-a)b=a(-b)=-(ab)$
+- $∀\ a,b\in R,\quad (-a)(-b)=ab$
+
+## commutative ring
+
+$⇔ ∀\ a,b\in R,\ ab=ba$
+
+## ring with identity
+
+$⇔ ∃\ 1\in R,\ ∀\ a\in R,\ a1=1a=a$
+
+- $1$ is unique
+- $∀\ a\in R,\quad -a=(-1)a$
+
+## division ring
+
+$⇔ (R,+,\cdot)$ is ring with identity and
+$∀\ a\in R\setminus\{0\},\ ∃\ b,\ ab=ba=1$
+
+## field
+
+commutative division ring
+
+## zero divisor of ring
+
+$a\in R,a≠0$
+
+$a$ is zero divisor $⇔$
+
+$$
+∃\ b\in R,b≠0\text{ s.t. }ab=0\text{ or }ba=0
+$$
+
+- $∀\ a,b,c\in R,a$ is not zero divisor, $ab=ac ⇒ a=0$ or $b=c$
+
+### integral domain
+
+commutative ring $(R,+,\cdot),1≠0$
+
+$(R,+,\cdot)$ is integral domain
+$⇔$ no zero divisor:
+
+$$
+∀\ a,b,c\in R,\quad
+ab=0 ⇒ a=0\text{ or }b=0\\[12pt]
+a≠0,b≠0 ⇒ ab≠0
+$$
+
+- $∀ a,b,c\in R,ab=ac ⇒ a=0$ or $b=c$
+- $R$ is finite $⇒ R$ is field
+
+## unit of ring
+
+$R$ is ring with identity, $1≠0,a\in R$
+
+$a$ is unit $⇔$
+
+$$
+∃\ b\in R\text{ s.t. }ab=1=ba
+$$
+
+- group of units of $R$, $R^\times:=\{\text{units in }R\}$
+- zero divisor cannot be unit
