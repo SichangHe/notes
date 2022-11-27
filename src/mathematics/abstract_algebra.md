@@ -826,3 +826,33 @@ $⇔$
 1. $S≠ ∅$
 1. $∀\ a,b\in S,\quad a+b\in S$
 1. $∀\ a,b\in S,\quad ab\in S$
+
+## polynomial ring
+
+$R$ is commutative ring with identity,
+$x$ is indeterminate
+
+ring of polynomial in $x$ with coefficient in $R$
+
+$$
+R[x]:=\{\text{polynomial in $x$ with coefficient in $R$}\}
+$$
+
+- commutative
+- identity $1$
+- $R$ is subring of $R[x]$
+- $S$ is subring of $R ⇒ S[x]$ is subring of $R[x]$
+- $R$ is integral domain, $p(x),q(x)\in R[x]\setminus\{0\} ⇒$
+    1. $R[x]$ is integral domain
+    1. $\deg(p(x)q(x))=\deg(p(x))\deg(q(x))$
+    1. $(R[x])^\times=R^\times$
+
+### polynomial in $x$ with coefficient in $R$
+
+$n\in\N,a_i\in R,a_n≠0$
+
+$$
+p(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0
+$$
+
+- degree $\deg(p(x))=n$
