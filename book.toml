@@ -19,3 +19,4 @@ include-src = true
 [preprocessor.toc]
 command = "mdbook-toc"
 renderer = ["html"]
+before = ["katex"]

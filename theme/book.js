@@ -698,15 +698,15 @@ function playground_text(playground) {
     })
 
     const toc_anchors = toc.querySelectorAll("a");
+    const header_anchors = document
+        .querySelector("main")
+        .querySelectorAll("h1 > a, h2 > a, h3 > a, h4 > a");
     const elements_w_refs = [];
-    for (const anchor of toc_anchors) {
-        try {
-            const element = document.querySelector(
-                decodeURIComponent(anchor.getAttribute("href"))
-            )
-            elements_w_refs.push([element, anchor]);
-        } catch (_) {};
-    }
+    toc_anchors.forEach((anchor, index) => {
+        const header = header_anchors[index];
+        anchor.href = header.href;
+        elements_w_refs.push([header, anchor]);
+    });
     let current_active = undefined;
     document.addEventListener("scroll", () => {
         if (current_active) {
