@@ -856,3 +856,39 @@ p(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0
 $$
 
 - degree $\deg(p(x))=n$
+
+## matrix ring
+
+$R$ is ring, $n\in\Z^+$
+
+matrix ring of degree $n$ over $R$
+
+$$
+M_n(R):=R^{n\times n}
+$$
+
+- $R$ has identity $⇒ 1_{M_n(R)}=\mathbb I_n$
+
+$n≥2 ⇒$
+
+- $M_n(R)$ is not commutative
+- $M_n(R)$ has zero divisor
+- set of scalar matrix in $M_n(R)$ is a subring
+- $S$ is subring of $R ⇒ M_n(S)$ is subring of $M_n(R)$
+
+### scalar matrix
+
+$∀\ i≠j,\quad a_{ii}=a,a_{ij}=0$
+
+## ring homomorphism
+
+$R,S$ are ring
+
+well-defined map $\varphi:R → S$ is ring homomorphism $⇔ ∀\ r,s\in R,$
+
+1. $\varphi(r+s)=\varphi(r)+\varphi(s)$
+1. $\varphi(rs)=\varphi(r)\varphi(s)$
+
+- monomorphism, epimorphism, isomorphism, kernel, image
+- $\text{Ker}\varphi$ is subring
+- $\text{Im}\varphi$ is subring
