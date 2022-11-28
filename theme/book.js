@@ -724,8 +724,7 @@ function playground_text(playground) {
                 }
             }
         }
-
-    })
+    });
 
     // Click katex element to copy their source.
     const math_srcs = document.querySelectorAll("span.katex-src");

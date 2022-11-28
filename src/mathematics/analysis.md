@@ -688,3 +688,16 @@ $$
 - $-∞ <\underbar s=s< ∞ ⇔ ∀\ \varepsilon>0,$
     - $∃\ N$ s.t. $∀\ n≥N,a_n≥s+\varepsilon$
     - $∀\ N,∃\ n≥N$ s.t. $a_n≤s-\varepsilon$
+- $\{a_n\} → a ⇔$
+
+    $$
+    -∞ <\lim\sup a_n≤\lim\inf a_n< ∞ \\[12pt]
+    \lim\sup a_n=a=\lim\inf a_n
+    $$
+
+- $a_n>0 ⇒$
+
+    $$
+    \lim\inf\frac{a_{n+1}}{a_n}≤\lim\inf\sqrt[n]a_n
+    ≤\lim\sup\sqrt[n]a_n≤\lim\sup\frac{a_{n+1}}{a_n}
+    $$
