@@ -701,3 +701,13 @@ $$
     \lim\inf\frac{a_{n+1}}{a_n}≤\lim\inf\sqrt[n]a_n
     ≤\lim\sup\sqrt[n]a_n≤\lim\sup\frac{a_{n+1}}{a_n}
     $$
+
+## partial sum
+
+partial sum $S_n$ of series $\sum_{j=1}^∞ a_j$
+
+$$
+S_n:=\sum_{j=1}^na_j
+$$
+
+- series convergence is the same as its sequence of partial sum $\{S_n\}$
