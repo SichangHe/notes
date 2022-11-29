@@ -163,7 +163,9 @@
 <pre><code>python3 -m pip install --upgrade pip
 </code></pre>
 <p>update all</p>
-<pre><code>python3 -m pip list --outdated --format=freeze \
+<pre><code>python3 -m pip list --outdated --format=json \
+| python3 -c &quot;import json, sys
+print('\n'.join([x['name'] for x in json.load(sys.stdin)]))&quot; \
 | grep -v '^\-e' \
 | cut -d = -f 1 \
 | xargs -n1 python3 -m pip install -U
