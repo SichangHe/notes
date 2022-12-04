@@ -821,7 +821,7 @@ $S$ is subring of $R ⇔$
 1. $∀\ a,b\in S,\quad a-b\in S$
 1. $∀\ a,b\in S,\quad ab\in S$
 
-$⇔$
+$S$ is finite subring of $R ⇔$
 
 1. $S≠ ∅$
 1. $∀\ a,b\in S,\quad a+b\in S$
@@ -892,3 +892,41 @@ well-defined map $\varphi:R → S$ is ring homomorphism $⇔ ∀\ r,s\in R,$
 - monomorphism, epimorphism, isomorphism, kernel, image
 - $\text{Ker}\varphi$ is subring
 - $\text{Im}\varphi$ is subring
+
+## ideal of ring
+
+subring $I$ is ideal of $R ⇔$
+
+$$
+∀\ r\in R,a\in I,\quad ra\in I, ar\in I
+$$
+
+### ideal test
+
+subset $I$ of ring $R$
+
+$I$ is ideal $⇔$
+
+1. $I≠ ∅$
+1. $∀\ a,b\in I, a-b\in I$
+1. $∀\ r\in R,a\in I,\quad ra\in I,ar\in I$
+
+$⇔$
+
+$$
+a+I=b+I,c+I=d+I ⇒ (ac)+I=(bd)+I
+$$
+
+## quotient ring
+
+$I$ is ideal of $R$
+
+$R/I=R\setminus I$ is quotient ring of $R$ by $I$
+
+- $1\in R ⇒ 1_{R/I}=1+I$
+- $R$ commutative $⇒ R/I$ commutative
+- natural projection
+
+    $$
+    \pi(r):=r+I:R → R/I
+    $$
