@@ -813,6 +813,11 @@ $S$ is subring of $R ⇔$
 1. $(S,+)$ is a subgroup of $S$
 1. $S$ is closed under multiplication
 
+relationship between identity
+
+- $1_S\not\equiv 1_R$
+- $1_R\in S ⇒ 1_S=1_R$, unit in $S$ are unit in $R$
+
 ### subring test
 
 $S$ is subring of $R ⇔$
@@ -826,6 +831,46 @@ $S$ is finite subring of $R ⇔$
 1. $S≠ ∅$
 1. $∀\ a,b\in S,\quad a+b\in S$
 1. $∀\ a,b\in S,\quad ab\in S$
+
+### center of ring
+
+$R$ is ring with $1$
+
+$$
+Z(R):=\{z\in R|∀\ r\in R,\quad zr=rz\}
+$$
+
+- is subring with $1$
+- $R$ is division ring $⇒ Z(R)$ is field
+
+### characteristic of ring
+
+if $∃\ n$ s.t.
+
+$$
+n:=\argmin_m\{m\in\Z^+|∀\ a\in R,\quad ma=0\}
+$$
+
+then $char(R)=n$, else $char(R)=0$
+
+- $char(R)>0 ⇔ char(R)=\displaystyle\argmin_n\{n\in\Z^+|n1=0\}$
+- $R$ is integral domain $⇒ char(R)$ is $0$ or prime
+- $R$ finite $⇒ char(R)\big||R|$
+
+### nilpotent of commutative ring with identity
+
+commutative ring $R$ with $1$
+
+$x$ is nilpotent $⇔$
+
+$$
+∃\ m\in\Z^+\text{ s.t. }x^m=0
+$$
+
+- $x$ is $0$ or zero divisor
+- $∀\ r\in R,\quad rx$ is nilpotent
+- $1+x$ is unit
+- $∀$ unit $u,u+x$ is unit
 
 ## polynomial ring
 
