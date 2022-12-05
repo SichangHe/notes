@@ -946,6 +946,8 @@ $$
 ∀\ r\in R,a\in I,\quad ra\in I, ar\in I
 $$
 
+- proper ideal: proper subset that is ideal
+
 ### ideal test
 
 subset $I$ of ring $R$
@@ -961,6 +963,30 @@ $⇔$
 $$
 a+I=b+I,c+I=d+I ⇒ (ac)+I=(bd)+I
 $$
+
+### maximal ideal
+
+ideal $M$ of $R$ is maximal ideal $⇔$
+
+1. $M\subsetneq R$
+1. $I$ is ideal of $R$, $M ⊆ I ⊆ R ⇒ I=M$ or $I=R$
+
+- easily seen in lattice
+- not necessarily exist
+- $1\in R ⇒$ every proper ideal is contained in a maximal ideal
+- $R$ is commutative, $1\in R ⇒ R/M$ is field
+
+### prime ideal
+
+ideal $P$ of $R$ is prime ideal $⇔$
+
+1. $P\subsetneq R$
+1. $∀\ a,b\in R,\quad ab\in P ⇒ a\in P$ or $b\in P$
+
+- $R$ is commutative, $1\in R ⇒$
+    - $R/P$ is integral domain
+    - $R$ is integral domain $⇔ \{0\}$ is prime ideal
+    - every maximal ideal is prime ideal
 
 ## quotient ring
 
