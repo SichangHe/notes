@@ -253,8 +253,7 @@
 <pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>`type1::fun1()`
-<span class="boring">}
-</span></code></pre></pre>
+<span class="boring">}</span></code></pre></pre>
 <h2 id="method"><a class="header" href="#method">method</a></h2>
 <ul>
 <li>call method on instance</li>
@@ -263,8 +262,7 @@
 </span><span class="boring">fn main() {
 </span>instance1
     .method1();
-<span class="boring">}
-</span></code></pre></pre>
+<span class="boring">}</span></code></pre></pre>
 <h1 id="variable"><a class="header" href="#variable">variable</a></h1>
 <p>immutable by default</p>
 <h2 id="declare"><a class="header" href="#declare">declare</a></h2>
@@ -282,8 +280,7 @@
 r#&quot;str
 literal&quot;# /* raw str
 literal */
-<span class="boring">}
-</span></code></pre></pre>
+<span class="boring">}</span></code></pre></pre>
 <h2 id="enumeration"><a class="header" href="#enumeration">enumeration</a></h2>
 <h3 id="variant"><a class="header" href="#variant">variant</a></h3>
 <h2 id="result-result"><a class="header" href="#result-result">result <code>Result</code></a></h2>
@@ -358,24 +355,21 @@ can be used as return statement</p>
 <pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>`fn fun1(&amp;self,…)-&gt;Type1;`
-<span class="boring">}
-</span></code></pre></pre>
+<span class="boring">}</span></code></pre></pre>
 </li>
 <li>
 <p>default implementation</p>
 <pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>`fn fun1(&amp;self,…)-&gt;Type1 {…}` 
-<span class="boring">}
-</span></code></pre></pre>
+<span class="boring">}</span></code></pre></pre>
 </li>
 </ul>
 <h3 id="implement-trait-on-type"><a class="header" href="#implement-trait-on-type">implement trait on type</a></h3>
 <pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>`impl Trait1 for Type1 {…}`
-<span class="boring">}
-</span></code></pre></pre>
+<span class="boring">}</span></code></pre></pre>
 <h4 id="implement-trait-method"><a class="header" href="#implement-trait-method">implement trait method</a></h4>
 <ul>
 <li>
@@ -386,8 +380,7 @@ can be used as return statement</p>
 <pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>`fn fun1(&amp;self,…)-&gt;Type1 {…}`
-<span class="boring">}
-</span></code></pre></pre>
+<span class="boring">}</span></code></pre></pre>
 </li>
 </ul>
 <h3 id="use-trait-as-parameter"><a class="header" href="#use-trait-as-parameter">use trait as parameter</a></h3>
@@ -397,8 +390,7 @@ can be used as return statement</p>
 <pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>`pub fn fun1(para1: &amp;impl Trait1) {…}` 
-<span class="boring">}
-</span></code></pre></pre>
+<span class="boring">}</span></code></pre></pre>
 </li>
 <li>
 <p>trait bound syntax <code>pub fn fun1&lt;T: Trait1&gt;(para1: &amp;T) {…}</code></p>
@@ -416,21 +408,18 @@ can be used as return statement</p>
     where T: Trait1 + Trait2,
           U: Trait3 + Trait4
 {…}
-<span class="boring">}
-</span></code></pre></pre>
+<span class="boring">}</span></code></pre></pre>
 <h3 id="return-type-implement-trait"><a class="header" href="#return-type-implement-trait">return type implement trait</a></h3>
 <pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>`fn fun1(…)-&gt;impl Trait1 {…}`
-<span class="boring">}
-</span></code></pre></pre>
+<span class="boring">}</span></code></pre></pre>
 <h1 id="closure"><a class="header" href="#closure">closure</a></h1>
 <p>anonymous function stored as variable that can capture its environment</p>
 <pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>`let closure1 = |var1,…| {return_value};`
-<span class="boring">}
-</span></code></pre></pre>
+<span class="boring">}</span></code></pre></pre>
 <p><em>implement <code>FnOnce</code> trait</em></p>
 <ul>
 <li>more overhead than function</li>
@@ -448,8 +437,7 @@ where
     attr1: T,
     …
 }
-<span class="boring">}
-</span></code></pre></pre>
+<span class="boring">}</span></code></pre></pre>
 <ul>
 <li>use a <code>Option&lt;…&gt;</code></li>
 <li>use a hashmap</li>
@@ -465,8 +453,7 @@ mutable as needed <em>implement <code>FnMut</code> trait</em></p>
 <pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>`move |var1,…| {return_value}`
-<span class="boring">}
-</span></code></pre></pre>
+<span class="boring">}</span></code></pre></pre>
 </li>
 </ul>
 
