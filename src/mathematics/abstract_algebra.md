@@ -975,3 +975,47 @@ $R/I=R\setminus I$ is quotient ring of $R$ by $I$
     $$
     \pi(r):=r+I:R → R/I
     $$
+
+## isomorphism theorem for ring
+
+### first isomorphism theorem for ring
+
+$\varphi:R → S$ is ring homomorphism $⇒$
+
+1. $\text{Ker}\varphi$ is ideal of $R$
+1. $R/\text{Ker}\varphi\cong\text{Im }\varphi$
+
+### second isomorphism theorem for ring
+
+$A,B$ are subring of $R$, $B$ is ideal $⇒$
+
+1. $A+B$ is subring of $R$
+1. $B$ is ideal of $A+B$
+1. $A\cap B$ is ideal of $A$
+1. $A/A\cap B\cong(A+B)/B$
+
+### third isomorphism theorem for ring
+
+$I,J$ are ideal of $R$, $I ⊆ J ⇒$
+
+1. $J/I$ is ideal of $R/I$
+1. $(R/I)/(J/I)\cong R/J$
+
+### forth isomorphism theorem for ring
+
+$I$ is ideal of $R$, natural projection $\pi:R → R/I$
+
+$∃$ bijection
+
+$$
+\Pi:\{S\text{ is subring of }R|S \supseteq I\} →
+\{\mathscr S\text{ is subring of }R/I\}\\[12pt]
+\Pi(S)=\pi(S)=S/I
+$$
+
+$A,B$ are subring of $R$, $I ⊆ A,B ⇒$
+
+1. $A ⊆ B ⇔ A/I ⊆ B/I$
+1. $A ⊆ B ⇔ [B:A] = [B/I:A/I]$
+1. $(A\cap B)/I=(A/I)\cap(B/I)$
+1. $A$ is ideal of $R ⇔ A/I$ is ideal of $R/I$
