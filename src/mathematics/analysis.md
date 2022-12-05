@@ -647,6 +647,15 @@ $(\mathcal M,\rho)$ complete $⇒$
 
 # series of function
 
+- $\sum a_j$ converge $⇔ ∀\ \varepsilon>0,∃\ N$ s.t.
+
+    $$
+    ∀\ n,m≥N,\quad\left|\sum_{j=n}^ma_j\right|≤\varepsilon
+    $$
+
+- $\sum a_j$ converge $⇒ a_j → 0$
+- linearity
+
 ## limit superior and limit inferior
 
 $\{a_n\}$, $a_n\in\R$
@@ -711,3 +720,37 @@ S_n:=\sum_{j=1}^na_j
 $$
 
 - series convergence is the same as its sequence of partial sum $\{S_n\}$
+
+## series convergence test
+
+### series absolute convergence
+
+$\sum|a_j|$ converge $⇒ \sum a_j$ absolutely converge
+
+- otherwise, conditionally converge or diverge
+- $f:\N → \N$ is bijection $⇒ \sum a_{f(j)}=\sum a_j$ (rearrangement)
+- $\sum b_k$ absolutely converge
+    $⇒ \sum a_jb_k=\sum a_j\sum b_k$ absolutely converge
+
+### comparison test
+
+$∃\ J,∀\ j≥J,\quad 0≤a_j≤b_j≤c_j ⇒$
+
+1. $\sum c_j$ converge $⇒ \sum b_j$ converge
+1. $\sum a_j$ diverge $⇒ \sum b_j$ diverge
+
+### root test
+
+$$
+\alpha:=\lim\sup|a_j|^{\frac{1}{j}}
+$$
+
+1. $\alpha<1 ⇒ \sum a_j$ converge absolutely
+1. $\alpha>1 ⇒ \sum a_j$ diverge
+
+### ratio test
+
+$a_j≠0$
+
+1. $\lim\sup\frac{|a_{j+1}|}{a_j}<1 ⇒ \sum a_j$ converge absolutely
+1. $\lim\sup\frac{|a_{j+1}|}{a_j}>1 ⇒ \sum a_j$ diverge
