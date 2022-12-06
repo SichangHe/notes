@@ -937,6 +937,7 @@ well-defined map $\varphi:R → S$ is ring homomorphism $⇔ ∀\ r,s\in R,$
 - monomorphism, epimorphism, isomorphism, kernel, image
 - $\text{Ker}\varphi$ is subring
 - $\text{Im}\varphi$ is subring
+- $R\cong S ⇒$ they have the same property (commutative, identity, inverse)
 
 ## ideal of ring
 
@@ -974,7 +975,7 @@ ideal $M$ of $R$ is maximal ideal $⇔$
 - easily seen in lattice
 - not necessarily exist
 - $1\in R ⇒$ every proper ideal is contained in a maximal ideal
-- $R$ is commutative, $1\in R ⇒ R/M$ is field
+- $R$ is commutative, $1\in R ⇔ R/M$ is field
 
 ### prime ideal
 
@@ -984,7 +985,7 @@ ideal $P$ of $R$ is prime ideal $⇔$
 1. $∀\ a,b\in R,\quad ab\in P ⇒ a\in P$ or $b\in P$
 
 - $R$ is commutative, $1\in R ⇒$
-    - $R/P$ is integral domain
+    - $P$ is prime ideal $⇔ R/P$ is integral domain
     - $R$ is integral domain $⇔ \{0\}$ is prime ideal
     - every maximal ideal is prime ideal
 
