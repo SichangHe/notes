@@ -55,7 +55,22 @@ $$
 \ell(y_n,h(\vec x_n))
 $$
 
-### empirical risk
+### zero-one loss
+
+$$
+\ell(y,\hat y):=\begin{cases}
+    0&y=\hat y\\
+    1&\text{otherwise}
+\end{cases}
+$$
+
+### quadratic loss
+
+$$
+\ell(y,\hat y):=(y-\hat y)^2
+$$
+
+## empirical risk
 
 average lost based on the training set
 
@@ -105,6 +120,32 @@ supervised learning: classification, regression
 
 unsupervised learning: clustering
 
+# polynomial data fitting
+
+not machine learning but similar
+
+$$
+A\vec c=\vec b\\[12pt]
+A=\begin{bmatrix}
+    1&x_1&\cdots&x_1^k\\
+    \vdots&\vdots&&\vdots\\
+    1&x_N&\cdots&x_N^k
+\end{bmatrix}\\[12pt]
+\vec b=\begin{bmatrix}
+    y_1\\\vdots\\y_N
+\end{bmatrix}\\[12pt]
+\hat{\vec c}\in\argmin_{\vec c}\|A\vec c=\vec b\|^2
+$$
+
+- number of monomial $m(d,k)={d+k\choose k}$
+
+## interpolation in polynomial data fitting
+
+achieve $0$ loss
+
+- $k=N-1 ⇒$ always interpolate
+- overfitting
+
 # k-nearest neighbors predictor
 
 remember the whole training set
@@ -123,4 +164,3 @@ the $k$ closest $\vec x_n$s to $\vec x$
 ## Voronoi diagram
 
 ![example of a Voronoi diagram](https://www.baeldung.com/wp-content/uploads/sites/4/2021/11/plotcrop-768x768.png)
-
