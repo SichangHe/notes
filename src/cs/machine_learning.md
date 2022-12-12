@@ -220,3 +220,36 @@ $$
     $$
     \Delta(\vec x):=\frac{b+\vec w^T\vec x}{\|\vec w\|}
     $$
+
+## logistic function
+
+$$
+f(\Delta):=\frac{1}{1+e^{-\Delta}}
+$$
+
+![logistic function](https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Logistic-curve.svg/800px-Logistic-curve.svg.png)
+
+then the score function is
+
+$$
+s(\vec x):=f(a(\vec x))=f(b+\vec w^T\vec x)=
+\frac{1}{1+e^{-b-\vec w^T\vec x}}
+$$
+
+- activation $a(\vec x)$ is signed distance scaled
+
+## cross entropy loss for binary classification
+
+cross entropy loss of assigning score $p$ to point whose true label is $y$
+
+$$
+\ell(y,p):=\begin{cases}
+    -\log p&y=1\\
+    -\log(1-p)&y=0\\
+\end{cases}\\[12pt]=
+-y\log p-(1-y)\log(1-p)
+$$
+
+- differentiable so we can do gradient descent
+- base of $\log$ does not matter
+- resulting risk function is weakly convex
