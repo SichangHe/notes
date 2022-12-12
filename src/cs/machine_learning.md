@@ -164,3 +164,27 @@ the $k$ closest $\vec x_n$s to $\vec x$
 ## Voronoi diagram
 
 ![example of a Voronoi diagram](https://www.baeldung.com/wp-content/uploads/sites/4/2021/11/plotcrop-768x768.png)
+
+# gradient descent
+
+## stochastic gradient descent (SGD)
+
+group training set randomly into mini-batch,
+use gradient from each mini-batch to descent
+
+- mini-step are in the right direction on average
+- epoch: using all data once
+
+## step size
+
+- fixed
+- decreasing
+- momentum
+
+    $$
+    \vec v_{k+1}=\mu_k\vec v_k-\alpha_k\nabla f(\vec z_k)
+    $$
+
+- line search
+
+## subgradient
