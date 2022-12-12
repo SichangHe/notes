@@ -152,11 +152,34 @@
                     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 <ul>
 <li><a href="#elixir">Elixir</a></li>
+<li><a href="#function">function</a>
+<ul>
+<li><a href="#anonymous-function">anonymous function</a>
+<ul>
+<li><a href="#capture-syntax">capture syntax</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <h1 id="elixir"><a class="header" href="#elixir">Elixir</a></h1>
 <p>print Charlist as list of integer</p>
 <pre><code class="language-elixir">[1, 2, 3] |&gt; inspect(charlists: :as_lists) |&gt; IO.puts()
 </code></pre>
+<h1 id="function"><a class="header" href="#function">function</a></h1>
+<h2 id="anonymous-function"><a class="header" href="#anonymous-function">anonymous function</a></h2>
+<pre><code class="language-elixir">f = fn arg0, arg1, … -&gt; result end
+</code></pre>
+<p>need a dot to call</p>
+<pre><code class="language-elixir">f.(a0, a1, …)
+</code></pre>
+<h3 id="capture-syntax"><a class="header" href="#capture-syntax">capture syntax</a></h3>
+<pre><code class="language-elixir">&amp;fn1/n_args
+&amp;(&amp;1…)
+</code></pre>
+<ul>
+<li><code>&amp;1</code> for the first argument, <code>&amp;2</code> for the second, etc.</li>
+</ul>
 
                 </main>
 
