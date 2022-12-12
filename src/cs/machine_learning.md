@@ -188,3 +188,35 @@ use gradient from each mini-batch to descent
 - line search
 
 ## subgradient
+
+# logistic-regression classifier
+
+- score-based
+
+## score function for linear boundary
+
+$$
+s(\vec x)=\sigma(a(\vec x))=\sigma(c+\vec u^T\vec x)
+$$
+
+## signed distance to hyperplane
+
+hyperplane $\chi\in\R^d$
+
+$$
+b+\vec w^T\vec x=0
+\qquad\vec w≠\vec 0
+$$
+
+- $\vec w$ is perpendicular to $\chi$
+- distance of $\chi$ from origin
+
+    $$
+    \beta:=\frac{|b|}{\|\vec w\|}
+    $$
+
+- signed distance of $\vec x$ from $\chi$
+
+    $$
+    \Delta(\vec x):=\frac{b+\vec w^T\vec x}{\|\vec w\|}
+    $$
