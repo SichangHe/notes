@@ -238,6 +238,21 @@ $$
 
 - activation $a(\vec x)$ is signed distance scaled
 
+### softmax function
+
+softmax function in activation $\vec a$
+
+$$
+\vec s(\vec x)=\begin{bmatrix}
+    s_1(\vec a)\\\vdots\\s_K(\vec a)
+\end{bmatrix}\\[12pt]
+\vec a(\vec x)=\begin{bmatrix}
+    a_1(\vec x)\\\vdots\\a_K(\vec x)
+\end{bmatrix}\\[12pt]
+s_k(\vec x)=f(a_k(\vec x))=
+\frac{e^{a_k}(\vec x)}{\sum_{j=1}^Ke^{a_j}(\vec x)}
+$$
+
 ## cross entropy loss for binary classification
 
 cross entropy loss of assigning score $p$ to point whose true label is $y$
@@ -253,3 +268,13 @@ $$
 - differentiable so we can do gradient descent
 - base of $\log$ does not matter
 - resulting risk function is weakly convex
+
+### cross entropy loss for $K$-class case
+
+$$
+\ell(y,\vec p)=-\log p_y=-\sum_{k=1}^Kq_k\log p_k
+$$
+
+- true label $y$
+- prediction $\vec p$
+- one hot encoding $\vec q$ of $y$
