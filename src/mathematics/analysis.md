@@ -754,3 +754,45 @@ $a_j≠0$
 
 1. $\lim\sup\frac{|a_{j+1}|}{a_j}<1 ⇒ \sum a_j$ converge absolutely
 1. $\lim\sup\frac{|a_{j+1}|}{a_j}>1 ⇒ \sum a_j$ diverge
+
+## series of function converge
+
+$\{f_j(x)\},x\in E$
+
+$$
+f(x)=\sum_{j=1}^∞ f_j(x)
+$$
+
+- $\sum f_j$ converge to $f ⇔ ∀\ x,\sum f_j(x)$ converge to $f(x)$
+
+### Weierstrass M-test
+
+1. $∀\ j,∃\ M_j$ s.t. $∀\ x\in E,|f_j(x)|≤M_j$
+1. $\sum M_j$ converge
+
+$⇒ \sum_{j=1}^∞ f_j(x)$ converge uniformly
+
+- $f_j\in C(E) ⇒ f\in C(E)$
+
+### integral of uniformly convergent series of function
+
+$\sum_{j=1}^∞ f_j(x)$ converge uniformly to $f(x)$ on $[a,b] ⇒$
+
+$∀\ x\in [a,b]$,
+
+$$
+\int_a^xf(t)\ dt=\sum_{j=1}^∞ \int_a^xf_j(t)\ dt
+$$
+
+### derivative of uniformly convergent series of function
+
+1. $f_j\in C^{(2)}(E)$
+1. $\sum f_j(x)$ converge uniformly to $f(x)$ on $E$
+1. $\sum f'_j(x)$ converge uniformly on $E$
+
+$⇒$
+
+1. $f\in C^{(2)}(E)$
+1. $$
+    f'(x)=\sum_{j=1}^∞ f'_j(x)
+    $$
