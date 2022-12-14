@@ -796,3 +796,32 @@ $⇒$
 1. $$
     f'(x)=\sum_{j=1}^∞ f'_j(x)
     $$
+
+# power series
+
+$$
+f(x):=\sum_{j=0}^∞ a_j(x-x_0)^j\\[12pt]
+\rho:=\limsup|a_j|^{\frac{1}{j}}
+$$
+
+radius of convergence of $f(x)$
+
+$$
+R=\begin{cases}
+    ∞ &\rho=0\\
+    0&\rho= ∞ \\
+    \frac{1}{\rho}&\text{otherwise}
+\end{cases}
+$$
+
+## convergence of power series
+
+- $f(x)$ converge on $(x_0-R,x_0+R)$
+- $f(x)$ diverge outside $[x_0-R,x_0+R]$
+- $∀\ 0≤r<R,f(x)$ converge uniformly on $[x_0-r,x_0+r]$
+
+## property of $f(x)$ in power series
+
+- $f(x)\in C^∞ (x_0-R,x_0+R)$
+- $f'(x)=\sum_{j=0}^∞ (a_j(x-x_0)^j)'$
+- $\sum_{j=0}^∞ a_j(x-x_0)^j$ is Taylor series of $f$ about $x_0$
