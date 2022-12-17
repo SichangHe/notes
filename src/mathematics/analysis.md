@@ -740,8 +740,8 @@ $$
 
 $a_j≠0$
 
-1. $\lim\sup\frac{|a_{j+1}|}{a_j}<1 ⇒ \sum a_j$ converge absolutely
-1. $\lim\sup\frac{|a_{j+1}|}{a_j}>1 ⇒ \sum a_j$ diverge
+1. $\lim\sup\frac{|a_{j+1}|}{|a_j|}<1 ⇒ \sum a_j$ converge absolutely
+1. $\lim\sup\frac{|a_{j+1}|}{|a_j|}>1 ⇒ \sum a_j$ diverge
 
 ## series of function converge
 
