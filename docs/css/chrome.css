@@ -510,9 +510,6 @@ ul#searchresults span.teaser em {
     border-top-right-radius: inherit;
 }
 
-span.katex {
+data.katex-src {
     cursor: pointer;
-}
-span.katex-src {
-    display: none;
 }

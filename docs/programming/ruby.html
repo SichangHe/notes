@@ -216,31 +216,51 @@
 </code></pre>
 <p>string considering <code>\</code></p>
 <pre><code class="language-ruby">&quot;string where \nis parsed&quot;
-</code></pre>
-<h2 id="formatted-string"><a class="header" href="#formatted-string">formatted string</a></h2>
-<pre><code class="language-ruby">str = &quot;yes
+```
+
+## formatted string
+
+```ruby
+str = &quot;yes
 &quot;say #{str}&quot;
-</code></pre>
-<h2 id="match-string"><a class="header" href="#match-string">match string</a></h2>
-<p>match a string with regex and return index of match</p>
-<pre><code class="language-ruby">str =~ regex
-</code></pre>
-<p>match string with regex and name each part</p>
-<pre><code class="language-ruby">comp = /\[(?&lt;comp1&gt;.*)\](?&lt;comp2&gt;.*)/.match(str)
+```
+
+## match string
+
+match a string with regex and return index of match
+
+```ruby
+str =~ regex
+```
+
+match string with regex and name each part
+
+```ruby
+comp = /\[(?&lt;comp1&gt;.*)\](?&lt;comp2&gt;.*)/.match(str)
 comp1 = comp[:comp1]
 comp2 = comp[:comp2]
-</code></pre>
-<h3 id="get-all-word-from-string"><a class="header" href="#get-all-word-from-string">get all word from string</a></h3>
-<pre><code class="language-ruby">str1.split(/[^[[:word:]]]+/)
-</code></pre>
-<h1 id="array"><a class="header" href="#array">array</a></h1>
-<pre><code class="language-ruby">arr = [ &quot;a&quot;, 1, true ]
+```
+
+### get all word from string
+
+```ruby
+str1.split(/[^[[:word:]]]+/)
+```
+
+# array
+
+```ruby
+arr = [ &quot;a&quot;, 1, true ]
 arr[0] # =&gt; &quot;a&quot;
 arr[1, 2] # =&gt; [ 1, true ]
-</code></pre>
-<h2 id="array-method"><a class="header" href="#array-method">array method</a></h2>
-<p><code>.length</code> <code>.push(ele)</code> <code>.pop</code></p>
-<pre><code class="language-ruby"># loop through
+```
+
+## array method
+
+`.length` `.push(ele)` `.pop`
+
+```ruby
+# loop through
 arr.each do |ele|
     # …
 end
@@ -254,12 +274,18 @@ end
 arr.map.with_index do |ele, index|
     # …
 end
-</code></pre>
-<h2 id="string-array"><a class="header" href="#string-array">string array</a></h2>
-<pre><code class="language-ruby">%w(this will be split) # =&gt; [ &quot;this&quot;, &quot;will&quot;, &quot;be&quot;, &quot;split&quot; ]
-</code></pre>
-<h1 id="hash"><a class="header" href="#hash">hash</a></h1>
-<pre><code class="language-ruby"># old way
+```
+
+## string array
+
+```ruby
+%w(this will be split) # =&gt; [ &quot;this&quot;, &quot;will&quot;, &quot;be&quot;, &quot;split&quot; ]
+```
+
+# hash
+
+```ruby
+# old way
 ha = {
     'a' =&gt; 1,
     'b' =&gt; 2
@@ -272,99 +298,154 @@ ha = {
     'b': 2
 }
 ha[:a] # =&gt; 1
-</code></pre>
-<h1 id="block"><a class="header" href="#block">block</a></h1>
-<pre><code class="language-ruby">{ |args|
+```
+
+# block
+
+```ruby
+{ |args|
     # …
 }
 # or
 do |args|
     # …
 end
-</code></pre>
-<h2 id="call-block"><a class="header" href="#call-block">call block</a></h2>
-<pre><code class="language-ruby">yield {|ele| puts ele}
-</code></pre>
-<h1 id="control-flow"><a class="header" href="#control-flow">control flow</a></h1>
-<h2 id="if"><a class="header" href="#if">if</a></h2>
-<pre><code class="language-ruby">if a
+```
+
+## call block
+
+```ruby
+yield {|ele| puts ele}
+```
+
+# control flow
+
+## if
+
+```ruby
+if a
     # …
 elsif b
     # …
 else
     # …
 end
-</code></pre>
-<h2 id="case"><a class="header" href="#case">case</a></h2>
-<pre><code class="language-ruby">case a
+```
+
+## case
+
+```ruby
+case a
 when b
     # …
 when c
     # …
 end
-</code></pre>
-<h2 id="while"><a class="header" href="#while">while</a></h2>
-<pre><code class="language-ruby">while a
+```
+
+## while
+
+```ruby
+while a
     # …
 end
-</code></pre>
-<h2 id="statement-modifier"><a class="header" href="#statement-modifier">statement modifier</a></h2>
-<pre><code class="language-ruby">do_something if a
-</code></pre>
-<h1 id="function"><a class="header" href="#function">function</a></h1>
-<p><code>yield</code> execute a block</p>
-<p><code>eval</code> evaluate a string as code</p>
-<h2 id="define-function"><a class="header" href="#define-function">define function</a></h2>
-<pre><code class="language-ruby">def func1(arg = default_value)
+```
+
+## statement modifier
+
+```ruby
+do_something if a
+```
+
+# function
+
+`yield` execute a block
+
+`eval` evaluate a string as code
+
+## define function
+
+```ruby
+def func1(arg = default_value)
     # …
     # return last expression
 end
-</code></pre>
-<h2 id="main-function"><a class="header" href="#main-function">main function</a></h2>
-<pre><code class="language-ruby">if __FILE__ == $0
+```
+
+## main function
+
+```ruby
+if __FILE__ == $0
     # main function
 end
-</code></pre>
-<h1 id="class"><a class="header" href="#class">class</a></h1>
-<pre><code class="language-ruby">class ClassName
+```
+
+# class
+
+```ruby
+class ClassName
     # called with `new`
     def initialize(arg)
         # …
     end
 end
-</code></pre>
-<h2 id="instance-variable"><a class="header" href="#instance-variable">instance variable</a></h2>
-<p><code>@name</code></p>
-<h3 id="access-instance-variable"><a class="header" href="#access-instance-variable">access instance variable</a></h3>
-<pre><code class="language-ruby">attr_accessor :name
-</code></pre>
-<h2 id="method"><a class="header" href="#method">method</a></h2>
-<pre><code class="language-ruby"># all instance method of class
+```
+
+## instance variable
+
+`@name`
+
+### access instance variable
+
+```ruby
+attr_accessor :name
+```
+
+## method
+
+```ruby
+# all instance method of class
 ClassName.instance_methods
 # instance method excluding inherited
 ClassName.instance_methods(false)
-</code></pre>
-<h3 id="inherited-method"><a class="header" href="#inherited-method">inherited method</a></h3>
-<p><code>.respond_to?(str)</code> check if object has method <code>str</code></p>
-<p><code>.to_s</code> convert to string</p>
-<p><code>.nil?</code> check if nil</p>
-<h3 id="static-method"><a class="header" href="#static-method">static method</a></h3>
-<pre><code class="language-ruby">def self.static_method_name(arg)
+```
+
+### inherited method
+
+`.respond_to?(str)` check if object has method `str`
+
+`.to_s` convert to string
+
+`.nil?` check if nil
+
+### static method
+
+```ruby
+def self.static_method_name(arg)
     # …
 end
-</code></pre>
-<h3 id="safe-navigation-syntax-"><a class="header" href="#safe-navigation-syntax-">safe navigation syntax <code>&amp;.</code></a></h3>
-<p>same as <code>optional chaining</code></p>
-<h1 id="module"><a class="header" href="#module">module</a></h1>
-<pre><code class="language-ruby">module ModuleName
+```
+
+### safe navigation syntax `&amp;.`
+
+same as `optional chaining`
+
+# module
+
+```ruby
+module ModuleName
     def self.static_method1
         # …
     end
 end
-</code></pre>
-<h1 id="exception"><a class="header" href="#exception">exception</a></h1>
-<pre><code class="language-ruby">class CustomError &lt; RuntimeError
+```
+
+# exception
+
+```ruby
+class CustomError &lt; RuntimeError
 end
+```
 </code></pre>
 
                 </main>

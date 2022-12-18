@@ -165,61 +165,34 @@ key: <code>X</code> <code>\\</code> <code>Left</code><br />
 the <code>{}</code> must stay even if it`s empty</p>
 <p>show alert message</p>
 <pre><code class="language-lua">hs.alert.show(&quot;message&quot;)
-```
-
-generate system notification with title and content
-
-```lua
-hs.notify.new({title=&quot;title&quot;, informativeText=&quot;content&quot;}):send()
-```
-
-define the current window as `win`
-
-```lua
-local win = hs.window.focusedWindow()
-```
-
-define win’s window frame as f
-
-```lua
-local f = win:frame()
-```
-
-position of `f` is `(f.x, f.y)`
-its width and height `f.w`, `f.h`
-
-define the screen `win` at as `screen`
-
-```lua
-local screen = win:screen()
-```
-
-define `screen`'s screen frame as `max`
-
-```lua
-local max = screen:frame()
-```
-
-update the frame of `win` as `f`
-
-```lua
-win:setFrame(f)
-```
-
-```lua
-hs.pathwatcher.new(.....):start()
-```
-
-reload config
-
-```lua
-hs.reload()
-```
-
-automatically reload config
-
-```lua
-function reloadConfig(files)
+</code></pre>
+<p>generate system notification with title and content</p>
+<pre><code class="language-lua">hs.notify.new({title=&quot;title&quot;, informativeText=&quot;content&quot;}):send()
+</code></pre>
+<p>define the current window as <code>win</code></p>
+<pre><code class="language-lua">local win = hs.window.focusedWindow()
+</code></pre>
+<p>define win’s window frame as f</p>
+<pre><code class="language-lua">local f = win:frame()
+</code></pre>
+<p>position of <code>f</code> is <code>(f.x, f.y)</code>
+its width and height <code>f.w</code>, <code>f.h</code></p>
+<p>define the screen <code>win</code> at as <code>screen</code></p>
+<pre><code class="language-lua">local screen = win:screen()
+</code></pre>
+<p>define <code>screen</code>'s screen frame as <code>max</code></p>
+<pre><code class="language-lua">local max = screen:frame()
+</code></pre>
+<p>update the frame of <code>win</code> as <code>f</code></p>
+<pre><code class="language-lua">win:setFrame(f)
+</code></pre>
+<pre><code class="language-lua">hs.pathwatcher.new(.....):start()
+</code></pre>
+<p>reload config</p>
+<pre><code class="language-lua">hs.reload()
+</code></pre>
+<p>automatically reload config</p>
+<pre><code class="language-lua">function reloadConfig(files)
     doReload = false
     for _,file in pairs(files) do
         if file:sub(-4) == &quot;.lua&quot; then
@@ -232,25 +205,15 @@ function reloadConfig(files)
 end
 myWatcher = hs.pathwatcher.new(os.getenv(&quot;HOME&quot;) .. &quot;/.hammerspoon/&quot;, reloadConfig):start()
 hs.alert.show(&quot;Config loaded&quot;)
-```
-
-get the home direction of the system
-
-```lua
-os.getenv(&quot;HOME&quot;)
-```
-
-connect string to path
-
-```lua
-..
-```
-
-call `function` whenever changes in `direction`
-
-```lua
-hs.pathwatcher.new(&quot;direction&quot;, function):start()
-```
+</code></pre>
+<p>get the home direction of the system</p>
+<pre><code class="language-lua">os.getenv(&quot;HOME&quot;)
+</code></pre>
+<p>connect string to path</p>
+<pre><code class="language-lua">..
+</code></pre>
+<p>call <code>function</code> whenever changes in <code>direction</code></p>
+<pre><code class="language-lua">hs.pathwatcher.new(&quot;direction&quot;, function):start()
 </code></pre>
 
                 </main>
