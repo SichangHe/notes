@@ -278,3 +278,63 @@ $$
 - true label $y$
 - prediction $\vec p$
 - one hot encoding $\vec q$ of $y$
+
+# support vector machine (SVM)
+
+## binary support vector machine
+
+### separating hyperplane for binary support vector machine
+
+$$
+\vec n^T\vec x+c=0\\[12pt]
+\vec n\in\R^d,\quad\|\vec n\|=1,\quad c\in\R
+$$
+
+- decision rule
+
+    $$
+    h(\vec x)=\text{sign}(\vec n^T\vec x+c)\\[12pt] ⇒
+    y(\vec n^T\vec x+c)≥0
+    $$
+
+- margin for $(\vec x,y)$ with parameter $\vec v=(\vec n,c)$
+
+    $$
+    \mu_{\vec v}(\vec x,y):=y(\vec n^T\vec x+c)
+    $$
+
+    - margin $\mu_{\vec v}(T)$ of training set
+
+        $$
+        \mu_{\vec v}(T):=\min_{(\vec x,y)\in T}\mu_{\vec v}(\vec x,y)
+        $$
+
+    - linearly separable if $\mu_{\vec v}(T)>0$
+
+### hinge loss
+
+reference margin $\mu^*>0$
+
+$$
+\ell_{\vec v}(\vec x,y):=
+\frac{1}{\mu*}\max\{0,\mu^*-\mu_{\vec v}(\vec x,y)\}\\[12pt]=
+\max\{0,1-y(\vec w^T\vec x+b)\}
+$$
+
+where
+
+$$
+\vec w:=\frac{\vec n}{\mu^*},\quad b=\frac{c}{\mu^*}
+$$
+
+- separating hyperplane $\vec w^T\vec x+b=0$
+
+#### empirical risk of binary support vector machine
+
+$$
+L_T(\vec w,b):=
+\frac{1}{2}\|\vec w\|^2+
+\frac{C_0}{N}\sum_{n=1}^N\ell_{(\vec w,b)}(\vec x_n,y_n)
+$$
+
+- bigger $C_0 ⇒$ smaller $\mu^*$
