@@ -338,3 +338,117 @@ L_T(\vec w,b):=
 $$
 
 - bigger $C_0 ⇒$ smaller $\mu^*$
+
+## soft linear support vector machine
+
+$$
+(\vec w^*,b^*)=\text{ERM}_T(\vec w,b)
+$$
+
+### subgradient of hinge function
+
+$$
+\rho(z)=\max\{0,z\}\\[12pt]
+\rho'(z)=\begin{cases}
+    1&z>0\\
+    0&\text{otherwise}
+\end{cases}
+$$
+
+## support vector machine with kernel
+
+### representer theorem
+
+$∀$ loss function in the form
+
+$$
+L^T(\vec w,b)=R(\|\vec w\|)+S(\vec w^T\vec x_1+b,\cdots,\vec w^T\vec x_N+b)
+$$
+
+where $R:\R_+ → \R$ increasing, $S:\R^N → \R$,
+
+$∃\ \beta_1,\cdots\beta_N$ s.t.
+
+$$
+\vec w^*=\sum_{n=1}^N\beta_n\vec x_n
+$$
+
+- proof: by writing
+
+    $$
+    \vec w^*=\sum_{n=1}^N\beta_n\vec x_n+\vec u\quad
+    \text{for some}\quad\vec u\in\text{span}\{\vec x_i\}
+    $$
+
+    and proving $\vec u=\vec 0$ by contradiction
+
+### support vector
+
+sample that are misclassified or classified correctly with
+a margin not larger than $\mu^*$
+
+only support vector contribute to $\vec w^*,b^*$
+
+$$
+h(\vec x)=\text{sign}\left(
+    \sum_{n=1}^N\beta_n\color{darkred}\vec x_n^T\vec x\color{unset}+b^*
+\right)\\[12pt]
+L^T(\vec w,b)=
+\frac{1}{2}\sum_{n=1}^N
+\beta_m\beta_n\color{darkred}\vec x_n^T\vec x_n\color{unset}+
+\frac{C_0}{N}\sum_{n=1}^N\rho \left(
+    1-y_n \left(
+        \sum_{n=1}^N\beta_m\color{darkred}\vec x_n^T\vec x_n\color{unset}+b
+    \right)
+\right)
+$$
+
+### kernel for support vector machine
+
+$$
+h(\vec x)=\text{sign}\left(
+    \sum_{n=1}^N\beta_n\color{darkred}K(\vec x_n,\vec x)\color{unset}+b^*
+\right)\\[12pt]
+L^T(\vec w,b)=
+\frac{1}{2}\sum_{n=1}^N
+\beta_m\beta_n\color{darkred}K(\vec x_n,\vec x_n)\color{unset}+
+\frac{C_0}{N}\sum_{n=1}^N\rho \left(
+    1-y_n \left(
+        \sum_{n=1}^N\beta_m\color{darkred}K(\vec x_n,\vec x_n)\color{unset}+b
+    \right)
+\right)
+$$
+
+where kernel $K$
+
+$$
+K(\vec x,\vec\xi):=\vec\varphi(\vec x)\vec\varphi(\vec\xi)
+$$
+
+for some $\vec\varphi$
+
+- $K(\vec x,\vec\xi)=K(\vec\xi,\vec x)$
+- $K^2(\vec x,\vec\xi)≤K(\vec x,\vec x)K(\vec\xi,\vec\xi)$
+
+$K$ is a kernel of $\{\vec x_i\}$
+
+- $⇔ C≥0$ where $C_{ij}=K(\vec x_i,\vec x_j)$
+- $⇔$ Mercer's condition: $∀\ f:\R^d → \R$ s.t.
+
+    $$
+    \int_{\R^d}f(\vec x)d\vec x
+    $$
+
+    is finite,
+
+    $$
+    \int_{\R^d\times\R^d}K(\vec x,\vec\xi)f(\vec x)f(\vec\xi)d\vec xd\vec\xi≥0
+    $$
+
+- Gaussian kernel
+
+    $$
+    K(\vec x,\vec\xi)=e^{-\frac{\|\vec x-\vec\xi\|^2}{\sigma^2}}
+    $$
+
+    - radial basis function (RBF) SVM
