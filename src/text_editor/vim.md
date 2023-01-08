@@ -126,7 +126,7 @@ paragraph 3
 ## to past position
 
 - go back to the previous jump position `''`
-- go to mark `letter`: ` + `letter`
+- go to mark `letter`: `` ` `` + `letter`
 - go to top of last visual selection '`<'
 - go to bottom of last visual selection '`>'
 - go to top of last yanked '`['
