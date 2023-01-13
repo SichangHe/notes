@@ -69,3 +69,9 @@ $f_{xy},f_{yx}$ continuous
 $$
 \Rightarrow f_{xy}(a,b)=f_{yx}(a,b)
 $$
+
+## tangent plane
+
+$$
+z-z_0=f_x(x_0,y_0)(x-x_0)+f_y(x_0,y_0)(y-y_0)
+$$

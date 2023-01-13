@@ -58,9 +58,42 @@ e^{i\theta}=\cos\theta+i\sin\theta\\[12pt] ⇒
 x+iy=re^{i\theta}
 $$
 
-where
+- $r=|z|$
+- $\theta=\arg z$, argument of $z$
+    - $-\pi<\text{Arg }z≤\pi$, principal argument of $z$
+- $z_1z_2=r_1r_2e^{i(\theta_1+\theta_2)}$
+    - $\arg(z_1z_2)=\arg z_1+\arg z_2$
+- $z^{-1}=\frac{1}{r}e^{-i\theta}$
+- $\bar z=re^{-i\theta}$
+
+### de Moivre's formula
 
 $$
-r=|z|,\quad
-\theta=\tan{\frac{y}{x}}
+(\cos\theta+i\sin\theta)^n=e^{in\theta}=\cos n\theta+i\sin n\theta
+$$
+
+## complex infinity
+
+$x → ∞$ or $y → ∞$
+
+## Riemann sphere
+
+$$
+x^2+y^2+z^2=1
+$$
+
+intersection of the sphere with line through north poll and complex number
+
+- north poll: $(0,0,1)$, correspond to complex infinity
+
+# limit
+
+$$
+\lim_{z → z_0}f(z)=w_0
+$$
+
+$⇔ ∀\ \varepsilon>0,\ ∃\ \delta>0$ s.t.
+
+$$
+|f(z)-w_0|<\varepsilon\text{ whenever }|z-z_0|<\delta
 $$
