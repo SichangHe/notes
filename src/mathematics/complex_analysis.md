@@ -72,6 +72,23 @@ $$
 (\cos\theta+i\sin\theta)^n=e^{in\theta}=\cos n\theta+i\sin n\theta
 $$
 
+## complex root
+
+$z_0=r_0e^{i\theta_0}$
+
+$n$th root of $z_0$
+
+$$
+z^n=z_0\\[12pt] ⇒
+z_k=\sqrt[n]{r_0}e^{i \left(
+    \frac{\theta_0+2\pi k}{n}
+\right)},\qquad
+k\in\{0,1,\cdots,n-1\}
+$$
+
+- $n$ distinct root
+- principal root, when $\theta_0=\text{Arg }z_0,k=0$
+
 ## complex infinity
 
 $x → ∞$ or $y → ∞$

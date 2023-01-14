@@ -6,6 +6,10 @@ a^n-b^n=(a-b)(a^{n-1}+a^{n-2}b+\cdots+ab^{n-2}+b^{n-1})
 $$
 
 $$
+a^3+b^3=(a+b)(a^2-ab+b^2)
+$$
+
+$$
 \log xy=\log x+\log y
 \\
 \log x^r=r\log x
