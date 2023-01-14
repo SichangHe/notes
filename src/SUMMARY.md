@@ -25,6 +25,7 @@
     - [Proof](mathematics/proof.md)
     - [Real Analysis](mathematics/analysis.md)
     - [Shorthand](mathematics/shorthand.md)
+    - [Topology](mathematics/topology.md)
 - [Package Manager](package_manager/index.md)
     - [Cargo](package_manager/cargo.md)
     - [Homebrew](package_manager/homebrew.md)

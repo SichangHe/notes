@@ -89,6 +89,19 @@ $$
 - $n$ distinct root
 - principal root, when $\theta_0=\text{Arg }z_0,k=0$
 
+## standard topology $\mathcal O_s$
+
+see context in [Topology](topology.md)
+
+$\varepsilon>0$
+
+open $\varepsilon$-neighborhood
+
+$$
+U_\varepsilon(z_0)=\{z\in\mathbb C:|z=z_0|<\varepsilon\}
+\in\mathcal O_s
+$$
+
 ## complex infinity
 
 $x → ∞$ or $y → ∞$
