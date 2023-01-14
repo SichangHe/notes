@@ -1,7 +1,7 @@
 <!-- toc -->
 # Complex Analysis
 
-# complex number
+# complex number $\mathbb C$
 
 $z=(x,y)$ in complex plane where $x,y\in\R$
 
@@ -102,11 +102,28 @@ U_\varepsilon(z_0)=\{z\in\mathbb C:|z=z_0|<\varepsilon\}
 \in\mathcal O_s
 $$
 
+## region
+
+nonempty connected set
+
+- domain, open region
+
+### connectedness
+
+$D ⊆ \mathbb C$ is connected $⇔$
+
+$∀\ z_1,z_2\in D,∃$ polygonal line with finitely many segment
+between $z_1$, $z_2$
+
+### bounded
+
+$∃$ circle of finite radius containing the set
+
 ## complex infinity
 
 $x → ∞$ or $y → ∞$
 
-## Riemann sphere
+## Riemann sphere $\mathbb S$
 
 $$
 x^2+y^2+z^2=1
@@ -115,6 +132,7 @@ $$
 intersection of the sphere with line through north poll and complex number
 
 - north poll: $(0,0,1)$, correspond to complex infinity
+- Argand plane $(x,y,0)$
 
 # limit
 
