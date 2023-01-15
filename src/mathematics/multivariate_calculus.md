@@ -209,3 +209,29 @@ $$
 \nabla f,\nabla g,\nabla h\perp C ⇒
 \nabla f(x,y,z)=\lambda\nabla g(x,y,z)+\mu\nabla h(x,y,z)
 $$
+
+## surface area
+
+$$
+A(S)=\iint_D\sqrt{1+f_x^2+f_y^2}\ dA
+$$
+
+## Jacobian
+
+$x=x(u,v),y=y(u,v)$
+
+$$
+\frac{∂(x,y)}{∂(u,v)}=\begin{vmatrix}
+    \frac{∂x}{∂u}&\frac{∂x}{∂v}\\[6pt]
+    \frac{∂y}{∂u}&\frac{∂y}{∂v}
+\end{vmatrix}=\frac{∂x}{∂u}\frac{∂y}{∂v}-\frac{∂x}{∂v}\frac{∂y}{∂u}\\[12pt]
+\iint_Rf(x,y)dx\ dy=\iint_Sf \left(
+    x(u,v),y(u,v)
+\right)\left|
+    \frac{∂(x,y)}{∂(u,v)}
+\right|du\ dv
+$$
+
+## conservative vector field
+
+vector field $\vec F$ and $∃\ f$ s.t. $\vec F=\nabla f$
