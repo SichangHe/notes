@@ -169,6 +169,10 @@ $$
 F_x(x-x_0)+F_y(y-y_0)+F_z(z-z_0)=0
 $$
 
+### conservative vector field
+
+vector field $\vec F$ and $∃\ f$ s.t. $\vec F=\nabla f$
+
 ## extrema
 
 point $(a,b)$
@@ -232,6 +236,52 @@ $$
 \right|du\ dv
 $$
 
-## conservative vector field
+## line integral
 
-vector field $\vec F$ and $∃\ f$ s.t. $\vec F=\nabla f$
+piecewise-smooth curve $C$
+
+$$
+\int_Cf\ ds=\int_Cf(x(t),y(t))\sqrt{\left(
+    \frac{dx}{dt}
+\right)^2+\left(
+    \frac{dy}{dt}
+\right)^2}dt
+$$
+
+- line integral of $f$ along $C$ with respect to $x$
+
+    $$
+    \int_Cf\ ds=\int_Cf(x(t),y(t))\frac{dx}{dt}dt
+    $$
+
+- change orientation of $C$
+    - $\int_{-C}f\ dx=-\int_Cf\ dx$
+    - $\int_{-C}f\ ds=\int_Cf\ ds$
+
+### work
+
+$$
+W(C)=\int_C\vec F\cdot d\vec r=\int_C\vec F\cdot\vec T\ ds
+$$
+
+### fundamental theorem of line integral
+
+$$
+\int_C\nabla f\cdot d\vec r=f(\vec r(b))-f(\vec r(a))
+$$
+
+#### independence of line integral path
+
+$C_1,C_2$ with the same ends
+
+$$
+\int_{C_1}\vec F\cdot d\vec r=\int_{C_2}\vec F\cdot d\vec r
+$$
+
+- $⇔$ closed path integral
+
+    $$
+    \oint_C\vec F\cdot d\vec r=0
+    $$
+
+- $⇔ \vec F$ is conservative
