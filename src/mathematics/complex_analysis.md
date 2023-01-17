@@ -169,3 +169,51 @@ $f$ is continuous at $z_0 ⇔$
 1. $$
     \lim_{z → z_0}f(z)=f(z_0)
     $$
+
+# differentiation
+
+$f:D → \mathbb C,U_\varepsilon(z_0) ⊆ D$
+
+$f$ differentiable at $z_0 ⇔$
+
+$$
+\lim_{z → z_0}\frac{f(z)-f(z_0)}{z-z_0}
+$$
+
+exist
+
+- $f(z)$ depend on $\bar z ⇒ f$ not differentiable
+- $u,v$ differentiable $\not ⇒ f$ differentiable
+
+## Cauchy-Riemann equations
+
+$f'(z)$ exist at $z_0 ⇒$
+
+$$
+u_x=v_y,\qquad
+u_y=-v_x\\[12pt]
+f'=u_x+iv_x
+$$
+
+### Cauchy-Riemann equations in polar coordinate
+
+$f(r,\theta)=u(r,\theta)+iv(r,\theta)$
+
+$$
+ru_r=v_\theta,\qquad
+u_\theta=-rv_r\\[12pt]
+f'=e^{-i\theta}(u_r+iv_r)
+$$
+
+### differentiability from Cauchy-Riemann equations
+
+at $z_0$
+
+1. $u_x,u_y,v_x,v_y$ are continuous
+1. satisfy Cauchy-Riemann equations
+
+$$
+⇒ f'=u_x+iv_x
+$$
+
+exist
