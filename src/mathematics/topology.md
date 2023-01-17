@@ -68,3 +68,13 @@ $∀\ \hat U,\hat U\cap S≠ ∅$
 $∀\ U\ni p,∃\ m\in\N$ s.t. $n>m ⇒ s(n)\in U$
 
 - in chaotic topology, every sequence converge to every point
+
+## continuity
+
+topological space $(M,\mathcal O_M),(N,\mathcal O_N)$
+
+map $f:M → N$ continuous $⇔$
+
+$$
+∀\ V\in\mathcal O_M,\text{preim}_f(V)\in\mathcal O_M
+$$

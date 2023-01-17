@@ -169,10 +169,6 @@ $$
 F_x(x-x_0)+F_y(y-y_0)+F_z(z-z_0)=0
 $$
 
-### conservative vector field
-
-vector field $\vec F$ and $∃\ f$ s.t. $\vec F=\nabla f$
-
 ## extrema
 
 point $(a,b)$
@@ -270,9 +266,13 @@ $$
 \int_C\nabla f\cdot d\vec r=f(\vec r(b))-f(\vec r(a))
 $$
 
-#### independence of line integral path
+### conservative vector field
 
-$C_1,C_2$ with the same ends
+vector field $\vec F$ and $∃\ f$ s.t. $\vec F=\nabla f$
+
+#### independence of path of line integral
+
+$∀\ C_1,C_2$ with the same ends
 
 $$
 \int_{C_1}\vec F\cdot d\vec r=\int_{C_2}\vec F\cdot d\vec r

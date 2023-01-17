@@ -145,3 +145,27 @@ $⇔ ∀\ \varepsilon>0,\ ∃\ \delta>0$ s.t.
 $$
 |f(z)-w_0|<\varepsilon\text{ whenever }|z-z_0|<\delta
 $$
+
+- unique if exist
+- independent of direction of approach
+
+## connection between complex limit and real limit
+
+$f(z)=u(x,y)+iv(x,y)$
+
+$$
+\lim_{z → z_0}f(z)=
+\lim_{(x,y) → (x_0,y_0)}u(x,y)+\lim_{(x,y) → (x_0,y_0)}v(x,y)
+$$
+
+$⇔$ limit on the RHS exist
+
+# continuity
+
+$f$ is continuous at $z_0 ⇔$
+
+1. $f$ exist
+1. $\lim_{z → z_0}f(z)$ exist
+1. $$
+    \lim_{z → z_0}f(z)=f(z_0)
+    $$
