@@ -217,3 +217,42 @@ $$
 $$
 
 exist
+
+## holomorphicity
+
+$f:D → \mathbb C$ holomorphic at $z_0 ⇔$
+
+$f$ differentiable at each point in $U_\varepsilon(z_0) ⊆ D$
+
+- a.k.a. analytic/ regular
+- $u,v\in C^∞(D)$ and are harmonic function in $D$
+
+### entire function
+
+holomorphic at every finite point
+
+### singularity
+
+$z_0$ is singularity $⇔$
+
+$f$ holomorphic in $\hat U_\varepsilon(z_0)$ and not at $z_0$
+
+### constancy from holomorphicity
+
+$f$ holomorphic, in $D$
+
+$f$ is constant
+
+$⇔ f'=0$
+
+$⇔ \bar f$ holomorphic in $D$
+
+$⇔ |f|$ is constant
+
+# harmonic function
+
+$h:D ⊆ \R^2 → \R$ with continuous second partial derivative
+
+$$
+h_{xx}+h_{yy}=0
+$$
