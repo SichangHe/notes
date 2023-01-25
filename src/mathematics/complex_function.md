@@ -16,6 +16,19 @@ where $\Theta=\text{Arg }z$
 - $\log z_1z_2=\log z_1+\log z_2$
 - $\text{Log }z_1z_2\not\equiv\text{Log }z_1+\text{Log }z_2$
 
+## branch of logarithm
+
+introduce $\alpha$ s.t.
+
+$$
+r>0,\quad
+\alpha<\theta<\alpha+2\theta
+$$
+
+- branch cut $\theta=\alpha$, not continuous across
+- principal branch $\alpha=-\pi$, branch cut for principal value
+- branch point $z=0$, point common to all branch cut
+
 ## derivative of logarithm
 
 $$
@@ -23,3 +36,48 @@ $$
 $$
 
 - holomorphic
+
+# exponential
+
+$$
+e^z=e^xe^{iy}=e^x\cos y+ie^x\sin y
+$$
+
+- nonzero
+- periodic, $e^{z+i2\pi k}=e^z$
+- entire function
+- $(z_1z_2)^c\not\equiv z_1^cz_2^c$
+
+## derivative of exponential
+
+$$
+\frac{d}{dz}c^z=c^z\text{Log }c
+$$
+
+# trigonometric function
+
+$$
+\sin z=\frac{e^{iz}-e^{-iz}}{2i},\quad
+\cos z=\frac{e^{iz}+e^{-iz}}{2}
+$$
+
+- entire
+- $\sin(iz)=i\sinh z,\quad\cos(iz)=\cosh z$
+
+    $$
+    ⇒ \sin z=\sin x\cosh y+i\cos x\sinh\\[12pt]
+    ⇒ |\sin z|^2=\sin^2x+\sinh^2y
+    $$
+
+# hyperbolic function
+
+$$
+\sinh z=\frac{e^z-e^{-z}}{2},\quad
+\cosh z=\frac{e^z+e^{-z}}{2}
+$$
+
+- $\sinh(iz)=i\sin z$
+
+    $$
+    ⇒ |\sinh z|^2=|i\sin(y-ix)|=\sinh^2x+\sin^2y
+    $$
