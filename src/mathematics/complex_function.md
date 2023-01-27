@@ -81,3 +81,24 @@ $$
     $$
     ⇒ |\sinh z|^2=|i\sin(y-ix)|=\sinh^2x+\sin^2y
     $$
+
+# inverse trigonometric function
+
+$$
+\sin^{-1}z=-i\log \left(
+    iz+\sqrt{1-z^2}
+\right)\\
+\cos^{-1}z=-i\log \left(
+    z+i\sqrt{1-z^2}
+\right)
+$$
+
+- $\log,\sqrt{}$ are multi-valued
+- holomorphic in branch
+
+## derivative of inverse trigonometric function
+
+$$
+\frac{d}{dz}\sin^{-1}z=\frac{1}{\sqrt{1-z^2}}\\[12pt]
+\frac{d}{dz}\cos^{-1}z=-\frac{1}{\sqrt{1-z^2}}
+$$
