@@ -256,3 +256,89 @@ $h:D ⊆ \R^2 → \R$ with continuous second partial derivative
 $$
 h_{xx}+h_{yy}=0
 $$
+
+# parametric curve
+
+complex-valued function
+
+$$
+C:[a,b] ⊆ \R → \mathbb C,\\[6pt]
+t\mapsto z(t)=u(t)+iv(t)
+$$
+
+- simple $⇔$ does not intersect self $⇔$ injection
+    - simple closed (Jordan curve) $⇔$ simple except two end meet
+- oriented
+    - positively oriented $⇔$ simple closed counterclockwise
+    - negatively oriented
+
+## parametric derivative
+
+$$
+z'(t)=u'(t)+iv'(t)
+$$
+
+- velocity
+    - speed $|z'|$
+- smooth $⇔$ differentiable and $z'≠0$
+
+## parametric integral
+
+$$
+\int z(t)=\int u(t)+i\int v(t)
+$$
+
+- antiderivative
+- mean value theorem of integral fail
+
+## reparametrization
+
+$$
+\tilde t\mapsto\phi(\tilde t)=t\\[6pt]
+C:z(t)=\tilde z(\tilde t)
+$$
+
+- curve length persist
+
+## contour
+
+piecewise smooth curve $C$ joined from finite smooth parametric curve
+
+- $z$ continuous
+- $z'$ piecewise continuous
+- vertex, point where $C$ not smooth
+
+### Jordan curve theorem
+
+simple closed contour separate $\mathbb C$ into
+
+1. a bounded interior
+1. an exterior
+
+### contour integral
+
+contour $C:z(t):[a,b] → \mathbb C$,\
+function $f(z)$ piecewise continuous on $C$
+
+$$
+\int_Cf(z)\ dz=\int_a^bf(z(t))\ z'(t)\ dt
+$$
+
+- independent of parametrization
+- linearity
+
+    $$
+    \int_C(cf(z)+g(z))\ dz=c\int_Cf(z)\ dz+\int_Cg(z)\ dz
+    $$
+
+- traversed in opposite direction
+
+    $$
+    -C:t\mapsto z(-t):[-b,-a] → \mathbb C
+    $$
+
+    then
+
+    $$
+    \int_{-C}f(z)\ dz=-\int_Cf(z)\ dz
+    $$
