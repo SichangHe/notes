@@ -102,3 +102,12 @@ $$
 \frac{d}{dz}\sin^{-1}z=\frac{1}{\sqrt{1-z^2}}\\[12pt]
 \frac{d}{dz}\cos^{-1}z=-\frac{1}{\sqrt{1-z^2}}
 $$
+
+# Contour integral of power function on circle
+
+$$
+\int_{C_R}z^n=\begin{cases}
+    0&n≠-1\\
+    2\pi i&n=-1
+\end{cases}
+$$

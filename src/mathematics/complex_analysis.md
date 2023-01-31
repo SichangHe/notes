@@ -288,6 +288,7 @@ $$
 \int z(t)=\int u(t)+i\int v(t)
 $$
 
+- both real part and imaginary part commute
 - antiderivative
 - mean value theorem of integral fail
 
@@ -300,7 +301,7 @@ $$
 
 - curve length persist
 
-## contour
+# contour
 
 piecewise smooth curve $C$ joined from finite smooth parametric curve
 
@@ -308,14 +309,14 @@ piecewise smooth curve $C$ joined from finite smooth parametric curve
 - $z'$ piecewise continuous
 - vertex, point where $C$ not smooth
 
-### Jordan curve theorem
+## Jordan curve theorem
 
 simple closed contour separate $\mathbb C$ into
 
 1. a bounded interior
 1. an exterior
 
-### contour integral
+## contour integral
 
 contour $C:z(t):[a,b] → \mathbb C$,\
 function $f(z)$ piecewise continuous on $C$
@@ -331,6 +332,12 @@ $$
     \int_C(cf(z)+g(z))\ dz=c\int_Cf(z)\ dz+\int_Cg(z)\ dz
     $$
 
+    for contour $C=C_1\cup C_2$
+
+    $$
+    \int_Cf(z)\ dz=\int_{C_1}f(z)\ dz+\int_{C_2}f(z)\ dz
+    $$
+
 - traversed in opposite direction
 
     $$
@@ -342,3 +349,31 @@ $$
     $$
     \int_{-C}f(z)\ dz=-\int_Cf(z)\ dz
     $$
+
+### upper bound theorem for contour integral (ML theorem)
+
+contour $C$ of length $L$,\
+$f(z)$ bounded by $M$
+
+$$
+⇒ \left|
+    \int_Cf(z)\ dz
+\right|≤ML
+$$
+
+### path independence of contour integral
+
+$f:D ⊆ \mathbb C → \mathbb C$ continuous in $D$,\
+$C$ in $D ⇒$
+
+$∃$ antiderivative $F$ s.t.
+
+$$
+\int_Cf(z)\ dz=F(z_2)-F(z_1)
+$$
+
+$⇔ ∀\ C$ closed,
+
+$$
+\oint_Cf(z)\ dz=0
+$$
