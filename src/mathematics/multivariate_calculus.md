@@ -270,6 +270,12 @@ $$
 
 vector field $\vec F$ and $∃\ f$ s.t. $\vec F=\nabla f$
 
+- on open connected region,
+    $\vec F=\nabla f=\langle P(x,y),Q(x,y) \rangle$
+
+    $⇔$ on simply-closed region,
+    $\frac{∂P}{∂y}=\frac{∂Q}{∂x}$
+
 #### independence of path of line integral
 
 $∀\ C_1,C_2$ with the same ends
@@ -285,3 +291,61 @@ $$
     $$
 
 - $⇔ \vec F$ is conservative
+
+## Green's theorem
+
+$C$ positively oriented, piecewise-smooth, simple closed,\
+$C=∂D$ is boundary of $D$
+
+$$
+∫_CPdx+Qdy=∬_D\left(
+    \frac{∂Q}{∂x}-\frac{∂P}{∂y}
+\right)dA
+$$
+
+- $$
+    A=\iint_D1dA=\int_Cxdy=-\int_Cydx=\frac{1}{2}\int-ydx+xdy
+    $$
+- extension: multiple-connected region
+
+# nabla
+
+$$
+\nabla=\left\langle \frac{∂}{∂x},\frac{∂}{∂y},\frac{∂}{∂z} \right\rangle
+$$
+
+## Laplace operator
+
+$$
+\nabla^2=\nabla\cdot\nabla
+$$
+
+## curl
+
+$$
+curl\ \vec F=\nabla × \vec F=\begin{vmatrix}
+    \vec i&\vec j&\vec k\\[6pt]
+    \frac{∂}{∂x}&\frac{∂}{∂y}&\frac{∂}{∂z}\\[6pt]
+    P&Q&R
+\end{vmatrix}\\[12pt]=
+\left\langle
+    \frac{∂R}{∂y}-\frac{∂Q}{∂z},
+    \frac{∂P}{∂z}-\frac{∂R}{∂x},
+    \frac{∂Q}{∂x}-\frac{∂P}{∂y}
+\right\rangle
+$$
+
+- $curl\ (\nabla f)=\nabla × (\nabla f)=\vec 0$
+- $\vec F$ conservative $⇔$
+    on simply-connected region, $curl\ \vec F=\vec 0$
+- irrotational $⇔ curl\ \vec F=\vec 0$
+
+## divergence
+
+$$
+div\ \vec F=\nabla\cdot\vec F=\frac{∂P}{∂x}+\frac{∂Q}{∂y}+\frac{∂R}{∂z}
+$$
+
+- incompressible $⇔ div\ \vec F=0$
+- source $⇔ div\ \vec F>0$
+- sink $⇔ div\ \vec F<0$
