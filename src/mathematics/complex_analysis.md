@@ -361,6 +361,11 @@ $$
 \right|≤ML
 $$
 
+- proof using lemma
+    $$
+    \left|\int_a^bz(t)\ dt\right|≤\int_a^b|z(t)|\ dt
+    $$
+
 ### path independence of contour integral
 
 $f:D ⊆ \mathbb C → \mathbb C$ continuous in $D$,\
@@ -377,3 +382,21 @@ $⇔ ∀\ C$ closed,
 $$
 \oint_Cf(z)\ dz=0
 $$
+
+## Cauchy-Goursat theorem
+
+on $D ⊆ \mathbb C$,\
+$f:D → \mathbb C$ holomorphic on and within $C$,\
+$∀\ C$ simple closed in $D$
+
+$$
+\int_Cf(z)\ dz=0
+$$
+
+- $D$ simply connected $⇒ C$ only need to be closed
+- holomorphic function on simply connected domain has antiderivative
+    - entire function has antiderivative
+
+### Cauchy's theorem
+
+same as Cauchy-Goursat theorem, except $f'(z)$ continuous

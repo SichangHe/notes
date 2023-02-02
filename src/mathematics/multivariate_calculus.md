@@ -295,7 +295,8 @@ $$
 ## Green's theorem
 
 $C$ positively oriented, piecewise-smooth, simple closed,\
-$C=∂D$ is boundary of $D$
+$C=∂D$ is boundary of $D$,\
+$P,Q$ have continuous partial derivative
 
 $$
 ∫_CPdx+Qdy=∬_D\left(
