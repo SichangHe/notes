@@ -400,3 +400,66 @@ $$
 ### Cauchy's theorem
 
 same as Cauchy-Goursat theorem, except $f'(z)$ continuous
+
+## Cauchy's integral formula (Cauchy's formula)
+
+$C$ positively oriented simple closed contour,\
+$f$ holomorphic inside and on $C$
+
+$∀\ z_0$ inside $C$
+
+$$
+f(z_0)=\frac{1}{2\pi i}∫_C \frac{f(z)\ dz}{z-z_0}
+$$
+
+- derivative
+
+    $$
+    f'(z_0)=\frac{1}{2\pi i}∫_C \frac{f(z)\ dz}{(z-z_0)^2}
+    $$
+
+- at $z_0$, $f$ holomorphic $⇒ ∀\ n\in\N,f^{(n)}$ exist and holomorphic
+
+    $$
+    f^{(n)}(z_0)=\frac{n!}{2\pi i}∫_C \frac{f(z)\ dz}{(z-z_0)^{(n+1)}}
+    $$
+
+- $f$ holomorphic $⇒ u,v$ have continuous partial derivative at all order
+
+<details>
+<summary>proof</summary>
+show using upper bound theorem
+
+$$
+\left|∫_{C_R}\frac{f(z)-f(z_0)}{z-z_0}\ dz\right|=0
+$$
+</details>
+
+## Morera's theorem
+
+$f$ continuous on $D$
+
+$∀$ closed contour $C$
+
+$$
+∫_Cf(z)\ dz=0
+$$
+
+$⇒ f$ holomorphic throughout $D$
+
+## Liouville's theorem
+
+bounded entire function is constant
+
+## fundamental theorem of algebra
+
+non-constant polynomial of degree $n$ has $n$ root
+
+## maximum modulus principle
+
+non-constant holomorphic function $f$ on open $D$\
+$⇒ |f|$ has no maximum on $D$
+
+- for $f$ on $D\cup ∂D$,
+    $|f|$ reach maximum always on $∂D$,
+    never on interior
