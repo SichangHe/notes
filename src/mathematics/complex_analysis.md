@@ -207,6 +207,7 @@ $$
 
 ### differentiability from Cauchy-Riemann equations
 
+$f$ defined around $z_0$,\
 at $z_0$
 
 1. $u_x,u_y,v_x,v_y$ are continuous
@@ -263,7 +264,7 @@ complex-valued function
 
 $$
 C:[a,b] ⊆ \R → \mathbb C,\\[6pt]
-t\mapsto z(t)=u(t)+iv(t)
+t\mapsto z(t)=x(t)+iy(t)
 $$
 
 - simple $⇔$ does not intersect self $⇔$ injection
@@ -274,18 +275,27 @@ $$
 
 ## parametric derivative
 
+$x'(t),y'(t)$ continuous
+
+$⇒ C$ differentiable,
+
 $$
-z'(t)=u'(t)+iv'(t)
+z'(t)=x'(t)+iy'(t)
 $$
 
 - velocity
     - speed $|z'|$
 - smooth $⇔$ differentiable and $z'≠0$
+    - $C$ has unit tangent vector in Argand diagram
+
+        $$
+        T(t)=\frac{z'(t)}{|z'(t)|}
+        $$
 
 ## parametric integral
 
 $$
-\int z(t)=\int u(t)+i\int v(t)
+\int z(t)=\int x(t)+i\int y(t)
 $$
 
 - both real part and imaginary part commute
@@ -301,6 +311,12 @@ $$
 
 - curve length persist
 
+### parametric curve length
+
+$$
+L(C)=∫_a^b\sqrt{x'(t)^2+y'(t)^2}\ dt=∫_a^b|z'(t)|\ dt
+$$
+
 # contour
 
 piecewise smooth curve $C$ joined from finite smooth parametric curve
@@ -308,13 +324,14 @@ piecewise smooth curve $C$ joined from finite smooth parametric curve
 - $z$ continuous
 - $z'$ piecewise continuous
 - vertex, point where $C$ not smooth
+- length, orientation, simple closed like parametric curve
 
 ## Jordan curve theorem
 
 simple closed contour separate $\mathbb C$ into
 
 1. a bounded interior
-1. an exterior
+1. an unbounded exterior
 
 ## contour integral
 
@@ -341,12 +358,7 @@ $$
 - traversed in opposite direction
 
     $$
-    -C:t\mapsto z(-t):[-b,-a] → \mathbb C
-    $$
-
-    then
-
-    $$
+    -C:t\mapsto z(-t):[-b,-a] → \mathbb C\\[12pt] ⇒
     \int_{-C}f(z)\ dz=-\int_Cf(z)\ dz
     $$
 
@@ -362,6 +374,7 @@ $$
 $$
 
 - proof using lemma
+
     $$
     \left|\int_a^bz(t)\ dt\right|≤\int_a^b|z(t)|\ dt
     $$

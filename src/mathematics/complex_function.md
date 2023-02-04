@@ -66,7 +66,8 @@ $$
 
     $$
     ⇒ \sin z=\sin x\cosh y+i\cos x\sinh\\[12pt]
-    ⇒ |\sin z|^2=\sin^2x+\sinh^2y
+    ⇒ |\sin z|^2=\sin^2x+\sinh^2y\\[12pt]
+    ⇒ \sin z=0 ⇔ z=\pi k,k\in\Z
     $$
 
 # hyperbolic function
@@ -79,7 +80,8 @@ $$
 - $\sinh(iz)=i\sin z$
 
     $$
-    ⇒ |\sinh z|^2=|i\sin(y-ix)|=\sinh^2x+\sin^2y
+    ⇒ |\sinh z|^2=|i\sin(y-ix)|=\sinh^2x+\sin^2y\\[12pt]
+    ⇒ \sinh z=0 ⇔ z=i\pi k,k\in\Z
     $$
 
 # inverse trigonometric function
