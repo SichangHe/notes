@@ -365,6 +365,7 @@ $$
 ### upper bound theorem for contour integral (ML theorem)
 
 contour $C$ of length $L$,\
+$f(z)$ piecewise continuous on $C$,\
 $f(z)$ bounded by $M$
 
 $$
@@ -379,12 +380,30 @@ $$
     \left|\int_a^bz(t)\ dt\right|≤\int_a^b|z(t)|\ dt
     $$
 
+    <details>
+    <summary>proof of lemma</summary>
+
+    $$
+    I:=∫_a^bw(t)\ dt=r_Ie^{i\theta_I}
+    $$
+
+    lemma hold for $I=0$.
+    for $I≠0$
+
+    $$
+    r_I>0\\[12pt] ⇒
+    r_I=\text{Re }\left(e^{-i\theta_I}∫_a^bw(t)\ dt\right)\\[12pt]=
+    ∫_a^b\text{Re }\left(e^{-i\theta_I}w(t)\right)\ dt≤
+    ∫_a^b\left|e^{-i\theta_I}w(t)\right|\ dt\\[12pt]=
+    ∫_a^b|z(t)|\ dt
+    $$
+    </details>
+
 ### path independence of contour integral
 
-$f:D ⊆ \mathbb C → \mathbb C$ continuous in $D$,\
-$C$ in $D ⇒$
+$f:D ⊆ \mathbb C → \mathbb C$ continuous in $D$
 
-$∃$ antiderivative $F$ s.t.
+$∃$ antiderivative $F$ s.t. $∀\ C$ in $D$ from $z_1$ to $z_2$
 
 $$
 \int_Cf(z)\ dz=F(z_2)-F(z_1)
@@ -399,20 +418,35 @@ $$
 ## Cauchy-Goursat theorem
 
 on $D ⊆ \mathbb C$,\
-$f:D → \mathbb C$ holomorphic on and within $C$,\
-$∀\ C$ simple closed in $D$
+simple closed contour $C$ in $D$,\
+$f:D → \mathbb C$ holomorphic on and within $C$
 
 $$
-\int_Cf(z)\ dz=0
+⇒ \int_Cf(z)\ dz=0
 $$
 
 - $D$ simply connected $⇒ C$ only need to be closed
+    - simply connected domain:
+        every simple closed contour enclose only point in $D$
+    - multiply connected domain
 - holomorphic function on simply connected domain has antiderivative
     - entire function has antiderivative
 
 ### Cauchy's theorem
 
 same as Cauchy-Goursat theorem, except $f'(z)$ continuous
+
+<details>
+<summary>proof using Green's theorem and Cauchy-Riemann equations</summary>
+
+$$
+∫_Cf(z)\ dz=∫_C(u+iv)(dx+idy)=∫_C(u+iv)dx+(-v+iu)dy\\[12pt]=
+\iint_D \left(
+    \frac{∂}{∂x}(-v+iu)-\frac{∂}{∂y}(u+iv)
+\right)dA\\[12pt]=
+\iint_D(-v_x+iu_x-u_y+iv_y)dA=0
+$$
+</details>
 
 ## Cauchy's integral formula (Cauchy's formula)
 
