@@ -514,6 +514,28 @@ $$
 $$
 </details>
 
+### evaluating integral with Cauchy's integral formula
+
+on positively oriented simple closed contour $C$,
+evaluate integral
+
+$$
+I=∫_Cg(z)\ dz
+$$
+
+1. find $f(z),z_0$ s.t. $z_0$ inside $C$ and
+
+    $$
+    g(z)=\frac{f(z)}{(z-z_0)^n}
+    $$
+
+1. calculate $f^{(n-1)}(z_0)$
+1. apply Cauchy's integral formula
+
+    $$
+    I=\frac{2\pi i}{(n-1)!}f^{(n-1)}(z_0)
+    $$
+
 ## Morera's theorem
 
 $f$ continuous on $D$
