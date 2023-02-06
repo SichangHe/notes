@@ -425,13 +425,6 @@ $$
 ⇒ \int_Cf(z)\ dz=0
 $$
 
-- $D$ simply connected $⇒ C$ only need to be closed
-    - simply connected domain:
-        every simple closed contour enclose only point in $D$
-    - multiply connected domain
-- holomorphic function on simply connected domain has antiderivative
-    - entire function has antiderivative
-
 ### Cauchy's theorem
 
 same as Cauchy-Goursat theorem, except $f'(z)$ continuous
@@ -447,6 +440,45 @@ $$
 \iint_D(-v_x+iu_x-u_y+iv_y)dA=0
 $$
 </details>
+
+## Cauchy-Goursat theorem on simply connected domain
+
+on simply connected domain $D ⊆ \mathbb C$,\
+closed contour $C$ in $D$,\
+$f:D → \mathbb C$ holomorphic on $D$
+
+$$
+⇒ \int_Cf(z)\ dz=0
+$$
+
+- simply connected domain:
+    every simple closed contour enclose only point in $D$
+    - multiply connected domain
+- holomorphic function on simply connected domain has antiderivative
+    - entire function has antiderivative
+
+## adoption of Cauchy-Goursat theorem on multiply connected domain
+
+on multiply connected domain $D ⊆ \mathbb C$,\
+positively oriented simple closed contour $C$,
+negatively oriented simple closed contour $C_i$,\
+$C_i$ inside of and disjoint from $C$,\
+$f:D → \mathbb C$ holomorphic on $D$ and on the region between $C,C_i$
+
+$$
+⇒ ∫_Cf(z)\ dz+∫_{C_i}f(z)\ dz=0
+$$
+
+### path deformation principle
+
+for the following case, deformation of contour integral persist its value
+
+positively oriented simple closed contour $C_1,C_2$,\
+$f$ holomorphic between $C_1,C_2$
+
+$$
+⇒ ∫_{C_1}f(z)\ dz=∫_{C_2}f(z)\ dz
+$$
 
 ## Cauchy's integral formula (Cauchy's formula)
 
