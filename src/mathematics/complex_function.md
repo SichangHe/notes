@@ -4,12 +4,12 @@
 
 $$
 \log z=\ln r+i\theta\\[12pt]
-\text{Log }z=\ln r+i\Theta\\[12pt]
+\text{Log }z=\ln r+i\Theta
 $$
 
 where $\Theta=\text{Arg }z$
 
-- $\log z≠0$
+- branch point $z=0$
 - $e^{\log z}=z$
 - $\log e^z\not\equiv z$
 - multi-valued function $\log$

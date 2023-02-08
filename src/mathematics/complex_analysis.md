@@ -155,7 +155,7 @@ $f(z)=u(x,y)+iv(x,y)$
 
 $$
 \lim_{z → z_0}f(z)=
-\lim_{(x,y) → (x_0,y_0)}u(x,y)+\lim_{(x,y) → (x_0,y_0)}v(x,y)
+\lim_{(x,y) → (x_0,y_0)}u(x,y)+i\lim_{(x,y) → (x_0,y_0)}v(x,y)
 $$
 
 $⇔$ limit on the RHS exist

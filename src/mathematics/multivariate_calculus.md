@@ -350,3 +350,97 @@ $$
 - incompressible $⇔ div\ \vec F=0$
 - source $⇔ div\ \vec F>0$
 - sink $⇔ div\ \vec F<0$
+- $div\ curl\ \vec F=\nabla\cdot(\nabla × \vec F)=0$
+- $div(\nabla f)=\nabla\cdot(\nabla f)=\nabla^2 f=
+    \frac{∂^2f}{∂x^2}+\frac{∂^2f}{∂y^2}+\frac{∂^2f}{∂z^2}$
+    - Laplace's equation, $\nabla^2 f=0$
+- for vector field, $\nabla^2\vec F=
+    \nabla^2P\vec i+\nabla^2Q\vec j+\nabla^2R\vec k$
+- product rule, $\nabla\cdot((\nabla f)g)=
+    (\nabla\cdot\nabla f)g+\nabla f\cdot\nabla g$
+
+## Green's theorem in vector form
+
+for 2-dimension
+
+$$
+\oint_C\vec F\cdot d\vec r=\iint_D(curl\ \vec F)\cdot d\vec A\\[12pt]
+\oint_C\vec F\cdot\vec n d\vec r=\iint_Ddiv\ \vec F\ d\vec A
+$$
+
+- outward unit normal vector
+
+    $$
+    \vec n=\left\langle
+        \frac{y'(t)}{|\vec r'(t)|},-\frac{x'(t)}{|\vec r'(t)|}
+    \right\rangle
+    $$
+
+# parametric surface
+
+$$
+\vec r(u,v)=\langle x(u,v),y(u,v),z(u,v) \rangle
+$$
+
+- grid curve
+- normal vector for tangent plane at $(u_0,v_0)$,
+    $\vec r_u(u_0,v_0) × \vec r_v(u_0,v_0)$
+- smooth, $\vec r_u × \vec r_v≠\vec 0$
+- surface integral
+
+    $$
+    \iint_Sf\ dS=\iint_Df\left|
+        \vec r_u × \vec r_v
+    \right|dA
+    $$
+
+    - area
+
+        $$
+        A(S)=\iint_S1\ dS=
+        \iint_D \left|
+            \vec r_u × \vec r_v
+        \right|dA
+        $$
+
+    - for sphere, $dS=a^2\sin\phi\ d\phi\ d\theta$
+
+## oriented surface
+
+- normal vector field
+
+    $$
+    \vec n=\frac{\vec r_u × \vec r_v}{\left|
+        \vec r_u × \vec r_v
+    \right|}
+    $$
+
+- $d\vec S=\vec n\ dS$
+
+### flux
+
+$$
+\iint_S\vec F\cdot\ d\vec S=
+\iint_S\vec F\cdot\ \vec n\ dS\\[12pt]=
+\iint_S\vec F\cdot\frac{\vec r_u × \vec r_v}{\left|
+    \vec r_u × \vec r_v
+\right|}\ dS\\[12pt]=
+\iint_S\vec F\cdot \left(
+    \vec r_u × \vec r_v
+\right)\ dA
+$$
+
+## Stoke's theorem
+
+$$
+\int_C\vec F\cdot d\vec r=\iint_Scurl\ \vec F\cdot d\vec S\\[12pt]=
+\iint_Scurl\ \vec F\cdot\left(
+    \vec r_u × \vec r_v
+\right)\ dA
+$$
+
+## divergence theorem (Gauss's theorem)
+
+$$
+\iint_S\vec F\cdot\vec n\ dS=\iiint_Ediv\vec F\ dV
+$$
