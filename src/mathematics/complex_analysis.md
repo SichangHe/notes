@@ -564,3 +564,19 @@ $⇒ |f|$ has no maximum on $D$
 - for $f$ on $D\cup ∂D$,
     $|f|$ reach maximum always on $∂D$,
     never on interior
+
+# Laurent series
+
+<!-- todo: check -->
+annual domain $D$, $R_0<|z-z_0|<R_1$,\
+any closed contour $C$ in $D$,\
+function $f$ holomorphic in $D$
+
+$$
+f(z)=∑_{n=-∞}^∞ c_n(z-z_0)^n\\[12pt]
+c_n=\frac{1}{2\pi i}∫_C \frac{f(z)\ dz}{(z-z_0)^{n+1}}
+$$
+
+## residue
+
+$c_{-1}$
