@@ -85,3 +85,9 @@ reverse triangle inequality
 $$
 ||x|-|y||≤|x-y|
 $$
+
+power when $|z|<<1$
+
+$$
+(1+z)^n=1+nz+\cdots
+$$

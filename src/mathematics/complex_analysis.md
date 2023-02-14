@@ -579,4 +579,47 @@ $$
 
 ## residue
 
-$c_{-1}$
+$$
+res\ f(z_0)=c_{-1}=\frac{1}{2\pi i}∫_Cf(z)\ dz\\[12pt] ⇒
+∫_Cf(z)\ dz=2\pi i\ res\ f(z_0)
+$$
+
+### Cauchy residue theorem
+
+positively oriented, simple closed contour $C$,\
+$f$ holomorphic on and within $C$ *except* on finite number of singularities
+$z_k,k\in\{1,2,\cdots,n\}$
+
+$$
+∫_Cf(z)\ dz=2\pi i∑_{k=1}^n res\ f(z_k)
+$$
+
+### residue at infinity
+
+$$
+∑_{k=1}^n res\ f(z_k)+res\ f(∞)=0
+$$
+
+# singularity
+
+## isolated singularity
+
+$f$ analytic in deleted neighborhood $\hat U(z_0)$
+
+$z_0$ is isolated singularity
+
+### essential isolated singularity
+
+$\not ∃\ m\in\N^+$ s.t. $∀\ n<-m,\ c_n=0$
+
+$z_0$ is essential isolated singularity
+
+### pole
+
+$∃\ m\in\N^+$ s.t. $∀\ n<-m,\ c_n=0$
+
+pole of order $m$ at $z_0$
+
+- simple pole $\Leftarrow m=1$
+- removable singularity $\Leftarrow m=0$
+    - removed by setting $f(z_0)=c_0$
