@@ -608,6 +608,8 @@ $f$ analytic in deleted neighborhood $\hat U(z_0)$
 
 $z_0$ is isolated singularity
 
+- $f$ has Laurent series at $z_0$
+
 ### essential isolated singularity
 
 $\not ∃\ m\in\N^+$ s.t. $∀\ n<-m,\ c_n=0$
@@ -623,3 +625,10 @@ pole of order $m$ at $z_0$
 - simple pole $\Leftarrow m=1$
 - removable singularity $\Leftarrow m=0$
     - removed by setting $f(z_0)=c_0$
+- $$
+    res\ f(z_0)=\frac{d^{m-1}}{(m-1)!\ dz^{m-1}}\left[
+        (z-z_0)^{m-1}f(z)
+    \right]\Bigr|_{z=z_0}
+    $$
+
+    - only usable for $m=1,2$
