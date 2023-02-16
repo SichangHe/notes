@@ -21,6 +21,7 @@
         - [Sequence and Series](mathematics/sequence_series.md)
     - [Complex Analysis](mathematics/complex_analysis.md)
         - [Complex function](mathematics/complex_function.md)
+        - [Complex Sequence and Series](mathematics/complex_sequence_series.md)
     - [Linear Algebra](mathematics/linear_algebra.md)
     - [Numerical Analysis](mathematics/numerical_analysis.md)
     - [Proof](mathematics/proof.md)

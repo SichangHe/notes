@@ -565,6 +565,15 @@ $⇒ |f|$ has no maximum on $D$
     $|f|$ reach maximum always on $∂D$,
     never on interior
 
+# analyticity
+
+$f:U_\varepsilon(z_0) → \mathbb C$ analytic $⇔$
+
+$$
+∀\ z\in U_\varepsilon(z_0),\quad
+f(z)=∑_{n=0}^∞ a_n(z-z_0)^n
+$$
+
 # Laurent series
 
 <!-- todo: check -->
