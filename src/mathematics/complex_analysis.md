@@ -648,7 +648,9 @@ $\not ∃\ m\in\N^+$ s.t. $∀\ n<-m,\ c_n=0$
 
 $z_0$ is essential isolated singularity
 
-- $∀\ \varepsilon,R>0,w\in\mathbb C,∃\ z\in|z-z_0|<R$ s.t
+- Casorati-Weierstrass theorem
+
+    $∀\ \varepsilon,R>0,w\in\mathbb C,∃\ z\in|z-z_0|<R$ s.t
     $|f(z)-w|<\varepsilon$
 
 ### pole
@@ -676,6 +678,35 @@ pole of order $m$ at $z_0$
         $$
         res\ f(z_0)=\frac{d}{dz}[(z-z_0)^2f(z)](z_0)
         $$
+
+### zero of order $m$
+
+$f$ analytic at $z_0$,\
+$f(z_0)=0$,\
+$∃\ m\in\N^+$ s.t.
+
+$$
+∀\ n<m,\quad f^{(n)}(z_0)=0
+$$
+
+- identically zero $\Leftarrow m=∞$
+    - otherwise, the zero is isolated
+
+#### zero and pole
+
+$p,q$ analytic,\
+$q$ has zero of order $m$ at at $z_0$\
+$p(z_0)≠0$
+
+$⇒ \frac{p}{q}$ has pole of order $m$ at $z_0$
+
+- $m=0 ⇒ \frac{p}{q}$ has simple pole at $z_0$,
+
+    $$
+    res\ \left[
+        \frac{p}{q}
+    \right](z_0)=\frac{p(z_0)}{q'(z_0)}
+    $$
 
 ## Fourier integral
 
