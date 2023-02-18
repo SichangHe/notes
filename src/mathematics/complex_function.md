@@ -65,7 +65,7 @@ $$
 - $\sin(iz)=i\sinh z,\quad\cos(iz)=\cosh z$
 
     $$
-    ⇒ \sin z=\sin x\cosh y+i\cos x\sinh\\[12pt]
+    ⇒ \sin z=\sin x\cosh y+i\cosh x\sin y\\[12pt]
     ⇒ |\sin z|^2=\sin^2x+\sinh^2y\\[12pt]
     ⇒ \sin z=0 ⇔ z=\pi k,k\in\Z
     $$

@@ -460,7 +460,7 @@ $$
 ## adoption of Cauchy-Goursat theorem on multiply connected domain
 
 on multiply connected domain $D ⊆ \mathbb C$,\
-positively oriented simple closed contour $C$,
+positively oriented contour $C$,
 negatively oriented simple closed contour $C_i$,\
 $C_i$ inside of and disjoint from $C$,\
 $f:D → \mathbb C$ holomorphic on $D$ and on the region between $C,C_i$
@@ -473,7 +473,7 @@ $$
 
 for the following case, deformation of contour integral persist its value
 
-positively oriented simple closed contour $C_1,C_2$,\
+positively oriented contour $C_1,C_2$,\
 $f$ holomorphic between $C_1,C_2$
 
 $$
@@ -482,7 +482,7 @@ $$
 
 ## Cauchy's integral formula (Cauchy's formula)
 
-$C$ positively oriented simple closed contour,\
+$C$ positively oriented contour,\
 $f$ holomorphic inside and on $C$
 
 $∀\ z_0$ inside $C$
@@ -516,7 +516,7 @@ $$
 
 ### evaluating integral with Cauchy's integral formula
 
-on positively oriented simple closed contour $C$,
+on positively oriented contour $C$,
 evaluate integral
 
 $$
@@ -576,15 +576,17 @@ $$
 
 # Laurent series
 
-<!-- todo: check -->
 annual domain $D$, $R_0<|z-z_0|<R_1$,\
 any closed contour $C$ in $D$,\
-function $f$ holomorphic in $D$
+function $f$ holomorphic in $D ⇒$
 
 $$
 f(z)=∑_{n=-∞}^∞ c_n(z-z_0)^n\\[12pt]
 c_n=\frac{1}{2\pi i}∫_C \frac{f(z)\ dz}{(z-z_0)^{n+1}}
 $$
+
+- punctured disk, $R_0=0$
+- unique
 
 ## residue
 
@@ -595,8 +597,8 @@ $$
 
 ### Cauchy residue theorem
 
-positively oriented, simple closed contour $C$,\
-$f$ holomorphic on and within $C$ *except* on finite number of singularities
+positively oriented contour $C$,\
+$f$ analytic on and within $C$ *except* on finite number of singularities
 $z_k,k\in\{1,2,\cdots,n\}$
 
 $$
@@ -605,9 +607,27 @@ $$
 
 ### residue at infinity
 
+all singularity are inside negatively oriented contour $C$
+
 $$
-∑_{k=1}^n res\ f(z_k)+res\ f(∞)=0
+∫_Cf(z)\ dz=2\pi i\ res\ f(∞)
 $$
+
+- Cauchy residue theorem can be rewritten as
+
+    $$
+    ∑_{k=1}^n res\ f(z_k)+res\ f(∞)=0
+    $$
+
+- by replacing $z$ with $\frac{1}{z}$
+
+    $$
+    res \left(
+        \frac{1}{z^2}f \left(
+            \frac{1}{z}
+        \right)
+    \right)(0)=-res\ f(∞)
+    $$
 
 # singularity
 
@@ -617,13 +637,19 @@ $f$ analytic in deleted neighborhood $\hat U(z_0)$
 
 $z_0$ is isolated singularity
 
-- $f$ has Laurent series at $z_0$
+- $f$ has Laurent series about $z_0$
+- not branch point
+- isolated singular at infinity $\Leftarrow ∃\ R>0$ s.t.
+    $f$ analytic for $R<|z|<∞$
 
 ### essential isolated singularity
 
 $\not ∃\ m\in\N^+$ s.t. $∀\ n<-m,\ c_n=0$
 
 $z_0$ is essential isolated singularity
+
+- $∀\ \varepsilon,R>0,w\in\mathbb C,∃\ z\in|z-z_0|<R$ s.t
+    $|f(z)-w|<\varepsilon$
 
 ### pole
 
@@ -632,6 +658,10 @@ $∃\ m\in\N^+$ s.t. $∀\ n<-m,\ c_n=0$
 pole of order $m$ at $z_0$
 
 - simple pole $\Leftarrow m=1$
+    - $$
+        res\ f(z_0)=[(z-z_0)f(z)](z_0)
+        $$
+
 - removable singularity $\Leftarrow m=0$
     - removed by setting $f(z_0)=c_0$
 - $$
@@ -641,6 +671,11 @@ pole of order $m$ at $z_0$
     $$
 
     - only usable for $m=1,2$
+    - for $m=2$
+
+        $$
+        res\ f(z_0)=\frac{d}{dz}[(z-z_0)^2f(z)](z_0)
+        $$
 
 ## Fourier integral
 

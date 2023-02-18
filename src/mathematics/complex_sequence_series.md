@@ -106,3 +106,27 @@ $$
 
 as $R → ∞$
 </details>
+
+### uniqueness of Taylor series
+
+in $|z-z_0|<R$,
+power series $∑_{n=0}^∞ a_n(z-z_0)^n$ converge to $f(z)$
+
+$⇒$ it is *the* Taylor series of $f$ about $z_0$
+
+<details>
+<summary>
+proof using power series integration and Cauchy's integral formula
+</summary>
+
+$$
+g(x):=\frac{1}{2\pi i(z-z_0)^{m+1}}\\[12pt]
+\underbrace{∫_Cg(z)f(z)\ dz}_ {\begin{align*}=
+    &\frac{1}{2\pi i}∫_C \frac{f(z)\ dz}{(z-z_0)^{m+1}}\\[12pt]=
+    &\frac{f^{(m)}(z_0)}{m!}
+\end{align*}}=\underbrace{∑_{n=0}^∞ a_n∫_C g(z)(z-z_0)^n\ dz}_{\begin{align*}=
+    &∑_{n=0}^∞ a_n\frac{1}{2\pi i}∫_C(z-z_0)^{n-m-1}\ dz\\[12pt]=
+    &a_m
+\end{align*}}
+$$
+</details>
