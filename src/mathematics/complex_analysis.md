@@ -641,3 +641,11 @@ pole of order $m$ at $z_0$
     $$
 
     - only usable for $m=1,2$
+
+## Fourier integral
+
+$k>0$
+
+$$
+∫_{-∞}^∞ f(s)\sin(kx)\ dx
+$$
