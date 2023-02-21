@@ -700,7 +700,7 @@ $p(z_0)≠0$
 
 $⇒ \frac{p}{q}$ has pole of order $m$ at $z_0$
 
-- $m=0 ⇒ \frac{p}{q}$ has simple pole at $z_0$,
+- $m=1 ⇒ \frac{p}{q}$ has simple pole at $z_0$,
 
     $$
     res\ \left[
@@ -715,3 +715,13 @@ $k>0$
 $$
 ∫_{-∞}^∞ f(s)\sin(kx)\ dx
 $$
+
+### Jordan's lemma
+
+$f(z)$ analytic above the imaginary axis outside $|z|<R_0$
+
+### Jordan's inequality
+
+## indented path
+
+### lemma
