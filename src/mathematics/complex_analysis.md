@@ -708,6 +708,30 @@ $⇒ \frac{p}{q}$ has pole of order $m$ at $z_0$
     \right](z_0)=\frac{p(z_0)}{q'(z_0)}
     $$
 
+# improper integral
+
+## Cauchy principal value $CPV$
+
+$$
+CPV\ ∫_{-∞}^∞ f(x)\ dx=\lim_{R → ∞}∫_{-R}^R f(x)\ dx
+$$
+
+if RHS exist
+
+- $f$ is even $⇒ ∫_{-∞}^∞ f(x)\ dx=CPV\ ∫_{-∞}^∞ f(x)\ dx$
+
+## improper integral for even rational function
+
+real, continuous, even, irreducible rational function $f=\frac{p}{q}$
+
+$⇒ f$ has finitely many zeros $z_k$ *above* the real axis
+
+let $C_R$ be upper half semicircle with $[-R,R]$ as its missing side
+
+$$
+∫_{-R}^R f(x)\ dx+∫_C f(x)\ dx=2\pi i∑_k res\ f(z_k)
+$$
+
 ## Fourier integral
 
 $k>0$
@@ -725,3 +749,34 @@ $f(z)$ analytic above the imaginary axis outside $|z|<R_0$
 ## indented path
 
 ### lemma
+
+# Laplace transform
+
+## Bromwich formula
+
+# meromorphic
+
+$f$ is analytic except possibly for poles
+
+## theorem for meromorphic function
+
+simple closed contour $C$,\
+$f$ non-zero and analytic on $C$, meromorphic within $C$
+
+$$
+\frac{1}{2\pi i}∫_C \frac{f'(z)}{f(z)} dz=Z-P
+$$
+
+- $Z$, number of zero of $f$ within $C$ counted with order
+- $P$, number of pole of $f$ within $C$ counted with order
+
+## argument principle
+
+$$
+Z-P=\frac{1}{2\pi i}∫_C \frac{f'(z)}{f(z)} dz=
+\frac{1}{2\pi}\Delta_C\arg f=\nu(\Gamma,0)
+$$
+
+## Rouché's theorem (dog on a leash theorem)
+
+$f,g$ analytic on and within $C$
