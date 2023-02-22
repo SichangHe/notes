@@ -780,3 +780,17 @@ $$
 ## Rouché's theorem (dog on a leash theorem)
 
 $f,g$ analytic on and within $C$
+
+## Brouwer's fixed point theorem
+
+$D:|z|≤1,int\ D:|z|<1$,\
+$g:D → int\ D$ analytic
+
+$⇒ ∃!\ z_0\in D$ s.t. $g(z_0)=z_0$ (fixed point)
+
+## Hopf's theorem
+
+closed curve $\Gamma,\tilde\Gamma$,\
+one can be continuously deformed into another without crossing point $w$
+
+$⇔ \nu(\Gamma,w)=\nu(\tilde\Gamma,w)$
