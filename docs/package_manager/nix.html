@@ -161,6 +161,9 @@
 <p>install package</p>
 <pre><code class="language-shell">nix-env -iA &lt;PACKAGE&gt;
 </code></pre>
+<p>update all nix package</p>
+<pre><code class="language-shell">nix-channel --update &amp;&amp; nix-env -u
+</code></pre>
 <p>check and fix nix store</p>
 <pre><code class="language-shell">sudo nix-store --verify
 </code></pre>
