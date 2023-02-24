@@ -15,6 +15,12 @@ install package
 nix-env -iA <PACKAGE>
 ```
 
+update all nix package
+
+```shell
+nix-channel --update && nix-env -u
+```
+
 check and fix nix store
 
 ```shell

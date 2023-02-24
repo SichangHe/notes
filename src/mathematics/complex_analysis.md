@@ -794,3 +794,29 @@ closed curve $\Gamma,\tilde\Gamma$,\
 one can be continuously deformed into another without crossing point $w$
 
 $⇔ \nu(\Gamma,w)=\nu(\tilde\Gamma,w)$
+
+# Möbius transformation
+
+$$
+f(z)=\frac{az+b}{cz+d}:\bar{\mathbb C} → \bar{\mathbb C},\qquad
+ad-bc≠0
+$$
+
+- extended complex plane $\bar{\mathbb C}:=\mathbb C\cup\{∞\}$
+- only singularity is simple pole $\frac{d}{c}$
+- derivative non-zero
+
+    $$
+    f'(z)=\frac{ad-bc}{(cz+d)^2}≠0
+    $$
+
+- they are a group
+- map circle to circle
+    - line are circle of infinite radius through $∞$
+
+## circle in Argand diagram
+
+$$
+Az\bar z+(B-iC)z+(B+iC)\bar z+D=0\\[12pt]
+A,B,C,D\in\R
+$$
