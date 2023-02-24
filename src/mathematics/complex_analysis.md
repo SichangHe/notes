@@ -722,14 +722,21 @@ if RHS exist
 
 ## improper integral for even rational function
 
-real, continuous, even, irreducible rational function $f=\frac{p}{q}$
+real, continuous, even, irreducible rational function $f=\frac{p}{q}$,\
+$q(x)$ has finitely many zero $z_k$ *above* the real axis
 
-$⇒ f$ has finitely many zeros $z_k$ *above* the real axis
+$⇒ f$ has pole $z_k$ *above* the real axis,
 
-let $C_R$ be upper half semicircle with $[-R,R]$ as its missing side
+let $C_R$ be upper semicircle with missing side $[-R,R]$, then
 
 $$
-∫_{-R}^R f(x)\ dx+∫_C f(x)\ dx=2\pi i∑_k res\ f(z_k)
+∫_{-R}^R f(x)\ dx+∫_{C_R} f(x)\ dx=2\pi i∑_k res\ f(z_k)
+$$
+
+if $\lim_{R → ∞}∫_{C_R} f(x)\ dx=0$, then
+
+$$
+∫_{-∞}^∞ f(x)\ dx=2\pi i∑_k res\ f(z_k)
 $$
 
 ## Fourier integral
@@ -737,14 +744,33 @@ $$
 $k>0$
 
 $$
-∫_{-∞}^∞ f(s)\sin(kx)\ dx
+∫_{-∞}^∞ f(x)\sin(kx)\ dx\quad\text{or}\quad
+∫_{-∞}^∞ f(x)\cos(kx)\ dx
+$$
+
+integrate instead
+
+$$
+∫_{-R}^R f(x)e^{ikx}\ dx
 $$
 
 ### Jordan's lemma
 
-$f(z)$ analytic above the imaginary axis outside $|z|<R_0$
+$f(z)$ analytic above the imaginary axis outside $|z|<R_0$,\
+semicircle contour $C_R:|z|=R>R_0,\ 0≤\theta≤\pi$
+
+$$
+|f(z)|(C_R)≤M_R,\quad \lim_{R → ∞}M_R=0\\[12pt]
+⇒ ∀\ k>0,\ \lim_{R → ∞}∫_{C_R}f(z)e^{ikz}\ dz=0
+$$
+
+proof by parametric integral and Jordan's inequality
 
 ### Jordan's inequality
+
+$$
+∫_0^\pi e^{-kR\sin\theta}d\theta<\frac{\pi}{kR}
+$$
 
 ## indented path
 
