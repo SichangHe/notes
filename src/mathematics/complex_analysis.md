@@ -660,24 +660,34 @@ $∃\ m\in\N^+$ s.t. $∀\ n<-m,\ c_n=0$
 pole of order $m$ at $z_0$
 
 - simple pole $\Leftarrow m=1$
-    - $$
-        res\ f(z_0)=[(z-z_0)f(z)](z_0)
-        $$
 
 - removable singularity $\Leftarrow m=0$
     - removed by setting $f(z_0)=c_0$
-- $$
-    res\ f(z_0)=\frac{d^{m-1}}{(m-1)!\ dz^{m-1}}\left[
-        (z-z_0)^{m-1}f(z)
-    \right]\Bigr|_{z=z_0}
+
+#### residue at pole
+
+$$
+res\ f(z_0)=\left\{
+     \frac{1}{(m-1)!}\frac{d^{m-1}}{dz^{m-1}}\left[
+    (z-z_0)^mf(z)
+\right]
+\right\}(z_0)
+$$
+
+- only usable for $m=1,2$
+- $m=1$
+
+    $$
+    res\ f(z_0)=[(z-z_0)f(z)](z_0)
     $$
 
-    - only usable for $m=1,2$
-    - for $m=2$
+- $m=2$
 
-        $$
-        res\ f(z_0)=\frac{d}{dz}[(z-z_0)^2f(z)](z_0)
-        $$
+    $$
+    res\ f(z_0)=\left\{
+        \frac{d}{dz}[(z-z_0)^2f(z)]
+    \right\}(z_0)
+    $$
 
 ### zero of order $m$
 
