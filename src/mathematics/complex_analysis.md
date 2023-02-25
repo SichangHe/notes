@@ -784,7 +784,30 @@ $$
 
 ## indented path
 
-### lemma
+improper integral with singularity on real axis
+
+circumvent each singularity $x_i$ on real axis
+by upper semicircle $C_i:|z-x_i|=r_i$ with $r_i → 0$
+
+### lemma for indented path
+
+$f$ analytic on $0<|z-x_i|<r$,\
+clockwise upper semicircle $C_i:z=x_i+r_ie^{i\theta},\pi≥\theta≥0,r_i<r$,\
+Larent series of $f$ about $x_i$ contain *no even negative* power
+
+
+$$
+⇒ \lim_{r_i → 0}∫_{C_i}f(z)\ dz=-i\pi\ res\ f(x_i)
+$$
+
+proof by integrating Laurent series of parametric line integral term by term
+
+- lemma hold at simple pole
+- can prove
+
+    $$
+    ∫_{-∞}^∞ \frac{\sin x}{x}dx=\pi
+    $$
 
 # Laplace transform
 
