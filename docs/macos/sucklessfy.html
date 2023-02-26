@@ -154,6 +154,7 @@
 <li><a href="#sucklessfy">Sucklessfy</a>
 <ul>
 <li><a href="#dsstore">DS.Store</a></li>
+<li><a href="#key-repeat">key repeat</a></li>
 </ul>
 </li>
 </ul>
@@ -164,6 +165,10 @@
 <h2 id="dsstore"><a class="header" href="#dsstore">DS.Store</a></h2>
 <p>remove all .DS_Store in subfolder</p>
 <pre><code class="language-shell">find . -name '.DS_Store' -type f -delete
+</code></pre>
+<h2 id="key-repeat"><a class="header" href="#key-repeat">key repeat</a></h2>
+<p>disable alternate character and enable key repeat for <code>APP_NAME</code></p>
+<pre><code class="language-bash">defaults write APP_NAME ApplePressAndHoldEnabled -bool false
 </code></pre>
 
                 </main>
