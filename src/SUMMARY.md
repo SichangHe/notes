@@ -47,6 +47,7 @@
     - [JavaScript](programming/javascript.md)
         - [MathJax](programming/mathjax.md)
     - [Julia](programming/julia.md)
+    - [Kotlin](programming/kotlin.md)
     - [Lua](programming/lua.md)
     - [Perl](programming/perl.md)
     - [Python](programming/python.md)
