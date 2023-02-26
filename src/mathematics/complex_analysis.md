@@ -795,7 +795,6 @@ $f$ analytic on $0<|z-x_i|<r$,\
 clockwise upper semicircle $C_i:z=x_i+r_ie^{i\theta},\pi≥\theta≥0,r_i<r$,\
 Larent series of $f$ about $x_i$ contain *no even negative* power
 
-
 $$
 ⇒ \lim_{r_i → 0}∫_{C_i}f(z)\ dz=-i\pi\ res\ f(x_i)
 $$
@@ -809,9 +808,54 @@ proof by integrating Laurent series of parametric line integral term by term
     ∫_{-∞}^∞ \frac{\sin x}{x}dx=\pi
     $$
 
+## lemma for integral over branch point
+
+circular segment of $C_r:z=re^{i\theta},0≤\theta≤\theta_1$,\
+$f(z)$ continuous on $C_r ⇒$
+
+$$
+\lim_{z → 0}zf(z)=0\quad ⇒\quad \lim_{r → 0}∫_{C_r}f(z)\ dz=0
+$$
+
+proof by definition of limit and upper bound theorem
+
+# trigonometric integral
+
+$$
+∫_{\theta_0}^{\theta_1}f(\sin\theta,\cos\theta)\ d\theta
+$$
+
+define $C:z=e^{i\theta},\theta_0≤\theta≤\theta_1$
+
+$$
+\sin\theta=\frac{z-z^{-1}}{2i},\quad
+\cos\theta=\frac{z+z^{-1}}{2},\quad
+d\theta=\frac{dz}{iz}\\[12pt] ⇒
+∫_{\theta_0}^{\theta_1}f(\sin\theta,\cos\theta)\ d\theta=
+∫_Cf \left(
+    \frac{z-z^{-1}}{2i},
+    \frac{z+z^{-1}}{2}
+\right)\frac{dz}{iz}
+$$
+
 # Laplace transform
 
+Laplace transform of $f:\R_0^+ → \R$
+
+$$
+\tilde f(s)=∫_0^∞ f(t)e^{-st}dt:\mathbb C → \mathbb C
+$$
+
 ## Bromwich formula
+
+inverse Laplace transform
+
+$\gamma\in\R$ to the right of all sinularity of $\tilde f(s)$,\
+line contour $\Gamma_R$ from $\gamma-iR$ to $\gamma+iR$
+
+$$
+f(t)=\frac{1}{2\pi i}\lim_{R → ∞}∫_{\Gamma_R}\tilde f(s)e^{st}ds
+$$
 
 # meromorphic
 
