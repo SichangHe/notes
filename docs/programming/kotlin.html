@@ -173,6 +173,29 @@
 <p>return <code>default_var0</code> if <code>null</code> using Elvis operator</p>
 <pre><code class="language-kotlin">var0?.field ?: default_var0
 </code></pre>
+<h2 id="anonymous-function"><a class="header" href="#anonymous-function">anonymous function</a></h2>
+<p>refer to existing function</p>
+<pre><code class="language-kotlin">fun fn0(arg0: TYPE0): RETURN_TYPE0 {
+    // …
+}
+
+val lambda0: (TYPE0 -&gt; RETURN_TYPE0) = ::fn0
+</code></pre>
+<p>create anonymous function directly</p>
+<pre><code class="language-kotlin">val lambda0: (TYPE0 -&gt; RETURN_TYPE) = { arg0 -&gt;
+    // …
+}
+</code></pre>
+<p>or refer to the only argument as <code>it</code></p>
+<pre><code class="language-kotlin">val lambda0 = {
+    doStuffWith(it) // …
+}
+</code></pre>
+<p>call function using trailing lambda syntax</p>
+<pre><code class="language-kotlin">fnUsingLambda(arg0) {
+    // Body of anonymous function.
+}
+</code></pre>
 
                 </main>
 
