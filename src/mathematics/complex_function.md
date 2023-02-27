@@ -109,7 +109,7 @@ $$
 # Contour integral of power function on circle
 
 $$
-\int_{C_R}z^n=\begin{cases}
+\int_{C_R}z^n\ dz=\begin{cases}
     0&n≠-1\\
     2\pi i&n=-1
 \end{cases}

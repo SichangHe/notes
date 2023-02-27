@@ -946,6 +946,7 @@ $$
 - they are a group
 - map circle to circle
     - line are circle of infinite radius through $∞$
+- need $3$ point to specify
 
 ## circle in Argand diagram
 
@@ -953,3 +954,44 @@ $$
 Az\bar z+(B-iC)z+(B+iC)\bar z+D=0\\[12pt]
 A,B,C,D\in\R
 $$
+
+## cross-ratio
+
+map $3$ distince point $z_1,z_2,z_3$ to $w=T(z)$ by\
+$z_1\mapsto w_1,z_2\mapsto w_2,z_3\mapsto w_3$
+
+$$
+\frac{(w-w_1)(w_2-w_3)}{(w-w_3)(w_2-w_1)}=
+\frac{(z-z_1)(z_2-z_3)}{(z-z_3)(z_2-z_1)}
+$$
+
+# conformal transformation
+
+$f:D → \mathbb C$
+
+1. analytic
+1. $∀\ z\in D,f'(z)≠0$
+
+- Möbius transformation
+
+## inverse function theorem
+
+analytic $f$ at $z_0$,\
+$f'(z_0)≠0$
+
+$⇒ ∃\ U(z_0),∃!\ f^{-1}$ analytic
+
+- derivative
+
+    $$
+    (f^{-1})'(w)=\frac{1}{f'(z)}
+    $$
+
+## conformal transformation preserve angle
+
+$f$ conformal,\
+smooth $C_1,C_2$ at $z_0$ and intersect with acute angle $\psi$
+
+$⇒ f(C_1),f(C_2)$ intersect at $f(z_0)$ with acute angle $\psi$
+
+proof by taking $f'(z_0)$ through $C_1$ and $C_2$ and their equality
