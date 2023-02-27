@@ -873,6 +873,24 @@ $$
 - $Z$, number of zero of $f$ within $C$ counted with order
 - $P$, number of pole of $f$ within $C$ counted with order
 
+## winding number
+
+closed contour $C:z=z(t),a≤t≤b,z(a)=z(b)=z_0$,\
+$f(z)=\rho e^{i\phi}≠0$ on $C$,\
+$\Gamma:f(z(t))$
+
+difference in argument
+
+$$
+\Delta_C\arg f=\phi(b)-\phi(a)=2\pi k
+$$
+
+winding number of $\Gamma$ with respect to $0$
+
+$$
+\nu(\Gamma,0)=\frac{1}{2\pi}\Delta_C\arg f=k
+$$
+
 ## argument principle
 
 $$
@@ -882,14 +900,26 @@ $$
 
 ## Rouché's theorem (dog on a leash theorem)
 
-$f,g$ analytic on and within $C$
+$f,g$ analytic on and within $C$,\
+$|g|<|f|$ on $C$
 
-## Brouwer's fixed point theorem
+$⇒f,f+g$ have the same number of zero counted with order inside $C$
+
+- constrain location of polynomial root using Rouché's theorem
+    1. split polynomial $P=f+g$ where $f(z)=z^n$
+    1. $C:|z|=1+|a_{n-1}|+\cdots+|a_0|$\
+        $⇒ |g|<|f|$ on $C$
+    1. $⇒$ root of $P$ are within $C$
+
+## Brouwer's fixed point theorem special version
 
 $D:|z|≤1,int\ D:|z|<1$,\
 $g:D → int\ D$ analytic
 
 $⇒ ∃!\ z_0\in D$ s.t. $g(z_0)=z_0$ (fixed point)
+
+- when changing $w$ continuously without crossing $\Gamma$,
+    $\nu(\Gamma,w)$ is topological invariant
 
 ## Hopf's theorem
 

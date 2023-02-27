@@ -78,3 +78,13 @@ map $f:M → N$ continuous $⇔$
 $$
 ∀\ V\in\mathcal O_M,\text{preim}_f(V)\in\mathcal O_M
 $$
+
+## Brouwer's fixed point theorem
+
+continuous $g:D → D$
+
+$⇒ ∃$ at least one fixed point
+
+assign each fixed point index $\nu_i$
+
+$⇒$ Lefschetz number $L=∑_i\nu_i$ is topological invariant
