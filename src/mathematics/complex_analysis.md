@@ -250,14 +250,6 @@ $⇔ \bar f$ holomorphic in $D$
 
 $⇔ |f|$ is constant
 
-# harmonic function
-
-$h:D ⊆ \R^2 → \R$ with continuous second partial derivative
-
-$$
-h_{xx}+h_{yy}=0
-$$
-
 # parametric curve
 
 complex-valued function
@@ -995,3 +987,35 @@ smooth $C_1,C_2$ at $z_0$ and intersect with acute angle $\psi$
 $⇒ f(C_1),f(C_2)$ intersect at $f(z_0)$ with acute angle $\psi$
 
 proof by taking $f'(z_0)$ through $C_1$ and $C_2$ and their equality
+
+## conformal transformation preserve harmonic
+
+# harmonic function
+
+$h:D ⊆ \R^2 → \R$ with continuous second partial derivative
+satisfy Laplace's equation
+
+$$
+h_{xx}+h_{yy}=0
+$$
+
+## Dirichlet problem
+
+hormonic $\phi:R → \R$,\
+prescribed $\phi(∂R)$,\
+find $\phi$
+
+- Neumann problem, prescribed $\nabla\phi(∂R)$
+
+## maximum principle
+
+simply connected $R$ bounded by simple closed $C$,\
+$\phi$ harmonic on $R$
+
+$⇒ \phi$ attain extremum on boundary
+
+## uniqueness of solution to Dirichlet problem
+
+simply connected $R$ bounded by simple closed $C$
+
+$⇒ \phi$ is unique
