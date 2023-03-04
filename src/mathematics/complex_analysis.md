@@ -998,6 +998,8 @@ $$
 \frac{(z-z_1)(z_2-z_3)}{(z-z_3)(z_2-z_1)}
 $$
 
+- $∞$ can be canceled
+
 # conformal transformation
 
 $f:D → \mathbb C$
@@ -1031,6 +1033,10 @@ proof by taking $f'(z_0)$ through $C_1$ and $C_2$ and their equality
 
 ## conformal transformation preserve harmonic
 
+proof by constructing $f$ s.t. $\phi=Re\ f$
+
+- $T(C)=k$ on smooth $C ⇒ \Phi(T(C))=k$
+
 # harmonic function
 
 $h:D ⊆ \R^2 → \R$ with continuous second partial derivative
@@ -1055,8 +1061,14 @@ $\phi$ harmonic on $R$
 
 $⇒ \phi$ attain extremum on boundary
 
+proof by constructing $f$ s.t. $\phi=Re\ f$ and
+using maximum modulus principle
+
 ## uniqueness of solution to Dirichlet problem
 
 simply connected $R$ bounded by simple closed $C$
 
 $⇒ \phi$ is unique
+
+proof by assuming both $\phi_1,\phi_2$ are solutions and
+arguing their difference is $0$ using maximum principle
