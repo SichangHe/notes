@@ -947,20 +947,37 @@ $$
 # Möbius transformation
 
 $$
-f(z)=\frac{az+b}{cz+d}:\bar{\mathbb C} → \bar{\mathbb C},\qquad
+T(z)=\frac{az+b}{cz+d}:\bar{\mathbb C} → \bar{\mathbb C},\qquad
 ad-bc≠0
 $$
 
 - extended complex plane $\bar{\mathbb C}:=\mathbb C\cup\{∞\}$
-- only singularity is simple pole $\frac{d}{c}$
+- only singularity is simple pole $-\frac{d}{c}$
+- inverse
+
+    $$
+    T^{-1}(w)=\frac{b-dw}{cw-a}
+    $$
+
 - derivative non-zero
 
     $$
-    f'(z)=\frac{ad-bc}{(cz+d)^2}≠0
+    T'(z)=\frac{ad-bc}{(cz+d)^2}≠0
+    $$
+
+    - analytic except at pole
+    - non-constant mapping
+- is composition of linear transformation and inversion
+
+    $$
+    f_1(z)=cz+d,\quad
+    f_2(z)=\frac{1}{z},\quad
+    f_3(z)=\frac{a}{c}-\frac{ad-bc}{c}z\\[6pt] ⇒
+    T=f_1\circ f_2\circ f_3
     $$
 
 - they are a group
-- map circle to circle
+- map circle to circle in $\bar{\mathbb C}$
     - line are circle of infinite radius through $∞$
 - need $3$ point to specify
 
