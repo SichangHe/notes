@@ -920,6 +920,30 @@ one can be continuously deformed into another without crossing point $w$
 
 $⇔ \nu(\Gamma,w)=\nu(\tilde\Gamma,w)$
 
+## vector field index theorem
+
+vector field $V:z\mapsto f(z)$,\
+simple closed contour $C$ enclose singularity $z_i, i=1,2,\cdots$ of $V$
+with index $I_V(C_i) ⇒$
+
+$$
+I_V(C_i)=\nu(\Gamma,0)=Z-P=∑_iI_V(C_i)
+$$
+
+### vector field singularity
+
+zero or pole of $f$
+
+### vector field index
+
+positively oriented contour $C_i$ enclose singularity $z_i$ of $V$
+
+vector field index is integer number of rotation of $V$ traversing $C_i$
+
+$$
+I_V(C_i)=\nu(\Gamma_i,0)
+$$
+
 # Möbius transformation
 
 $$
