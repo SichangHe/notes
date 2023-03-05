@@ -232,12 +232,6 @@ $f$ differentiable at each point in $U_\varepsilon(z_0) ⊆ D$
 
 holomorphic at every finite point
 
-### singularity
-
-$z_0$ is singularity $⇔$
-
-$f$ holomorphic in $\hat U_\varepsilon(z_0)$ and not at $z_0$
-
 ### constancy from holomorphicity
 
 $f$ holomorphic, in $D$
@@ -622,6 +616,10 @@ $$
     $$
 
 # singularity
+
+$z_0$ is singularity $⇔$
+
+$f$ holomorphic in $\hat U_\varepsilon(z_0)$ and not at $z_0$
 
 ## isolated singularity
 
