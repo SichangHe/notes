@@ -98,7 +98,7 @@ $\varepsilon>0$
 open $\varepsilon$-neighborhood
 
 $$
-U_\varepsilon(z_0)=\{z\in\mathbb C:|z=z_0|<\varepsilon\}
+U_\varepsilon(z_0)=\{z\in\mathbb C:|z-z_0|<\varepsilon\}
 \in\mathcal O_s
 $$
 
@@ -695,7 +695,7 @@ $$
 #### zero and pole
 
 $p,q$ analytic,\
-$q$ has zero of order $m$ at at $z_0$\
+$q$ has zero of order $m$ at at $z_0$,\
 $p(z_0)≠0$
 
 $⇒ \frac{p}{q}$ has pole of order $m$ at $z_0$
@@ -783,7 +783,7 @@ by upper semicircle $C_i:|z-x_i|=r_i$ with $r_i → 0$
 
 $f$ analytic on $0<|z-x_i|<r$,\
 clockwise upper semicircle $C_i:z=x_i+r_ie^{i\theta},\pi≥\theta≥0,r_i<r$,\
-Larent series of $f$ about $x_i$ contain *no even negative* power
+Laurent series of $f$ about $x_i$ contain *no even negative* power
 
 $$
 ⇒ \lim_{r_i → 0}∫_{C_i}f(z)\ dz=-i\pi\ res\ f(x_i)
@@ -988,7 +988,7 @@ $$
 
 ## cross-ratio
 
-map $3$ distince point $z_1,z_2,z_3$ to $w=T(z)$ by\
+map $3$ distinct point $z_1,z_2,z_3$ to $w=T(z)$ by\
 $z_1\mapsto w_1,z_2\mapsto w_2,z_3\mapsto w_3$
 
 $$
