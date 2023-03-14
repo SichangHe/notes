@@ -10,6 +10,8 @@
     - [Visualization](data_science/visualization.md)
 - [Documentation](documentation/index.md)
     - [Pandoc](documentation/pandoc.md)
+- [Exams](exams/index.md)
+    - [TOEFL](exams/toefl.md)
 - [macOS](macos/index.md)
     - [Sucklessfy](macos/sucklessfy.md)
 - [Mathematics](mathematics/index.md)

@@ -94,7 +94,7 @@ fd .git -H -t d -x git --git-dir={} fetch \; -x git --git-dir={} --work-tree {}/
 delete all history of a certain file (*deprecated*)
 
 ```shell
-git filter-branch --index-filter \
+FILTER_BRANCH_SQUELCH_WARNING=1 git filter-branch --index-filter \
     'git rm -rf --cached --ignore-unmatch <path_to_file>' HEAD
 ```
 

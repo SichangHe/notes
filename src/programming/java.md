@@ -308,6 +308,13 @@ System.out.printf(“string1%w1.p1c1… string2”,output1,…)
 - must have `%` and `c`
 - [standard string format in Java](https://docs.oracle.com/javase/tutorial/java/data/numberformat.html)
 
+### pretty print object
+
+```java
+Gson gson = new GsonBuilder().setPrettyPrinting().serializeNulls().create();
+gson.toJson(object0);
+```
+
 # class
 
 ## class as function library
