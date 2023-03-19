@@ -6,18 +6,13 @@ src = "src"
 title = "Steven's Notes"
 
 [build]
-build-dir = "."
+build-dir = "html"
 
 [output.html]
 git-repository-url = "https://github.com/SichangHe/notes"
 
-[output.katex]
-
 [preprocessor.katex]
-renderer = ["html"]
 include-src = true
 
 [preprocessor.toc]
-command = "mdbook-toc"
-renderer = ["html"]
 before = ["katex"]
