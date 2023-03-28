@@ -6,6 +6,7 @@
 - [Computer Science](cs/index.md)
     - [Discrete Mathematics for Computer Science](cs/discrete_math.md)
     - [Machine Learning](cs/machine_learning.md)
+    - [Networking](cs/networking.md)
 - [Data Science](data_science/index.md)
     - [Visualization](data_science/visualization.md)
 - [Documentation](documentation/index.md)

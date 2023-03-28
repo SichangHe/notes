@@ -13,6 +13,8 @@
 
 ## speaking
 
+do not add stuff not on notes
+
 ### defend personal choice
 
 - give example
