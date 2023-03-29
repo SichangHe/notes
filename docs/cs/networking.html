@@ -154,7 +154,25 @@
 <li><a href="#networking">Networking</a>
 <ul>
 <li><a href="#encodingdecoding">encoding/decoding</a></li>
-<li><a href="#framing">framing</a></li>
+<li><a href="#framing">framing</a>
+<ul>
+<li><a href="#error-handling-for-framing">error handling for framing</a></li>
+</ul>
+</li>
+<li><a href="#reliable-transmission">reliable transmission</a>
+<ul>
+<li><a href="#stop-and-wait-transmission">stop-and-wait transmission</a></li>
+<li><a href="#continuous-transmission-sliding-window-algorithm">continuous transmission: sliding window algorithm</a>
+<ul>
+<li><a href="#go-back-n">go-back-<data class="katex-src" value="n"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span></data></a></li>
+<li><a href="#duplicate-ack">duplicate ACK</a></li>
+<li><a href="#selective-ack">selective ACK</a></li>
+<li><a href="#sliding-window-performance">sliding window performance</a></li>
+<li><a href="#sliding-window-frame-identifier-count">sliding window frame identifier count</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -211,6 +229,97 @@
 <li>high efficiency</li>
 </ul>
 </li>
+</ul>
+<h3 id="error-handling-for-framing"><a class="header" href="#error-handling-for-framing">error handling for framing</a></h3>
+<ul>
+<li>
+<p>parity bit: whether number of 1 is odd</p>
+<p>e.g. server RAM</p>
+<ul>
+<li>fast, easy in hardware</li>
+<li>miss many error</li>
+<li>high overhead</li>
+</ul>
+</li>
+<li>
+<p>checksum: add up all sequence of certain length</p>
+<p>e.g. internet checksum</p>
+<ul>
+<li>easy in software</li>
+<li>miss many error</li>
+</ul>
+</li>
+<li>
+<p>cyclic redundancy check (CRC):
+divide message as a polynomial by generator polynomial</p>
+<p>e.g. BISYNC, DDCMP, HDLC, ethernet, Wi-Fi</p>
+<ul>
+<li>easy in hardware with shift register</li>
+<li>good implementation ensure catching
+<ul>
+<li>all single-bit error</li>
+<li>double bit error</li>
+<li>odd number of error</li>
+<li>burst of error shorter than <data class="katex-src" value="k"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span></data> bit</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="reliable-transmission"><a class="header" href="#reliable-transmission">reliable transmission</a></h2>
+<ul>
+<li>acknowledgement (ACK)</li>
+<li>timeout</li>
+</ul>
+<h3 id="stop-and-wait-transmission"><a class="header" href="#stop-and-wait-transmission">stop-and-wait transmission</a></h3>
+<p>if ACK arrive before timeout, send next frame, else, send same frame again</p>
+<ul>
+<li>timeout hard to choose</li>
+<li>need 1 bit for frame identifier and in ACK</li>
+<li>waste bandwidth</li>
+</ul>
+<h3 id="continuous-transmission-sliding-window-algorithm"><a class="header" href="#continuous-transmission-sliding-window-algorithm">continuous transmission: sliding window algorithm</a></h3>
+<p>sender</p>
+<ul>
+<li>send window size (SWS)</li>
+<li>last ACK received (LAR)</li>
+<li>last frame sent (LFS)</li>
+</ul>
+<p>receiver</p>
+<ul>
+<li>receive window size (RWS)</li>
+<li>largest frame acceptable (LFA)</li>
+<li>last frame received (LFR)</li>
+</ul>
+<h4 id="go-back-n"><a class="header" href="#go-back-n">go-back-<data class="katex-src" value="n"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span></data></a></h4>
+<p>resend all frame since first lost frame</p>
+<h4 id="duplicate-ack"><a class="header" href="#duplicate-ack">duplicate ACK</a></h4>
+<ul>
+<li>sender: resend on duplicate ACK</li>
+<li>receiver: resend ACK for the last in-order frame when frame out of order</li>
+</ul>
+<h4 id="selective-ack"><a class="header" href="#selective-ack">selective ACK</a></h4>
+<ul>
+<li>sender: resend missing frame between last ACK and SACK</li>
+<li>receiver: send SACK for out-of-order frame</li>
+</ul>
+<h4 id="sliding-window-performance"><a class="header" href="#sliding-window-performance">sliding window performance</a></h4>
+<p>utilize bandwidth</p>
+<p>frame size <data class="katex-src" value="f"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span></span></span></span></data>,<br />
+bandwidth <data class="katex-src" value="b"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">b</span></span></span></span></data>,<br />
+transmission time <data class="katex-src" value="t"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">t</span></span></span></span></data>,<br />
+round trip time <data class="katex-src" value="r"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span></span></span></span></data>,<br />
+time to first ACK <data class="katex-src" value="t_0"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7651em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></data>,<br />
+number of packet <data class="katex-src" value="n"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span></data></p>
+<p><data class="katex-src" value="
+t=\frac{f}{b}\\[6pt]
+t_0=t+r\\[6pt]
+n=\left\lceil \frac{t_0}{t} \right\rceil
+"><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0574em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">b</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span><span class="mspace newline" style="margin-top:0.6em;"></span><span class="base"><span class="strut" style="height:0.7651em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6984em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span></span><span class="mspace newline" style="margin-top:0.6em;"></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.4em;vertical-align:-0.95em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">⌈</span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.2921em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">t</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size3">⌉</span></span></span></span></span></span></span></data></p>
+<h4 id="sliding-window-frame-identifier-count"><a class="header" href="#sliding-window-frame-identifier-count">sliding window frame identifier count</a></h4>
+<ul>
+<li>smaller is better since overhead</li>
+<li>≥ SWS + RWS: prevent overlap of sequence</li>
 </ul>
 
                 </main>
