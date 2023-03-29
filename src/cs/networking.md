@@ -29,3 +29,90 @@
     - fixed size frame
     - need precise clock & synchronization phase
     - high efficiency
+
+### error handling for framing
+
+- parity bit: whether number of 1 is odd
+
+    e.g. server RAM
+    - fast, easy in hardware
+    - miss many error
+    - high overhead
+- checksum: add up all sequence of certain length
+
+    e.g. internet checksum
+    - easy in software
+    - miss many error
+- cyclic redundancy check (CRC):
+    divide message as a polynomial by generator polynomial
+
+    e.g. BISYNC, DDCMP, HDLC, ethernet, Wi-Fi
+    - easy in hardware with shift register
+    - good implementation ensure catching
+        - all single-bit error
+        - double bit error
+        - odd number of error
+        - burst of error shorter than $k$ bit
+
+## reliable transmission
+
+- acknowledgement (ACK)
+- timeout
+
+### stop-and-wait transmission
+
+if ACK arrive before timeout, send next frame, else, send same frame again
+
+- timeout hard to choose
+- need 1 bit for frame identifier and in ACK
+- waste bandwidth
+
+### continuous transmission: sliding window algorithm
+
+sender
+
+- send window size (SWS)
+- last ACK received (LAR)
+- last frame sent (LFS)
+
+receiver
+
+- receive window size (RWS)
+- largest frame acceptable (LFA)
+- last frame received (LFR)
+
+#### go-back-$n$
+
+resend all frame since first lost frame
+
+#### duplicate ACK
+
+- sender: resend on duplicate ACK
+- receiver: resend ACK for the last in-order frame when frame out of order
+
+#### selective ACK
+
+- sender: resend missing frame between last ACK and SACK
+- receiver: send SACK for out-of-order frame
+
+#### sliding window performance
+
+utilize bandwidth
+
+frame size $f$,\
+bandwidth $b$,\
+transmission time $t$,\
+round trip time $r$,\
+time to first ACK $t_0$,\
+number of packet $n$
+
+$$
+t=\frac{f}{b}\\[6pt]
+t_0=t+r\\[6pt]
+n=\left\lceil \frac{t_0}{t} \right\rceil
+$$
+
+#### sliding window frame identifier count
+
+- smaller is better since overhead
+- ≥ SWS + RWS: prevent overlap of sequence
