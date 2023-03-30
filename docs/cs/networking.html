@@ -151,8 +151,7 @@
                 <main>
                     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 <ul>
-<li><a href="#networking">Networking</a>
-<ul>
+<li><a href="#networking">Networking</a></li>
 <li><a href="#encodingdecoding">encoding/decoding</a></li>
 <li><a href="#framing">framing</a>
 <ul>
@@ -173,11 +172,14 @@
 </li>
 </ul>
 </li>
+<li><a href="#ethernet">Ethernet</a>
+<ul>
+<li><a href="#ethernet-switch">Ethernet switch</a></li>
 </ul>
 </li>
 </ul>
 <h1 id="networking"><a class="header" href="#networking">Networking</a></h1>
-<h2 id="encodingdecoding"><a class="header" href="#encodingdecoding">encoding/decoding</a></h2>
+<h1 id="encodingdecoding"><a class="header" href="#encodingdecoding">encoding/decoding</a></h1>
 <ul>
 <li>non-return to zero (NRZ)
 <ul>
@@ -199,7 +201,7 @@
 </li>
 <li>modulation</li>
 </ul>
-<h2 id="framing"><a class="header" href="#framing">framing</a></h2>
+<h1 id="framing"><a class="header" href="#framing">framing</a></h1>
 <ul>
 <li>sentinel-based framing
 <ul>
@@ -230,7 +232,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="error-handling-for-framing"><a class="header" href="#error-handling-for-framing">error handling for framing</a></h3>
+<h2 id="error-handling-for-framing"><a class="header" href="#error-handling-for-framing">error handling for framing</a></h2>
 <ul>
 <li>
 <p>parity bit: whether number of 1 is odd</p>
@@ -266,19 +268,19 @@ divide message as a polynomial by generator polynomial</p>
 </ul>
 </li>
 </ul>
-<h2 id="reliable-transmission"><a class="header" href="#reliable-transmission">reliable transmission</a></h2>
+<h1 id="reliable-transmission"><a class="header" href="#reliable-transmission">reliable transmission</a></h1>
 <ul>
 <li>acknowledgement (ACK)</li>
 <li>timeout</li>
 </ul>
-<h3 id="stop-and-wait-transmission"><a class="header" href="#stop-and-wait-transmission">stop-and-wait transmission</a></h3>
+<h2 id="stop-and-wait-transmission"><a class="header" href="#stop-and-wait-transmission">stop-and-wait transmission</a></h2>
 <p>if ACK arrive before timeout, send next frame, else, send same frame again</p>
 <ul>
 <li>timeout hard to choose</li>
 <li>need 1 bit for frame identifier and in ACK</li>
 <li>waste bandwidth</li>
 </ul>
-<h3 id="continuous-transmission-sliding-window-algorithm"><a class="header" href="#continuous-transmission-sliding-window-algorithm">continuous transmission: sliding window algorithm</a></h3>
+<h2 id="continuous-transmission-sliding-window-algorithm"><a class="header" href="#continuous-transmission-sliding-window-algorithm">continuous transmission: sliding window algorithm</a></h2>
 <p>sender</p>
 <ul>
 <li>send window size (SWS)</li>
@@ -291,19 +293,19 @@ divide message as a polynomial by generator polynomial</p>
 <li>largest frame acceptable (LFA)</li>
 <li>last frame received (LFR)</li>
 </ul>
-<h4 id="go-back-n"><a class="header" href="#go-back-n">go-back-<data class="katex-src" value="n"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span></data></a></h4>
+<h3 id="go-back-n"><a class="header" href="#go-back-n">go-back-<data class="katex-src" value="n"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span></data></a></h3>
 <p>resend all frame since first lost frame</p>
-<h4 id="duplicate-ack"><a class="header" href="#duplicate-ack">duplicate ACK</a></h4>
+<h3 id="duplicate-ack"><a class="header" href="#duplicate-ack">duplicate ACK</a></h3>
 <ul>
 <li>sender: resend on duplicate ACK</li>
 <li>receiver: resend ACK for the last in-order frame when frame out of order</li>
 </ul>
-<h4 id="selective-ack"><a class="header" href="#selective-ack">selective ACK</a></h4>
+<h3 id="selective-ack"><a class="header" href="#selective-ack">selective ACK</a></h3>
 <ul>
 <li>sender: resend missing frame between last ACK and SACK</li>
 <li>receiver: send SACK for out-of-order frame</li>
 </ul>
-<h4 id="sliding-window-performance"><a class="header" href="#sliding-window-performance">sliding window performance</a></h4>
+<h3 id="sliding-window-performance"><a class="header" href="#sliding-window-performance">sliding window performance</a></h3>
 <p>utilize bandwidth</p>
 <p>frame size <data class="katex-src" value="f"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span></span></span></span></data>,<br />
 bandwidth <data class="katex-src" value="b"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">b</span></span></span></span></data>,<br />
@@ -316,10 +318,20 @@ t=\frac{f}{b}\\[6pt]
 t_0=t+r\\[6pt]
 n=\left\lceil \frac{t_0}{t} \right\rceil
 "><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0574em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">b</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span><span class="mspace newline" style="margin-top:0.6em;"></span><span class="base"><span class="strut" style="height:0.7651em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6984em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span></span><span class="mspace newline" style="margin-top:0.6em;"></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.4em;vertical-align:-0.95em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">⌈</span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.2921em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">t</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size3">⌉</span></span></span></span></span></span></span></data></p>
-<h4 id="sliding-window-frame-identifier-count"><a class="header" href="#sliding-window-frame-identifier-count">sliding window frame identifier count</a></h4>
+<h3 id="sliding-window-frame-identifier-count"><a class="header" href="#sliding-window-frame-identifier-count">sliding window frame identifier count</a></h3>
 <ul>
 <li>smaller is better since overhead</li>
 <li>≥ SWS + RWS: prevent overlap of sequence</li>
+</ul>
+<h1 id="ethernet"><a class="header" href="#ethernet">Ethernet</a></h1>
+<ul>
+<li>carrier sense: idle/busy</li>
+<li>multiple access: share medium and broadcast</li>
+<li>collision detection</li>
+</ul>
+<h2 id="ethernet-switch"><a class="header" href="#ethernet-switch">Ethernet switch</a></h2>
+<ul>
+<li>point-to-point</li>
 </ul>
 
                 </main>
