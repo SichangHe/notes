@@ -1,7 +1,7 @@
 <!-- toc -->
 # Networking
 
-## encoding/decoding
+# encoding/decoding
 
 - non-return to zero (NRZ)
     - baseline wander
@@ -14,7 +14,7 @@
     - 128b/130b
 - modulation
 
-## framing
+# framing
 
 - sentinel-based framing
     - BISYNC, PPP
@@ -30,7 +30,7 @@
     - need precise clock & synchronization phase
     - high efficiency
 
-### error handling for framing
+## error handling for framing
 
 - parity bit: whether number of 1 is odd
 
@@ -54,12 +54,12 @@
         - odd number of error
         - burst of error shorter than $k$ bit
 
-## reliable transmission
+# reliable transmission
 
 - acknowledgement (ACK)
 - timeout
 
-### stop-and-wait transmission
+## stop-and-wait transmission
 
 if ACK arrive before timeout, send next frame, else, send same frame again
 
@@ -67,7 +67,7 @@ if ACK arrive before timeout, send next frame, else, send same frame again
 - need 1 bit for frame identifier and in ACK
 - waste bandwidth
 
-### continuous transmission: sliding window algorithm
+## continuous transmission: sliding window algorithm
 
 sender
 
@@ -81,21 +81,21 @@ receiver
 - largest frame acceptable (LFA)
 - last frame received (LFR)
 
-#### go-back-$n$
+### go-back-$n$
 
 resend all frame since first lost frame
 
-#### duplicate ACK
+### duplicate ACK
 
 - sender: resend on duplicate ACK
 - receiver: resend ACK for the last in-order frame when frame out of order
 
-#### selective ACK
+### selective ACK
 
 - sender: resend missing frame between last ACK and SACK
 - receiver: send SACK for out-of-order frame
 
-#### sliding window performance
+### sliding window performance
 
 utilize bandwidth
 
@@ -112,7 +112,17 @@ t_0=t+r\\[6pt]
 n=\left\lceil \frac{t_0}{t} \right\rceil
 $$
 
-#### sliding window frame identifier count
+### sliding window frame identifier count
 
 - smaller is better since overhead
 - ≥ SWS + RWS: prevent overlap of sequence
+
+# Ethernet
+
+- carrier sense: idle/busy
+- multiple access: share medium and broadcast
+- collision detection
+
+## Ethernet switch
+
+- point-to-point
