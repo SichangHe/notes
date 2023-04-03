@@ -175,8 +175,15 @@
 <li><a href="#ethernet">Ethernet</a>
 <ul>
 <li><a href="#ethernet-switch">Ethernet switch</a></li>
+<li><a href="#ethernet-address">Ethernet address</a></li>
 </ul>
 </li>
+<li><a href="#wi-fi">Wi-Fi</a>
+<ul>
+<li><a href="#wi-fi-distribution-system">Wi-Fi distribution system</a></li>
+</ul>
+</li>
+<li><a href="#network-switch">network switch</a></li>
 </ul>
 <h1 id="networking"><a class="header" href="#networking">Networking</a></h1>
 <h1 id="encodingdecoding"><a class="header" href="#encodingdecoding">encoding/decoding</a></h1>
@@ -331,7 +338,42 @@ n=\left\lceil \frac{t_0}{t} \right\rceil
 </ul>
 <h2 id="ethernet-switch"><a class="header" href="#ethernet-switch">Ethernet switch</a></h2>
 <ul>
-<li>point-to-point</li>
+<li>usually point-to-point</li>
+<li>high collision</li>
+</ul>
+<h2 id="ethernet-address"><a class="header" href="#ethernet-address">Ethernet address</a></h2>
+<p>48 bit printed in hex separated per byte by colon</p>
+<ul>
+<li>unique</li>
+<li>manufacturer are allocated 3-byte OUI</li>
+<li>broadcast address FF:FF:FF:FF:FF:FF</li>
+</ul>
+<h1 id="wi-fi"><a class="header" href="#wi-fi">Wi-Fi</a></h1>
+<ul>
+<li>carrier sense</li>
+<li>multiple access</li>
+<li>collision avoidance
+<ul>
+<li>request to send (RTS): inform future send</li>
+<li>clear to send (CTS): reserve medium</li>
+</ul>
+</li>
+</ul>
+<h2 id="wi-fi-distribution-system"><a class="header" href="#wi-fi-distribution-system">Wi-Fi distribution system</a></h2>
+<ul>
+<li>access point connected to Ethernet</li>
+<li>automatic handover
+<ul>
+<li>support client mobility</li>
+<li>new access point inform old one</li>
+</ul>
+</li>
+</ul>
+<h1 id="network-switch"><a class="header" href="#network-switch">network switch</a></h1>
+<p>interconnect link of the same type</p>
+<ul>
+<li>many port</li>
+<li>can connect to each other</li>
 </ul>
 
                 </main>
