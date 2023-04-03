@@ -125,4 +125,35 @@ $$
 
 ## Ethernet switch
 
-- point-to-point
+- usually point-to-point
+- high collision
+
+## Ethernet address
+
+48 bit printed in hex separated per byte by colon
+
+- unique
+- manufacturer are allocated 3-byte OUI
+- broadcast address FF:FF:FF:FF:FF:FF
+
+# Wi-Fi
+
+- carrier sense
+- multiple access
+- collision avoidance
+    - request to send (RTS): inform future send
+    - clear to send (CTS): reserve medium
+
+## Wi-Fi distribution system
+
+- access point connected to Ethernet
+- automatic handover
+    - support client mobility
+    - new access point inform old one
+
+# network switch
+
+interconnect link of the same type
+
+- many port
+- can connect to each other
