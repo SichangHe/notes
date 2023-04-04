@@ -157,3 +157,59 @@ interconnect link of the same type
 
 - many port
 - can connect to each other
+
+# forwarding
+
+- require unique address
+
+## packet forwarding (frame-based forwarding)
+
+- each frame contain enough information of destination (overhead)
+- no reachability information
+- independent forwarding
+- congestion
+- network switch keep forwarding table
+    - map destination to outgoing port
+
+## circuit-based forwarding
+
+- need establish circuit (stateful)
+    - virtual circuit established on demand
+    - circuit establishment request use frame forwarding
+- network switch keep virtual circuit table
+    - input port, input id, output port, output id
+
+## source-based routing
+
+- origin provide forwarding information
+    - specify each output port in switch
+        - intermediate switch shift array
+    - address of each switch
+- origin need global view
+- frame header size undefined
+
+usage
+
+- establish virtual circuit
+- go around failure
+- hide origin of packet for attack
+    - mostly disabled
+
+# Ethernet switch device
+
+multiple Ethernet interface
+
+- build forwarding table
+- broadcast if destination not on forwarding table
+- remove old entry
+
+## spanning tree algorithm
+
+- disable some link to eliminate loop
+- switch with lowest ID is the root
+- each switch start with self as root and broadcast root and distance
+- broadcast storm: broadcast cycle
+
+## repeater
+
+- increase collision
