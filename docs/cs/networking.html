@@ -184,6 +184,19 @@
 </ul>
 </li>
 <li><a href="#network-switch">network switch</a></li>
+<li><a href="#forwarding">forwarding</a>
+<ul>
+<li><a href="#packet-forwarding-frame-based-forwarding">packet forwarding (frame-based forwarding)</a></li>
+<li><a href="#circuit-based-forwarding">circuit-based forwarding</a></li>
+<li><a href="#source-based-routing">source-based routing</a></li>
+</ul>
+</li>
+<li><a href="#ethernet-switch-device">Ethernet switch device</a>
+<ul>
+<li><a href="#spanning-tree-algorithm">spanning tree algorithm</a></li>
+<li><a href="#repeater">repeater</a></li>
+</ul>
+</li>
 </ul>
 <h1 id="networking"><a class="header" href="#networking">Networking</a></h1>
 <h1 id="encodingdecoding"><a class="header" href="#encodingdecoding">encoding/decoding</a></h1>
@@ -374,6 +387,79 @@ n=\left\lceil \frac{t_0}{t} \right\rceil
 <ul>
 <li>many port</li>
 <li>can connect to each other</li>
+</ul>
+<h1 id="forwarding"><a class="header" href="#forwarding">forwarding</a></h1>
+<ul>
+<li>require unique address</li>
+</ul>
+<h2 id="packet-forwarding-frame-based-forwarding"><a class="header" href="#packet-forwarding-frame-based-forwarding">packet forwarding (frame-based forwarding)</a></h2>
+<ul>
+<li>each frame contain enough information of destination (overhead)</li>
+<li>no reachability information</li>
+<li>independent forwarding</li>
+<li>congestion</li>
+<li>network switch keep forwarding table
+<ul>
+<li>map destination to outgoing port</li>
+</ul>
+</li>
+</ul>
+<h2 id="circuit-based-forwarding"><a class="header" href="#circuit-based-forwarding">circuit-based forwarding</a></h2>
+<ul>
+<li>need establish circuit (stateful)
+<ul>
+<li>virtual circuit established on demand</li>
+<li>circuit establishment request use frame forwarding</li>
+</ul>
+</li>
+<li>network switch keep virtual circuit table
+<ul>
+<li>input port, input id, output port, output id</li>
+</ul>
+</li>
+</ul>
+<h2 id="source-based-routing"><a class="header" href="#source-based-routing">source-based routing</a></h2>
+<ul>
+<li>origin provide forwarding information
+<ul>
+<li>specify each output port in switch
+<ul>
+<li>intermediate switch shift array</li>
+</ul>
+</li>
+<li>address of each switch</li>
+</ul>
+</li>
+<li>origin need global view</li>
+<li>frame header size undefined</li>
+</ul>
+<p>usage</p>
+<ul>
+<li>establish virtual circuit</li>
+<li>go around failure</li>
+<li>hide origin of packet for attack
+<ul>
+<li>mostly disabled</li>
+</ul>
+</li>
+</ul>
+<h1 id="ethernet-switch-device"><a class="header" href="#ethernet-switch-device">Ethernet switch device</a></h1>
+<p>multiple Ethernet interface</p>
+<ul>
+<li>build forwarding table</li>
+<li>broadcast if destination not on forwarding table</li>
+<li>remove old entry</li>
+</ul>
+<h2 id="spanning-tree-algorithm"><a class="header" href="#spanning-tree-algorithm">spanning tree algorithm</a></h2>
+<ul>
+<li>disable some link to eliminate loop</li>
+<li>switch with lowest ID is the root</li>
+<li>each switch start with self as root and broadcast root and distance</li>
+<li>broadcast storm: broadcast cycle</li>
+</ul>
+<h2 id="repeater"><a class="header" href="#repeater">repeater</a></h2>
+<ul>
+<li>increase collision</li>
 </ul>
 
                 </main>
