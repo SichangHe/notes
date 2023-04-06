@@ -195,6 +195,16 @@
 <ul>
 <li><a href="#spanning-tree-algorithm">spanning tree algorithm</a></li>
 <li><a href="#repeater">repeater</a></li>
+<li><a href="#virtual-local-area-network-vlan">virtual local area network (VLAN)</a></li>
+</ul>
+</li>
+<li><a href="#interconnect-network">interconnect network</a>
+<ul>
+<li><a href="#internet-protocol-ip">internet protocol (IP)</a>
+<ul>
+<li><a href="#ip-fragmentation">IP fragmentation</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -455,11 +465,55 @@ n=\left\lceil \frac{t_0}{t} \right\rceil
 <li>disable some link to eliminate loop</li>
 <li>switch with lowest ID is the root</li>
 <li>each switch start with self as root and broadcast root and distance</li>
+</ul>
+<p>reason</p>
+<ul>
 <li>broadcast storm: broadcast cycle</li>
+</ul>
+<p>drawback</p>
+<ul>
+<li>waste bandwidth</li>
+<li><data class="katex-src" value="O(d)"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">d</span><span class="mclose">)</span></span></span></span></data> where <data class="katex-src" value="d"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">d</span></span></span></span></data> is diameter of network, slow to converge if <data class="katex-src" value="d"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">d</span></span></span></span></data> large</li>
 </ul>
 <h2 id="repeater"><a class="header" href="#repeater">repeater</a></h2>
 <ul>
 <li>increase collision</li>
+</ul>
+<h2 id="virtual-local-area-network-vlan"><a class="header" href="#virtual-local-area-network-vlan">virtual local area network (VLAN)</a></h2>
+<ul>
+<li>additional field in frame header</li>
+<li>block invalid address</li>
+<li>scoped broadcast</li>
+</ul>
+<h1 id="interconnect-network"><a class="header" href="#interconnect-network">interconnect network</a></h1>
+<ul>
+<li>failed attempt to convert packet</li>
+</ul>
+<h2 id="internet-protocol-ip"><a class="header" href="#internet-protocol-ip">internet protocol (IP)</a></h2>
+<ul>
+<li>service model
+<ul>
+<li>no guarantee</li>
+<li>most basic requirement on link layer, work everywhere</li>
+</ul>
+</li>
+<li>packet header</li>
+</ul>
+<h3 id="ip-fragmentation"><a class="header" href="#ip-fragmentation">IP fragmentation</a></h3>
+<p>what to do when packet size exceed frame size</p>
+<ul>
+<li>reassemble packet at destination</li>
+<li>in frame header
+<ul>
+<li>use same identifier, indicate following fragment with flag</li>
+</ul>
+</li>
+<li>alternative: drop packet
+<ul>
+<li>default in IPv6</li>
+<li>tell sender maximum valid size</li>
+</ul>
+</li>
 </ul>
 
                 </main>
