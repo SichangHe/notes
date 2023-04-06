@@ -208,8 +208,44 @@ multiple Ethernet interface
 - disable some link to eliminate loop
 - switch with lowest ID is the root
 - each switch start with self as root and broadcast root and distance
+
+reason
+
 - broadcast storm: broadcast cycle
+
+drawback
+
+- waste bandwidth
+- $O(d)$ where $d$ is diameter of network, slow to converge if $d$ large
 
 ## repeater
 
 - increase collision
+
+## virtual local area network (VLAN)
+
+- additional field in frame header
+- block invalid address
+- scoped broadcast
+
+# interconnect network
+
+- failed attempt to convert packet
+
+## internet protocol (IP)
+
+- service model
+    - no guarantee
+    - most basic requirement on link layer, work everywhere
+- packet header
+
+### IP fragmentation
+
+what to do when packet size exceed frame size
+
+- reassemble packet at destination
+- in frame header
+    - use same identifier, indicate following fragment with flag
+- alternative: drop packet
+    - default in IPv6
+    - tell sender maximum valid size
