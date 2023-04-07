@@ -205,6 +205,20 @@
 <li><a href="#ip-fragmentation">IP fragmentation</a></li>
 </ul>
 </li>
+<li><a href="#ip-address">IP address</a>
+<ul>
+<li><a href="#network-information-center-nic">network information center (NIC)</a></li>
+<li><a href="#ipv4">IPv4</a></li>
+<li><a href="#ipv6">IPv6</a></li>
+<li><a href="#subnetcidr">subnet/CIDR</a></li>
+</ul>
+</li>
+<li><a href="#ip-forwarding-by-router">IP forwarding by router</a>
+<ul>
+<li><a href="#default-route">default route</a></li>
+</ul>
+</li>
+<li><a href="#routing-table">routing table</a></li>
 </ul>
 </li>
 </ul>
@@ -505,7 +519,9 @@ n=\left\lceil \frac{t_0}{t} \right\rceil
 <li>reassemble packet at destination</li>
 <li>in frame header
 <ul>
-<li>use same identifier, indicate following fragment with flag</li>
+<li>use same identifier</li>
+<li>indicate following fragment with flags</li>
+<li>help reassemble with offset</li>
 </ul>
 </li>
 <li>alternative: drop packet
@@ -514,6 +530,49 @@ n=\left\lceil \frac{t_0}{t} \right\rceil
 <li>tell sender maximum valid size</li>
 </ul>
 </li>
+</ul>
+<h2 id="ip-address"><a class="header" href="#ip-address">IP address</a></h2>
+<ul>
+<li>hierarchical</li>
+<li>network identifier</li>
+<li>node identifier</li>
+</ul>
+<h3 id="network-information-center-nic"><a class="header" href="#network-information-center-nic">network information center (NIC)</a></h3>
+<h3 id="ipv4"><a class="header" href="#ipv4">IPv4</a></h3>
+<ul>
+<li>class A: big network, first byte &lt; 128, 1 byte reserved</li>
+<li>class B: smaller, first byte 129 ~ 191, 2 byte reserved</li>
+<li>class C: small, first byte ≥ 192, 3 byte reserved</li>
+</ul>
+<h3 id="ipv6"><a class="header" href="#ipv6">IPv6</a></h3>
+<ul>
+<li>16 byte</li>
+<li>written in hex, 2 byte between each colon, <data class="katex-src" value="0"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span></data>s omitted</li>
+</ul>
+<h3 id="subnetcidr"><a class="header" href="#subnetcidr">subnet/CIDR</a></h3>
+<p>split address</p>
+<ul>
+<li>length <code>x.y.z.w/l</code>
+<ul>
+<li>bit not masked determine subnet size</li>
+<li>network smaller than <code>/24</code> usually not allowed in routing table</li>
+</ul>
+</li>
+<li>netmask: same as length, <data class="katex-src" value="1"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span></data>s followed by <data class="katex-src" value="0"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span></data>s</li>
+<li>can split large subnet/ aggregate small subnet and advertise big network</li>
+<li>routing table can have overlapping entry, specific one used</li>
+</ul>
+<h2 id="ip-forwarding-by-router"><a class="header" href="#ip-forwarding-by-router">IP forwarding by router</a></h2>
+<ul>
+<li>if interface is connected to destination network,
+find link-layer address (e.g. MAC) and deliver over local network</li>
+<li>else, find a router nearer to destination and do the above to it</li>
+</ul>
+<h3 id="default-route"><a class="header" href="#default-route">default route</a></h3>
+<p>just deliver to this route if not in my routing table</p>
+<h2 id="routing-table"><a class="header" href="#routing-table">routing table</a></h2>
+<ul>
+<li>can configure manually but usually automatically by routing protocol</li>
 </ul>
 
                 </main>
