@@ -245,7 +245,53 @@ what to do when packet size exceed frame size
 
 - reassemble packet at destination
 - in frame header
-    - use same identifier, indicate following fragment with flag
+    - use same identifier
+    - indicate following fragment with flags
+    - help reassemble with offset
 - alternative: drop packet
     - default in IPv6
     - tell sender maximum valid size
+
+## IP address
+
+- hierarchical
+- network identifier
+- node identifier
+
+### network information center (NIC)
+
+### IPv4
+
+- class A: big network, first byte < 128, 1 byte reserved
+- class B: smaller, first byte 129 ~ 191, 2 byte reserved
+- class C: small, first byte ≥ 192, 3 byte reserved
+
+### IPv6
+
+- 16 byte
+- written in hex, 2 byte between each colon, $0$s omitted
+
+### subnet/CIDR
+
+split address
+
+- length `x.y.z.w/l`
+    - bit not masked determine subnet size
+    - network smaller than `/24` usually not allowed in routing table
+- netmask: same as length, $1$s followed by $0$s
+- can split large subnet/ aggregate small subnet and advertise big network
+- routing table can have overlapping entry, specific one used
+
+## IP forwarding by router
+
+- if interface is connected to destination network,
+    find link-layer address (e.g. MAC) and deliver over local network
+- else, find a router nearer to destination and do the above to it
+
+### default route
+
+just deliver to this route if not in my routing table
+
+## routing table
+
+- can configure manually but usually automatically by routing protocol
