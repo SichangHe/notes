@@ -285,8 +285,18 @@ split address
 ## IP forwarding by router
 
 - if interface is connected to destination network,
-    find link-layer address (e.g. MAC) and deliver over local network
+    translate to link-layer address (e.g. MAC) and deliver over local network
 - else, find a router nearer to destination and do the above to it
+
+### address translation
+
+- build link-layer address from IP
+    - does not work, e.g. IPv4 address (4 byte) to MAC (6 byte)
+    - privacy leak, e.g. IPv6 EUI-64 deprecated
+- address resolution protocol (ARP)
+    - source broadcast ARP request
+    - matching node send ARP response with link-layer address to requester
+- neighbor discovery protocol (NDP) for IPv6
 
 ### default route
 
@@ -295,3 +305,34 @@ just deliver to this route if not in my routing table
 ## routing table
 
 - can configure manually but usually automatically by routing protocol
+
+## node configuration
+
+- manual configuration: maintain IP allocation table
+- autoconfiguration: DHCP
+
+### dynamic host configuration protocol (DHCP)
+
+- client without IP address broadcast DHCP discover message
+- DHCP server respond with configuration
+    - IP address
+    - DNS server
+    - default gateway
+    - lease duration
+- DHCP server reserve IP prefix and give new device unallocated IP address
+- DHCP relay allow multiple network to use 1 DHCP server
+
+## internet control message protocol (ICMP)
+
+- report error, transmit metadata
+- for troubleshoot
+
+message type
+
+- 0: echo reply
+- 3: destination unreachable
+    - 0/1/2/3: network/host/protocol/port unreachable
+    - 4 fragmentation needed, for maximum transmission unit (MTU) discovery
+
+
+- 8: echo request
