@@ -215,10 +215,17 @@
 </li>
 <li><a href="#ip-forwarding-by-router">IP forwarding by router</a>
 <ul>
+<li><a href="#address-translation">address translation</a></li>
 <li><a href="#default-route">default route</a></li>
 </ul>
 </li>
 <li><a href="#routing-table">routing table</a></li>
+<li><a href="#node-configuration">node configuration</a>
+<ul>
+<li><a href="#dynamic-host-configuration-protocol-dhcp">dynamic host configuration protocol (DHCP)</a></li>
+</ul>
+</li>
+<li><a href="#internet-control-message-protocol-icmp">internet control message protocol (ICMP)</a></li>
 </ul>
 </li>
 </ul>
@@ -357,11 +364,7 @@ transmission time <data class="katex-src" value="t"><span class="katex"><span cl
 round trip time <data class="katex-src" value="r"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span></span></span></span></data>,<br />
 time to first ACK <data class="katex-src" value="t_0"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7651em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></data>,<br />
 number of packet <data class="katex-src" value="n"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span></data></p>
-<p><data class="katex-src" value="
-t=\frac{f}{b}\\[6pt]
-t_0=t+r\\[6pt]
-n=\left\lceil \frac{t_0}{t} \right\rceil
-"><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0574em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">b</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span><span class="mspace newline" style="margin-top:0.6em;"></span><span class="base"><span class="strut" style="height:0.7651em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6984em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span></span><span class="mspace newline" style="margin-top:0.6em;"></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.4em;vertical-align:-0.95em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">⌈</span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.2921em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">t</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size3">⌉</span></span></span></span></span></span></span></data></p>
+<p><data class="katex-src" value="&#10;t=\frac{f}{b}\\[6pt]&#10;t_0=t+r\\[6pt]&#10;n=\left\lceil \frac{t_0}{t} \right\rceil&#10;"><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0574em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">b</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span><span class="mspace newline" style="margin-top:0.6em;"></span><span class="base"><span class="strut" style="height:0.7651em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6984em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span></span><span class="mspace newline" style="margin-top:0.6em;"></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.4em;vertical-align:-0.95em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">⌈</span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.2921em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">t</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size3">⌉</span></span></span></span></span></span></span></data></p>
 <h3 id="sliding-window-frame-identifier-count"><a class="header" href="#sliding-window-frame-identifier-count">sliding window frame identifier count</a></h3>
 <ul>
 <li>smaller is better since overhead</li>
@@ -565,14 +568,70 @@ n=\left\lceil \frac{t_0}{t} \right\rceil
 <h2 id="ip-forwarding-by-router"><a class="header" href="#ip-forwarding-by-router">IP forwarding by router</a></h2>
 <ul>
 <li>if interface is connected to destination network,
-find link-layer address (e.g. MAC) and deliver over local network</li>
+translate to link-layer address (e.g. MAC) and deliver over local network</li>
 <li>else, find a router nearer to destination and do the above to it</li>
+</ul>
+<h3 id="address-translation"><a class="header" href="#address-translation">address translation</a></h3>
+<ul>
+<li>build link-layer address from IP
+<ul>
+<li>does not work, e.g. IPv4 address (4 byte) to MAC (6 byte)</li>
+<li>privacy leak, e.g. IPv6 EUI-64 deprecated</li>
+</ul>
+</li>
+<li>address resolution protocol (ARP)
+<ul>
+<li>source broadcast ARP request</li>
+<li>matching node send ARP response with link-layer address to requester</li>
+</ul>
+</li>
+<li>neighbor discovery protocol (NDP) for IPv6</li>
 </ul>
 <h3 id="default-route"><a class="header" href="#default-route">default route</a></h3>
 <p>just deliver to this route if not in my routing table</p>
 <h2 id="routing-table"><a class="header" href="#routing-table">routing table</a></h2>
 <ul>
 <li>can configure manually but usually automatically by routing protocol</li>
+</ul>
+<h2 id="node-configuration"><a class="header" href="#node-configuration">node configuration</a></h2>
+<ul>
+<li>manual configuration: maintain IP allocation table</li>
+<li>autoconfiguration: DHCP</li>
+</ul>
+<h3 id="dynamic-host-configuration-protocol-dhcp"><a class="header" href="#dynamic-host-configuration-protocol-dhcp">dynamic host configuration protocol (DHCP)</a></h3>
+<ul>
+<li>client without IP address broadcast DHCP discover message</li>
+<li>DHCP server respond with configuration
+<ul>
+<li>IP address</li>
+<li>DNS server</li>
+<li>default gateway</li>
+<li>lease duration</li>
+</ul>
+</li>
+<li>DHCP server reserve IP prefix and give new device unallocated IP address</li>
+<li>DHCP relay allow multiple network to use 1 DHCP server</li>
+</ul>
+<h2 id="internet-control-message-protocol-icmp"><a class="header" href="#internet-control-message-protocol-icmp">internet control message protocol (ICMP)</a></h2>
+<ul>
+<li>report error, transmit metadata</li>
+<li>for troubleshoot</li>
+</ul>
+<p>message type</p>
+<ul>
+<li>
+<p>0: echo reply</p>
+</li>
+<li>
+<p>3: destination unreachable</p>
+<ul>
+<li>0/1/2/3: network/host/protocol/port unreachable</li>
+<li>4 fragmentation needed, for maximum transmission unit (MTU) discovery</li>
+</ul>
+</li>
+<li>
+<p>8: echo request</p>
+</li>
 </ul>
 
                 </main>
