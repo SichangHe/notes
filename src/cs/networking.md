@@ -305,6 +305,35 @@ just deliver to this route if not in my routing table
 ## routing table
 
 - can configure manually but usually automatically by routing protocol
+- distilled into forwarding table
+- map destination to potentially many next port
+- additional information than forwarding table
+
+### distance vector protocol
+
+- used by routing information protocol (RIPv2)
+- each router periodically broadcast all its best route to each neighbor
+- count to infinity problem
+    - solution: limit maximum distance to 15
+    - split horizon optimization: do not send route back to where it is from
+
+### link-state protocol
+
+- used by open shortest path first (OSPF)
+- each router globally broadcast all its link at change
+- reliable flooding
+    - costly
+    - send link-state packet (LSP)
+        - list of neighbor and metric (cost) of link
+        - sequence number: increasing
+        - guaranteed delivery via ACK
+        - time-to-live
+    - receiver discard LSP with lower sequence number than seen
+    - receiver forward LSP
+    - receiver optimization: wait for other LSP for a while
+- metric
+    - usually fixed
+    - dynamic metric cause route oscillation and unpredictable performance
 
 ## node configuration
 
@@ -333,6 +362,5 @@ message type
 - 3: destination unreachable
     - 0/1/2/3: network/host/protocol/port unreachable
     - 4 fragmentation needed, for maximum transmission unit (MTU) discovery
-
 
 - 8: echo request
