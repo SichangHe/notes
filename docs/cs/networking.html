@@ -219,7 +219,12 @@
 <li><a href="#default-route">default route</a></li>
 </ul>
 </li>
-<li><a href="#routing-table">routing table</a></li>
+<li><a href="#routing-table">routing table</a>
+<ul>
+<li><a href="#distance-vector-protocol">distance vector protocol</a></li>
+<li><a href="#link-state-protocol">link-state protocol</a></li>
+</ul>
+</li>
 <li><a href="#node-configuration">node configuration</a>
 <ul>
 <li><a href="#dynamic-host-configuration-protocol-dhcp">dynamic host configuration protocol (DHCP)</a></li>
@@ -592,6 +597,47 @@ translate to link-layer address (e.g. MAC) and deliver over local network</li>
 <h2 id="routing-table"><a class="header" href="#routing-table">routing table</a></h2>
 <ul>
 <li>can configure manually but usually automatically by routing protocol</li>
+<li>distilled into forwarding table</li>
+<li>map destination to potentially many next port</li>
+<li>additional information than forwarding table</li>
+</ul>
+<h3 id="distance-vector-protocol"><a class="header" href="#distance-vector-protocol">distance vector protocol</a></h3>
+<ul>
+<li>used by routing information protocol (RIPv2)</li>
+<li>each router periodically broadcast all its best route to each neighbor</li>
+<li>count to infinity problem
+<ul>
+<li>solution: limit maximum distance to 15</li>
+<li>split horizon optimization: do not send route back to where it is from</li>
+</ul>
+</li>
+</ul>
+<h3 id="link-state-protocol"><a class="header" href="#link-state-protocol">link-state protocol</a></h3>
+<ul>
+<li>used by open shortest path first (OSPF)</li>
+<li>each router globally broadcast all its link at change</li>
+<li>reliable flooding
+<ul>
+<li>costly</li>
+<li>send link-state packet (LSP)
+<ul>
+<li>list of neighbor and metric (cost) of link</li>
+<li>sequence number: increasing</li>
+<li>guaranteed delivery via ACK</li>
+<li>time-to-live</li>
+</ul>
+</li>
+<li>receiver discard LSP with lower sequence number than seen</li>
+<li>receiver forward LSP</li>
+<li>receiver optimization: wait for other LSP for a while</li>
+</ul>
+</li>
+<li>metric
+<ul>
+<li>usually fixed</li>
+<li>dynamic metric cause route oscillation and unpredictable performance</li>
+</ul>
+</li>
 </ul>
 <h2 id="node-configuration"><a class="header" href="#node-configuration">node configuration</a></h2>
 <ul>
