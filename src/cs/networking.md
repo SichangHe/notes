@@ -364,3 +364,56 @@ message type
     - 4 fragmentation needed, for maximum transmission unit (MTU) discovery
 
 - 8: echo request
+
+# interdomain routing
+
+## autonomous system (AS)
+
+a.k.a domain
+
+- distinct operator
+- transit traffic: traffic across two AS
+- stub AS: on the border, no transit trafic
+    - transit AS: opposite
+- multihoming: network with multiple provider
+- peering point: host network equipment
+
+## border gateway protocol (BGP)
+
+- de facto standard
+- policy-based routing
+    - oblivious to performance
+    - goal: find loop-free policy-compliant path
+    - no obligation to accept or propagate route
+    - can withdraw route
+- focus on scalability
+    - only propagate most preferred route
+- only need to run on router that connect two AS
+- configure BGP session manually
+    - sometimes require contract and service agreement
+    - small/regional network pay larger network for transit
+
+## routing relationship and policy
+
+- whatever make them money
+- provider-client/client-provider: client pay for transit
+    - provider export all route to client
+    - client export only its route to provider
+- peer-to-peer: exchange route for free
+    - peer export client route to peer
+
+# user datagram protocol (UDP)
+
+multiplex packet for different application
+
+- demultiplexing key (network port) in packet
+- add packet to queue for socket. packet stay until application call `recv()`
+- datagram: packet
+
+## network port
+
+- 2 byte, local to each node
+- which port
+    - in the spec
+    - portmap
+    - well-know port: SSH: 22, DNS: 53, HTTP: 80, HTTPS: 443
