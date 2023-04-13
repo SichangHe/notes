@@ -233,6 +233,18 @@
 <li><a href="#internet-control-message-protocol-icmp">internet control message protocol (ICMP)</a></li>
 </ul>
 </li>
+<li><a href="#interdomain-routing">interdomain routing</a>
+<ul>
+<li><a href="#autonomous-system-as">autonomous system (AS)</a></li>
+<li><a href="#border-gateway-protocol-bgp">border gateway protocol (BGP)</a></li>
+<li><a href="#routing-relationship-and-policy">routing relationship and policy</a></li>
+</ul>
+</li>
+<li><a href="#user-datagram-protocol-udp">user datagram protocol (UDP)</a>
+<ul>
+<li><a href="#network-port">network port</a></li>
+</ul>
+</li>
 </ul>
 <h1 id="networking"><a class="header" href="#networking">Networking</a></h1>
 <h1 id="encodingdecoding"><a class="header" href="#encodingdecoding">encoding/decoding</a></h1>
@@ -677,6 +689,77 @@ translate to link-layer address (e.g. MAC) and deliver over local network</li>
 </li>
 <li>
 <p>8: echo request</p>
+</li>
+</ul>
+<h1 id="interdomain-routing"><a class="header" href="#interdomain-routing">interdomain routing</a></h1>
+<h2 id="autonomous-system-as"><a class="header" href="#autonomous-system-as">autonomous system (AS)</a></h2>
+<p>a.k.a domain</p>
+<ul>
+<li>distinct operator</li>
+<li>transit traffic: traffic across two AS</li>
+<li>stub AS: on the border, no transit trafic
+<ul>
+<li>transit AS: opposite</li>
+</ul>
+</li>
+<li>multihoming: network with multiple provider</li>
+<li>peering point: host network equipment</li>
+</ul>
+<h2 id="border-gateway-protocol-bgp"><a class="header" href="#border-gateway-protocol-bgp">border gateway protocol (BGP)</a></h2>
+<ul>
+<li>de facto standard</li>
+<li>policy-based routing
+<ul>
+<li>oblivious to performance</li>
+<li>goal: find loop-free policy-compliant path</li>
+<li>no obligation to accept or propagate route</li>
+<li>can withdraw route</li>
+</ul>
+</li>
+<li>focus on scalability
+<ul>
+<li>only propagate most preferred route</li>
+</ul>
+</li>
+<li>only need to run on router that connect two AS</li>
+<li>configure BGP session manually
+<ul>
+<li>sometimes require contract and service agreement</li>
+<li>small/regional network pay larger network for transit</li>
+</ul>
+</li>
+</ul>
+<h2 id="routing-relationship-and-policy"><a class="header" href="#routing-relationship-and-policy">routing relationship and policy</a></h2>
+<ul>
+<li>whatever make them money</li>
+<li>provider-client/client-provider: client pay for transit
+<ul>
+<li>provider export all route to client</li>
+<li>client export only its route to provider</li>
+</ul>
+</li>
+<li>peer-to-peer: exchange route for free
+<ul>
+<li>peer export client route to peer</li>
+</ul>
+</li>
+</ul>
+<h1 id="user-datagram-protocol-udp"><a class="header" href="#user-datagram-protocol-udp">user datagram protocol (UDP)</a></h1>
+<p>multiplex packet for different application</p>
+<ul>
+<li>demultiplexing key (network port) in packet</li>
+<li>add packet to queue for socket. packet stay until application call <code>recv()</code></li>
+<li>datagram: packet</li>
+</ul>
+<h2 id="network-port"><a class="header" href="#network-port">network port</a></h2>
+<ul>
+<li>2 byte, local to each node</li>
+<li>which port
+<ul>
+<li>in the spec</li>
+<li>portmap</li>
+<li>well-know port: SSH: 22, DNS: 53, HTTP: 80, HTTPS: 443</li>
+</ul>
 </li>
 </ul>
 
