@@ -157,6 +157,7 @@
 <p><a href="https://opensource.com/article/18/9/pandoc-research-paper">How to use Pandoc to produce a research paper</a></p>
 <p>create <code>paper.pdf</code> from <code>paper.md</code> and <code>paper.bib</code></p>
 <pre><code class="language-shell">pandoc --pdf-engine latexmk -C --bibliography=paper.bib \
+-M reference-section-title=Bibliography \
 -V classoption=twocolumn -V papersize=a4paper -V fontsize=12pt \
 -V geometry:margin=0.1in -V mainfont=Times \
 -s paper.md -o paper.pdf
@@ -164,6 +165,9 @@
 <p>using HTML as intermedia and <code>wkhtmltopdf</code> to create PDF</p>
 <pre><code class="language-shell">pandoc -s paper.md -o paper.pdf -t html5 \
 -V margin-top=0 -V margin-bottom=0 -V margin-left=0 -V margin-right=0
+</code></pre>
+<p>word count</p>
+<pre><code class="language-shell">pandoc --lua-filter ~/.config/helper.lua/wc.lua input
 </code></pre>
 
                 </main>
