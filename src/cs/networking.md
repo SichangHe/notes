@@ -417,3 +417,33 @@ multiplex packet for different application
     - in the spec
     - portmap
     - well-know port: SSH: 22, DNS: 53, HTTP: 80, HTTPS: 443
+
+# transport control protocol (TCP)
+
+- demultiplexing
+- guaranteed delivery
+    - dynamic retransmission timer
+- in-order delivery
+    - dynamic sliding window
+- bidirection transmission
+- flow control
+    - accommodate for slowest endpoint
+- congestion control
+    - coordinate across nodes
+
+## end-to-end principle
+
+functionality should be provided at a layer only if it can be complete there
+
+- guarantee on each link does not guarantee end-to-end
+- TCP/IP push reliable delivery to transport layer
+
+## TCP header
+
+- number each byte: SequenceNum
+- ACK for each byte: Acknowledgment
+- control sliding window: AdvertisedWindow
+
+## TCP connection establishment
+
+- three-way handshake
