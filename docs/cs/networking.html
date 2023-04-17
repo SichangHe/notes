@@ -245,6 +245,13 @@
 <li><a href="#network-port">network port</a></li>
 </ul>
 </li>
+<li><a href="#transport-control-protocol-tcp">transport control protocol (TCP)</a>
+<ul>
+<li><a href="#end-to-end-principle">end-to-end principle</a></li>
+<li><a href="#tcp-header">TCP header</a></li>
+<li><a href="#tcp-connection-establishment">TCP connection establishment</a></li>
+</ul>
+</li>
 </ul>
 <h1 id="networking"><a class="header" href="#networking">Networking</a></h1>
 <h1 id="encodingdecoding"><a class="header" href="#encodingdecoding">encoding/decoding</a></h1>
@@ -761,6 +768,47 @@ translate to link-layer address (e.g. MAC) and deliver over local network</li>
 <li>well-know port: SSH: 22, DNS: 53, HTTP: 80, HTTPS: 443</li>
 </ul>
 </li>
+</ul>
+<h1 id="transport-control-protocol-tcp"><a class="header" href="#transport-control-protocol-tcp">transport control protocol (TCP)</a></h1>
+<ul>
+<li>demultiplexing</li>
+<li>guaranteed delivery
+<ul>
+<li>dynamic retransmission timer</li>
+</ul>
+</li>
+<li>in-order delivery
+<ul>
+<li>dynamic sliding window</li>
+</ul>
+</li>
+<li>bidirection transmission</li>
+<li>flow control
+<ul>
+<li>accommodate for slowest endpoint</li>
+</ul>
+</li>
+<li>congestion control
+<ul>
+<li>coordinate across nodes</li>
+</ul>
+</li>
+</ul>
+<h2 id="end-to-end-principle"><a class="header" href="#end-to-end-principle">end-to-end principle</a></h2>
+<p>functionality should be provided at a layer only if it can be complete there</p>
+<ul>
+<li>guarantee on each link does not guarantee end-to-end</li>
+<li>TCP/IP push reliable delivery to transport layer</li>
+</ul>
+<h2 id="tcp-header"><a class="header" href="#tcp-header">TCP header</a></h2>
+<ul>
+<li>number each byte: SequenceNum</li>
+<li>ACK for each byte: Acknowledgment</li>
+<li>control sliding window: AdvertisedWindow</li>
+</ul>
+<h2 id="tcp-connection-establishment"><a class="header" href="#tcp-connection-establishment">TCP connection establishment</a></h2>
+<ul>
+<li>three-way handshake</li>
 </ul>
 
                 </main>
