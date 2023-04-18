@@ -447,3 +447,37 @@ functionality should be provided at a layer only if it can be complete there
 ## TCP connection establishment
 
 - three-way handshake
+- 4 messages to tear down
+
+## TCP flow control
+
+- receiver set AdvertisedWindow to remaining buffer space
+- sender set sliding window size according to AdvertisedWindow
+    - block `send()` on buffer full
+- sender send 1 byte periodically to check AdvertisedWindow
+    - prevent chicken-egg problem: hang on 0 AdvertisedWindow
+- 32 bit sequence number, sliding window can have up to $2^16$ byte
+    - prevent sequence number wrap around
+    - increase sequence number to 64 bit with option flag
+- use all bandwidth
+    - AdvertisedWindow has 16 bit, maximum sliding window size is 64KiB
+    - option flag to multiply value in AdvertisedWindow
+- Nagle's algorithm: sender wait for ACK if cannot send full frame
+    - silly window syndrome: sender send tiny frame due to tiny AdvertisedWindow
+- adaptive transmission: EstimatedRTT $t_e$, MeasuredRTT $t_m$, Timeout $t_o$
+    - Karn/Partridge algorithm with parameter $a$:
+
+        $$
+        t_e=a\cdot t_e+(1-a)\cdot t_m\\
+        t_o=2\cdot t_e
+        $$
+
+    - Jacobson/Karels algorithm with DeviationRTT $\sigma$, parameter $\delta$:
+
+        $$
+        t_e=t_e+(\delta\cdot (t_m-t_e))\\
+        \sigma=\sigma+\delta\cdot(|t_m-t_e|-\sigma)\\
+        t_o=t_e+4\cdot\sigma
+        $$
+
+    - ignore retransmitted packet
