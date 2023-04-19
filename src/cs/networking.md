@@ -481,3 +481,19 @@ functionality should be provided at a layer only if it can be complete there
         $$
 
     - ignore retransmitted packet
+
+## hypertext transfer protocol (HTTP)
+
+- universal resource locator (URL)
+    - `protocol:path`
+    - for HTTP `http[s]://[user[:pass]@]host/path[?query][#fragment]`
+
+### HTTP message
+
+- command/status line
+    - request: command `GET / HTTP/1.1`
+    - response: status line `HTTP/1.1 200 OK`
+- headers
+    - mandatory `Content-Length: 69`
+- empty line `\r\n`
+- content
