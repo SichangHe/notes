@@ -251,6 +251,11 @@
 <li><a href="#tcp-header">TCP header</a></li>
 <li><a href="#tcp-connection-establishment">TCP connection establishment</a></li>
 <li><a href="#tcp-flow-control">TCP flow control</a></li>
+<li><a href="#hypertext-transfer-protocol-http">hypertext transfer protocol (HTTP)</a>
+<ul>
+<li><a href="#http-message">HTTP message</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -857,6 +862,31 @@ translate to link-layer address (e.g. MAC) and deliver over local network</li>
 </li>
 </ul>
 </li>
+</ul>
+<h2 id="hypertext-transfer-protocol-http"><a class="header" href="#hypertext-transfer-protocol-http">hypertext transfer protocol (HTTP)</a></h2>
+<ul>
+<li>universal resource locator (URL)
+<ul>
+<li><code>protocol:path</code></li>
+<li>for HTTP <code>http[s]://[user[:pass]@]host/path[?query][#fragment]</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="http-message"><a class="header" href="#http-message">HTTP message</a></h3>
+<ul>
+<li>command/status line
+<ul>
+<li>request: command <code>GET / HTTP/1.1</code></li>
+<li>response: status line <code>HTTP/1.1 200 OK</code></li>
+</ul>
+</li>
+<li>headers
+<ul>
+<li>mandatory <code>Content-Length: 69</code></li>
+</ul>
+</li>
+<li>empty line <code>\r\n</code></li>
+<li>content</li>
 </ul>
 
                 </main>
