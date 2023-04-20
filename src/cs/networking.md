@@ -482,13 +482,13 @@ functionality should be provided at a layer only if it can be complete there
 
     - ignore retransmitted packet
 
-## hypertext transfer protocol (HTTP)
+# hypertext transfer protocol (HTTP)
 
 - universal resource locator (URL)
     - `protocol:path`
     - for HTTP `http[s]://[user[:pass]@]host/path[?query][#fragment]`
 
-### HTTP message
+## HTTP message
 
 - command/status line
     - request: command `GET / HTTP/1.1`
@@ -497,3 +497,35 @@ functionality should be provided at a layer only if it can be complete there
     - mandatory `Content-Length: 69`
 - empty line `\r\n`
 - content
+
+# remote procedure call (RPC)
+
+client request & server respond (minimum 2 transmission)
+
+- message oriented
+- lower overhead than TCP
+- stub
+    - allow function call
+- protocol
+    - encode high-level data
+- acknowledgement model
+    - send ACK
+    - response as ACK
+    - ping/working
+- sync/async
+
+popular example: REST/gRPC
+
+# real-time protocol (RTP)
+
+- latency is vital
+- monitor path property
+- let application handle packet drop
+
+## stream control transmission protocol (SCTP)
+
+- media delivery
+- built-in media stream sync
+- not depend on low-layer functionality
+    - common: IP + UDP
+- example: WebRTC

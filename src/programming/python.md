@@ -639,7 +639,7 @@ create file if not exist and parent exist
 ```python
 try:
     execution1
-except error_name:
+except ErrorClass as error_name:
     execution2
 finally:
     execution3
