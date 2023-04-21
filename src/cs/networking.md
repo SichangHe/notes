@@ -122,6 +122,7 @@ $$
 - carrier sense: idle/busy
 - multiple access: share medium and broadcast
 - collision detection
+    - collision avoidance: exponential back-off
 
 ## Ethernet switch
 
