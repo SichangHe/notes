@@ -157,6 +157,12 @@
 <p>get ID of app</p>
 <pre><code class="language-bash">osascript -e 'id of app &quot;SomeApp&quot;'
 </code></pre>
+<p>stop <code>mds_store</code> going crazy: disable Spotlight indexing</p>
+<pre><code class="language-bash">sudo mdutil -a -i off
+# enable later
+sudo mdutil -a -i on
+</code></pre>
+<p>add big folders to Spotlight privacy ignore list</p>
 
                 </main>
 
