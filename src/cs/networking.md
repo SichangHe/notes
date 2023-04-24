@@ -530,3 +530,52 @@ popular example: REST/gRPC
 - not depend on low-layer functionality
     - common: IP + UDP
 - example: WebRTC
+
+# congestion control
+
+- router-based vs endhost-based
+- priori resource reservation vs transmission-time feedback
+- window-based vs rate-based
+- throughput vs latency: power = throughput / latency
+
+## traffic flow
+
+- defined as (Source IP, Destination IP) or
+    (Source IP, Source Port, Destination IP, Destination Port)
+- aid router track soft state
+
+## resource allocation fairness
+
+Jain's fairness for $n$ flow with throughput $x_i$
+
+$$
+f(x_1,\cdots,x_n)=\frac{\left(
+    \sum_{i=1}^nx_i
+\right)^2}{n\sum_{i=1}^nx_i^2}:\R^n\rightarrow[0,1]
+$$
+
+- 1 is most fair
+
+## classic TCP congestion control
+
+- utilizing bandwidth & fairness
+- introduced during "congestion collapse"
+- implicit signal: drop packet
+
+### congestion window `cwnd`
+
+limit number of unacknowledged byte
+
+additive increase/ multiplicative decrease (AI/MD)
+
+- packet dropped: `cwnd = max(cwnd / 2, packet_size)`
+- not dropped: `cwnd += packet_size`
+- mathematically proved to converge to same throughput
+
+TCP slow start
+
+- exponentially increase `cwnd` at start
+- when dropped
+- `SSthresh = cwnd / 2`
+- `cwnd = packet_size`
+- slow start while `cwnd < SSthresh`, do AI/MD afterwards
