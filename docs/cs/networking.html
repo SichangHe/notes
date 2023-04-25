@@ -268,9 +268,13 @@
 <ul>
 <li><a href="#traffic-flow">traffic flow</a></li>
 <li><a href="#resource-allocation-fairness">resource allocation fairness</a></li>
+<li><a href="#tcp-queue-discipline">TCP queue discipline</a></li>
 <li><a href="#classic-tcp-congestion-control">classic TCP congestion control</a>
 <ul>
 <li><a href="#congestion-window-cwnd">congestion window <code>cwnd</code></a></li>
+<li><a href="#tcp-slow-start">TCP slow start</a></li>
+<li><a href="#tcp-fast-retransmit">TCP fast retransmit</a></li>
+<li><a href="#tcp-cubic">TCP cubic</a></li>
 </ul>
 </li>
 </ul>
@@ -970,6 +974,33 @@ translate to link-layer address (e.g. MAC) and deliver over local network</li>
 <ul>
 <li>1 is most fair</li>
 </ul>
+<h2 id="tcp-queue-discipline"><a class="header" href="#tcp-queue-discipline">TCP queue discipline</a></h2>
+<ul>
+<li>FIFO queue with tail-drop
+<ul>
+<li>prevalent</li>
+</ul>
+</li>
+<li>priority queing
+<ul>
+<li>absolute priority: higher priority always first</li>
+<li>reserve a fraction of bandwidth</li>
+<li>diffserv: buy priority</li>
+</ul>
+</li>
+<li>fair queuing
+<ul>
+<li>number of flow variable and large</li>
+<li>flow send packet of different size</li>
+</ul>
+</li>
+<li>random early drop (RED): drop packet before queue fill
+<ul>
+<li>no drop below minTreshold</li>
+<li>increasing drop probability between minTreshold and maxThreshold</li>
+</ul>
+</li>
+</ul>
 <h2 id="classic-tcp-congestion-control"><a class="header" href="#classic-tcp-congestion-control">classic TCP congestion control</a></h2>
 <ul>
 <li>utilizing bandwidth &amp; fairness</li>
@@ -984,13 +1015,28 @@ translate to link-layer address (e.g. MAC) and deliver over local network</li>
 <li>not dropped: <code>cwnd += packet_size</code></li>
 <li>mathematically proved to converge to same throughput</li>
 </ul>
-<p>TCP slow start</p>
+<h3 id="tcp-slow-start"><a class="header" href="#tcp-slow-start">TCP slow start</a></h3>
 <ul>
 <li>exponentially increase <code>cwnd</code> at start</li>
 <li>when dropped</li>
 <li><code>SSthresh = cwnd / 2</code></li>
 <li><code>cwnd = packet_size</code></li>
 <li>slow start while <code>cwnd &lt; SSthresh</code>, do AI/MD afterwards</li>
+</ul>
+<h3 id="tcp-fast-retransmit"><a class="header" href="#tcp-fast-retransmit">TCP fast retransmit</a></h3>
+<ul>
+<li>receiver send duplicated ACK for each packet out of order</li>
+<li>sender retransmit on multiple duplicated ACK</li>
+</ul>
+<h3 id="tcp-cubic"><a class="header" href="#tcp-cubic">TCP cubic</a></h3>
+<ul>
+<li>default in Linux since 2006</li>
+<li>hybrid slow start
+<ul>
+<li>identify ACK slowdown and do AI/MD</li>
+</ul>
+</li>
+<li>stay at expected maximum <code>cwnd</code>, do AI after no drop for a while</li>
 </ul>
 
                 </main>
