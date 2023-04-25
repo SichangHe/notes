@@ -556,6 +556,21 @@ $$
 
 - 1 is most fair
 
+## TCP queue discipline
+
+- FIFO queue with tail-drop
+    - prevalent
+- priority queing
+    - absolute priority: higher priority always first
+    - reserve a fraction of bandwidth
+    - diffserv: buy priority
+- fair queuing
+    - number of flow variable and large
+    - flow send packet of different size
+- random early drop (RED): drop packet before queue fill
+    - no drop below minTreshold
+    - increasing drop probability between minTreshold and maxThreshold
+
 ## classic TCP congestion control
 
 - utilizing bandwidth & fairness
@@ -572,10 +587,22 @@ additive increase/ multiplicative decrease (AI/MD)
 - not dropped: `cwnd += packet_size`
 - mathematically proved to converge to same throughput
 
-TCP slow start
+### TCP slow start
 
 - exponentially increase `cwnd` at start
 - when dropped
 - `SSthresh = cwnd / 2`
 - `cwnd = packet_size`
 - slow start while `cwnd < SSthresh`, do AI/MD afterwards
+
+### TCP fast retransmit
+
+- receiver send duplicated ACK for each packet out of order
+- sender retransmit on multiple duplicated ACK
+
+### TCP cubic
+
+- default in Linux since 2006
+- hybrid slow start
+    - identify ACK slowdown and do AI/MD
+- stay at expected maximum `cwnd`, do AI after no drop for a while
