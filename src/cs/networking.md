@@ -266,6 +266,7 @@ what to do when packet size exceed frame size
 - class A: big network, first byte < 128, 1 byte reserved
 - class B: smaller, first byte 129 ~ 191, 2 byte reserved
 - class C: small, first byte ≥ 192, 3 byte reserved
+- private address: 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16
 
 ### IPv6
 
@@ -282,6 +283,15 @@ split address
 - netmask: same as length, $1$s followed by $0$s
 - can split large subnet/ aggregate small subnet and advertise big network
 - routing table can have overlapping entry, specific one used
+
+### network address translation (NAT)
+
+enable computer in network share same globally routed public address
+
+- engineering solution (hack)
+- connection mapping: NAT table, use local port and remote IP and port to multiplex packet
+- IP no longer unique across device
+- port forwarding (UPNP) so incoming connection arrive
 
 ## IP forwarding by router
 
@@ -530,6 +540,16 @@ popular example: REST/gRPC
 - not depend on low-layer functionality
     - common: IP + UDP
 - example: WebRTC
+
+## simple mail transfer protocol (SMTP)
+
+1. user send mail to domain server
+1. domain server send to other domain server
+1. other domain server push to other user
+1. other user retrieve message using IMAP or POP3
+
+- plain text: encode binary to string
+- optional authentication: usually only between user/server
 
 # congestion control
 
