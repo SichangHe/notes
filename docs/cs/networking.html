@@ -211,6 +211,7 @@
 <li><a href="#ipv4">IPv4</a></li>
 <li><a href="#ipv6">IPv6</a></li>
 <li><a href="#subnetcidr">subnet/CIDR</a></li>
+<li><a href="#network-address-translation-nat">network address translation (NAT)</a></li>
 </ul>
 </li>
 <li><a href="#ip-forwarding-by-router">IP forwarding by router</a>
@@ -262,6 +263,7 @@
 <li><a href="#real-time-protocol-rtp">real-time protocol (RTP)</a>
 <ul>
 <li><a href="#stream-control-transmission-protocol-sctp">stream control transmission protocol (SCTP)</a></li>
+<li><a href="#simple-mail-transfer-protocol-smtp">simple mail transfer protocol (SMTP)</a></li>
 </ul>
 </li>
 <li><a href="#congestion-control">congestion control</a>
@@ -601,6 +603,7 @@ number of packet <data class="katex-src" value="n"><span class="katex"><span cla
 <li>class A: big network, first byte &lt; 128, 1 byte reserved</li>
 <li>class B: smaller, first byte 129 ~ 191, 2 byte reserved</li>
 <li>class C: small, first byte ≥ 192, 3 byte reserved</li>
+<li>private address: 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16</li>
 </ul>
 <h3 id="ipv6"><a class="header" href="#ipv6">IPv6</a></h3>
 <ul>
@@ -619,6 +622,14 @@ number of packet <data class="katex-src" value="n"><span class="katex"><span cla
 <li>netmask: same as length, <data class="katex-src" value="1"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span></data>s followed by <data class="katex-src" value="0"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span></data>s</li>
 <li>can split large subnet/ aggregate small subnet and advertise big network</li>
 <li>routing table can have overlapping entry, specific one used</li>
+</ul>
+<h3 id="network-address-translation-nat"><a class="header" href="#network-address-translation-nat">network address translation (NAT)</a></h3>
+<p>enable computer in network share same globally routed public address</p>
+<ul>
+<li>engineering solution (hack)</li>
+<li>connection mapping: NAT table, use local port and remote IP and port to multiplex packet</li>
+<li>IP no longer unique across device</li>
+<li>port forwarding (UPNP) so incoming connection arrive</li>
 </ul>
 <h2 id="ip-forwarding-by-router"><a class="header" href="#ip-forwarding-by-router">IP forwarding by router</a></h2>
 <ul>
@@ -954,6 +965,17 @@ translate to link-layer address (e.g. MAC) and deliver over local network</li>
 </ul>
 </li>
 <li>example: WebRTC</li>
+</ul>
+<h2 id="simple-mail-transfer-protocol-smtp"><a class="header" href="#simple-mail-transfer-protocol-smtp">simple mail transfer protocol (SMTP)</a></h2>
+<ol>
+<li>user send mail to domain server</li>
+<li>domain server send to other domain server</li>
+<li>other domain server push to other user</li>
+<li>other user retrieve message using IMAP or POP3</li>
+</ol>
+<ul>
+<li>plain text: encode binary to string</li>
+<li>optional authentication: usually only between user/server</li>
 </ul>
 <h1 id="congestion-control"><a class="header" href="#congestion-control">congestion control</a></h1>
 <ul>
