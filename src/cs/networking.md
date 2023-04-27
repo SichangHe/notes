@@ -626,3 +626,18 @@ additive increase/ multiplicative decrease (AI/MD)
 - hybrid slow start
     - identify ACK slowdown and do AI/MD
 - stay at expected maximum `cwnd`, do AI after no drop for a while
+
+# domain name system (DNS)
+
+- first try: "hosts" file `/etc/hosts`
+- top-level domain by ICANN
+- domain level hierarchy
+- name resolution: ask name server from root up
+- 13 root server each use different implementation
+- distributed database
+
+## DNS entry
+
+- canonical name
+- nick name
+- subdomain entry
