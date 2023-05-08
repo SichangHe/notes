@@ -289,7 +289,8 @@ split address
 enable computer in network share same globally routed public address
 
 - engineering solution (hack)
-- connection mapping: NAT table, use local port and remote IP and port to multiplex packet
+- connection mapping: NAT table, use local port and remote IP and port to
+    multiplex packet
 - IP no longer unique across device
 - port forwarding (UPNP) so incoming connection arrive
 
@@ -641,3 +642,25 @@ additive increase/ multiplicative decrease (AI/MD)
 - canonical name
 - nick name
 - subdomain entry
+
+# attack
+
+## authenticity attack
+
+- phishing: impersonation
+- spoofing: hide source of attack
+
+countermeasure: HTTPS
+
+## anonymity attack
+
+- censorship
+- persecution
+- blackmail
+
+countermeasure: VPN, TOR
+
+## availability attack
+
+- DDoS
+- ransom
