@@ -286,6 +286,13 @@
 <li><a href="#dns-entry">DNS entry</a></li>
 </ul>
 </li>
+<li><a href="#attack">attack</a>
+<ul>
+<li><a href="#authenticity-attack">authenticity attack</a></li>
+<li><a href="#anonymity-attack">anonymity attack</a></li>
+<li><a href="#availability-attack">availability attack</a></li>
+</ul>
+</li>
 </ul>
 <h1 id="networking"><a class="header" href="#networking">Networking</a></h1>
 <h1 id="encodingdecoding"><a class="header" href="#encodingdecoding">encoding/decoding</a></h1>
@@ -632,7 +639,8 @@ number of packet <data class="katex-src" value="n"><span class="katex"><span cla
 <p>enable computer in network share same globally routed public address</p>
 <ul>
 <li>engineering solution (hack)</li>
-<li>connection mapping: NAT table, use local port and remote IP and port to multiplex packet</li>
+<li>connection mapping: NAT table, use local port and remote IP and port to
+multiplex packet</li>
 <li>IP no longer unique across device</li>
 <li>port forwarding (UPNP) so incoming connection arrive</li>
 </ul>
@@ -1079,6 +1087,25 @@ translate to link-layer address (e.g. MAC) and deliver over local network</li>
 <li>canonical name</li>
 <li>nick name</li>
 <li>subdomain entry</li>
+</ul>
+<h1 id="attack"><a class="header" href="#attack">attack</a></h1>
+<h2 id="authenticity-attack"><a class="header" href="#authenticity-attack">authenticity attack</a></h2>
+<ul>
+<li>phishing: impersonation</li>
+<li>spoofing: hide source of attack</li>
+</ul>
+<p>countermeasure: HTTPS</p>
+<h2 id="anonymity-attack"><a class="header" href="#anonymity-attack">anonymity attack</a></h2>
+<ul>
+<li>censorship</li>
+<li>persecution</li>
+<li>blackmail</li>
+</ul>
+<p>countermeasure: VPN, TOR</p>
+<h2 id="availability-attack"><a class="header" href="#availability-attack">availability attack</a></h2>
+<ul>
+<li>DDoS</li>
+<li>ransom</li>
 </ul>
 
                 </main>
