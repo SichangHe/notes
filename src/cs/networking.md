@@ -468,7 +468,7 @@ functionality should be provided at a layer only if it can be complete there
     - block `send()` on buffer full
 - sender send 1 byte periodically to check AdvertisedWindow
     - prevent chicken-egg problem: hang on 0 AdvertisedWindow
-- 32 bit sequence number, sliding window can have up to $2^16$ byte
+- 32 bit sequence number, sliding window can have up to $2^{16}$ byte
     - prevent sequence number wrap around
     - increase sequence number to 64 bit with option flag
 - use all bandwidth
@@ -664,3 +664,27 @@ countermeasure: VPN, TOR
 
 - DDoS
 - ransom
+
+# firewall
+
+- block incoming, usually allow outgoing
+- software/hardware
+    - cheap, flexible vs expensive, opaque
+    - low vs high performance
+- stateful/stateless
+    - have vs no memory
+    - cheap, easy vs expressive
+
+## firewall access policy
+
+- accept, drop, reject
+- default allow vs default deny
+- IP, transport protocol, port, application data
+
+## demilitarized zone
+
+- allow closely watched device to access more
+
+## intrusion detection system (IDS)
+
+monitor software/hardware to detect malicious activity
