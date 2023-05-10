@@ -688,3 +688,36 @@ countermeasure: VPN, TOR
 ## intrusion detection system (IDS)
 
 monitor software/hardware to detect malicious activity
+
+- network intrusion detection system (NIDS)
+- host intrusion detection system (HIDS)
+
+# virtual private network (VPN)
+
+- tunneling protocol
+- end-to-end encryption
+
+usage
+
+- remote access
+- site-to-site
+- bypass firewall/proxy
+
+## secure tunnel
+
+- TSL, SSL
+- IPsec
+    - authentication header (AH): after IP header
+    - encryption header (EH): after AH, before encrypted TCP header
+    - wrap all above as payload into another IP-AH-EH-encrypted payload
+
+## the onion router (TOR)
+
+# overlay network
+
+- internet is overlay IP network over physical link
+- VPN is overlay IP network over internet
+
+example
+
+- overlay multicast
