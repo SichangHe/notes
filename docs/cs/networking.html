@@ -300,6 +300,13 @@
 <li><a href="#intrusion-detection-system-ids">intrusion detection system (IDS)</a></li>
 </ul>
 </li>
+<li><a href="#virtual-private-network-vpn">virtual private network (VPN)</a>
+<ul>
+<li><a href="#secure-tunnel">secure tunnel</a></li>
+<li><a href="#the-onion-router-tor">the onion router (TOR)</a></li>
+</ul>
+</li>
+<li><a href="#overlay-network">overlay network</a></li>
 </ul>
 <h1 id="networking"><a class="header" href="#networking">Networking</a></h1>
 <h1 id="encodingdecoding"><a class="header" href="#encodingdecoding">encoding/decoding</a></h1>
@@ -1142,6 +1149,42 @@ translate to link-layer address (e.g. MAC) and deliver over local network</li>
 </ul>
 <h2 id="intrusion-detection-system-ids"><a class="header" href="#intrusion-detection-system-ids">intrusion detection system (IDS)</a></h2>
 <p>monitor software/hardware to detect malicious activity</p>
+<ul>
+<li>network intrusion detection system (NIDS)</li>
+<li>host intrusion detection system (HIDS)</li>
+</ul>
+<h1 id="virtual-private-network-vpn"><a class="header" href="#virtual-private-network-vpn">virtual private network (VPN)</a></h1>
+<ul>
+<li>tunneling protocol</li>
+<li>end-to-end encryption</li>
+</ul>
+<p>usage</p>
+<ul>
+<li>remote access</li>
+<li>site-to-site</li>
+<li>bypass firewall/proxy</li>
+</ul>
+<h2 id="secure-tunnel"><a class="header" href="#secure-tunnel">secure tunnel</a></h2>
+<ul>
+<li>TSL, SSL</li>
+<li>IPsec
+<ul>
+<li>authentication header (AH): after IP header</li>
+<li>encryption header (EH): after AH, before encrypted TCP header</li>
+<li>wrap all above as payload into another IP-AH-EH-encrypted payload</li>
+</ul>
+</li>
+</ul>
+<h2 id="the-onion-router-tor"><a class="header" href="#the-onion-router-tor">the onion router (TOR)</a></h2>
+<h1 id="overlay-network"><a class="header" href="#overlay-network">overlay network</a></h1>
+<ul>
+<li>internet is overlay IP network over physical link</li>
+<li>VPN is overlay IP network over internet</li>
+</ul>
+<p>example</p>
+<ul>
+<li>overlay multicast</li>
+</ul>
 
                 </main>
 
