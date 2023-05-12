@@ -306,7 +306,15 @@
 <li><a href="#the-onion-router-tor">the onion router (TOR)</a></li>
 </ul>
 </li>
-<li><a href="#overlay-network">overlay network</a></li>
+<li><a href="#overlay-network">overlay network</a>
+<ul>
+<li><a href="#peer-to-peer-network">peer-to-peer network</a>
+<ul>
+<li><a href="#bittorrent">BitTorrent</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <h1 id="networking"><a class="header" href="#networking">Networking</a></h1>
 <h1 id="encodingdecoding"><a class="header" href="#encodingdecoding">encoding/decoding</a></h1>
@@ -1184,6 +1192,36 @@ translate to link-layer address (e.g. MAC) and deliver over local network</li>
 <p>example</p>
 <ul>
 <li>overlay multicast</li>
+</ul>
+<h2 id="peer-to-peer-network"><a class="header" href="#peer-to-peer-network">peer-to-peer network</a></h2>
+<ul>
+<li>unstructured peer-to-peer network: messy</li>
+<li>super node: big machines, store what file neighbor have
+<ul>
+<li>coordination: maintain after super node leave</li>
+</ul>
+</li>
+<li>tracker: broadcast what peer interested in same file
+<ul>
+<li>peer exchange (PEX): list of known peer</li>
+</ul>
+</li>
+</ul>
+<h3 id="bittorrent"><a class="header" href="#bittorrent">BitTorrent</a></h3>
+<ul>
+<li>dedicated tracker track peer and torrent</li>
+<li>direct connection between peer for data transfer
+<ul>
+<li>select peer by speed (tic-for-tat)</li>
+<li>seeder: peer with file</li>
+<li>leecher: peer looking for file</li>
+</ul>
+</li>
+<li>distributed hash table (DHT)
+<ul>
+<li>no need for tracker</li>
+</ul>
+</li>
 </ul>
 
                 </main>
