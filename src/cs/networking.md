@@ -721,3 +721,21 @@ usage
 example
 
 - overlay multicast
+
+## peer-to-peer network
+
+- unstructured peer-to-peer network: messy
+- super node: big machines, store what file neighbor have
+    - coordination: maintain after super node leave
+- tracker: broadcast what peer interested in same file
+    - peer exchange (PEX): list of known peer
+
+### BitTorrent
+
+- dedicated tracker track peer and torrent
+- direct connection between peer for data transfer
+    - select peer by speed (tic-for-tat)
+    - seeder: peer with file
+    - leecher: peer looking for file
+- distributed hash table (DHT)
+    - no need for tracker
