@@ -542,7 +542,7 @@ popular example: REST/gRPC
     - common: IP + UDP
 - example: WebRTC
 
-## simple mail transfer protocol (SMTP)
+# simple mail transfer protocol (SMTP)
 
 1. user send mail to domain server
 1. domain server send to other domain server
@@ -705,13 +705,13 @@ usage
 
 ## secure tunnel
 
-- TSL, SSL
+- TLS, SSL
 - IPsec
     - authentication header (AH): after IP header
     - encryption header (EH): after AH, before encrypted TCP header
     - wrap all above as payload into another IP-AH-EH-encrypted payload
 
-## the onion router (TOR)
+## the onion router (Tor)
 
 # overlay network
 
