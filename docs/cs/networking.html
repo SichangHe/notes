@@ -573,6 +573,7 @@ number of packet <data class="katex-src" value="n"><span class="katex"><span cla
 <li>disable some link to eliminate loop</li>
 <li>switch with lowest ID is the root</li>
 <li>each switch start with self as root and broadcast root and distance</li>
+<li>alternative: TRILL, shortest path bridging</li>
 </ul>
 <p>reason</p>
 <ul>
@@ -721,11 +722,13 @@ translate to link-layer address (e.g. MAC) and deliver over local network</li>
 <li>sequence number: increasing</li>
 <li>guaranteed delivery via ACK</li>
 <li>time-to-live</li>
+<li>resend if no ACK</li>
 </ul>
 </li>
 <li>receiver discard LSP with lower sequence number than seen</li>
 <li>receiver forward LSP</li>
 <li>receiver optimization: wait for other LSP for a while</li>
+<li>only needed when topology change</li>
 </ul>
 </li>
 <li>metric
