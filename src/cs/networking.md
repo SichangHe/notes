@@ -209,6 +209,7 @@ multiple Ethernet interface
 - disable some link to eliminate loop
 - switch with lowest ID is the root
 - each switch start with self as root and broadcast root and distance
+- alternative: TRILL, shortest path bridging
 
 reason
 
@@ -340,9 +341,11 @@ just deliver to this route if not in my routing table
         - sequence number: increasing
         - guaranteed delivery via ACK
         - time-to-live
+        - resend if no ACK
     - receiver discard LSP with lower sequence number than seen
     - receiver forward LSP
     - receiver optimization: wait for other LSP for a while
+    - only needed when topology change
 - metric
     - usually fixed
     - dynamic metric cause route oscillation and unpredictable performance
