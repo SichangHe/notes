@@ -285,6 +285,26 @@ literal */
 <h3 id="variant"><a class="header" href="#variant">variant</a></h3>
 <h2 id="result-result"><a class="header" href="#result-result">result <code>Result</code></a></h2>
 <p>enumeration with variant <code>Ok</code> or <code>Err</code></p>
+<ul>
+<li>
+<p>handle error and convert to <code>Option</code>: </p>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>result.map_err(|e|/*…*/).ok()`
+<span class="boring">}</span></code></pre></pre>
+</li>
+<li>
+<p>convert error to value:</p>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>result.map_or_else(|e|/*…*/, identity)
+<span class="boring">}</span></code></pre></pre>
+</li>
+<li>
+<p>using <code>anyhow</code>, both <code>Result</code> and <code>Option</code> can be wrapped as <code>Result</code>
+using <code>.context</code></p>
+</li>
+</ul>
 <h3 id="ok-variant"><a class="header" href="#ok-variant"><code>Ok</code> variant</a></h3>
 <p>indicate successful run, contain result</p>
 <h3 id="err-variant"><a class="header" href="#err-variant"><code>Err</code> variant</a></h3>

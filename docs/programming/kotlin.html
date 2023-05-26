@@ -163,6 +163,13 @@
 <p>declare nullable variable</p>
 <pre><code class="language-kotlin">var0: TYPE?
 </code></pre>
+<h3 id="late-initialized-variable"><a class="header" href="#late-initialized-variable">late-initialized variable</a></h3>
+<pre><code class="language-kotlin">lateinit var var0: Type0
+</code></pre>
+<ul>
+<li>no need for null check when accessing</li>
+<li>crash at runtime if no initialized</li>
+</ul>
 <h3 id="access-field-in-nullable-variable"><a class="header" href="#access-field-in-nullable-variable">access field in nullable variable</a></h3>
 <p>return <code>null</code> if <code>var0</code> is <code>null</code> using safe-call operator</p>
 <pre><code class="language-kotlin">var0?.field
@@ -196,6 +203,40 @@ val lambda0: (TYPE0 -&gt; RETURN_TYPE0) = ::fn0
     // Body of anonymous function.
 }
 </code></pre>
+<h2 id="suspend-function"><a class="header" href="#suspend-function">suspend function</a></h2>
+<pre><code class="language-kotlin">suspend fun fn0(arg0: TYPE0): RETURN_TYPE0 {
+    // …
+}
+</code></pre>
+<ul>
+<li>
+<p>can only call in a <code>CoroutineScope</code>, execute seemingly sequentially</p>
+<ul>
+<li>
+<p>brainless scope <code>GlobalScope</code></p>
+</li>
+<li>
+<p>scope of current function</p>
+<pre><code class="language-kotlin">val scope = CoroutineScope(Job())
+</code></pre>
+</li>
+<li>
+<p>android UI component can use</p>
+<pre><code class="language-kotlin">val scope = MainScope()
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>can be started in background using <code>launch</code> or <code>async</code> of a <code>CoroutineScope</code></p>
+</li>
+<li>
+<p>use context to choose <code>Dispatcher</code>:</p>
+<pre><code class="language-kotlin">withContext(Dispatchers.IO) {/*IO tasks*/}
+withContext(Dispatchers.Default) {/*CPU tasks*/}
+</code></pre>
+</li>
+</ul>
 
                 </main>
 
