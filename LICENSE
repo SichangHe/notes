@@ -1,7 +1,7 @@
                              StevenHe Public License
                           Version 1.0.2, 25 April 2022
 
-Copyright (c) 2022 Sichang He (Steven)
+Copyright (c) 2023 Sichang He (Steven)
 All rights reserved.
 
                                    Basic Term

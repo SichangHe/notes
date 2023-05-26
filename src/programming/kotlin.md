@@ -19,6 +19,15 @@ declare nullable variable
 var0: TYPE?
 ```
 
+### late-initialized variable
+
+```kotlin
+lateinit var var0: Type0
+```
+
+- no need for null check when accessing
+- crash at runtime if no initialized
+
 ### access field in nullable variable
 
 return `null` if `var0` is `null` using safe-call operator
@@ -74,3 +83,33 @@ fnUsingLambda(arg0) {
     // Body of anonymous function.
 }
 ```
+
+## suspend function
+
+```kotlin
+suspend fun fn0(arg0: TYPE0): RETURN_TYPE0 {
+    // …
+}
+```
+
+- can only call in a `CoroutineScope`, execute seemingly sequentially
+    - brainless scope `GlobalScope`
+    - scope of current function
+
+        ```kotlin
+        val scope = CoroutineScope(Job())
+        ```
+
+    - android UI component can use
+
+        ```kotlin
+        val scope = MainScope()
+        ```
+
+- can be started in background using `launch` or `async` of a `CoroutineScope`
+- use context to choose `Dispatcher`:
+
+    ```kotlin
+    withContext(Dispatchers.IO) {/*IO tasks*/}
+    withContext(Dispatchers.Default) {/*CPU tasks*/}
+    ```

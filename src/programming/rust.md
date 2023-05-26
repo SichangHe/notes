@@ -57,6 +57,21 @@ literal */
 
 enumeration with variant `Ok` or `Err`
 
+- handle error and convert to `Option`: 
+
+    ```rust
+    result.map_err(|e|/*…*/).ok()`
+    ```
+
+- convert error to value:
+
+    ```rust
+    result.map_or_else(|e|/*…*/, identity)
+    ```
+
+- using `anyhow`, both `Result` and `Option` can be wrapped as `Result`
+    using `.context`
+
 ### `Ok` variant
 
 indicate successful run, contain result

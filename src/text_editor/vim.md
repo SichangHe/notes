@@ -160,6 +160,8 @@ or
 
 # visual mode
 
+- move the other border of selection instead `o`
+
 ## visual mode navigation
 
 - select whole paragraph `vip`
