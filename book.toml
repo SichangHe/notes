@@ -3,7 +3,7 @@ authors = ["Steven Hé (Sīchàng)"]
 language = "en"
 multilingual = false
 src = "src"
-title = "Steven's Notes"
+title = "Steven Hé (Sīchàng)'s Notes"
 
 [build]
 build-dir = "html"
