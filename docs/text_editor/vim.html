@@ -215,6 +215,7 @@
 <li><a href="#undo-and-redo">undo and redo</a></li>
 <li><a href="#fold">fold</a></li>
 <li><a href="#spelling">spelling</a></li>
+<li><a href="#buffer">buffer</a></li>
 <li><a href="#quit">quit</a></li>
 <li><a href="#write-as-root">write as root</a></li>
 </ul>
@@ -306,12 +307,13 @@ paragraph 3
 </ul>
 <h2 id="to-past-position"><a class="header" href="#to-past-position">to past position</a></h2>
 <ul>
-<li>go back to the previous jump position <code>''</code></li>
+<li>go back to the previous jump position <code>``</code></li>
+<li>go back to the previous jump lien <code>''</code></li>
 <li>go to mark <code>letter</code>: <code>`</code> + <code>letter</code></li>
-<li>go to top of last visual selection '`&lt;'</li>
-<li>go to bottom of last visual selection '`&gt;'</li>
-<li>go to top of last yanked '`['</li>
-<li>go to bottom of last yanked '`]'</li>
+<li>go to top of last visual selection <code>`&lt;</code></li>
+<li>go to bottom of last visual selection <code>`&gt;</code></li>
+<li>go to top of last yanked <code>`[</code></li>
+<li>go to bottom of last yanked <code>`]</code></li>
 <li>go to last change <code>g;</code></li>
 <li>go to previous change in change history <code>g,</code></li>
 </ul>
@@ -360,12 +362,17 @@ paragraph 3
 <li>add spelling of current word to dictionary <code>zg</code></li>
 <li>remove spelling of current word to dictionary <code>zw</code></li>
 </ul>
+<h1 id="buffer"><a class="header" href="#buffer">buffer</a></h1>
+<ul>
+<li>next buffer <code>:bn</code>, previous buffer <code>:bp</code></li>
+<li>previous buffer <code>&lt;C-o&gt;</code></li>
+</ul>
 <h1 id="quit"><a class="header" href="#quit">quit</a></h1>
 <ul>
 <li>save all and quit <code>ZZ</code></li>
 </ul>
 <h1 id="write-as-root"><a class="header" href="#write-as-root">write as root</a></h1>
-<pre><code>:w !sudo tee %
+<pre><code class="language-vim">:w !sudo tee %
 </code></pre>
 
                 </main>
