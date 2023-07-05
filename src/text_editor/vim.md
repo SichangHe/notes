@@ -125,12 +125,13 @@ paragraph 3
 
 ## to past position
 
-- go back to the previous jump position `''`
+- go back to the previous jump position ``` `` ```
+- go back to the previous jump lien `''`
 - go to mark `letter`: `` ` `` + `letter`
-- go to top of last visual selection '`<'
-- go to bottom of last visual selection '`>'
-- go to top of last yanked '`['
-- go to bottom of last yanked '`]'
+- go to top of last visual selection `` `< ``
+- go to bottom of last visual selection `` `> ``
+- go to top of last yanked `` `[ ``
+- go to bottom of last yanked `` `] ``
 - go to last change `g;`
 - go to previous change in change history `g,`
 
@@ -186,13 +187,17 @@ or
 - add spelling of current word to dictionary `zg`
 - remove spelling of current word to dictionary `zw`
 
+# buffer
+
+- next buffer `:bn`, previous buffer `:bp`
+- previous buffer `<C-o>`
+
 # quit
 
 - save all and quit `ZZ`
 
 # write as root
 
-```
+```vim
 :w !sudo tee %
 ```
-
