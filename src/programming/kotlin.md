@@ -113,3 +113,7 @@ suspend fun fn0(arg0: TYPE0): RETURN_TYPE0 {
     withContext(Dispatchers.IO) {/*IO tasks*/}
     withContext(Dispatchers.Default) {/*CPU tasks*/}
     ```
+
+## Misc
+
+prettry print `Array`s: `.contentToString()`
