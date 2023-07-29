@@ -63,6 +63,7 @@
     - [Rust](programming/rust.md)
     - [R lang](programming/rlang.md)
     - [Shell](programming/shell.md)
+    - [Trail](programming/trail.md)
 - [Server](server/index.md)
     - [NFS](server/nfs.md)
     - [SSH](server/ssh.md)
