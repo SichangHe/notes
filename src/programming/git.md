@@ -150,3 +150,9 @@ verify no change since commit
 ```sh
 git diff --exit-code HEAD
 ```
+
+pull main without checking out main
+
+```sh
+git fetch origin main:main
+```
