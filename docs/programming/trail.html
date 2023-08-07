@@ -153,6 +153,15 @@
                     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 <h1 id="the-trail-language"><a class="header" href="#the-trail-language">The Trail Language</a></h1>
 <p>Silly ideas about how a language should have all its syntax trailing.</p>
+<ul>
+<li>Identifiers can be used as procedure arguments.</li>
+<li>Blocks are a comptime primitive type and can contain undefined identifiers.</li>
+<li>All code can be marked to be comptime.</li>
+<li>No generics.
+Instead, generate types or procedures needed using comptime procedure
+execution.</li>
+<li>No grouping executions using parentheses.</li>
+</ul>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
 <ul>
 <li>Keywords are capitalized letters.
@@ -166,59 +175,83 @@
 </ul>
 </li>
 <li>Expressions are evaluated left to right, with no operator precedence.</li>
+<li>Tuples are space-separated and expressions inside are lazy-evaluated.
+<ul>
+<li><code>=</code> and many other side-effects-only procedures return <code>( )</code>.</li>
 </ul>
-<pre><code class="language-lua">1 A a -- Assign `1` to `a`.
-true M b -- Mutable variable.
-a / 2.0 A a/2 -- Call procedure `/` with `a` and `2.0` and assign to `a/2`.
-false R b -- Reassign `b`.
-0..10 E { &quot;Hey&quot; print } -- Print &quot;Hey&quot; 10 times.
+</li>
+</ul>
+<pre><code class="language-lua">1 = a -- Assign `1` to `a` by calling procedure `=` at comptime.
+true =M b -- Mutable variable.
+a / 2.0 = a/2 -- Call procedure `/` with `a` and `2.0` and assign to `a/2`.
+false =R b -- Reassign `b`.
+0 .. 10 do { &quot;Hey&quot; print } -- Print &quot;Hey&quot; 10 times.
+( 1 2 ) nth 0 assert_eq 1
 </code></pre>
 <h2 id="procedures"><a class="header" href="#procedures">Procedures</a></h2>
 <ul>
-<li>The last expression is the return value.
+<li><code>=&gt;</code> is a comptime procedure that takes a tuple of identifiers and a block
+as arguments and returns a procedure.</li>
+<li>The last expression of a block is its return value.
 <ul>
 <li>No &quot;return&quot; keyword.</li>
 </ul>
 </li>
-<li>Procedures are automatically called with the variable before it and the
-appropriate number of variables after it.</li>
-<li>If a procedure does not take any arguments, it should be called with <code>( )</code>.</li>
-<li>Limited polymorphism: the first argument of the function decides what the
-rest of the function arguments could be.</li>
+<li>Procedures that take arguments are automatically called with the expression
+before it and the appropriate number of expressions after it.
+<ul>
+<li>If a procedure does not take any arguments, it cannot be called by itself
+and requires a comptime procedure <code>call</code> to call it.</li>
+<li>If an expression is not callable, the expression before it is discarded
+when the execution reaches it.</li>
 </ul>
-<pre><code class="language-lua">P a b { a + b } A add -- Procedure `add`.
+</li>
+<li>Procedure <code>+doc</code> takes anything and a string as its two arguments,
+and apply the string as documentation to the first argument.</li>
+<li>Limited polymorphism: the first argument of the procedure decides what the
+rest of the procedure arguments could be.</li>
+</ul>
+<pre><code class="language-lua">( a b ) =&gt; { a + b } = add -- Procedure `add`.
 
-P { &quot;hell&quot; ++ &quot;o&quot; } A greet -- Procedure `greet`.
+( ) =&gt; { &quot;hell&quot; ++ &quot;o&quot; } +doc &quot;Return \&quot;hello\&quot;.&quot; = greet -- Procedure `greet`.
+greet doc starts_with &quot;Return&quot; assert -- Assert the documentation of `greet`.
 
-( ) greet A hello
+greet = also_greet
+greet call = hello -- =&gt; &quot;hello&quot;
 </code></pre>
 <h2 id="names"><a class="header" href="#names">Names</a></h2>
 <p>Symbols can be names.</p>
-<pre><code class="language-lua">P a b { a pow b } A ** -- Procedure `**`.
+<pre><code class="language-lua">( a b ) =&gt; { a pow b } = ** -- Procedure `**`.
 </code></pre>
-<h2 id="compile-time-computation"><a class="header" href="#compile-time-computation">Compile-time computation</a></h2>
+<h2 id="compile-time-comptime-computation"><a class="header" href="#compile-time-comptime-computation">Compile-time (comptime) computation</a></h2>
 <p>The program is interpreted into a program that gets compiled.</p>
 <ul>
 <li>During interpretation, expressions marked with <code>C</code> are calculated.</li>
 <li>Global variables are always calculated at compile time and immutable at run
 time.</li>
-<li>Compile-time variables can also be declared &quot;mutable at compile time.&quot;</li>
+<li>Comptime variables can also be declared &quot;mutable at comptime.&quot;</li>
 </ul>
-<pre><code class="language-lua">32 * 32 A TWO_TO_TEN -- Compile-time.
+<pre><code class="language-lua">32 * 32 = TWO_TO_TEN -- Comptime.
 
-P a b {
-    b * b A b_square -- Run-time.
+( a b ) =&gt; {
+    b * b = b_square -- Run-time.
     a * TWO_TO_TEN + b_square -- Run-time.
-} A hyperbole -- Compile-time.
+} = hyperbole -- Comptime.
 
-P x {
-    2 hyperbole 7 A C LUCKY_NUMBER -- Compile-time.
+( x ) =&gt; {
+    2 hyperbole 7 C = LUCKY_NUMBER -- Comptime.
+    LUCKY_NUMBER is_comptime assert -- Assert that `LUCKY_NUMBER` is comptime.
     x + LUCKY_NUMBER -- Run-time.
-} A add_luck -- Compile-time.
+} = add_luck -- Comptime.
 
-2 M TO_BE_CHANGED -- Compile-time mutable.
-0..10 E { TO_BE_CHANGED * TO_BE_CHANGED R TO_BE_CHANGED } -- Compile-time
+2 =M TO_BE_CHANGED -- Comptime mutable.
+0 .. 10 do { TO_BE_CHANGED * TO_BE_CHANGED =R TO_BE_CHANGED } -- Comptime
 -- `TO_BE_CHANGED` = 4294967296
+
+-- Assign a procedure type that take one argument of `Any` type and returns
+-- an instance of `( )` to `equal_type`.
+( Any ) proc_type ( ) = equal_type
+= s_type assert_eq equal_type -- Assert `=`'s type.
 </code></pre>
 
                 </main>
