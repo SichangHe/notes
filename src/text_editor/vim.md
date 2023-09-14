@@ -201,3 +201,9 @@ or
 ```vim
 :w !sudo tee %
 ```
+
+# capitalize first letter
+
+```vim
+s/\<./\u&/g
+```

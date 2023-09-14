@@ -156,3 +156,9 @@ pull main without checking out main
 ```sh
 git fetch origin main:main
 ```
+
+fetch only 1 commit
+
+```sh
+git fetch --depth 1 git@github.com:username/repo.git FULL_SHA_FOR_COMMIT
+```
