@@ -45,3 +45,9 @@ clean up junk
 ```shell
 brew cleanup && brew autoremove
 ```
+
+no stop-the-world auto update
+
+```sh
+export HOMEBREW_NO_AUTO_UPDATE=1
+```

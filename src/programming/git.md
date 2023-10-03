@@ -162,3 +162,9 @@ fetch only 1 commit
 ```sh
 git fetch --depth 1 git@github.com:username/repo.git FULL_SHA_FOR_COMMIT
 ```
+
+remove not tracked files
+
+```sh
+git clean -fX
+```
