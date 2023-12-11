@@ -41,6 +41,7 @@
     - [NPM](package_manager/npm.md)
     - [Pacman](package_manager/pacman.md)
     - [Pip](package_manager/pip.md)
+    - [TeXLive Manager (tlmgr)](package_manager/tlmgr.md)
 - [Programming](programming/index.md)
     - [C](programming/c.md)
         -[clang](programming/clang.md)

@@ -202,8 +202,16 @@ or
 :w !sudo tee %
 ```
 
-# capitalize first letter
+# text transformations
+
+capitalize first letter
 
 ```vim
 s/\<./\u&/g
+```
+
+simple camelCase to snake_case
+
+```vim
+s/\l\zs\u/_\l&/g
 ```
