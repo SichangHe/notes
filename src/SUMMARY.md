@@ -1,6 +1,7 @@
 # Summary
 
 - [Automation Software](automation_software/index.md)
+    - [Chatbot Prompt](automation_software/chatbot_prompt.md)
     - [Command-Line Utilities](automation_software/cli_util.md)
     - [Hammerspoon](automation_software/hammerspoon.md)
 - [Computer Science](cs/index.md)
@@ -44,7 +45,7 @@
     - [TeXLive Manager (tlmgr)](package_manager/tlmgr.md)
 - [Programming](programming/index.md)
     - [C](programming/c.md)
-        -[clang](programming/clang.md)
+        - [clang](programming/clang.md)
     - [Elixir](programming/elixir.md)
     - [Git](programming/git.md)
     - [Java](programming/java.md)
