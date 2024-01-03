@@ -69,6 +69,8 @@
 - [Server](server/index.md)
     - [NFS](server/nfs.md)
     - [SSH](server/ssh.md)
+- [Soft Skill](soft/index.md)
+    - [Management](soft/management.md)
 - [Text Editor](text_editor/index.md)
     - [Vim](text_editor/vim.md)
     - [Xcode](text_editor/xcode.md)
