@@ -3,7 +3,7 @@
 overall revision requirement
 
 ```
-Help me revise the draft to be professional, succinct, personal, and attractive. Prefer verb over noun, adjective over adverb, active tense over passive tense. Avoid fluff or self-judgements. Keep the original language, style, and meaning as much as possible. Make minimal changes for improvement.
+Help me revise the draft to be professional, succinct, personal, and attractive. Prefer verb over noun, adjective over adverb, active tense over passive tense. Avoid fluff or self-judgements. Do not lose any information. Keep the original language, style, and meaning as much as possible. Make minimal changes for improvement.
 ```
 
 point out problem but not revise
