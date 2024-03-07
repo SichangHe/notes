@@ -13,6 +13,16 @@ pandoc --pdf-engine latexmk -C --bibliography=paper.bib \
 -s paper.md -o paper.pdf
 ```
 
+deal with CJK
+
+```shell
+pandoc --pdf-engine xelatex -C --bibliography=paper.bib \
+-M reference-section-title=Bibliography \
+-V classoption=twocolumn -V papersize=a4paper -V fontsize=12pt \
+-V geometry:margin=0.1in -V mainfont=Times -V CJKmainfont='Songti SC' \
+-s paper.md -o paper.pdf
+```
+
 using HTML as intermedia and `wkhtmltopdf` to create PDF
 
 ```shell
