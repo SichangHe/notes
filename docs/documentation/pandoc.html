@@ -163,6 +163,13 @@
 -V geometry:margin=0.1in -V mainfont=Times \
 -s paper.md -o paper.pdf
 </code></pre>
+<p>deal with CJK</p>
+<pre><code class="language-shell">pandoc --pdf-engine xelatex -C --bibliography=paper.bib \
+-M reference-section-title=Bibliography \
+-V classoption=twocolumn -V papersize=a4paper -V fontsize=12pt \
+-V geometry:margin=0.1in -V mainfont=Times -V CJKmainfont='Songti SC' \
+-s paper.md -o paper.pdf
+</code></pre>
 <p>using HTML as intermedia and <code>wkhtmltopdf</code> to create PDF</p>
 <pre><code class="language-shell">pandoc -s paper.md -o paper.pdf -t html5 \
 -V margin-top=0 -V margin-bottom=0 -V margin-left=0 -V margin-right=0
