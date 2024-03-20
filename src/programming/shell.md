@@ -206,3 +206,11 @@ go forward one word
 <kbd>Alt</kbd> + <kbd>C</kbd>
 
 capitalize the letter and move cursor to end of word
+
+## ANSI terminal escape sequence
+
+control sequence introducer (CSI): `\033[`
+
+clear screen and return to home: `\033[2J\033[H`
+
+clear line and return to left: `\033[2K\r`

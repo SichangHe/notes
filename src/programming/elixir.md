@@ -7,6 +7,8 @@ print Charlist as list of integer
 [1, 2, 3] |> inspect(charlists: :as_lists) |> IO.puts()
 ```
 
+control sequence introducer `\e` instead of `\033[`
+
 # function
 
 ## anonymous function
